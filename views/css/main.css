@@ -1,0 +1,6 @@
+body>div:not([class*='main']){
+    display: none;
+}
+.cbalink{
+    display: none;
+}

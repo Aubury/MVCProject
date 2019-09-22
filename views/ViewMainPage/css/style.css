@@ -1,0 +1,381 @@
+html{
+    scroll-behavior: smooth;
+}
+.header,
+.main,
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Condensed';
+}
+.header,
+.footer{
+    color: white;
+    background-color: rgb(32,36,45);
+}
+.hide{
+    display: none;
+}
+.container{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.left__header__content,
+.right__header__content{
+    width: 50%;
+    display: flex;
+}
+.left__header__content{
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px ;
+}
+.left__header__content div{
+    margin: 0 0 0 0;
+    width: 50%;
+}
+.left__header__content .companySlogan p{
+    width: 100%;
+    font-size: 50px;
+    user-select: none;
+}
+.left__header__content .companySlogan p:first-child{
+    text-align: left;
+    padding: 0 0 0 0;
+}
+.left__header__content .companySlogan p:nth-child(2){
+    text-align: center;
+    padding: 15px 0 15px 0;
+}
+.left__header__content .companySlogan p:last-child{
+    text-align: right;
+    padding: 0 0 0 0;
+}
+.left__header__content .companySlogan{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left__header__content img{
+    width: 280px;
+    height: 180px;
+}
+.right__header__content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.right__header__content .companySloganNone,
+.right__header__content .userRoom,
+.right__header__content nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 20px 0;
+}
+.right__header__content .companySloganNone{
+    font-size: 35px;
+    color: transparent;
+}
+.right__header__content .userRoom button{
+    padding: 10px;
+    font-family: 'Roboto Condensed';
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: 0 !important;
+    transition: all .3s;
+}
+.right__header__content .userRoom button:hover{
+    background-color: rgb(8,126,177);
+    border: solid 2px white;
+    color: white;
+}
+.navigation{
+    display: flex;
+}
+.navigation a{
+    color: white;
+    text-decoration: none;
+    transition: all .3s;
+}
+.navigation li{
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 20px;
+    border-left: solid 3px transparent;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    transition: all .3s;
+}
+.navigation li:hover{
+    color: rgb(8,126,177);
+    border-left: solid 3px rgb(8,126,177);
+}
+.navigation a:hover{
+    color: rgb(8,126,177);
+}
+.navigation li:last-child{
+    padding: 5px 0px 5px 20px;
+
+
+
+
+}
+/* ------------------------------------------------------------ */
+
+
+.main section{
+    margin: 30px 0 30px 0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: 0px 0px 10px gray;
+}
+.about__us{
+    justify-content: space-around;
+}
+.about__us .about__us__left__content,
+.about__us .about__us__right__content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 48%;
+}
+.about__us__left__content h2{
+    font-size: 50px;
+    margin: 0 0 20px 0;
+}
+.about__us__left__content p{
+    font-size: 20px;
+    line-height: 1.3;
+    text-align: justify;
+}
+.about__us__right__content{
+    align-items: center;
+    justify-content: space-between;
+}
+.about__us__right__content img:first-child{
+    width: 210px;
+    height: 350px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+.about__us__right__content img:last-child{
+    width: 340px;
+    height: 300px;
+}
+
+.progect{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 10px 0;
+}
+.progect h2{
+    font-size: 50px;
+    margin: 0 0 20px;
+}
+.progect p{
+    font-size: 20px;
+    line-height: 1.3;
+}
+.progect__left__content,
+.progect__right__content{
+    width: 48%;
+}
+.progect__left__content p{
+    text-align: right;
+}
+.progect__left__content img{
+    width: 600px;
+}
+.progect__right__content .galery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.progect__right__content img{
+    width: 250px;
+}
+
+.photoGalery img{
+    width: 350px;
+}
+.photoGalery{
+    justify-content: space-between;
+}
+
+
+section .video{
+    width: 100%;
+}
+.video{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.video img{
+    width: 570px;
+    margin: 10px 0 10px 0;
+}
+
+
+.footer{
+    padding: 30px 0 30px 0;
+}
+.map,
+.contacts{
+    width: 50%;
+}
+iframe{
+    width: 100%;
+}
+.contacts{
+    display: flex;
+}
+.adress p,
+.phone p{
+    width: 100%;
+    font-size: 30px;
+    line-height: 1.3;
+    color: white;
+}
+.adress,
+.phone{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.top span{
+    font-size: 40px;
+}
+.top{
+    width: 70px;
+    height: 70px;
+    transform: rotate(90deg); 
+    font-family: 'Roboto Condensed';
+    color: white;
+    background-color: #3f414d;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    outline: 0 !important;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 50%;
+}
+.top:hover{
+    background-color: rgb(8,126,177);
+    color: white;
+}
+.topHide{
+    right: -150px;
+    bottom: -150px;
+}
+
+
+/* ----------------------------modal window---------------------------------- */
+/* ----------------------------modal__certificate---------------------------------- */
+
+.modal__certificate{/* фон модального окна свидетельства */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+}
+.modal__content__certificate{/* контейнер модального окна свидетельства */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.modal__content__certificate img{ /* свидетельство */
+    width: 1000px;
+}
+.modal__content__certificate input{/* закрыть модальное окно свидетельства */
+    cursor: pointer;
+    font-size: 30px;
+    margin: 30px 0 0 30px;
+    padding: 13px 20px 13px 20px;
+    border-radius: 50%;
+    border: solid 1px white;
+    outline: none !important;
+}
+
+/* ----------------------------modal__userRoom---------------------------------- */
+
+.modal__userRoom{/* фон модального окна личного кабинета */
+    font-family: 'Roboto Condensed';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+}
+.modal__content__userRoom{/* контейнер модального окна личного кабинета */
+   padding: 0 0 40px 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   width: 40%;
+   background-color: #fff;
+}
+.modal__content__userRoom h2{
+    width: 80%;
+    font-size: 25px;
+    margin: 20px 0 20px 0;
+    text-align: center;
+}
+.modal__content__userRoom p{
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+.modal__content__userRoom input{
+    margin: 0 0 20px 0;
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+}
+.modal__content__userRoom .closeUserRoom{/* закрыть модальное окно личного кабинета */
+    outline: none !important;
+    position: relative;
+    top: -30px;
+    left: 30px;
+    cursor: pointer;
+    width: 40px;
+    text-align: center;
+    margin: 0 0 0 0;
+    padding: 0 10px 0 10px;
+    border: none;
+    border-radius: 50%;
+}
+.modal__content__userRoom .int{
+    width: 100px;
+    margin: 0 0 0 0;
+}
+
+.none{
+    display: none;
+}
