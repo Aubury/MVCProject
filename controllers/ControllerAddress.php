@@ -15,20 +15,20 @@ class ControllerAddress
    public function actionAddAddress()
    {
 
-       if(array_key_exists( 'address', $_POST)){
+       switch ($_POST){
 
-           $this->m->addAddress($_POST['address']);
+           case array_key_exists( 'address', $_POST):
+                $this->m->addAddress($_POST['address']);
+                break;
+
+           case array_key_exists( 'telephones', $_POST):
+               $this->m->addPhones($_POST['telephones']);
+               break;
+
+           case array_key_exists( 'link', $_POST):
+               $this->m->addLink($_POST['link']);
+               break;
        }
-       if(array_key_exists( 'telephones', $_POST)){
-
-           $this->m->addPhones($_POST['telephones']);;
-       }
-       if(array_key_exists( 'link', $_POST)){
-
-           $this->m->addLink($_POST['link']);;
-       }
-
-
 
    }
    public function actionShowPanelAddress()
