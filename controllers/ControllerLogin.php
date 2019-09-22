@@ -20,12 +20,12 @@ class ControllerLogin
             'password'=> $_POST['password']
         ];
 
-        if(array_key_exists('uId',$_COOKIE))
+        if(array_key_exists($_COOKIE, 'uId'))
         {
             $this->m->checkLog($_COOKIE['uId'], $_COOKIE['uPd'], $_COOKIE['tab']);
         }
 
-         $this->m->getIn($obj);
+        $this->m->getIn($obj);
     }
 
 

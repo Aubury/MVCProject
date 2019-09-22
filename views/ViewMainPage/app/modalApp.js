@@ -46,8 +46,8 @@ function sendObj(answ) {
         method: "POST",
         body: fD
     }).then(e => e.json())
-       // .then(data => obj.form.nextElementSibling.innerHTML = data);
-        // .then(text => console.log(text));
-         .then(data => window.location.href = `http://${data[0]}`);
+        .then(text => console.log('Request successful', text))
+        .catch(error => console.log('Request failed', error))
+        .then(data => window.location.href = `http://${data[0]}`);
 
 }
