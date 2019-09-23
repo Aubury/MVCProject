@@ -22,24 +22,27 @@ class Router
 
 
         $uri = trim($_SERVER['REQUEST_URI'], "/");
-//        $auth = new  ControllerIsAuth();
+        $auth = new  ControllerIsAuth();
 
-//        if($auth->IsAuth()){
 
-            foreach ($this->routes as $key => $val)
+
+        foreach ($this->routes as $key => $val)
+        {
+            if(preg_match("~^$key~", $uri) == 1)
             {
-                if(preg_match("~^$key~", $uri) == 1)
-                {
-                    $clMet = explode($del, $val);
+                $clMet = explode($del, $val);
+                
+                if($clMet[2] == 'none' || $auth->IsAuth($clMet)){
                     $contr = $controllerName . $clMet[0];
                     $met = $methodName . $clMet[1];
-
-                    break;
                 }
+                
+                break;
+            }
 
-//            }
+       }
 
-        }
+        
         //    /controllers/ControllerRegistratorUser.php
         include_once(ROOT . "/controllers/" . $contr . ".php");
         $obj = new $contr();

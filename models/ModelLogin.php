@@ -56,16 +56,20 @@ class ModelLogin
 
 
                     if ($role) {
-                        $this->addUserLog($admin[0], 'supAdm');
-//                        echo json_encode([SITE . "/show/superAdmin"]);
-                        $this->redirect('/show/superAdmin');
-
+                        
+                      echo json_encode([
+                            SITE . "/show/superAdmin",
+                            $this->addUserLog($admin[0], 'supAdm')]);
+              //          $this->redirect('/show/superAdmin');
+//                        header('Location:'.SITE.'/show/superAdmin');
 
                     } else {
-                        $this->addUserLog($admin[0], 'adm');
-//                        echo json_encode([SITE . "/show/Panel"]);
-                        $this->redirect('/show/Panel');
-
+                       ;
+                       echo json_encode([
+                            SITE . "/show/Panel"],
+                            $this->addUserLog($admin[0], 'adm'));
+                     //   $this->redirect('/show/Panel');
+//                        header('Location:'.SITE.'/show/Panel');
                     }
 
                 }else{
@@ -79,9 +83,10 @@ class ModelLogin
 
                     $str = $this->db->con->prepare("UPDATE `users` SET `last_visit`= NOW() WHERE `email`='${arr['email']}'");
                     $str->execute();
-                    $this->addUserLog($user[0], 'usr');
-//                    echo json_encode([SITE . "/show/User"]);
-                    $this->redirect('/show/User');
+                    $this->addUserLog($user[0], 'usr');//TODO: same as admin!!!
+                   echo json_encode([SITE . "/show/User"]);
+                 //   $this->redirect('/show/User');
+//                    header('Location:'.SITE.'/show/User');
 
                 }else{
 
@@ -102,22 +107,23 @@ class ModelLogin
 
             $uPd = password_hash(time() . $user['email'], PASSWORD_BCRYPT);
             $this->db->con->exec("INSERT INTO `logIn`(`user_id`, `uPd`, `role`, `table`) VALUES ( ${user['id']}, '${uPd}', ${user['role']}, '${tab}')");
-            setcookie('uId', $user['id']);
-            setcookie('uPd', $uPd);
-            setcookie('tab', $tab);
+            return [$uPd, $user['id'], $tab];
+            // setcookie('uId', $user['id']);
+            // setcookie('uPd', $uPd);
+            // setcookie('tab', $tab);
 
         }else{
-
-            setcookie('uId', $arr[0]['user_id']);
-            setcookie('uPd', $arr[0]['uPd']);
-            setcookie('tab', $arr[0]['table']);
+            return [$arr[0]['uPd'], $arr[0]['user_id'], $arr[0]['table']];   
+            // setcookie('uId', $arr[0]['user_id']);
+            // setcookie('uPd', $arr[0]['uPd']);
+            // setcookie('tab', $arr[0]['table']);
 
         }
     }
 
     public function redirect($url) {
 
-        header('HTTPS/1.1 200 OK');
+       // header('HTTP/1.1 200 OK');
         header('Location: https://'.$_SERVER['HTTP_HOST']. $url);
         exit();
     }

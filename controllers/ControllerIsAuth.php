@@ -11,15 +11,29 @@ class ControllerIsAuth
         $this->m = new ModelIsAuth();
     }
 
-    public function IsAuth()
+    public function IsAuth($arr)
     {
-
-        if(array_key_exists( 'uId', $_COOKIE))
+        if(array_key_exists('user_id', $_COOKIE))
         {
-          return  $this->m->checkLog($_COOKIE['uId'], $_COOKIE['uPd'], $_COOKIE['tab']);
+            if($this->checkRole($arr, $_COOKIE['table']))
+            {
+                return  $this->m->checkLog($_COOKIE['user_id'], $_COOKIE['uPd'], $_COOKIE['table']);
+            }
         }
 
      return false;
+    }
+    
+    private function checkRole($ar, $val2)
+    {
+        foreach(array_splice($ar, 2) as $val)
+        {
+            if($val == $val2)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
