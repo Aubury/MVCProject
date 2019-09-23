@@ -3,8 +3,7 @@
 
 class ModelLogin
 {
-    private $db, $cA, $cP, $cSa;
-    public $table;
+    private $db;
 
     public  function __construct()
     {
@@ -34,7 +33,12 @@ class ModelLogin
         $admin = $this->dbSelect($arr,'email', 'admins');
         $user  = $this->dbSelect($arr,'email', 'users');
         $role = $admin[0]['role'];
+  //      $passH = password_hash($arr['password'], PASSWORD_BCRYPT);
 
+//        echo $passH.PHP_EOL;
+//        echo $admin[0]['password'].PHP_EOL;
+//        echo $user[0]['password'].PHP_EOL;
+//        echo password_verify($arr['password'], $admin[0]['password']).PHP_EOL;
 //===========================================================================================
 
 
@@ -45,7 +49,7 @@ class ModelLogin
         }else{
             if(count($admin)>0){
 
-                if( password_verify($arr['password'], $admin[0]['password'])) {
+                if(password_verify($arr['password'], $admin[0]['password'])) {
 
                     $str = $this->db->con->prepare("UPDATE `admins` SET `last_visit`= NOW() WHERE `email`='${arr['email']}'");
                     $str->execute();
@@ -53,12 +57,14 @@ class ModelLogin
 
                     if ($role) {
                         $this->addUserLog($admin[0], 'supAdm');
-                        echo json_encode([SITE . "/show/superAdmin"]);
+//                        echo json_encode([SITE . "/show/superAdmin"]);
+                        $this->redirect('/show/superAdmin');
 
 
                     } else {
                         $this->addUserLog($admin[0], 'adm');
-                        echo json_encode([SITE . "/show/Panel"]);
+//                        echo json_encode([SITE . "/show/Panel"]);
+                        $this->redirect('/show/Panel');
 
                     }
 
@@ -69,13 +75,13 @@ class ModelLogin
 
             }else{
 
-                if(password_verify($arr['password'], $admin[0]['password'])) {
+                if(password_verify($arr['password'], $user[0]['password'])) {
 
                     $str = $this->db->con->prepare("UPDATE `users` SET `last_visit`= NOW() WHERE `email`='${arr['email']}'");
                     $str->execute();
                     $this->addUserLog($user[0], 'usr');
-                    echo json_encode([SITE . "/show/User"]);
-
+//                    echo json_encode([SITE . "/show/User"]);
+                    $this->redirect('/show/User');
 
                 }else{
 
@@ -109,36 +115,43 @@ class ModelLogin
         }
     }
 
-    public function checkLog($uid, $upd, $tab)
-    {
-        $p = $this->db->con->prepare("SELECT * FROM `logIn` WHERE `user_id`='${uid}'");
-        $p->execute();
-        $arr = $p->fetchAll();
+    public function redirect($url) {
 
-        if(count($arr) > 0)
-        {
-            if(hash_equals($upd, $arr[0]['uPd']))
-            {
-                if($tab === 'supAdm'){
-
-                    $this->lastVisit($uid, 'admins');
-                    echo json_encode([SITE . "/show/superAdmin"]);
-                }
-                if($tab === 'adm'){
-
-                    $this->lastVisit($uid, 'admins');
-                    echo json_encode([SITE . "/show/Panel"]);
-                }
-                if($tab === 'usr'){
-
-                    $this->lastVisit($uid, 'users');
-                    echo json_encode([SITE . "/show/User"]);
-                }
-            }
-            return;
-        }
-
-        return;
+        header('HTTPS/1.1 200 OK');
+        header('Location: https://'.$_SERVER['HTTP_HOST']. $url);
+        exit();
     }
+
+//    public function checkLog($uid, $upd, $tab)
+//    {
+//        $p = $this->db->con->prepare("SELECT * FROM `logIn` WHERE `user_id`='${uid}'");
+//        $p->execute();
+//        $arr = $p->fetchAll();
+//
+//        if(count($arr) > 0)
+//        {
+//            if(hash_equals($upd, $arr[0]['uPd']))
+//            {
+//                if($tab === 'supAdm'){
+//
+//                    $this->lastVisit($uid, 'admins');
+//                    echo json_encode([SITE . "/show/superAdmin"]);
+//                }
+//                if($tab === 'adm'){
+//
+//                    $this->lastVisit($uid, 'admins');
+//                    echo json_encode([SITE . "/show/Panel"]);
+//                }
+//                if($tab === 'usr'){
+//
+//                    $this->lastVisit($uid, 'users');
+//                    echo json_encode([SITE . "/show/User"]);
+//                }
+//            }
+//            return;
+//        }
+//
+//        return;
+//    }
 
 }

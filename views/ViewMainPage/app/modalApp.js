@@ -44,10 +44,15 @@ function sendObj(answ) {
 
     fetch(url, {
         method: "POST",
-        body: fD
-    }).then(e => e.json())
-        .then(text => console.log('Request successful', text))
-        .catch(error => console.log('Request failed', error))
-        .then(data => window.location.href = `http://${data[0]}`);
+        body: fD,
+        mode: 'no-cors', // no-cors, cors, *same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+    });
+        //.then(e => e.text())
+       // .then(data => console.log(data));
+      // .then(text => console.log('Request successful', text))
+       // .catch(error => console.log('Request failed', error));
+        // .then(data => window.location.href = `http://${data[0]}`);
 
 }

@@ -8,7 +8,7 @@ class Router
 
     public function __construct()
     {
-        include_once ROOT . "/controllers/ControllerLogin.php";
+        include_once ROOT . "/controllers/ControllerIsAuth.php";
         $this->routes = include_once(ROOT . "/config/routes.php");
     }
 
@@ -22,9 +22,9 @@ class Router
 
 
         $uri = trim($_SERVER['REQUEST_URI'], "/");
-//        $auth = new  ControllerLogin();
+//        $auth = new  ControllerIsAuth();
 
-//        if($auth->actionLogIn() !== false){
+//        if($auth->IsAuth()){
 
             foreach ($this->routes as $key => $val)
             {
@@ -37,9 +37,9 @@ class Router
                     break;
                 }
 
-            }
+//            }
 
-//        }
+        }
         //    /controllers/ControllerRegistratorUser.php
         include_once(ROOT . "/controllers/" . $contr . ".php");
         $obj = new $contr();
