@@ -50,7 +50,6 @@ function sendObj(answ) {
         credentials: 'same-origin', // include, *same-origin, omit
     })
         .then(e => e.json())
-       // .then(data => console.log(data));
       // .then(text => console.log('Request successful', text))
        // .catch(error => console.log('Request failed', error));
          .then(data => {

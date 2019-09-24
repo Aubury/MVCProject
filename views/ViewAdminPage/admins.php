@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/views/ViewSuperAdminPage/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/views/ViewSuperAdminPage/css/style.css">
+    <style><?php include_once ROOT . "/views/css/reset.css";
+        include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css";
+        include_once ROOT . "/views/ViewSuperAdminPage/css/bootstrap.min.css"?></style>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Admin</title>
@@ -148,7 +149,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/views/ViewSuperAdminPage/js/bootstrap.min.js"></script>
 <script src="/views/ViewSuperAdminPage/js/search/admins.js"></script>
-<!--<script src="/views/ViewSuperAdminPage/js/selector.js"></script>-->
 <script src="/views/ViewAdminPage/js/scriptAdmin.js"></script>
 </body>
 </html>

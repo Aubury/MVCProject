@@ -1,4 +1,4 @@
 @import "/views/css/reset.css";
-@import "fonts.css";
-@import "style.css";
-@import  "modal.css";
+@import "/views/ViewMainPage/css/fonts.css";
+@import "/views/ViewMainPage/css/style.css";
+@import  "/views/ViewMainPage/css/modal.css";

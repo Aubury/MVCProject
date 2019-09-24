@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/views/ViewMainPage/css/import.css">
+    <style><?php include_once ROOT . "/views/css/reset.css";
+                 include_once ROOT . "/views/ViewMainPage/css/fonts.css";
+                 include_once ROOT . "/views/ViewMainPage/css/style.css";
+                 include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
     <title>GIM</title>
 </head>
 <body>
@@ -159,7 +162,7 @@
         </div>
    </section>
 
-    <section class="modal" id="modal">
+    <div class="modal" id="modal">
         <div class="modalForm">
             <header>
                 <h2>Введите данные</h2>
@@ -174,10 +177,10 @@
                 <a href="#" class="btn">Закрыть</a>
             </footer>
         </div>
-    </section>
+    </div>
 
-    <script src="/views/ViewMainPage/app/app.js"></script>
-    <script src="/views/ViewMainPage/app/modal_certificate.js"></script>
-    <script src="/views/ViewMainPage/app/modalApp.js"></script>
+    <script ><?php include_once ROOT . "/views/ViewMainPage/app/app.js";
+               include_once ROOT . "/views/ViewMainPage/app/modal_certificate.js";
+               include_once ROOT . "/views/ViewMainPage/app/modalApp.js"?></script>
 </body>
 </html>

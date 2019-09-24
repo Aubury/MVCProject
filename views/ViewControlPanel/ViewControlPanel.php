@@ -5,6 +5,6 @@ class ViewControlPanel
 {
     public function showControlPanel()
     {
-        include ROOT . "/views/ViewControlPanel/index.html";
+        include ROOT . "/views/ViewControlPanel/index.php";
     }
 }

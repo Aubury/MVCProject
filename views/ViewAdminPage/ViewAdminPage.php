@@ -5,6 +5,6 @@ class ViewAdminPage
 {
     public  function showAdminPage()
     {
-        include ROOT . "/views/ViewAdminPage/admins.html";
+        include ROOT . "/views/ViewAdminPage/admins.php";
     }
 }

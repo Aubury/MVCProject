@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/views/ViewSuperAdminPage/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/views/ViewSuperAdminPage/css/style.css">
+<!--    <link rel="stylesheet" href="/views/ViewSuperAdminPage/css/import.css">-->
+    <style><?php include_once ROOT . "/views/ViewSuperAdminPage/css/import.css"?></style>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>SuperAdmin</title>
 </head>

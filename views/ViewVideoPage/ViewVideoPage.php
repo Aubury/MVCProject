@@ -5,6 +5,6 @@ class ViewVideoPage
 {
     public  function showVideoPage()
     {
-        include ROOT . "/views/ViewVideoPage/video.html";
+        include ROOT . "/views/ViewVideoPage/video.php";
     }
 }

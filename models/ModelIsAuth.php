@@ -9,10 +9,7 @@ class ModelIsAuth
     public  function __construct()
     {
         include_once ROOT . "/components/Db.php";
-        // include_once ROOT . "models/ModelIsAuth.php";
         $this->db = new Db();
-        // $this->m = new ModelLogin();
-
     }
     public function checkLog($uid, $upd, $tab)
     {

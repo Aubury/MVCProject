@@ -5,6 +5,6 @@ class ViewProjectPage
 {
     public  function showFormProject()
     {
-        include ROOT . "/views/ViewProjectPage/projects.html";
+        include ROOT . "/views/ViewProjectPage/projects.php";
     }
 }

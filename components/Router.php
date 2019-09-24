@@ -42,8 +42,6 @@ class Router
 
        }
 
-        
-        //    /controllers/ControllerRegistratorUser.php
         include_once(ROOT . "/controllers/" . $contr . ".php");
         $obj = new $contr();
         $obj->$met();

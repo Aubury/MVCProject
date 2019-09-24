@@ -8,9 +8,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/views/ViewSuperAdminPage/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/views/ViewSuperAdminPage/css/style.css">
-    <link rel="stylesheet" href="/views/ViewPersonalPage/css/style.css">
+    <style><?php include_once ROOT . "/views/css/reset.css";
+        include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css";
+        include_once ROOT . "/views/ViewSuperAdminPage/css/bootstrap.min.css";
+        include_once ROOT . "/views/ViewPersonalPage/css/style.css"?></style>
     <title>Document</title>
 </head>
 <body>
