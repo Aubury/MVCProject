@@ -24,9 +24,12 @@ class ControllerAnswers
             'text' => $_POST['text']
         ];
 
-//        var_dump($obj);
 
         $this->m->addAnswer($obj);
+    }
+    public function actionNumAnswers()
+    {
+        $this->m->totalNumAnswers();
     }
 
 }

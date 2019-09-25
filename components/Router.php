@@ -32,10 +32,10 @@ class Router
             {
                 $clMet = explode($del, $val);
                 
-                if($clMet[2] == 'none' || $auth->IsAuth($clMet)){
+               // if($clMet[2] == 'none' || $auth->IsAuth($clMet)){
                     $contr = $controllerName . $clMet[0];
                     $met = $methodName . $clMet[1];
-                }
+               // }
                 
                 break;
             }

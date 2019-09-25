@@ -7,4 +7,5 @@ class ViewSuperAdminPage
     {
         include ROOT . "/views/ViewSuperAdminPage/index.php";
     }
+
 }

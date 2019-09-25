@@ -13,10 +13,10 @@ class ModelAnswers
 
     public function addAnswer($obj)
     {
-
-       $prep = $this->db->con->prepare("INSERT INTO `answers`(`id_complaint`, `email`, `text`)
-                                          VALUES ('{$obj['id']}', '{$obj['email']}', '{$obj['text']}')");
+        $admin = $_COOKIE['user_id'];
+        $prep = $this->db->con->prepare("UPDATE `answers` SET `id_admin`= '{$admin}',`text`= '{$obj['text']}' WHERE `id_complaint`= '{$obj['id']}' ");
         $prep->execute();
+
 
         echo "Ответ на предложение(жалоба) № '${obj['id']}' добавлено";
 
@@ -35,8 +35,22 @@ class ModelAnswers
         $msg     = "<h3>Ответ на ваше предложение(жалобу) под номером ${answ['id']} на сайте ". SITE . "</h3><br><h4>${answ['text']}</h4>";
         $to      = $answ['email'];
         $subject = "Ответ на предложение(жалобу) " . SITE;
-        $headers = "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: newproject@newprojectteam.zzz.com.ua\r\n";
+        $headers = "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: _mainaccount@vinash.netxi.in\r\n";
         mail($to, $subject, $msg, $headers);
+    }
+
+    public function selectTotal(){
+
+        $prp = $this->db->con->prepare("SELECT * FROM `answers`");
+        $prp->execute();
+        return $prp->fetchAll();
+    }
+
+    public function totalNumAnswers()
+    {
+        $num = $this->selectTotal();
+        echo count($num);
+
     }
 
 }
