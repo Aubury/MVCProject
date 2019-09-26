@@ -48,7 +48,10 @@ class ModelAnswers
 
     public function totalNumAnswers()
     {
-        $num = $this->selectTotal();
+        $prp = $this->db->con->prepare("SELECT * FROM `answers` WHERE `text` != ''");
+        $prp->execute();
+        $num = $prp->fetchAll();
+
         echo count($num);
 
     }

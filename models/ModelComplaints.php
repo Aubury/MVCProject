@@ -80,41 +80,32 @@ class ModelComplaints
 
        foreach ($answ as $value)
        {
-               $mass = [
-
-//               0 => $value['user'],
-               0 => 'Ответ на жалобу №'.$value['id_complaint'],
-//               2 => $value['email'],
-               1 => $value['date_time'],
-               2 => $value['text']
-
-           ];
-
-               array_push($massAnsw, $mass);
+               array_push($massAnsw, [
+                       'Ответ на жалобу №'.$value['id_complaint'],
+                       $value['date_time'],
+                       $value['text']? $value['text']: 'No answer'
+                       ]
+               );
 
        }
        foreach ($compl as $value)
        {
 
-               $mass = [
-
-                   0 => $value['user'],
-                   1 => 'Жалоба №'.$value['id'],
-                   2 => $value['email'],
-                   3  => $value['date'],
-                   4  => $value['text']
-               ];
-
-               array_push($massCompl, $mass);
+               array_push($massCompl, [
+                   $value['user'], 
+                   'Жалоба №'.$value['id'], 
+                   $value['email'],
+                   $value['date'], 
+                   $value['text']
+               ]);
 
        }
 
-       $arr = [
+
+       echo json_encode([
            'complains'=>$massCompl,
            'answers'  => $massAnsw
-       ];
-
-       echo json_encode($arr);
+       ]);
 
     }
 }

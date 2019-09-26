@@ -2,7 +2,6 @@ const objInf = {
     allCompl : document.querySelector("#allComplaints"),
     allAnsw  : document.querySelector("#answeredComplaints"),
     newCompl : document.querySelector("#newComplaints"),
-    report   : document.querySelector(".templateCompAnsw"),
     container: document.querySelector(".tableReports")
 
 
@@ -37,55 +36,61 @@ const templateContainer = function createTemplateContainer(arr){
     let len = arr['complains'].length,
         info = objInf.container; //.tableReports
 
+    //Удаляю всех детей!!!
+    while(info.hasChildNodes()){
+          info.removeChild(info.firstChild);
+    }
+
+
     for(let k = 0; k < len; k++){
+        const mainDiv = createAndClass('div', 'card', 'border-warning', 'mb-3'), //основной контейнер
+        containerHeaderComp = createAndClass('div', 'card-header'),
+        secondDivCompl = createAndClass('div', 'row'),
+        containerCompl = createAndClass('div', 'card-body');//text
 
-        let mainDiv  = document.createElement('div'); //основной контейнер
-            mainDiv.classList.add('card');
-            mainDiv.classList.add('border-warning');
-            mainDiv.classList.add('mb-3');
+      createComplHeaders(secondDivCompl,arr['complains'][k]);
 
-                let containerHeaderComp = document.createElement('div'),
-                    secondDivCompl = document.createElement('div'),
-                    containerCompl = document.createElement('div');//text
+        containerCompl.innerHTML = arr['complains'][k].pop();
+        containerHeaderComp.appendChild(secondDivCompl);
+        mainDiv.appendChild(containerHeaderComp);
+         mainDiv.appendChild(containerCompl);
 
-                    containerHeaderComp.classList.add('card-header');
-                    secondDivCompl.classList.add('row');
-                    containerCompl.classList.add('card-body'); //text
+        let containerHeaderAnsw = document.createElement('div'),
+        secondDivAnsw = document.createElement('div'),
+        containerAnsw = document.createElement('div');//text
 
-                    for(let j = 0; j < 4; j++){
+        containerHeaderAnsw.classList.add('card-header');
+        secondDivAnsw.classList.add('row');
+        containerAnsw.classList.add('card-body'); //text
 
-                        let div = document.createElement('div');
-                        div.classList.add('col');
-                        div.innerHTML = arr['complains'][k][j];
-                        secondDivCompl.appendChild(div);
-                    }
-                    containerCompl.innerHTML = arr['complains'][k][4];
-                    mainDiv.appendChild(secondDivCompl);
-                    mainDiv.appendChild(containerCompl);
+        createComplHeaders(secondDivAnsw, arr['answers'][k]);
 
-                let containerHeaderAnsw = document.createElement('div'),
-                    secondDivAnsw = document.createElement('div'),
-                    containerAnsw = document.createElement('div');//text
 
-                    containerHeaderAnsw.classList.add('card-header');
-                    secondDivAnsw.classList.add('row');
-                    containerAnsw.classList.add('card-body'); //text
+        containerAnsw.innerHTML = arr['answers'][k].pop();
 
-                    for(let j = 0; j < 3; j++){
+        containerHeaderAnsw.appendChild(secondDivAnsw);
+        mainDiv.appendChild(containerHeaderAnsw);
+        mainDiv.appendChild(containerAnsw);
+       
 
-                        let div = document.createElement('div');
-                        div.classList.add('col');
+        info.appendChild(mainDiv);
+    }
+}
 
-                        div.innerHTML = arr['answers'][k][j];
-                        secondDivAnsw.appendChild(div);
-                    }
+function createAndClass(name = 'div', ...classes){
+    const el = document.createElement(name);
+    el.classList.add(...classes);
+    return el;
+}
 
-                    containerAnsw.innerHTML = arr['answers'][k][3];
-                    mainDiv.appendChild(secondDivAnsw);
-                    mainDiv.appendChild(containerAnsw);
+function createComplHeaders(parent, arr) {
+    var newArr = arr.slice(0, -1);
+    newArr.forEach( el => {
+            const  div = createAndClass('div', 'col');
+            div.innerHTML = el;
+            parent.appendChild(div);
 
-                info.appendChild(mainDiv);
-            }
+    });
 }
 
 getNumCompl();
@@ -95,4 +100,5 @@ getNumAnsw();
 setInterval(getNumAnsw, 50000);
 
 fillUpcontainer();
+setInterval(fillUpcontainer, 50000);
 

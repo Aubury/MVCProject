@@ -37,7 +37,7 @@ class ModelUserPage
             $msg     = "<h3>Вас успешно зарегистрировали на сайте " . SITE . "</h3> Для авторизации используйте логин: ${user['email']} пароль: ${user['password']}";
             $to      = $user['email'];
             $subject = "Регистрация на сервере " . SITE;
-            $headers = "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: newproject@newprojectteam.zzz.com.ua\r\n";
+            $headers = "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: _mainaccount@vinash.netxi.in\r\n";
             mail($to, $subject, $msg, $headers);
     }
 }

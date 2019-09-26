@@ -1,7 +1,3 @@
-<?php
-//require_once ROOT . "/controllers/ControllerComplaints.php";
-//$c = new ControllerComplaints();
-//?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style><?php include_once ROOT . "/views/css/reset.css";
-                 include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css";
-                 include_once ROOT . "/views/ViewSuperAdminPage/css/bootstrap.min.css"?></style>
-
+    <style><?php include_once ROOT . "/views/css/reset.css";?></style>
+    <style><?php include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css";?></style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>SuperAdmin</title>
 </head>
 <body>
@@ -89,14 +85,14 @@
 
 
 <!--            <div class="card border-warning mb-3">-->
-    <!--                <div class="card-header">-->
-        <!--                  <div class="row complaintInfo">-->
-            <!--                    <div class="col reporterName"></div>-->
-            <!--                    <div class="col reportNumber">№</div>-->
-            <!--                    <div class="col reportEmail"></div>-->
-            <!--                    <div class="col reportTimeData"></div>-->
-        <!--                  </div>-->
-    <!--                </div>-->
+<!--                    <div class="card-header">-->
+<!--                          <div class="row complaintInfo">-->
+<!--                                <div class="col reporterName"></div>-->
+<!--                                <div class="col reportNumber">№</div>-->
+<!--                                <div class="col reportEmail"></div>-->
+<!--                                <div class="col reportTimeData"></div>-->
+<!--                          </div>-->
+<!--                    </div>-->
 <!--                <div class="card-body reportComplaints">-->
 <!--                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, debitis! Labore praesentium adipisci ea maxime accusamus excepturi molestias inventore cum ullam, cumque necessitatibus, reiciendis, magni nihil! Fugit autem vero quod!-->
 <!--                </div>-->
@@ -116,32 +112,8 @@
             </div>
          </div>
       </div>
-<!---->
-<!---->
-<!--      модальное окно -->
-<!--      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
-<!--          <div class="modal-dialog" role="document">-->
-<!--            <div class="modal-content">-->
-<!--              <div class="modal-header">-->
-<!--                <h5 class="modal-title" id="exampleModalLabel">Ответ на жалобу</h5>-->
-<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--                  <span aria-hidden="true">&times;</span>-->
-<!--                </button>-->
-<!--              </div>-->
-<!--              <textarea name="" id="textAreaForAdminModal" rows="5"></textarea>-->
-<!--              <div class="modal-footer">-->
-<!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>-->
-<!--                <button type="button" class="btn btn-primary">Отправить</button>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!---->
-<!---->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="/views/ViewSuperAdminPage/js/bootstrap.min.js"></script>
-<script src="/views/ViewSuperAdminPage/js/scriptAnswer.js"></script>
+    <script><?php include_once ROOT ."/views/ViewSuperAdminPage/js/scriptAnswer.js"?></script>
     <script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/backInfo.js"?></script>
 </body>
 </html>
