@@ -37,9 +37,12 @@ class ModelLogin
 
                 if(password_verify($arr['password'], $admin[0]['password'])) {
 
-                    $str = $this->db->con->prepare("UPDATE `admins` SET `last_visit`= NOW() WHERE `email`='${arr['email']}'");
+                    $str = $this->db->con->prepare("UPDATE `admins` SET `last_visit`= NOW() WHERE `email`='{$arr['email']}'");
                     $str->execute();
 
+                    $action = "Вошел(а) на сайт";
+                    $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin['id']}', '{$action}')");
+                    $sql->execute();
 
                     if ($role) {
                         
@@ -64,7 +67,7 @@ class ModelLogin
 
                 if(password_verify($arr['password'], $user[0]['password'])) {
 
-                    $str = $this->db->con->prepare("UPDATE `users` SET `last_visit`= NOW() WHERE `email`='${arr['email']}'");
+                    $str = $this->db->con->prepare("UPDATE `users` SET `last_visit`= NOW() WHERE `email`='{$arr['email']}'");
                     $str->execute();
                     $this->addUserLog($user[0], 'usr');//TODO: same as admin!!!
                    echo json_encode([SITE . "/show/User"]);
@@ -88,7 +91,7 @@ class ModelLogin
         if(count($arr) == 0){
 
             $uPd = password_hash(time() . $user['email'], PASSWORD_BCRYPT);
-            $this->db->con->exec("INSERT INTO `logIn`(`user_id`, `uPd`, `role`, `table`) VALUES ( ${user['id']}, '${uPd}', ${user['role']}, '${tab}')");
+            $this->db->con->exec("INSERT INTO `logIn`(`user_id`, `uPd`, `role`, `table`) VALUES ( '{$user['id']}', '${uPd}', '{$user['role']}', '{$tab}')");
             return [$uPd, $user['id'], $tab];
 
 

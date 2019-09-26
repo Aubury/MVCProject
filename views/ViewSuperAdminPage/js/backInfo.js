@@ -102,3 +102,7 @@ setInterval(getNumAnsw, 50000);
 fillUpcontainer();
 setInterval(fillUpcontainer, 50000);
 
+getNumNewCompl();
+setInterval(getNumNewCompl, 50000);
+
+

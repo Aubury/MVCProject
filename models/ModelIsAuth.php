@@ -4,7 +4,7 @@
 class ModelIsAuth
 {
 
-    private $db, $m;
+    private $db;
 
     public  function __construct()
     {
@@ -33,7 +33,7 @@ class ModelIsAuth
     {
         $t = ($table == 'adm' || $table == 'supAdm')? 'admins': 'users';
 
-        $prep = $this->db->con->prepare("UPDATE `$t` SET `last_visit`= NOW() WHERE `id` = '{$obj['id']}'");
+        $prep = $this->db->con->prepare("UPDATE `$t` SET `last_visit`= NOW() WHERE `id` = '${obj}'");
         $prep->execute();
     }
 

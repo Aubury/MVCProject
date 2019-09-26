@@ -17,6 +17,9 @@ class ModelAnswers
         $prep = $this->db->con->prepare("UPDATE `answers` SET `id_admin`= '{$admin}',`text`= '{$obj['text']}' WHERE `id_complaint`= '{$obj['id']}' ");
         $prep->execute();
 
+        $action = "Ответил(а) на жалобу № {$obj['id']}";
+        $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+        $sql->execute();
 
         echo "Ответ на предложение(жалоба) № '${obj['id']}' добавлено";
 

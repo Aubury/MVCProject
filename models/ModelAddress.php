@@ -21,8 +21,8 @@ class ModelAddress
 
             $up = $this->db->con->prepare("UPDATE `address` SET `address`= '{$obj}' WHERE `id` = 1");
             $up->execute();
-            var_dump($obj['address']);
-            echo $obj['address'];
+//            var_dump($obj['address']);
+//            echo $obj['address'];
             echo "Изменения внесены";
 
         }else{

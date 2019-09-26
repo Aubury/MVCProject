@@ -68,6 +68,21 @@ class ModelComplaints
 
     public function totalNumNewComplaints()
     {
+        if(array_key_exists('user_id', $_COOKIE)){
+            $admin = $_COOKIE['user_id'];
+
+            $prp = $this->db->con->prepare("SELECT * FROM `admins` WHERE `id` = '{$admin}'");
+            $prp->execute();
+            $arr = $prp->fetchAll();
+
+            $lastVisit = $arr['last_visit'];
+
+            $sql = $this->db->con->prepare("SELECT * FROM `complaints_suggestions` WHERE `date` < '{$lastVisit}'");
+            $sql->execute();
+            $num = $sql->fetchAll();
+
+            echo count($num);
+        }
 
     }
 
