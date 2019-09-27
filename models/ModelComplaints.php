@@ -74,10 +74,13 @@ class ModelComplaints
             $prp = $this->db->con->prepare("SELECT * FROM `admins` WHERE `id` = '{$admin}'");
             $prp->execute();
             $arr = $prp->fetchAll();
+//            echo "<pre>";
+//            var_dump($arr);
+//            echo "</pre>";
 
-            $lastVisit = $arr['last_visit'];
+            $lastVisit = $arr[0]['last_visit'];
 
-            $sql = $this->db->con->prepare("SELECT * FROM `complaints_suggestions` WHERE `date` < '{$lastVisit}'");
+            $sql = $this->db->con->prepare("SELECT * FROM `complaints_suggestions` WHERE `date` > '{$lastVisit}'");
             $sql->execute();
             $num = $sql->fetchAll();
 
