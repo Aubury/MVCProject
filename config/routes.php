@@ -2,6 +2,7 @@
 
 return[
     "reg/addUser"    => "UserPage/AddUser/adm/supAdm",
+    "reg/delUser"    => "UserPage/DelUser/adm/supAdm",
     "reg/addVideo"   => "VideoPage/AddVideo/adm/supAdm",
     "reg/addProject" => "ProjectPage/AddProject/adm/supAdm",
     "reg/addAdmin"   => "AdminPage/AddAdmin/supAdm",

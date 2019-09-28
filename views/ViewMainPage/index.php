@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style><?php include_once ROOT . "/views/css/reset.css";
-                 include_once ROOT . "/views/ViewMainPage/css/fonts.css";
-                 include_once ROOT . "/views/ViewMainPage/css/style.css";
-                 include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
+    <style><?php include_once ROOT . "/views/css/reset.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/fonts.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
     <title>GIM</title>
 </head>
 <body>
@@ -179,8 +179,8 @@
         </div>
     </div>
 
-    <script ><?php include_once ROOT . "/views/ViewMainPage/app/app.js";
-               include_once ROOT . "/views/ViewMainPage/app/modal_certificate.js";
-               include_once ROOT . "/views/ViewMainPage/app/modalApp.js"?></script>
+    <script ><?php include_once ROOT . "/views/ViewMainPage/app/app.js"?></script>
+    <script ><?php include_once ROOT . "/views/ViewMainPage/app/modal_certificate.js"?></script>
+    <script ><?php include_once ROOT . "/views/ViewMainPage/app/modalApp.js"?></script>
 </body>
 </html>

@@ -21,6 +21,11 @@ class ControllerUserPage
         $this->m->addUser($obj);
    }
 
+   public function actionDelUser()
+   {
+       $this->m->deleteUser($_GET['email']);
+   }
+
    public function actionShowUsersPage()
    {
        $this->v->showUsersPage();

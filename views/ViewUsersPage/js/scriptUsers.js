@@ -4,10 +4,10 @@ let rex = {
     addressRex : /[a-zа-я\s,"№\0-9]/gi,
     telRex     : /[\d+\s\(\)-\+]/g,
     taxRex     : /[\d+]{10}/,
-    form : document.forms['formUsers'],
-    count : 0,
-    arrInp : document.forms['formUsers'].querySelectorAll('.form-control'),
-    buttonValue : ''
+    formAdd    : document.forms['formUsers'],
+    formDel    : document.forms['formDelUser'],
+    arrInp     : document.forms['formUsers'].querySelectorAll('.form-control')
+
 };
 //-------------------------------------------------------------------------------------------------------------
 function validate(inpArr){
@@ -26,13 +26,29 @@ function validate(inpArr){
 }
 //-----------------------------------------------------------------------------------------------------------------
 //Обработчик отправки.
- rex.form.addEventListener('submit', function (ev) {
+ rex.formDel.addEventListener('submit', function (ev) {
+
+     ev.preventDefault();
+
+    const form = rex.formDel,
+          url = `/reg/delUser?email=${form['email'].value}`;
+
+    fetch(url).then((response)=> {  return response.text();})
+            .then((text)=>{rex.formDel.nextElementSibling.innerHTML = text;
+                for(let i=0; i<rex.arrInp.length; i++){
+
+                    rex.arrInp[i].value = '';
+                }
+            })
+
+});
+//-----------------------------------------------------------------------------------------------------------------
+rex.formAdd.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
-    rex.buttonValue = ev.value;
 
-    let form = rex.form;
-    const inpArr = [
+    const form = rex.formAdd,
+          inpArr = [
         {
             inp     : form['name'],
             info    : form['name'].nextElementSibling,
@@ -124,7 +140,7 @@ function sendObj(answ){
 
 
     fetch(url).then((response)=> {  return response.text();})
-        .then((text)=>{rex.form.nextElementSibling.innerHTML = text;
+        .then((text)=>{rex.formAdd.nextElementSibling.innerHTML = text;
                      for(let i=0; i<rex.arrInp.length; i++){
 
                          rex.arrInp[i].value = '';
