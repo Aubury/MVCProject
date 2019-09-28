@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--    <link rel="stylesheet" href="/views/ViewSuperAdminPage/css/import.css">-->
-    <style><?php include_once ROOT . "/views/ViewSuperAdminPage/css/import.css"?></style>
+    <style><?php include_once ROOT . "/views/css/reset.css"?></style>
+    <style><?php include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css"?></style>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>SuperAdmin</title>
 </head>
 <body>
@@ -46,8 +47,7 @@
         </div>
       </nav>
 
-
-      <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row justify-content-center topTxt">
             <div class="col-12 reports">
                 <span>Управление видеоконтентом</span>
@@ -65,12 +65,11 @@
                     <div class="card-header reports"><h3>Добавить видео</h3></div>
                     <div class="card-body formAddUsers">
                         <form class="formAddVideo" name="formVideo" action="#" method="get">
-                            <div><input type="text" class="inpText form-control"  name="name" placeholder="Заголовок"></div>
-                            <div><input type="text" class="inpText form-control"  name="project_name" placeholder="Имя проекта"></div>
-                            <div><textarea class="inpText form-control" name="link" placeholder="Ссылка на youtube"></textarea></div>
-                            <div class="row">
-                              <div class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></div>
-                            </div>
+                            <p><input type="text" class="inpText form-control"  name="name" placeholder="Заголовок"></p>
+                            <p><input type="text" class="inpText form-control"  name="project_name" placeholder="Имя проекта"></p>
+                            <p><textarea class="inpText form-control" name="link" placeholder="Ссылка на youtube"></textarea></p>
+                            <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></p>
+
                         </form>
                         <span class="italic"></span></div>
                     </div>
@@ -126,7 +125,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/views/ViewSuperAdminPage/js/bootstrap.min.js"></script>
 <script src="/views/ViewSuperAdminPage/js/search/videos.js"></script>
-<script src="/views/ViewSuperAdminPage/js/scriptVideo.js"></script>
+<script src="/views/ViewVideoPage/js/scriptVideo.js"></script>
 
 </body>
 </html>

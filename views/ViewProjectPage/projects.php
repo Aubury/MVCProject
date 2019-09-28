@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style><?php include_once ROOT . "/views/css/reset.css";
-        include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css";
-        include_once ROOT . "/views/ViewSuperAdminPage/css/bootstrap.min.css"?></style>
+    <style><?php include_once ROOT . "/views/css/reset.css"?></style>
+    <style><?php include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css"?></style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>SuperAdmin</title>
 </head>
 <body>
@@ -64,17 +64,11 @@
         <div class="col-3 ReportInfo">
             <div class="card border-info  mb-3">
                 <div class="card-header reports"><h3>Добавление нового проекта</h3></div>
-                <div class="card-body formAddUsers">
-                    <form class="formAddAdmins" action="#" method="get" name="formProject">
-<!--                        <input type="text" class="form-control" name="name" placeholder="Заголовок">-->
-<!--                        <input type="text" class="form-control" name="subtitle" placeholder="Подзаголовок">-->
-<!--                        <input type="text" class="form-control" name="imgLink" placeholder="Ссылка на изображение">-->
-<!--                        <input type="text" class="form-control" name="budget" placeholder="Начальный бюджет">-->
-<!--                        <input type="text" class="form-control" name="noticeToProject" placeholder="Заметки">-->
+                <div class="card-body">
+                    <form  action="#" method="get" name="formProject">
 
                             <p><input type="text" class="form-control"  name="name" placeholder="Имя проекта"></p>
                             <p><input type="text" class="form-control"  name="budget" placeholder="Бюджет"></p>
-                            <p><input type="text"  class="form-control" name="raiser_money" placeholder="Собрали денег"></p>
 
                         <div class="custom-control custom-radio">
                               <input type="radio" class="custom-control-input" id="customControlValidation2" name="published" required>

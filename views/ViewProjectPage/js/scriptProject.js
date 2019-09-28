@@ -15,19 +15,11 @@ rex.form.addEventListener('submit', function (ev) {
     const inpArr = [
         {
             inp     : form['name'],
-            info    : form['name'].nextElementSibling,
             name    : 'name',
         },
         {
             inp     : form['budget'],
-            info    : form['budget'].nextElementSibling,
             name    : 'budget',
-        },
-        {
-            inp     : form['raiser_money'],
-            info    : form['raiser_money'].nextElementSibling,
-            name    : 'raiser_money',
-
         }
     ];
 
@@ -44,12 +36,17 @@ rex.form.addEventListener('submit', function (ev) {
 //-----------------------------------------------------------------------------------------------------
 function sendObj(answ) {
 
-    let str = encodeURIComponent(JSON.stringify(answ)),
-        url = `/reg/addProject?value=${str}`;
+    const fD = new FormData(),
+         url = '/reg/addProject';
 
+    fD.append('name', answ['name']);
+    fD.append('budget', answ['budget']);
 
-    fetch(url).then((response)=> {  return response.text();})
-        .then((text)=>{rex.form.nextElementSibling.innerHTML = text;
+    fetch(url, {
+        method: "POST",
+        body: fD
+    }).then(response=>  response.text())
+        .then(text=>{rex.form.nextElementSibling.innerHTML = text;
             for(let i=0; i<rex.arrInp.length; i++){
 
                 rex.arrInp[i].value = '';

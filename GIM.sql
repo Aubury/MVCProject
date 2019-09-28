@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Сен 27 2019 г., 12:16
+-- Время создания: Сен 28 2019 г., 18:01
 -- Версия сервера: 5.7.27-cll-lve
 -- Версия PHP: 7.2.7
 
@@ -52,14 +52,6 @@ CREATE TABLE `admins` (
   `last_visit` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `admins`
---
-
-INSERT INTO `admins` (`id`, `name`, `patronymic`, `surname`, `email`, `password`, `role`, `registration_date`, `last_visit`) VALUES
-(1, 'Наталья', 'Федотовна', 'Обури', 'aubury@ukr.net', '$2y$10$/83gDeUH/JJjT0CS3zu1gO44wmKDsG3RuGUpFSB.DfiXMVDHyCoiO', 1, '2019-09-23 11:38:09', '2019-09-27 09:10:11'),
-(2, 'Петер', 'Петрович', 'Петров', 'nfaubury@gmail.com', '$2y$10$7k5C773mZcxbLcdXBfQr0u7fU9yhW3N3inNuXafG4wCqB7LVuTWgS', 0, '2019-09-23 11:38:51', '2019-09-23 11:38:51');
-
 -- --------------------------------------------------------
 
 --
@@ -75,14 +67,6 @@ CREATE TABLE `answers` (
   `date_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `answers`
---
-
-INSERT INTO `answers` (`id`, `id_complaint`, `email`, `id_admin`, `text`, `date_time`) VALUES
-(1, 1, 'aubury@ukr.net', 0, '', '2019-09-25 12:33:41'),
-(2, 2, 'nfaubury@gmail.com', 0, 'Bye!', '2019-09-25 12:34:49');
-
 -- --------------------------------------------------------
 
 --
@@ -96,14 +80,6 @@ CREATE TABLE `complaints_suggestions` (
   `text` varchar(1000) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `complaints_suggestions`
---
-
-INSERT INTO `complaints_suggestions` (`id`, `user`, `email`, `text`, `date`) VALUES
-(1, 'Даша', 'aubury@ukr.net', 'Привет!', '2019-09-25 12:33:41'),
-(2, 'Наташа', 'nfaubury@gmail.com', 'Hi', '2019-09-25 12:34:49');
 
 -- --------------------------------------------------------
 
@@ -119,13 +95,6 @@ CREATE TABLE `logIn` (
   `table` varchar(50) NOT NULL,
   `timeDateLogIn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `logIn`
---
-
-INSERT INTO `logIn` (`id`, `user_id`, `uPd`, `role`, `table`, `timeDateLogIn`) VALUES
-(2, 1, '$2y$10$Zfhre31OG1koN7qtSWl3zuTxDulW1A3Xs0WxHbKP2jDK1NVwdQtrS', 1, 'supAdm', '2019-09-26 13:31:01');
 
 -- --------------------------------------------------------
 
@@ -192,14 +161,6 @@ CREATE TABLE `weWatchingYou` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `weWatchingYou`
---
-
-INSERT INTO `weWatchingYou` (`id`, `id_admin`, `actions`, `timeDate`) VALUES
-(1, 0, 'Вошел(а) на сайт', '2019-09-26 19:10:21'),
-(2, 0, 'Вошел(а) на сайт', '2019-09-26 19:13:48');
-
---
 -- Индексы сохранённых таблиц
 --
 
@@ -259,25 +220,25 @@ ALTER TABLE `weWatchingYou`
 -- AUTO_INCREMENT для таблицы `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `complaints_suggestions`
 --
 ALTER TABLE `complaints_suggestions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `logIn`
 --
 ALTER TABLE `logIn`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `projects`
@@ -301,7 +262,7 @@ ALTER TABLE `video`
 -- AUTO_INCREMENT для таблицы `weWatchingYou`
 --
 ALTER TABLE `weWatchingYou`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style><?php include_once ROOT . "/views/css/reset.css";
-        include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css";
-        include_once ROOT . "/views/ViewSuperAdminPage/css/bootstrap.min.css"?></style>
+    <style><?php include_once ROOT . "/views/css/reset.css"?></style>
+    <style><?php include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css"?></style>
+<!--    <style>--><?php //include_once ROOT . "/views/ViewSuperAdminPage/css/bootstrap.min.css"?><!--</style>-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>SuperAdmin</title>
 </head>
@@ -65,14 +66,15 @@
                 <div class="card-header reports"><h3>Создание платежа</h3></div>
                 <div class="card-body formAddUsers">
                     <form class="formAddPay" action="" method="POST">
-                        <select name="bankAccount[]" id="inputState" class="form-control">
-                            <option value="acc1">Счет 1</option> 
-                            <option value="acc2">Счет 2</option> 
-                            <option value="acc3">Счет 3</option> 
-                            <option value="acc4">Счет 4</option> 
-                        </select>   
-                        <input type="text" class="form-control" name="payment" placeholder="Сумма">   
-                        <input type="text" class="form-control" name="date" placeholder="Дата">   
+                       <p><select name="projects" id="inputState" class="form-control"></p>
+                            <option value="acc1">Проект 1</option>
+                            <option value="acc2">Проект 2</option>
+                            <option value="acc3">Проект 3</option>
+                            <option value="acc4">Проект 4</option>
+                        </select>
+                       <p><input type="text" class="form-control" name="email" placeholder="Email плательщика"></p>
+                       <p><input type="text" class="form-control" name="payment" placeholder="Сумма платежа"></p>
+                       <p><input type="text" class="form-control" name="date" placeholder="Дата платежа"></p>
                         <div class="row">
                           <div class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></div>
                         </div>

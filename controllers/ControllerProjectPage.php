@@ -16,10 +16,11 @@ class ControllerProjectPage
 
     public function actionAddProject()
     {
-        echo "Новый проект добавлен";
-        echo "<br>";
+       $obj = [
+           'name'   => $_POST['name'],
+           'budget' => $_POST['budget']
+       ];
 
-        $obj =(array)json_decode($_GET['value']);
         $this->m->addProject($obj);
     }
 

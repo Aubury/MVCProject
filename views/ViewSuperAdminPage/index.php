@@ -72,10 +72,10 @@
                      </div>
                          <div class="card-body">
                              <form name="formAnswer" action="#" class="formAddUsers">
-                                 <div><input type="text" class="form-control"  name="id" placeholder="№ Жалобы или предложения" required></div>
-                                 <div><input type="text" class="form-control"  name="email" placeholder="email" required></div>
-                                 <div><textarea class="form-control height" name="text" placeholder="Жалоба или предложения" required></textarea></div>
-                                 <div class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Подать</button></div>
+                                 <p><input type="text" class="form-control"  name="id" placeholder="№ Жалобы или предложения" required></p>
+                                 <p><input type="text" class="form-control"  name="email" placeholder="email" required></p>
+                                 <p><textarea class="form-control height" name="text" placeholder="Жалоба или предложения" required></textarea></p>
+                                 <p class="col-12 col-xl-12"><input class="btn btn-block btn-success" type="submit" value="Отправить"></p>
                              </form>
                              <span class="italic"></span>
                          </div>

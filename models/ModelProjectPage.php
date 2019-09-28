@@ -13,10 +13,14 @@ class ModelProjectPage
 
     public function addProject($arr)
     {
-        $sqlStr = "INSERT INTO `projects`(`name`, `budget`, `raiser_money`)
-                  VALUES ('{$arr['name']}','{$arr['budget']}', '{$arr['raiser_money']}')";
 
-        $this->db->con->exec($sqlStr);
+        $sqlStr = $this->db->con->prepare("INSERT INTO `projects`(`name`, `budget`) VALUES ('{$arr['name']}','{$arr['budget']}')");
+        $sqlStr->execute();
+
+        $admin = $_COOKIE['user_id'];
+        $action = "Добавил(а) проект {$arr['name']} в базу данных";
+        $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+        $sql->execute();
 
         echo "Проект добавлен";
     }

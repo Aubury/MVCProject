@@ -41,7 +41,7 @@ class ModelLogin
                     $str->execute();
 
                     $action = "Вошел(а) на сайт";
-                    $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin['id']}', '{$action}')");
+                    $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin[0]['id']}', '{$action}')");
                     $sql->execute();
 
                     if ($role) {
