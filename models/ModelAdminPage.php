@@ -25,9 +25,42 @@ class ModelAdminPage
         ];
 
         $this->db->con->exec($sqlStr);
+
+        $admin = $_COOKIE['user_id'];
+        $name = "{$arr['surname']} {$arr['name']}  {$arr['patronymic']}";
+        $action = "Админ- {$name} добавлен в базу данных";
+        $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+        $sql->execute();
+
         echo "Админ добавлен";
         //Формирование строки для регистрации пользователей и отправки паролей
         $this->sendRegistrationInfo($regD);
+    }
+
+    public function DeleteAdmin($admin)
+    {
+        $sql = $this->db->con->prepare("SELECT * FROM `admins` WHERE `email` = '{$admin}'");
+        $sql->execute();
+        $bdAdm = $sql->fetchAll();
+
+        if(count($bdAdm)>0){
+            $prp = $this->db->con->prepare("DELETE FROM `admins` WHERE `email` = '{$admin}'");
+            $prp->execute();
+
+            $admin = $_COOKIE['user_id'];
+            $name = "{$bdAdm[0]['surname']} {$bdAdm[0]['name']}  {$bdAdm[0]['patronymic']}";
+            $action = "Админ- {$name} удален из базы данных";
+            $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+            $sql->execute();
+
+
+            echo "Админ: {$bdAdm[0]['surname']} {$bdAdm[0]['name']} {$bdAdm[0]['patronymic']} удален из базы данных";
+        }else{
+
+            echo "Админа с Email- {$admin} нет в базе";
+        }
+
+
     }
     private function sendRegistrationInfo($user)
     {

@@ -26,6 +26,12 @@ class ControllerAdminPage
         $this->m->addAdmin($obj);
     }
 
+    public function actionDeleteAdmin()
+    {
+
+        $this->m->DeleteAdmin($_POST['email']);
+    }
+
 
 
 }

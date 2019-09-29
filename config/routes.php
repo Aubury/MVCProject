@@ -6,6 +6,7 @@ return[
     "reg/addVideo"   => "VideoPage/AddVideo/adm/supAdm",
     "reg/addProject" => "ProjectPage/AddProject/adm/supAdm",
     "reg/addAdmin"   => "AdminPage/AddAdmin/supAdm",
+    "reg/delAdmin"   => "AdminPage/DeleteAdmin/supAdm",
     "reg/AddMoney"   => "BudgetPage/AddToBudget/adm/supAdm",
     "reg/addComplaints" => "Complaints/AddComplaints/usr",
     "reg/addAnswer"     => "Answers/AddAnswers/adm/supAdm",
