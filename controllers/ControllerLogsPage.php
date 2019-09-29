@@ -17,4 +17,8 @@ class ControllerLogsPage
     {
         $this->v->showLogs();
     }
+    public function actionTotalLogs()
+    {
+        $this->m->TotalLogs();
+    }
 }

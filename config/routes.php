@@ -29,6 +29,7 @@ return[
     "inf/newCompl"    =>  "Complaints/NumNewComplaints/adm/supAdm",
     "inf/compAnsw"    =>  "Complaints/TotalAnswerComplaints/adm/supAdm",
     "inf/nameProjects"  =>  "BudgetPage/ShowAllProjectsName/adm/supAdm",
+    "inf/Logs"          => "LogsPage/TotalLogs/supAdm",
 
     "log/login"         => "Login/LogIn/none"
 

@@ -60,7 +60,7 @@
       </div>
   </div> 
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 infoTable">
       <table class="tableLogs table table-hover">
           <thead>
             <tr>
@@ -92,5 +92,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/views/ViewSuperAdminPage/js/bootstrap.min.js"></script>
 <script src="/views/ViewSuperAdminPage/js/search/logs.js"></script>
+<script src="/views/ViewLogsPage/js/scriptLogs.js"></script>
 </body>
 </html>
