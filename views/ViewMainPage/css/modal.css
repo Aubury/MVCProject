@@ -84,6 +84,7 @@ input[placeholder]{
 }
 span.italic{
     text-align: center !important;
+    font-size: 1.2em;
 }
 pre{
     text-align: center !important;

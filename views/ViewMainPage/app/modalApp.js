@@ -50,14 +50,19 @@ function sendObj(answ) {
         credentials: 'same-origin', // include, *same-origin, omit
     })
         .then(e => e.json())
-      // .then(text => console.log('Request successful', text))
-       // .catch(error => console.log('Request failed', error));
          .then(data => {
-             //set cookie with data[1]
-             setCookie('user_id', data[1][1], 1);
-             setCookie('uPd', data[1][0], 1);
-             setCookie('table', data[1][2], 1);
-             window.location.href = `http://${data[0]}`;
+             if(data.length == 2){
+                 //set cookie with data[1]
+                 setCookie('user_id', data[1][1], 1);
+                 setCookie('uPd', data[1][0], 1);
+                 setCookie('table', data[1][2], 1);
+                 window.location.href = `http://${data[0]}`;
+             }else {
+
+                 obj.form.nextElementSibling.innerHTML = data;
+             }
+
+
              
          });
 

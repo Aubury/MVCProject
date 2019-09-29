@@ -11,4 +11,8 @@
 	   
 //================================================	
     *****   ADMINS   *****   
-		
+		login   - aubury@ukr.net   - superAdmin
+		pasword - 674e729f9a
+//------------------------------------------------		
+        login   - nfaubury@gmail.com   - admin
+		pasword - 

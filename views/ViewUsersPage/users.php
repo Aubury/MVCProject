@@ -41,7 +41,7 @@
               <a class="nav-link" href="/show/Address">Адрес и номер</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/views/ViewSuperAdminPage/pages/logs.html">Logs</a>
+              <a class="nav-link" href="/show/Logs">Logs</a>
             </li>
           </ul>
           <button class="btn btn-success">Выйти</button>

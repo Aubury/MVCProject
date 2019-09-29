@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style><?php include_once ROOT . "/views/css/reset.css";
-        include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css";
-        include_once ROOT . "/views/ViewSuperAdminPage/css/bootstrap.min.css"?></style>
+    <style><?php include_once ROOT . "/views/css/reset.css" ?></style>
+    <style><?php include_once ROOT . "/views/ViewSuperAdminPage/css/style.css" ?></style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>SuperAdmin</title>
 </head>
@@ -40,7 +40,7 @@
                   <a class="nav-link" href="/show/Address">Адрес и номер</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="/views/ViewSuperAdminPage/pages/logs.html">Logs</a>
+                  <a class="nav-link" href="/show/Logs">Logs</a>
               </li>
           </ul>
           <button class="btn btn-success">Выйти</button>

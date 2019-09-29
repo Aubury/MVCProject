@@ -28,11 +28,8 @@ class ModelLogin
         $user  = $this->dbSelect($arr,'email', 'users');
         $role = $admin[0]['role'];
 
-        if(count($admin)<0 || count($user)<0){
+        if(count($admin)>0 || count($user)>0){
 
-            return;
-
-        }else{
             if(count($admin)>0){
 
                 if(password_verify($arr['password'], $admin[0]['password'])) {
@@ -45,22 +42,22 @@ class ModelLogin
                     $sql->execute();
 
                     if ($role) {
-                        
-                      echo json_encode([
+
+                        echo json_encode([
                             SITE . "/show/superAdmin",
                             $this->addUserLog($admin[0], 'supAdm')]);
 
 
                     } else {
-                       ;
-                       echo json_encode([
+                        ;
+                        echo json_encode([
                             SITE . "/show/Panel"],
                             $this->addUserLog($admin[0], 'adm'));
                     }
 
                 }else{
 
-                    return;
+                    echo json_encode("Проверьте введенные данные");
                 }
 
             }else{
@@ -70,15 +67,21 @@ class ModelLogin
                     $str = $this->db->con->prepare("UPDATE `users` SET `last_visit`= NOW() WHERE `email`='{$arr['email']}'");
                     $str->execute();
                     $this->addUserLog($user[0], 'usr');//TODO: same as admin!!!
-                   echo json_encode([SITE . "/show/User"]);
+                    echo json_encode([SITE . "/show/User"]);
 
 
                 }else{
 
-                    return;
+                    echo json_encode("Проверьте введенные данные");
+
                 }
 
             }
+
+        }else{
+
+            echo json_encode("Такого пользователя нет");
+
         }
 
     }
