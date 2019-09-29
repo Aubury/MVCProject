@@ -15,12 +15,23 @@ class ControllerBudgetPage
 
    public function actionAddToBudget()
    {
-       $this->m->addMoney();
+       $obj = [
+           'project_name' => $_POST['project_name'],
+           'email_user'   => $_POST['email_user'],
+           'amount'       => $_POST['amount'],
+           'timeDate'     => $_POST['timeDate']
+       ];
+//       var_dump($obj);
+       $this->m->addMoney($obj);
    }
 
    public function actionShowBudgetPage()
    {
        $this->v->showBudgetPage();
    }
+    public function actionShowAllProjectsName()
+    {
+        $this->m->ShowAllProjectsName();
+    }
 
 }

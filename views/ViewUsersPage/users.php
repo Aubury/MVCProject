@@ -75,6 +75,8 @@
                         <span class="italic"></span></p>
                     <p><input type="text" class="inpText form-control" name="project_name"  placeholder="Проект">
                         <span class="italic"></span></p>
+                    <p><input type="text" class="inpText form-control" name="share_investment"  placeholder="Сумма инвестиции">
+                        <span class="italic"></span></p>
                     <p><input type="text" class="inpText form-control" name="address"  placeholder="Адрес">
                         <span class="italic"></span></p>
                     <p><input type="tel" class="inpText form-control" name="telephon" id="phone"  placeholder="+7 (123) 456-78-90"

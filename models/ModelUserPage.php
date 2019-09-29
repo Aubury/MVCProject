@@ -24,8 +24,9 @@ class ModelUserPage
 
            $passH = password_hash($arr['password'], PASSWORD_BCRYPT);
 
-           $sqlStr = "INSERT INTO `users`(`name`, `patronymic`, `surname`, `email`, `password`, `project_name`, `address`, `telephon`, `tax_code`)
-                  VALUES ('{$arr['name']}','{$arr['patronymic']}', '{$arr['surname']}','{$arr['email']}','{$passH}','{$arr['project_name']}','{$arr['address']}','{$arr['telephon']}','{$arr['tax_code']}')";
+           $sqlStr = "INSERT INTO `users`(`name`, `patronymic`, `surname`, `email`, `password`, `project_name`, `share_investment`, `address`, `telephon`, `tax_code`)
+                  VALUES ('{$arr['name']}','{$arr['patronymic']}', '{$arr['surname']}','{$arr['email']}','{$passH}','{$arr['project_name']}', '{$arr['share_investment']}', '{$arr['address']}','{$arr['telephon']}','{$arr['tax_code']}')";
+
 
            $regD = [
                'email' => $arr['email'],
@@ -36,6 +37,12 @@ class ModelUserPage
            echo "Пользователь добавлен";
            //Формирование строки для регистрации пользователей и отправки паролей
            $this->sendRegistrationInfo($regD);
+
+           $admin = $_COOKIE['user_id'];
+           $usr = $arr['name']." ".$arr['patronymic']." ".$arr['surname'];
+           $action = "Добавил(а) участника {$usr} к проекту {$arr['project_name']}";
+           $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+           $sql->execute();
 
        }
    }

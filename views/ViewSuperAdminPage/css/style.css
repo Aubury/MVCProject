@@ -89,6 +89,9 @@ button{
 select{
     margin-bottom: 6px;
 }
+option{
+    color: black;
+}
 .italic{
     font-style: italic;
 
@@ -109,5 +112,6 @@ nav{
 span{
     text-align: center;
 }
+
 
 

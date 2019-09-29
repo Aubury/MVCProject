@@ -1,0 +1,14 @@
+     *****    USERS   *****
+
+	   login   -  obn@ukr.net 
+       pasword - 199bfa78aa
+//------------------------------------
+       login   - petrov@petr.com
+       pasword - cc61b055c0
+//------------------------------------
+       login   - poliak@ pol.com
+ 	   pasword - c95a08b893	
+	   
+//================================================	
+    *****   ADMINS   *****   
+		

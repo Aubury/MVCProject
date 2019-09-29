@@ -20,12 +20,13 @@ return[
     "show/User"         => "PersonalPage/ShowPersonalPage/usr",
     "show/Panel"        => "ControlPanel/ShowControlPanel/adm",
     "show/Address"      => "Address/ShowPanelAddress/supAdm",
-    "show/BuildStartPage" => "StartPage/BuildStartPage",
+    "show/BuildStartPage" => "StartPage/BuildStartPage/none",
 
-    "inf/compl"      =>  "Complaints/NumComplaints/adm/supAdm",
-    "inf/answ"       =>  "Answers/NumAnswers/adm/supAdm",
-    "inf/newCompl"   =>  "Complaints/NumNewComplaints/adm/supAdm",
-    "inf/compAnsw"  =>  "Complaints/TotalAnswerComplaints/adm/supAdm",
+    "inf/compl"       =>  "Complaints/NumComplaints/adm/supAdm",
+    "inf/answ"        =>  "Answers/NumAnswers/adm/supAdm",
+    "inf/newCompl"    =>  "Complaints/NumNewComplaints/adm/supAdm",
+    "inf/compAnsw"    =>  "Complaints/TotalAnswerComplaints/adm/supAdm",
+    "inf/nameProjects"  =>  "BudgetPage/ShowAllProjectsName/adm/supAdm",
 
     "log/login"         => "Login/LogIn/none"
 

@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style><?php include_once ROOT . "/views/css/reset.css"?></style>
-    <style><?php include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css"?></style>
-<!--    <style>--><?php //include_once ROOT . "/views/ViewSuperAdminPage/css/bootstrap.min.css"?><!--</style>-->
+    <style><?php include_once ROOT . "/views/css/reset.css" ?></style>
+    <style><?php include_once ROOT . "/views/ViewSuperAdminPage/css/style.css" ?></style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>SuperAdmin</title>
@@ -65,21 +64,18 @@
             <div class="card border-info  mb-3">
                 <div class="card-header reports"><h3>Создание платежа</h3></div>
                 <div class="card-body formAddUsers">
-                    <form class="formAddPay" action="" method="POST">
-                       <p><select name="projects" id="inputState" class="form-control"></p>
-                            <option value="acc1">Проект 1</option>
-                            <option value="acc2">Проект 2</option>
-                            <option value="acc3">Проект 3</option>
-                            <option value="acc4">Проект 4</option>
+                    <form name="formAddPay" action="" method="POST">
+                       <p><select name="project_name" id="inputState" class="form-control"></p>
+                            <option>Выберите проект</option>
                         </select>
-                       <p><input type="text" class="form-control" name="email" placeholder="Email плательщика"></p>
-                       <p><input type="text" class="form-control" name="payment" placeholder="Сумма платежа"></p>
-                       <p><input type="text" class="form-control" name="date" placeholder="Дата платежа"></p>
+                       <p><input type="text" class="form-control" name="email_user" placeholder="Email плательщика"></p>
+                       <p><input type="text" class="form-control" name="amount" placeholder="Сумма платежа"></p>
+                       <p><input type="text" class="form-control" name="timeDate" placeholder="Дата платежа( гггг-мм-дд )"></p>
                         <div class="row">
                           <div class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></div>
                         </div>
-        
                     </form>
+                    <span class="italic"></span>
                 </div>
               </div>
         </div>
@@ -127,5 +123,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/views/ViewSuperAdminPage/js/bootstrap.min.js"></script>
 <script src="/views/ViewSuperAdminPage/js/search/finances.js"></script>
+<Script src="/views/ViewBudgetPage/js/scriptFinances.js"></Script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 let rex = {
     form : document.forms['formProject'],
-    arrInp : document.forms['formProject'].querySelectorAll('.form-control'),
+    arrInp : document.forms['formProject'].querySelectorAll('.form-control')
+
 };
 
 //-----------------------------------------------------------------------------------------------------------------
@@ -53,3 +54,26 @@ function sendObj(answ) {
             }
         });
 }
+// //--------------------------------------------------------------------------------------------------
+//
+// const addOptions = function addOptions(arr) {
+//
+//     const select = rex.select;
+//     arr.forEach( el => {
+//
+//         let option = document.createElement("option");
+//             option.value = el.name;
+//             select.appendChild(option);
+//     })
+// }
+// //--------------------------------------------------------------------------------------------------
+// const getNamesProjects = function getNamesProjects() {
+//
+//     const url = '/inf/nameProjects';
+//
+//     fetch(url).then(response => response.json())
+//               .then(arr => addOptions(arr));
+// }
+// //--------------------------------------------------------------------------------------------------
+// getNamesProjects();
+// setInterval(getNamesProjects,50000);
