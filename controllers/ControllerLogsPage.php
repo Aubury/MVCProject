@@ -7,7 +7,7 @@ class ControllerLogsPage
 
     public function __construct()
     {
-        include_once ROOT . "/views/ViewLogsPage/logs.php";
+        include_once ROOT . "/views/ViewLogsPage/ViewLogsPage.php";
         include_once ROOT . "/models/ModelLogsPage.php";
         $this->v = new ViewLogsPage();
         $this->m = new ModelLogsPage();
@@ -17,7 +17,7 @@ class ControllerLogsPage
     {
         $this->v->showLogs();
     }
-    public function actionTotalLogs()
+    public function actionShowTotalLogs()
     {
         $this->m->TotalLogs();
     }

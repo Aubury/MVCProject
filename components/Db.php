@@ -3,14 +3,14 @@
 
 class Db
 {
-    private $servername, $username, $password, $dbname, $opt;
+    private $servername, $username, $password, $dbname;
     public $con;
     public function __construct()
     {
         $this->servername = "localhost";
-        $this->username = "newprojectDB";
-        $this->password = "0_newprojectDB";
-        $this->dbname = "aubury";
+        $this->username = "qvhklqzo";
+        $this->password = "-4[RrA02zvhD7B";
+        $this->dbname = "qvhklqzo_GIM";
 
 
      try{

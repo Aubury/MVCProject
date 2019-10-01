@@ -1,7 +1,7 @@
 <?php
 
 define('ROOT', $_SERVER['DOCUMENT_ROOT']);
-define('SITE','newprojectteam.zzz.com.ua');
+define('SITE','http://vinash.netxi.in');
 
 include_once ROOT . "/components/Router.php";
 

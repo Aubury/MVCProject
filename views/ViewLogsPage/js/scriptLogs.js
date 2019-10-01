@@ -1,7 +1,14 @@
 const obj = {
     infoBlock : document.querySelector('.infoTable')
 };
-const addToTable = function(arr){
+const getInf = function getInfoLogs() {
+
+    fetch('/inf/Logs').then(d => d.json())
+        // .then(d=> console.log(d));
+        .then( d => creatTable(d));
+}
+
+const creatTable = function creatActionTable(arr){
 
     const table = document.createElement('table');
           table.classList.add('table', 'table-hover');
@@ -15,18 +22,15 @@ const addToTable = function(arr){
     //Формирую строки
     let trs = "<tr><th>Администратор</th><th>Действие</th><th>Дата</th></tr>";
     arr.forEach(el=>{
-        trs = `${trs}<tr><td>${el.id}</td><td>${el.text}</td><td>${el.date}</td></tr>`;
+        trs = `${trs}<tr><td>${el[0]}</td><td>${el[1]}</td><td>${el[2]}</td></tr>`;
     });
 
     table.innerHTML = trs;
 
     obj.infoBlock.appendChild(table);
 }
-const getInf = function getInfoLogs() {
 
-    fetch('/inf/Logs').then(respons => respons.json() )
-                           .then( data => addToTable(data));
-}
+
 
 getInf();
-setInterval(getInf, 100000);
+setInterval(getInf, 1000000);

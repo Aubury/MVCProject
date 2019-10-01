@@ -104,13 +104,36 @@ nav{
 }
 nav{
     height: 5em;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 .btnFont{
     font-size: 2em;
 }
 span{
     text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid #c6c6c6;
+
+}
+th{
+    background-color: #e2e2e2;
+    border: 1px solid #c6c6c6;
+    min-height: 50px;
+    text-align: center !important;
+    font-weight: 600;
+
+}
+td{
+    border: 1px solid #c6c6c6;
+    min-height: 50px;
+
+}
+tr{
+    min-height: 50px;
 }
 
 

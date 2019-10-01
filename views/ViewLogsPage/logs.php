@@ -61,27 +61,7 @@
   </div> 
   <div class="row">
     <div class="col-12 infoTable">
-      <table class="tableLogs table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Дата</th>
-              <th scope="col">Администратор</th>
-              <th scope="col">Действие</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>24.05.67</td>
-              <td>Adolf Hitler</td>
-              <td>Occupied Poland</td>
-            </tr>
-            <tr>
-              <td>23.02.11</td>
-              <td>Joseph Gebbels</td>
-              <td>Propagandized fascism</td>
-            </tr>
-          </tbody>
-        </table>
+
   </div>
   </div>
 </div>

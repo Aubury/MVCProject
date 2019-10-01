@@ -26,7 +26,9 @@ class ModelLogsPage
                     $value['timeDate']
                 ]);
         }
-        return json_encode($allLogs);
+        echo json_encode($allLogs);
+
+
     }
 
     private function getName($id)
@@ -34,7 +36,7 @@ class ModelLogsPage
         $adprp = $this->db->con->prepare("SELECT `name`, `patronymic`, `surname` FROM `admins` WHERE `id`={$id}");
         $adprp->execute();
         $adm = $adprp->fetchAll();
-
-        return "{$adm[0]['surname']} {$adm[0]['name']}  {$adm[0]['patronymic']}";
+        $name = "{$adm[0]['surname']} {$adm[0]['name']}  {$adm[0]['patronymic']}";
+        return $name;
     }
 }
