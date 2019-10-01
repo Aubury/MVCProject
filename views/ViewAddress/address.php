@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style><?php include_once ROOT . "/views/css/reset.css" ?></style>
-    <style><?php include_once ROOT . "/views/ViewSuperAdminPage/css/style.css" ?></style>
+    <style><?php include_once ROOT . "/views/css/reset.css"?></style>
+    <style><?php include_once ROOT . "/views/css/style.css" ?></style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>SuperAdmin</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img class="logo" src="/views/ViewSuperAdminPage/img/logo.png" alt="logo"></a>
+        <a class="navbar-brand" href="#"><img class="logo" src="/views/img/logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -106,8 +108,9 @@
               </div>
       </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/views/ViewSuperAdminPage/js/bootstrap.min.js"></script>
-    <script src="/views/ViewAddress/js/scriptAddress.js"></script>
+<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/bootstrap.min.js"?></script>
+<script><?php include_once ROOT . "/views/ViewAddress/js/scriptAddress.js"?></script>
+<script><?php include_once ROOT . "/views/app/main.js"?></script>
+
 </body>
 </html>

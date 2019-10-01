@@ -73,4 +73,32 @@ class ModelUserPage
             $headers = "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: _mainaccount@vinash.netxi.in\r\n";
             mail($to, $subject, $msg, $headers);
     }
+
+    public function TotalInformationUsers()
+    {
+       $prp = $this->db->con->prepare("SELECT * FROM `users` ORDER BY `users`.`project_name` ASC");
+       $prp->execute();
+       $mass = $prp->fetchAll();
+
+       $massUsers = [];
+
+       foreach ($mass as $value){
+
+           array_push($massUsers, [
+               $value['surname'],
+               $value['name'],
+               $value['patronymic'],
+               $value['telephon'],
+               $value['email'],
+               $value['address'],
+               $value['tax_code'],
+               $value['project_name'],
+               $value['share_investment'],
+               $value['invest_amount'],
+               $value['payment_time']
+           ]);
+       }
+      echo json_encode($massUsers);
+
+    }
 }

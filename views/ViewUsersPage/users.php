@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style><?php include_once ROOT . "/views/css/reset.css"?></style>
-    <style><?php include_once  ROOT . "/views/ViewSuperAdminPage/css/style.css"?></style>
+    <style><?php include_once ROOT . "/views/css/style.css" ?></style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>SuperAdmin</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img class="logo" src="/views/ViewSuperAdminPage/img/logo.png" alt="logo"></a>
+        <a class="navbar-brand" href="#"><img class="logo" src="/views/img/logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,10 +55,9 @@
           <span>Участники</span>
          </div>
   </div>
-  <div class="row">
-      <div class="col-4 col-lg-2 offset-lg-10">
-            <input class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
-      </div>
+  <div class="row justify-content-end offset-lg-4">
+      <button type="button" class="btn btn-info print">Печать</button>
+      <input class="mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
   </div>
   <div class="row justify-content-around">
     <div class="col-3 ReportInfo">
@@ -98,81 +98,21 @@
                 <form name="formDelUser" action="#" method="get">
                     <p><input type="email" class="inpText form-control" name="email" placeholder="Email">
                         <span class="italic"></span></p>
-<!--                    <div class="row">-->
                         <p class="col-12 col-xl-12"><input class="btn btn-block btn-danger" type="submit" value="Удалить"></p>
-<!--                    </div>-->
                 </form>
                 <span class="talic"></span>
             </div>
           </div>
     </div>
-    <div class="col-8">
-        <table class="tableUsers table table-hover">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col">ФИО</th>
-                <th scope="col">Адрес</th>
-                <th scope="col">Телефон</th>
-                <th scope="col">Email</th>
-                <th scope="col">ИНН</th>
-                <th scope="col">Сумма</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><i class="material-icons">info</i></td>
-                <td><i class="material-icons">create</i></td>
-                <td>Адольф  Степанович</td>
-                <td>ул. Пушкина, дом. Колотушкина</td>
-                <td>13371488</td>
-                <td>ihatejews@thirdreich.de</td>
-                <td>1939</td>
-                <td>100000$</td>
-              </tr>
-              <tr>
-                  <td><i class="material-icons">info</i></td>
-                  <td><i class="material-icons">create</i></td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-              </tr>
-              <tr>
-                  <td><i class="material-icons">info</i></td>
-                  <td><i class="material-icons">create</i></td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-              </tr>
-              <tr>
-                  <td><i class="material-icons">info</i></td>
-                  <td><i class="material-icons">create</i></td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-              </tr>
-              
-              
-            </tbody>
-          </table>
+    <div class="col-9 tableUsers">
+        <table class="table table-hover" id="tableUsers"></table>
+
     </div>
-
   </div>
-
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!--<script src="/views/ViewSuperAdminPage/js/bootstrap.min.js"></script>-->
-<script src="/views/ViewSuperAdminPage/js/search/users.js"></script>
-<script src="/views/ViewUsersPage/js/scriptUsers.js"></script>
+<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/search/users.js"?></script>
+<script><?php include_once ROOT . "/views/ViewUsersPage/js/scriptUsers.js"?></script>
+<script><?php include_once ROOT . "/views/app/main.js"?></script>
+
 </body>
 </html>

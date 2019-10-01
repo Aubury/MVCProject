@@ -30,6 +30,10 @@ class ControllerUserPage
    {
        $this->v->showUsersPage();
    }
+   public function actionTotalUsers()
+   {
+       $this->m->TotalInformationUsers();
+   }
 
 
 }

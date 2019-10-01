@@ -123,17 +123,22 @@ th{
     background-color: #e2e2e2;
     border: 1px solid #c6c6c6;
     min-height: 50px;
-    text-align: center !important;
+    /*text-align: center !important;*/
     font-weight: 600;
 
 }
 td{
     border: 1px solid #c6c6c6;
     min-height: 50px;
+    vertical-align: middle !important;
 
 }
 tr{
     min-height: 50px;
+}
+.btn{
+    width: 10em;
+    margin-right: 5px;
 }
 
 
