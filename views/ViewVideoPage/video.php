@@ -78,49 +78,7 @@
                     </div>
             <div class="col-9">
                 <div class="row justify-content-around tableVideos"></div>
-<!--              <table class="tableVideos table table-hover">-->
-<!--                  <thead>-->
-<!--                    <tr>-->
-<!--                      <th scope="col"></th>-->
-<!--                      <th scope="col">Название</th>-->
-<!--                      <th scope="col">Название проекта</th>-->
-<!--                      <th scope="col">Дата</th>-->
-<!--                      <th scope="col">Опубликовано</th>-->
-<!--                    </tr>-->
-<!--                  </thead>-->
-<!--                  <tbody>-->
-<!--                    <tr>-->
-<!--                      <td><i class="material-icons">create</i></td>-->
-<!--                      <td>1939</td>-->
-<!--                      <td>100000$</td>-->
-<!--                      <td>1939</td>-->
-<!--                      <td>Нет</td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td><i class="material-icons">create</i></td>-->
-<!--                        <td>@mdo</td>-->
-<!--                        <td>@mdo</td>-->
-<!--                        <td>1939</td>-->
-<!--                      <td>Нет</td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td><i class="material-icons">create</i></td>-->
-<!--                        <td>@mdo</td>-->
-<!--                        <td>@mdo</td>-->
-<!--                        <td>1939</td>-->
-<!--                        <td>Да</td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <td><i class="material-icons">create</i></td>-->
-<!--                        <td>@mdo</td>-->
-<!--                        <td>@mdo</td>-->
-<!--                        <td>1939</td>-->
-<!--                      <td>Нет</td>-->
-<!--                    </tr>-->
-<!--                    -->
-<!--                    -->
-<!--                  </tbody>-->
-<!--                </table>-->
+
             </div>
         </div>
       </div>

@@ -29,10 +29,23 @@ rex.form.addEventListener('submit', function (ev) {
         }
     ];
 
-    sendObj(inpArr)
+    let answ = {};
+
+    inpArr.forEach((el) => {
+        (el.name == "link") ? answ[el.name] = strIframe(el.inp.value, 'width="560" height="315"')
+                              :answ[el.name] = el.inp.value;
+    });
+
+    sendObj(answ)
 
 });
+//---------------------------------------------------------------------------------------------
+const strIframe = function deletePartOfString(str, pattern) {
 
+    let newStr = str.replace(pattern,'');
+    return newStr;
+
+}
 //---------------------------------------------------------------------------------------------
 function sendObj(answ) {
 
@@ -46,6 +59,7 @@ function sendObj(answ) {
 
                     rex.arrInp[i].value = '';
                 }
+                getVideos();
             });
 }
 //---------------------------------------------------------------------------------------------
@@ -78,3 +92,4 @@ const getVideos = function getVideos(){
         .then( arr => videosTable(arr));
 }
 getVideos();
+
