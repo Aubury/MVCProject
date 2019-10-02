@@ -25,5 +25,10 @@ class ControllerVideoPage
         $this->v->showVideoPage();
     }
 
+    public function actionTotalVideo()
+    {
+        $this->m->TotalVideo();
+    }
+
 
 }

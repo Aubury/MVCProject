@@ -31,6 +31,7 @@ return[
     "inf/nameProjects"  => "BudgetPage/ShowAllProjectsName/adm/supAdm",
     "inf/Logs"          => "LogsPage/ShowTotalLogs/supAdm",
     "inf/users"         => "UserPage/TotalUsers/adm/supAdm",
+    "inf/videos"        => "VideoPage/TotalVideo/adm/supAdm",
 
     "log/login"         => "Login/LogIn/none"
 

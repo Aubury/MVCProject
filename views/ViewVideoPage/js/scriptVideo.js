@@ -1,22 +1,9 @@
 let rex = {
     form : document.forms['formVideo'],
-    count : 0,
     arrInp : document.forms['formVideo'].querySelectorAll('.inpText'),
+    table  : document.querySelector('.tableVideos')
 };
-//-------------------------------------------------------------------------------------------------------------
-function validate(inpArr){
-
-    let answ = {};
-
-    inpArr.forEach((el) => {
-        answ[el.name] = el.inp.value;
-
-    });
-
-        sendObj(answ);
-
-};
-//-----------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
 //Обработчик отправки.
 rex.form.addEventListener('submit', function (ev) {
 
@@ -42,11 +29,11 @@ rex.form.addEventListener('submit', function (ev) {
         }
     ];
 
-    validate(inpArr);
+    sendObj(inpArr)
 
 });
 
-//-----------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------
 function sendObj(answ) {
 
     let str = encodeURIComponent(JSON.stringify(answ)),
@@ -61,3 +48,45 @@ function sendObj(answ) {
                 }
             });
 }
+//---------------------------------------------------------------------------------------------
+
+const videosTable = function createVideoTable(arr){
+
+    let answer = '';
+
+    arr.forEach( el =>{
+        answer += `<div class="card align-self-end" style="width: 18rem;">
+           <h5 class="h5">${el[1]}</h5>
+           <div class="iframe">${el[3]}</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span>Id</span> - ${el[0]}</li>
+            <li class="list-group-item"><span>Проект</span> - ${el[2]}</li>
+            <li class="list-group-item"><span>Добавлено</span> - ${el[4]}</li>
+          </ul>
+        </div>`;
+
+    });
+
+    // arr.forEach( el => {
+    //     answer += `<div class="card" style="width: 18rem;">
+    //   <h5 class="card-title">${el[1]}</h5>
+    //   <p>${el[3]}</p>
+    //   <div class="card-body">
+    //        <p class="card-text"><span>Id</span> - ${el[0]}</p>
+    //        <p class="card-text"><span>Проект</span> - ${el[2]}</p>
+    //        <p class="card-text"><span>Добавлено</span> - ${el[4]}</p>
+    //    </div>
+    // </div>`;
+    // });
+
+    rex.table.innerHTML = answer;
+
+}
+//---------------------------------------------------------------------------------------------
+const getVideos = function getVideos(){
+
+    fetch('/inf/videos').then( inf => inf.json())
+       // .then(arr=>console.log(arr));
+        .then( arr => videosTable(arr));
+}
+getVideos();
