@@ -67,17 +67,6 @@ const videosTable = function createVideoTable(arr){
 
     });
 
-    // arr.forEach( el => {
-    //     answer += `<div class="card" style="width: 18rem;">
-    //   <h5 class="card-title">${el[1]}</h5>
-    //   <p>${el[3]}</p>
-    //   <div class="card-body">
-    //        <p class="card-text"><span>Id</span> - ${el[0]}</p>
-    //        <p class="card-text"><span>Проект</span> - ${el[2]}</p>
-    //        <p class="card-text"><span>Добавлено</span> - ${el[4]}</p>
-    //    </div>
-    // </div>`;
-    // });
 
     rex.table.innerHTML = answer;
 
@@ -86,7 +75,6 @@ const videosTable = function createVideoTable(arr){
 const getVideos = function getVideos(){
 
     fetch('/inf/videos').then( inf => inf.json())
-       // .then(arr=>console.log(arr));
         .then( arr => videosTable(arr));
 }
 getVideos();

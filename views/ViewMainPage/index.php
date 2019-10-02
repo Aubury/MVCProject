@@ -17,7 +17,7 @@
             <section class="left__header__content">
                 <h2 class="none">h2</h2>
                 <div class="logo">
-                    <img src="/views/ViewMainPage/img/logo.png" alt="logo__company">
+                    <img src="/views/img/logo.png" alt="logo__company">
                 </div>
                 <div class="companySlogan">
                     <p>Главное</p>
@@ -58,19 +58,19 @@
                     </p>
                 </div>
                 <div class="about__us__right__content">
-                    <img src="/views/ViewMainPage/img/page.jpg" class="certificate" alt="certificate" title="свидетельство">
-                    <img src="/views/ViewMainPage/img/dream.jpg" alt="">
+                    <img src="/views/img/page.jpg" class="certificate" alt="certificate" title="свидетельство">
+                    <img src="/views/img/dream.jpg" alt="">
                 </div>
                 <div class="video">
-                    <img src="/views/ViewMainPage/img/video.jpg" alt="">
-                    <img src="/views/ViewMainPage/img/video.jpg" alt="">
+                    <img src="/views/img/video.jpg" alt="">
+                    <img src="/views/img/video.jpg" alt="">
                 </div>
             </section>
             <section class="progect">
                 <h2 class="none">progects</h2>
                 <div class="progect__left__content">
                     <div class="galery">
-                        <img src="/views/ViewMainPage/img/car.jpg" alt="">
+                        <img src="/views/img/car.jpg" alt="">
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum doloremque ratione. Consectetur hic, consequuntur veniam odit est temporibus tempora praesentium quae, ratione quo totam mollitia eos possimus expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi officia omnis dolore corporis molestiae placeat recusandae numquam, itaque quos asperiores minima rem, autem ullam, quis fugiat mollitia quasi maiores ipsam!
@@ -82,22 +82,22 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat, praesentium ipsam odio quo ut inventore ratione dolor eius officiis nihil optio debitis quae velit voluptatibus esse, in nemo necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quidem dolorum sit aperiam dolore expedita ab ea fugiat laudantium aut explicabo a deserunt, nesciunt ut animi iure. Nobis, voluptates impedit!
                     </p>
                     <div class="galery">
-                        <img src="/views/ViewMainPage/img/car.jpg" alt="">
-                        <img src="/views/ViewMainPage/img/car.jpg" alt="">
-                        <img src="/views/ViewMainPage/img/car.jpg" alt="">
-                        <img src="/views/ViewMainPage/img/car.jpg" alt="">
+                        <img src="/views/img/car.jpg" alt="">
+                        <img src="/views/img/car.jpg" alt="">
+                        <img src="/views/img/car.jpg" alt="">
+                        <img src="/views/img/car.jpg" alt="">
                     </div>
                 </div>
                 <div class="video">
-                        <img src="/views/ViewMainPage/img/video.jpg" alt="">
-                        <img src="/views/ViewMainPage/img/video.jpg" alt="">
+                        <img src="/views/img/video.jpg" alt="">
+                        <img src="/views/img/video.jpg" alt="">
                     </div>
             </section>
             <section class="progect">
                 <h2 class="none">h2</h2>
                 <div class="progect__left__content">
                     <div class="galery">
-                        <img src="/views/ViewMainPage/img/house.jpg" alt="">
+                        <img src="/views/img/house.jpg" alt="">
                     </div>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum doloremque ratione. Consectetur hic, consequuntur veniam odit est temporibus tempora praesentium quae, ratione quo totam mollitia eos possimus expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi officia omnis dolore corporis molestiae placeat recusandae numquam, itaque quos asperiores minima rem, autem ullam, quis fugiat mollitia quasi maiores ipsam!
@@ -109,29 +109,29 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat, praesentium ipsam odio quo ut inventore ratione dolor eius officiis nihil optio debitis quae velit voluptatibus esse, in nemo necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quidem dolorum sit aperiam dolore expedita ab ea fugiat laudantium aut explicabo a deserunt, nesciunt ut animi iure. Nobis, voluptates impedit!
                     </p>
                     <div class="galery">
-                        <img src="/views/ViewMainPage/img/house.jpg" alt="">
-                        <img src="/views/ViewMainPage/img/house.jpg" alt="">
-                        <img src="/views/ViewMainPage/img/house.jpg" alt="">
-                        <img src="/views/ViewMainPage/img/house.jpg" alt="">
+                        <img src="/views/img/house.jpg" alt="">
+                        <img src="/views/img/house.jpg" alt="">
+                        <img src="/views/img/house.jpg" alt="">
+                        <img src="/views/img/house.jpg" alt="">
                     </div>
                 </div>
                 <div class="video">
-                        <img src="/views/ViewMainPage/img/video.jpg" alt="">
-                        <img src="/views/ViewMainPage/img/video.jpg" alt="">
+                        <img src="/views/img/video.jpg" alt="">
+                        <img src="/views/img/video.jpg" alt="">
                     </div>
             </section>
             <section class="photoGalery">
                 <h2 class="none">h2</h2>
-                <img src="/views/ViewMainPage/img/house.jpg" alt="">
-                <img src="/views/ViewMainPage/img/house.jpg" alt="">
-                <img src="/views/ViewMainPage/img/house.jpg" alt="">
+                <img src="/views/img/house.jpg" alt="">
+                <img src="/views/img/house.jpg" alt="">
+                <img src="/views/img/house.jpg" alt="">
             </section>
             <section class="video">
                 <h2 class="none">h2</h2>
-                <img src="/views/ViewMainPage/img/video.jpg" alt="">
-                <img src="/views/ViewMainPage/img/video.jpg" alt="">
-                <img src="/views/ViewMainPage/img/video.jpg" alt="">
-                <img src="/views/ViewMainPage/img/video.jpg" alt="">
+                <img src="/views/img/video.jpg" alt="">
+                <img src="/views/img/video.jpg" alt="">
+                <img src="/views/img/video.jpg" alt="">
+                <img src="/views/img/video.jpg" alt="">
             </section>
         </div>
     </main>
@@ -157,7 +157,7 @@
    <section class="modal__certificate none">
         <h2 class="none">h2</h2>
         <div class="modal__content__certificate">
-            <img src="/views/ViewMainPage/img/page.jpg" alt="свидетельство">
+            <img src="/views/img/page.jpg" alt="свидетельство">
             <input type="button" class="closeModalCertificate" value="X">
         </div>
    </section>
