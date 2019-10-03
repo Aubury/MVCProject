@@ -22,13 +22,16 @@ class ControllerPhotoPage
        // если была произведена отправка формы
        if(isset($_FILES['file'])) {
            // проверяем, можно ли загружать изображение
-           $check = $this->m->can_upload($_FILES['file']);
+           $check = $this->m->Can_upload($_FILES['file']);
 
            if ($check === true) {
                $img_url = $_FILES['file']['name'];
                $tmp_name_img= $_FILES['file']['tmp_name'];
                $size_img = $_FILES['file']['size'];
-               $this->m->downloadImg($img_url, $tmp_name_img, $size_img);
+               $image_info = getimagesize($_FILES["file"]["tmp_name"]);
+               $width_height = $image_info[0]." x ".$image_info[1];
+
+               $this->m->DownloadImg($img_url, $tmp_name_img, $size_img, $width_height);
 
            } else {
                // выводим сообщение об ошибке
@@ -36,5 +39,10 @@ class ControllerPhotoPage
            }
        }
 
+   }
+
+   public function actionTotalPhoto()
+   {
+       $this->m->TotalPhoto();
    }
 }

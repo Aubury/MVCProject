@@ -10,7 +10,7 @@ class ModelPhotoPage
         include_once ROOT . "/components/Db.php";
         $this->db = new Db();
     }
-   public function can_upload($file){
+    public function Can_upload($file){
         // если имя пустое, значит файл не выбран
         if($file['name'] == ''){
             echo 'Вы не выбрали файл.';
@@ -35,9 +35,9 @@ class ModelPhotoPage
         return true;
     }
 
-   public function downloadImg($img_url, $tmp_name_img, $size_img){
+    public function DownloadImg($img_url, $tmp_name_img, $size_img, $width_height){
 
-       $img_url_2= $this->translitPhp($img_url);
+       $img_url_2= $this->TranslitPhp($img_url);
        $path = '/views/img/gallery/'; // Путь к папке
 
        $file_type = substr($img_url_2, strrpos($img_url_2, '.')+1); // Получаем Расширение файла
@@ -54,7 +54,7 @@ class ModelPhotoPage
 
            rename( ROOT ."/".$img_url_2,ROOT ."/".$path.$img_url_2);
 
-          $prp = $this->db->con->prepare("INSERT INTO `photos`(`name`, `size`, `direction`) VALUES ('{$img_url_2}', '{$size_img}', '{$path}')");
+          $prp = $this->db->con->prepare("INSERT INTO `photos`(`name`, `size`, `width_height`, `direction`) VALUES ('{$img_url_2}', '{$size_img}', '{$width_height}', '{$path}')");
           $prp->execute();
 
            $admin = $_COOKIE['user_id'];
@@ -66,11 +66,20 @@ class ModelPhotoPage
        }
 
     }
-    public function translitPhp($url){
+    public function TranslitPhp($url){
         $rus = array('А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я', 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я');
         $lat = array('A', 'B', 'V', 'G', 'D', 'E', 'E', 'Gh', 'Z', 'I', 'Y', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'F', 'H', 'C', 'Ch', 'Sh', 'Sch', 'Y', 'Y', 'Y', 'E', 'Yu', 'Ya', 'a', 'b', 'v', 'g', 'd', 'e', 'e', 'gh', 'z', 'i', 'y', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f', 'h', 'c', 'ch', 'sh', 'sch', 'y', 'y', 'y', 'e', 'yu', 'ya');
         $url= str_replace($rus, $lat, $url);
         return $url;
+    }
+
+    public function TotalPhoto()
+    {
+        $prp = $this->db->con->prepare("SELECT * FROM `photos`");
+        $prp->execute();
+        $mass = $prp->fetchAll();
+
+       echo json_encode($mass);
     }
 
 //    public function getRandomFileName($path, $extension='')

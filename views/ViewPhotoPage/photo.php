@@ -60,7 +60,7 @@
         </div>
         <div class="row">
               <div class="col-4 col-lg-2 offset-lg-10"> 
-                    <input onkeyup="tableSearch()" id="searchVideos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+                    <input onkeyup="tableSearch()" id="searchPhotos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
               </div>
         </div> 
     
@@ -78,7 +78,7 @@
                     </div>
                     </div>
             <div class="col-9">
-                <div class="row justify-content-around tablePhoto"></div>
+                <div class="row justify-content-around tableDg tablePhoto"></div>
 
             </div>
         </div>

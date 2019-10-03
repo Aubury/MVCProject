@@ -28,3 +28,32 @@ rex.form.addEventListener('submit', function (ev) {
 })
 //---------------------------------------------------------------------------------------------
 
+const photoTable = function createPhotoTable(arr) {
+
+    let answer = '';
+
+    arr.forEach(el => {
+        answer += `<div class="card align-self-end" style="width: 18rem;">
+           <h5 class="h5">${el.name}</h5>
+           <img class="card-img-top" src="${el[4]}${el[1]}" alt="Card image cap">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Id - <span>${el.id}</span></li>
+            <li class="list-group-item">Размер - <span>${el.size}</span></li>
+            <li class="list-group-item">Ширина_Высота - <span>${el.width_height}</span></li>
+          </ul>
+        </div>`;
+
+    });
+
+
+    rex.table.innerHTML = answer;
+
+}
+const getPhotos = function getPhotos(){
+
+    fetch('/inf/photos').then( inf => inf.json())
+        // .then((arr => console.log(arr)));
+        .then( arr => photoTable(arr));
+}
+getPhotos();
+
