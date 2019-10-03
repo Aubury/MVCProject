@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Окт 03 2019 г., 19:09
+-- Время создания: Окт 03 2019 г., 21:48
 -- Версия сервера: 5.7.27-cll-lve
 -- Версия PHP: 7.2.7
 
@@ -32,6 +32,7 @@ CREATE TABLE `photos` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `size` varchar(20) NOT NULL,
+  `width_height` varchar(20) NOT NULL,
   `direction` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -39,8 +40,9 @@ CREATE TABLE `photos` (
 -- Дамп данных таблицы `photos`
 --
 
-INSERT INTO `photos` (`id`, `name`, `size`, `direction`) VALUES
-(1, 'Baza dannyh1586.png', '118930', '/views/img/gallery/');
+INSERT INTO `photos` (`id`, `name`, `size`, `width_height`, `direction`) VALUES
+(1, 'Baza dannyh1586.png', '118930', '', '/views/img/gallery/'),
+(2, 'Baza dannyh140.png', '118930', '951 x 521', '/views/img/gallery/');
 
 --
 -- Индексы сохранённых таблиц
@@ -60,7 +62,7 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT для таблицы `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
