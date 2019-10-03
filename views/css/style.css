@@ -117,6 +117,7 @@ span{
 table{
     border-collapse: collapse;
     border: 1px solid #c6c6c6;
+    background-color: rgba(0,0,0,.03);
 
 }
 th{
@@ -155,6 +156,12 @@ iframe{
 .h5{
     height: 3em;
     padding: 1em 0;
+}
+.tableDg{
+    background-color: rgba(0,0,0,.03);
+    /*margin-right: 2em;*/
+    padding: 10px 5px;
+    width: 100%;
 }
 
 

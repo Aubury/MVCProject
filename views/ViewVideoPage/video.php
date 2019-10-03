@@ -80,7 +80,7 @@
                     </div>
                     </div>
             <div class="col-9">
-                <div class="row justify-content-around tableVideos"></div>
+                <div class="row justify-content-around  tableDg tableVideos"></div>
 
             </div>
         </div>
