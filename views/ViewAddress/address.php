@@ -33,6 +33,9 @@
                   <a class="nav-link" href="/show/Videos">Видео</a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link" href="/show/Photos">Фото</a>
+              </li>
+              <li class="nav-item">
                   <a class="nav-link" href="/show/Projects">Проекты</a>
               </li>
               <li class="nav-item">

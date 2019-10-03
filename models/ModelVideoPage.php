@@ -20,7 +20,7 @@ class ModelVideoPage
         $this->db->con->exec($sqlStr);
 
         $admin = $_COOKIE['user_id'];
-        $action = "Добавил(а) видео {$arr['name']} к проекту {$arr['project_name']}";
+        $action = "Добавил(а) видео \"{$arr['name']}\" к проекту {$arr['project_name']}";
         $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
         $sql->execute();
 

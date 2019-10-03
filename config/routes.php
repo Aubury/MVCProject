@@ -23,6 +23,7 @@ return[
     "show/Address"      => "Address/ShowPanelAddress/supAdm",
     "show/BuildStartPage" => "StartPage/BuildStartPage/none",
     "show/Logs"       => "LogsPage/ShowLogsPage/supAdm",
+    "show/Photos"     => "PhotoPage/ShowPhotoPage/adm/supAdm",
 
     "inf/compl"       =>  "Complaints/NumComplaints/adm/supAdm",
     "inf/answ"        =>  "Answers/NumAnswers/adm/supAdm",
