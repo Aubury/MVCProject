@@ -11,6 +11,7 @@ return[
     "reg/addComplaints" => "Complaints/AddComplaints/usr",
     "reg/addAnswer"     => "Answers/AddAnswers/adm/supAdm",
     "reg/addAddress"    => "Address/AddAddress/supAdm",
+    "reg/addPhoto"      => "PhotoPage/AddPhoto/adm/supAdm",
 
     "show/Users"     => "UserPage/ShowUsersPage/adm/supAdm",
     "show/Videos"    => "VideoPage/ShowVideoPage/adm/supAdm",

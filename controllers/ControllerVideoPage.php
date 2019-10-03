@@ -9,7 +9,7 @@ class ControllerVideoPage
     {
         include_once ROOT . "/views/ViewVideoPage/ViewVideoPage.php";
         include_once ROOT . "/models/ModelVideoPage.php";
-        $this->v = new ViewPhotoPage();
+        $this->v = new ViewVideoPage();
         $this->m = new ModelVideoPage();
     }
 

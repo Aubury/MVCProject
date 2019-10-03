@@ -55,7 +55,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center topTxt">
             <div class="col-12 reports">
-                <span>Управление фотоконтентом</span>
+                <span>Управление видеоконтентом</span>
             </div>
         </div>
         <div class="row">
@@ -68,8 +68,8 @@
             <div class="col-3 ReportInfo">
                 <div class="card border-info  mb-3">
                     <div class="card-header reports"><h3>Добавить видео</h3></div>
-                    <div class="card-body formAddUsers">
-                        <form class="formAddVideo" name="formVideo" action="#" method="get">
+                    <div class="card-body">
+                        <form name="formVideo" action="#" method="get">
                             <p><input type="text" class="inpText form-control"  name="name" placeholder="Заголовок"></p>
                             <p><input type="text" class="inpText form-control"  name="project_name" placeholder="Имя проекта"></p>
                             <p><textarea class="inpText form-control" name="link" placeholder="Ссылка на youtube"></textarea></p>

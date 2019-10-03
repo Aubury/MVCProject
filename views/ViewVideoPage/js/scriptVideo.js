@@ -13,17 +13,14 @@ rex.form.addEventListener('submit', function (ev) {
     const inpArr = [
         {
             inp     : form['name'],
-            info    : form['name'].nextElementSibling,
             name    : 'name',
         },
         {
             inp     : form['project_name'],
-            info    : form['project_name'].nextElementSibling,
             name    : 'project_name',
         },
         {
             inp     : form['link'],
-            info    : form['link'].nextElementSibling,
             name    : 'link',
 
         }

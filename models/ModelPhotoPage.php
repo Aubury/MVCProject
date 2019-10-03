@@ -10,16 +10,16 @@ class ModelPhotoPage
         include_once ROOT . "/components/Db.php";
         $this->db = new Db();
     }
-    public  function can_upload($file){
+   public function can_upload($file){
         // если имя пустое, значит файл не выбран
-        if($file['name'] == '')
-            return 'Вы не выбрали файл.';
-
+        if($file['name'] == ''){
+            echo 'Вы не выбрали файл.';
+        }
         /* если размер файла 0, значит его не пропустили настройки
         сервера из-за того, что он слишком большой */
-        if($file['size'] == 0)
-            return 'Файл слишком большой.';
-
+        if($file['size'] == 0){
+            echo 'Файл слишком большой.';
+        }
         // разбиваем имя файла по точке и получаем массив
         $getMime = explode('.', $file['name']);
         // нас интересует последний элемент массива - расширение
@@ -28,15 +28,61 @@ class ModelPhotoPage
         $types = array('jpg', 'png', 'gif', 'bmp', 'jpeg');
 
         // если расширение не входит в список допустимых - return
-        if(!in_array($mime, $types))
-            return 'Недопустимый тип файла.';
+        if(!in_array($mime, $types)){
+            echo 'Недопустимый тип файла.';
+        }
 
         return true;
     }
 
-    function make_upload($file){
-        // формируем уникальное имя картинки: случайное число и name
-        $name = $file['name'] . mt_rand(0, 10000);
-        copy($file['tmp_name'], $name);
+   public function downloadImg($img_url, $tmp_name_img, $size_img){
+
+       $img_url_2= $this->translitPhp($img_url);
+       $path = '/views/img/gallery/'; // Путь к папке
+
+       $file_type = substr($img_url_2, strrpos($img_url_2, '.')+1); // Получаем Расширение файла
+       $pos = strpos($img_url_2, ".");
+       $fn = substr($img_url_2, 0, $pos);
+       $file_name = $fn;
+       $img_url_2 = $file_name.mt_rand(0, 10000).".".$file_type;
+
+       if(!copy($tmp_name_img, $img_url_2)){
+
+           echo "failed to copy $tmp_name_img";
+
+       }else{
+
+           rename( ROOT ."/".$img_url_2,ROOT ."/".$path.$img_url_2);
+
+          $prp = $this->db->con->prepare("INSERT INTO `photos`(`name`, `size`, `direction`) VALUES ('{$img_url_2}', '{$size_img}', '{$path}')");
+          $prp->execute();
+
+           $admin = $_COOKIE['user_id'];
+           $action = "Загрузил(а) фотографию на сервер";
+           $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+           $sql->execute();
+
+           echo "Файл успешно загружен!";
+       }
+
     }
+    public function translitPhp($url){
+        $rus = array('А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я', 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я');
+        $lat = array('A', 'B', 'V', 'G', 'D', 'E', 'E', 'Gh', 'Z', 'I', 'Y', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'F', 'H', 'C', 'Ch', 'Sh', 'Sch', 'Y', 'Y', 'Y', 'E', 'Yu', 'Ya', 'a', 'b', 'v', 'g', 'd', 'e', 'e', 'gh', 'z', 'i', 'y', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'f', 'h', 'c', 'ch', 'sh', 'sch', 'y', 'y', 'y', 'e', 'yu', 'ya');
+        $url= str_replace($rus, $lat, $url);
+        return $url;
+    }
+
+//    public function getRandomFileName($path, $extension='')
+//    {
+//        $extension = $extension ? '.' . $extension : '';
+//        $path = $path ? $path . '/' : '';
+//        do {
+//            $name = md5(microtime() . rand(0, 9999));
+//            $file = $path . $name . $extension;
+//        } while (file_exists($file));
+//        return $name;
+//    }
+
+
 }
