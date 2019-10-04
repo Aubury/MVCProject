@@ -59,24 +59,35 @@
             </div>
         </div>
         <div class="row">
-              <div class="col-4 col-lg-2 offset-lg-10"> 
+              <div class="col-4 col-lg-2 offset-lg-10">
                     <input onkeyup="tableSearch()" id="searchPhotos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
               </div>
-        </div> 
-    
+        </div>
+
         <div class="row justify-content-around">
             <div class="col-3 ReportInfo">
                 <div class="card border-info  mb-3">
-                    <div class="card-header reports"><h3>Добавить фото</h3></div>
+                    <div class="card-header reports"><h3>Загрузить фото</h3></div>
+                        <div class="card-body">
+                            <form name="formPhoto" action="#" method="post" enctype="multipart/form-data">
+                                <p> <input type="file" name="img_url" class="form-control-file"></p>
+                                <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></p>
+                            </form>
+                            <span class="italic"></span>
+                        </div>
+                </div>
+                <div class="card border-info  mb-3">
+                    <div class="card-header reports"><h3>Удалить фото</h3></div>
                     <div class="card-body">
-                        <form name="formPhoto" action="/reg/addPhoto" method="post" enctype="multipart/form-data">
-<!--                            <p><input type="text" class="inpText form-control"  name="name" placeholder="Заголовок"></p>-->
-                            <p> <input type="file" name="img_url" class="form-control-file"></p>
-                            <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></p>
+                        <form name="formDelPhoto" action="/reg/delPhoto" method="post">
+                            <p><input type="text" class="inpText form-control"  name="id" placeholder="Id картинки">
+                            <p class="col-12 col-xl-12"><input class="btn btn-block btn-danger" type="submit" value="Удалить"></p>
                         </form>
-                        <span class="italic"></span></div>
+                        <span class="italic"></span>
                     </div>
-                    </div>
+                </div>
+            </div>
+
             <div class="col-9">
                 <div class="row justify-content-around tableDg tablePhoto"></div>
 

@@ -12,6 +12,8 @@ return[
     "reg/addAnswer"     => "Answers/AddAnswers/adm/supAdm",
     "reg/addAddress"    => "Address/AddAddress/supAdm",
     "reg/addPhoto"      => "PhotoPage/AddPhoto/adm/supAdm",
+    "reg/delPhoto"      => "PhotoPage/DelPhoto/adm/supAdm",
+    "reg/delVideo"      => "VideoPage/DelVideo/adm/supAdm",
 
     "show/Users"     => "UserPage/ShowUsersPage/adm/supAdm",
     "show/Videos"    => "VideoPage/ShowVideoPage/adm/supAdm",

@@ -74,11 +74,20 @@
                             <p><input type="text" class="inpText form-control"  name="project_name" placeholder="Имя проекта"></p>
                             <p><textarea class="inpText form-control" name="link" placeholder="Ссылка на youtube"></textarea></p>
                             <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></p>
-
                         </form>
                         <span class="italic"></span></div>
                     </div>
+                <div class="card border-info  mb-3">
+                    <div class="card-header reports"><h3>Удалить видео</h3></div>
+                    <div class="card-body">
+                        <form name="formDelVideo" action="#" method="post">
+                            <p><input type="text" class="inpText form-control"  name="id" placeholder="Id видео">
+                            <p class="col-12 col-xl-12"><input class="btn btn-block btn-danger" type="submit" value="Удалить"></p>
+                        </form>
+                        <span class="italic"></span>
                     </div>
+                </div>
+            </div>
             <div class="col-9">
                 <div class="row justify-content-around  tableDg tableVideos"></div>
 
