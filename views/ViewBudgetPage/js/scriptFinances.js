@@ -85,7 +85,7 @@ const buildTable = function table(arr) {
     const table = obj.table;
     //   Удаляю всех детей!!!
     while (table.hasChildNodes()) {
-        table.removeChild(list.firstChild);
+        table.removeChild(table.firstChild);
     }
 
     let trs = "<tr><th>Время платежа</th><th>Плательщик</th><th>Сумма платежа</th><th>Проект</th></tr>";

@@ -73,8 +73,13 @@
                 <div class="card-body">
                     <form  action="#" method="get" name="formProject">
 
-                            <p><input type="text" class="form-control"  name="name" placeholder="Имя проекта"></p>
-                            <p><input type="text" class="form-control"  name="budget" placeholder="Бюджет"></p>
+                        <p><input type="text" class="form-control"  name="name" placeholder="Имя проекта"></p>
+                        <p><input type="text" class="form-control"  name="budget" placeholder="Бюджет"></p>
+                        <p><input type="text" class="form-control"  name="photo_1" placeholder="Id Фото"></p>
+                        <p><input type="text" class="form-control"  name="photo_2" placeholder="Id Фото"></p>
+                        <p><input type="text" class="form-control"  name="video_1" placeholder="Id Видео"></p>
+                        <p><input type="text" class="form-control"  name="video_2" placeholder="Id Видео"></p>
+                        <p><textarea class="form-control height"  name="text" placeholder="Описание проекта"></textarea></p>
 
                         <div class="custom-control custom-radio">
                               <input type="radio" class="custom-control-input" id="customControlValidation2" name="published" required>

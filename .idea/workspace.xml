@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b87d1862-d4a4-4866-b5fd-8f3137f66d06" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerBudgetPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerBudgetPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ModelBudgetPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelBudgetPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewLogsPage/js/scriptLogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewLogsPage/js/scriptLogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewUsersPage/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewUsersPage/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ViewProjectPage/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewProjectPage/projects.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,52 +29,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/ViewUsersPage/users.php">
+        <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/projects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="109" column="21" lean-forward="true" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="21" />
+            <state relative-caret-position="418">
+              <caret line="81" column="63" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
+        <entry file="file://$PROJECT_DIR$/views/ViewMainPage/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+            <state relative-caret-position="681">
+              <caret line="94" column="22" lean-forward="true" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/ModelUserPage.php">
+        <entry file="file://$PROJECT_DIR$/views/ViewPhotoPage/js/scriptPhoto.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="91" selection-start-line="91" selection-end-line="92" />
+            <state relative-caret-position="88">
+              <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js">
+        <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="673">
-              <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/finances.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+            <state relative-caret-position="52">
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#325#704#0" />
+                <element signature="n#!!block;n#sendObj#0" />
               </folding>
             </state>
           </provider>
@@ -89,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="165" selection-start-line="165" selection-end-line="165" />
+            <state relative-caret-position="481">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
             </state>
           </provider>
         </entry>
@@ -114,7 +99,6 @@
       <list>
         <option value="$PROJECT_DIR$/views/ViewMainPage/css/fonts.css" />
         <option value="$PROJECT_DIR$/views/ViewMainPage/index.php" />
-        <option value="$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js" />
         <option value="$PROJECT_DIR$/views/ViewBudgetPage/scriptFinances.js" />
         <option value="$PROJECT_DIR$/views/ViewBudgetPage/js/finances.php" />
         <option value="$PROJECT_DIR$/controllers/ControllerProjectPage.php" />
@@ -145,7 +129,6 @@
         <option value="$PROJECT_DIR$/views/ViewAdminPage/admins.php" />
         <option value="$PROJECT_DIR$/views/ViewControlPanel/index.php" />
         <option value="$PROJECT_DIR$/views/ViewLogsPage/logs.php" />
-        <option value="$PROJECT_DIR$/views/ViewProjectPage/projects.php" />
         <option value="$PROJECT_DIR$/views/ViewSuperAdminPage/index.php" />
         <option value="$PROJECT_DIR$/controllers/ControllerPhotoPage.php" />
         <option value="$PROJECT_DIR$/models/ModelPhotoPage.php" />
@@ -159,10 +142,12 @@
         <option value="$PROJECT_DIR$/views/ViewLogsPage/js/scriptLogs.js" />
         <option value="$PROJECT_DIR$/views/ViewUsersPage/users.php" />
         <option value="$PROJECT_DIR$/config/routes.php" />
-        <option value="$PROJECT_DIR$/models/ModelBudgetPage.php" />
         <option value="$PROJECT_DIR$/views/css/style.css" />
         <option value="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" />
         <option value="$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js" />
+        <option value="$PROJECT_DIR$/models/ModelBudgetPage.php" />
+        <option value="$PROJECT_DIR$/views/ViewProjectPage/projects.php" />
+        <option value="$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js" />
       </list>
     </option>
   </component>
@@ -218,27 +203,7 @@
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewBudgetPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewBudgetPage" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewLogsPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewLogsPage" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewMainPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
@@ -257,14 +222,20 @@
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewUsersPage" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewProjectPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewUsersPage" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewProjectPage" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewSuperAdminPage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,12 +334,12 @@
       <workItem from="1570078085483" duration="35478000" />
       <workItem from="1570162826125" duration="4803000" />
       <workItem from="1570210528930" duration="1027000" />
-      <workItem from="1570348680657" duration="18967000" />
+      <workItem from="1570348680657" duration="23921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="702538000" />
+    <option name="totallyTimeSpent" value="707492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -399,16 +370,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/app/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/css/forms.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -423,13 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="39" column="7" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="39" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewMainPage/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
         </state>
       </provider>
     </entry>
@@ -465,13 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="12" column="86" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewSuperAdminPage/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -517,13 +464,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewSuperAdminPage/js/search/finances.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="63" column="78" selection-start-line="63" selection-start-column="78" selection-end-line="63" selection-end-column="78" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewAddress/js/scriptAddress.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -656,16 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewPhotoPage/js/scriptPhoto.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewUsersPage/js/scriptUsers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
@@ -676,20 +606,6 @@
             <element signature="n#!!block;n#checkInput#0" />
             <element signature="n#!!block;n#sendObj#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewUsersPage/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="109" column="21" lean-forward="true" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="165" selection-start-line="165" selection-end-line="165" />
         </state>
       </provider>
     </entry>
@@ -721,17 +637,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
+    <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+        <state relative-caret-position="132">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js">
+    <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
+        <state relative-caret-position="242">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewUsersPage/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="109" column="21" lean-forward="true" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="81" column="63" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewMainPage/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="94" column="22" lean-forward="true" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewPhotoPage/js/scriptPhoto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="50" lean-forward="true" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewSuperAdminPage/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="63" column="50" lean-forward="true" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+          <folding>
+            <element signature="e#325#704#0" />
+            <element signature="n#!!block;n#sendObj#0" />
+          </folding>
         </state>
       </provider>
     </entry>

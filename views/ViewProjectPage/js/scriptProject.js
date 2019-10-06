@@ -54,6 +54,39 @@ function sendObj(answ) {
             }
         });
 }
+
+//----------------------------------------------------------------------------------------------------
+const projectCard = function createProjectCart(arr){
+
+    let answ = '';
+    answ += ` <div class="progect">
+                <h2 class="none">progects</h2>
+                <div class="progect__left__content">
+                    <div class="galery">
+                        <img src="/views/img/car.jpg" alt="">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum doloremque ratione. Consectetur hic, consequuntur veniam odit est temporibus tempora praesentium quae, ratione quo totam mollitia eos possimus expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi officia omnis dolore corporis molestiae placeat recusandae numquam, itaque quos asperiores minima rem, autem ullam, quis fugiat mollitia quasi maiores ipsam!
+                    </p>
+                </div>
+                <div class="progect__right__content">
+                    <h2 id="progects">Первый проект</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat, praesentium ipsam odio quo ut inventore ratione dolor eius officiis nihil optio debitis quae velit voluptatibus esse, in nemo necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quidem dolorum sit aperiam dolore expedita ab ea fugiat laudantium aut explicabo a deserunt, nesciunt ut animi iure. Nobis, voluptates impedit!
+                    </p>
+                    <div class="galery">
+                        <img src="/views/img/car.jpg" alt="">
+                        <img src="/views/img/car.jpg" alt="">
+                        <img src="/views/img/car.jpg" alt="">
+                        <img src="/views/img/car.jpg" alt="">
+                    </div>
+                </div>
+                <div class="video">
+                        <img src="/views/img/video.jpg" alt="">
+                        <img src="/views/img/video.jpg" alt="">
+                    </div>
+            </div>`;
+}
 // //--------------------------------------------------------------------------------------------------
 //
 // const addOptions = function addOptions(arr) {
