@@ -109,7 +109,6 @@
     </div>
     <div class="col-9 tableUsers">
         <table class="table table-hover" id="tableUsers"></table>
-
     </div>
   </div>
 </div>

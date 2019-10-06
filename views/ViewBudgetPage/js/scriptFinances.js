@@ -1,7 +1,8 @@
 let obj = {
     select : document.querySelector('#inputState'),
     form   : document.forms['formAddPay'],
-    arrInp : document.querySelectorAll(".form-control")
+    arrInp : document.querySelectorAll(".form-control"),
+    table  : document.querySelector('.tableFinances')
 };
 
 //--------------------------------------------------------------------------------------------------
@@ -29,20 +30,20 @@ const getNamesProjects = function getNamesProjects() {
     fetch(url).then(response => response.json())
         .then(arr => addOptions(arr));
 }
+
+
 //--------------------------------------------------------------------------------------------------
 
 obj.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
-
-
     const url = '/reg/AddMoney',
           fD  = new FormData(),
           form = obj.form;
 
     fD.append('project_name', form['project_name'].value);
     fD.append('email_user', form['email_user'].value);
-    fD.append('amount', form['amount'].value);
+    fD.append('amount', replcomma(form['amount'].value));
     fD.append('timeDate', form['timeDate'].value);
 
     fetch(url,{
@@ -55,12 +56,47 @@ obj.form.addEventListener('submit', function (ev) {
 
                 obj.arrInp[i].value = '';
             };
-            getNamesProjects();
+
+            getTotalInf();
         })
 });
+//-------------------------------------------------------------------------------------------------
+const replcomma = function comma(data) {
+
+    let newData = '';
+
+    (data.indexOf(",") !== -1) ? newData = data.replace(',','.') : newData = data;
+
+    return newData;
+
+}
+//--------------------------------------------------------------------------------------------------
+
+const getTotalInf = function getTotalInformation(){
+
+    fetch('/inf/budget').then( data => data.json())
+        .then( arr => buildTable(arr));
+}
 //--------------------------------------------------------------------------------------------------
 
 
+const buildTable = function table(arr) {
 
+    const table = obj.table;
+    //   Удаляю всех детей!!!
+    while (table.hasChildNodes()) {
+        table.removeChild(list.firstChild);
+    }
+
+    let trs = "<tr><th>Время платежа</th><th>Плательщик</th><th>Сумма платежа</th><th>Проект</th></tr>";
+    arr.forEach(el => {
+        trs = `${trs}<tr><td>${el[0]}</td><td>${el[1]}</td><td>${el[2]}</td><td>${el[3]}</td></tr>`;
+    });
+
+    table.innerHTML = trs;
+}
+ //--------------------------------------------------------------------------------------------------
+
+getTotalInf();
 getNamesProjects();
 setInterval(getNamesProjects,500000);

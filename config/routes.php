@@ -37,6 +37,7 @@ return[
     "inf/users"         => "UserPage/TotalUsers/adm/supAdm",
     "inf/videos"        => "VideoPage/TotalVideo/adm/supAdm",
     "inf/photos"        => "PhotoPage/TotalPhoto/adm/supAdm",
+    "inf/budget"        => "BudgetPage/TotalInf/adm/supAdm",
 
     "log/login"         => "Login/LogIn/none"
 

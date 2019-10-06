@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style><?php include_once ROOT . "/views/css/reset.css"?></style>
-    <style><?php include_once ROOT . "/views/css/style.css" ?></style>
+    <style><?php include_once ROOT . "/views/css/style.css"?></style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -56,14 +56,13 @@
     <div class="row justify-content-center topTxt">
         <div class="col-12 reports">
             <span>Управление финансами</span>
-           </div>
-      </div> 
+        </div>
+    </div>
     <div class="row">
           <div class="col-4 col-lg-2 offset-lg-10">
                 <input onkeyup="tableSearch()" id="searchFinances" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
           </div>
     </div> 
-
     <div class="row justify-content-around">
         <div class="col-3 ReportInfo">
             <div class="card border-info  mb-3">
@@ -74,60 +73,24 @@
                             <option>Выберите проект</option>
                         </select>
                        <p><input type="text" class="form-control" name="email_user" placeholder="Email плательщика"></p>
-                       <p><input type="text" class="form-control" name="amount" placeholder="Сумма платежа"></p>
-                       <p><input type="text" class="form-control" name="timeDate" placeholder="Дата платежа( гггг-мм-дд )"></p>
-                        <div class="row">
-                          <div class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></div>
-                        </div>
+                       <p><input type="text" class="form-control title" name="amount" placeholder="Сумма платежа"
+                                 title="Вводите сумму без пробелов"></p>
+                       <p><input type="text" class="form-control" name="timeDate" placeholder="Дата платежа( гггг-мм-дд )"
+                                 title="Вводить данные через тире и в формате год-месяц-число"></p>
+                       <p class="col-12 col-xl-12"><button class="btn btn-block btn-success" type="submit">Добавить</button></p>
                     </form>
                     <span class="italic"></span>
                 </div>
-              </div>
+            </div>
         </div>
-
-        <div class="col-8">
-          <table class="tableFinances table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">Дата</th>
-                  <th scope="col">Счет</th>
-                  <th scope="col">Сумма</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>22.22.22</td>
-                  <td>1939</td>
-                  <td>100000$</td>
-                </tr>
-                <tr>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-                
-                
-              </tbody>
-            </table>
-      </div>
-
+        <div class="col-9">
+          <table class="tableFinances table table-hover"></table>
+        </div>
     </div>
-
 </div>
 
 <script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/search/finances.js"?></script>
 <script><?php include_once ROOT . "/views/ViewBudgetPage/js/scriptFinances.js"?></Script>
-<script><?php include_once ROOT . "/views/app/main.js"?></script>
-
+<!--<script>--><?php //include_once ROOT . "/views/app/main.js"?><!--</script>-->
 </body>
 </html>

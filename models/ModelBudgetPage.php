@@ -65,4 +65,33 @@ class ModelBudgetPage
 
         echo json_encode($names);
     }
+    public function TotalInformationProject()
+    {
+        $prp = $this->db->con->prepare("SELECT * FROM `budget` ORDER BY `timeDate` DESC");
+        $prp->execute();
+        $mass = $prp->fetchAll();
+
+        $arr = [];
+        foreach ($mass as $value){
+
+            array_push($arr,[
+                $value['timeDate'],
+                $this->User($value['email_user']),
+                $value['amount'],
+                $value['project_name']
+            ]);
+        }
+       echo json_encode($arr);
+    }
+    public function User($data)
+    {
+        $prp = $this->db->con->prepare("SELECT `name`, `patronymic`, `surname` FROM `users`  WHERE `email`='{$data}'");
+        $prp->execute();
+        $mass = $prp->fetchAll();
+
+        $name = "{$mass[0]['surname']} {$mass[0]['name']}  {$mass[0]['patronymic']}";
+        return $name;
+
+    }
+
 }

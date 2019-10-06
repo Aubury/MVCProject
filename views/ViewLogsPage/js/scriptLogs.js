@@ -1,13 +1,14 @@
 const obj = {
     infoBlock : document.querySelector('.infoTable')
 };
+//--------------------------------------------------------------------------------------------
 const getInf = function getInfoLogs() {
 
     fetch('/inf/Logs').then(d => d.json())
         // .then(d=> console.log(d));
         .then( d => creatTable(d));
 }
-
+//----------------------------------------------------------------------------------------------
 const creatTable = function creatActionTable(arr){
 
     const table = document.createElement('table');
@@ -30,7 +31,7 @@ const creatTable = function creatActionTable(arr){
     obj.infoBlock.appendChild(table);
 }
 
-
+//-----------------------------------------------------------------------------------------------
 
 getInf();
 setInterval(getInf, 1000000);
