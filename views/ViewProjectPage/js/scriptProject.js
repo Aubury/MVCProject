@@ -10,7 +10,7 @@ rex.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
 
-    let answ = {};
+    // let answ = [];
 
     let form = rex.form;
     const inpArr = [
@@ -63,23 +63,25 @@ rex.form.addEventListener('submit', function (ev) {
         }
     ];
 
-    inpArr.forEach((el) => {
-       el.inp.name === 'published' ? answ[el.name] = el.inp.checked.value : el.inp.value;
+    // inpArr.forEach((el) => {
+    //    el.inp.name === 'published' ? answ.push({[el.name]:el.inp.checked.value}) : answ.push({[el.name]:el.inp.value});
+    //
+    // });
 
-    });
-
-    sendObj(answ);
-
-
-});
-
-//-----------------------------------------------------------------------------------------------------
-function sendObj(answ) {
+//     sendObj(inpArr);
+//
+//
+// });
+//
+// //-----------------------------------------------------------------------------------------------------
+// function sendObj(answ) {
 
     const fD = new FormData(),
          url = '/reg/addProject';
 
-    answ.forEach( el => fD.append(el.name, el.value));
+    inpArr.forEach((el) => { (el.inp.name === 'published')?
+        fD.append([el.name],el.inp.checked.value):
+        fD.append([el.name],el.inp.value);});
     // fD.append('name', answ['name']);
     // fD.append('budget', answ['budget']);
 
@@ -94,6 +96,7 @@ function sendObj(answ) {
             }
         });
 }
+);
 
 //----------------------------------------------------------------------------------------------------
 const projectCard = function createProjectCart(arr){

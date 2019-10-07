@@ -162,7 +162,7 @@
 
 <script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/search/projects.js"?></script>
 <script><?php include_once ROOT . "/views/ViewProjectPage/js/scriptProject.js"?></script>
-<script><?php include_once ROOT . "/views/app/main.js"?></script>
+<!--<script>--><?php //include_once ROOT . "/views/app/main.js"?><!--</script>-->
 
 </body>
 </html>

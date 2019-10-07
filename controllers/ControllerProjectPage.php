@@ -16,12 +16,13 @@ class ControllerProjectPage
 
     public function actionAddProject()
     {
-       $obj = [
-           'name'   => $_POST['name'],
-           'budget' => $_POST['budget']
-       ];
+//       $obj = [
+//           'name'   => $_POST['name'],
+//           'budget' => $_POST['budget']
+//       ];
 
-        $this->m->addProject($obj);
+        $this->m->addProject($_POST);
+//        var_dump($_POST);
     }
 
 
