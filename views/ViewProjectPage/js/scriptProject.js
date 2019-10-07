@@ -21,11 +21,50 @@ rex.form.addEventListener('submit', function (ev) {
         {
             inp     : form['budget'],
             name    : 'budget',
+        },
+        {
+            inp     : form['photo_1'],
+            name    : 'photo_1',
+        },
+        {
+            inp     : form['photo_2'],
+            name    : 'photo_2',
+        },
+        {
+            inp     : form['photo_3'],
+            name    : 'photo_3',
+        },
+        {
+            inp     : form['photo_4'],
+            name    : 'photo_4',
+        },
+        {
+            inp     : form['photo_5'],
+            name    : 'photo_5',
+        },
+        {
+            inp     : form['video_1'],
+            name    : 'video_1',
+        },{
+            inp     : form['video_2'],
+            name    : 'video_2',
+        },
+        {
+            inp     : form['text_1'],
+            name    : 'text_1',
+        },
+        {
+            inp     : form['text_2'],
+            name    : 'text_2',
+        },
+        {
+            inp     : form['published'],
+            name    : 'published',
         }
     ];
 
     inpArr.forEach((el) => {
-        answ[el.name] = el.inp.value;
+       el.inp.name === 'published' ? answ[el.name] = el.inp.checked.value : el.inp.value;
 
     });
 
@@ -40,8 +79,9 @@ function sendObj(answ) {
     const fD = new FormData(),
          url = '/reg/addProject';
 
-    fD.append('name', answ['name']);
-    fD.append('budget', answ['budget']);
+    answ.forEach( el => fD.append(el.name, el.value));
+    // fD.append('name', answ['name']);
+    // fD.append('budget', answ['budget']);
 
     fetch(url, {
         method: "POST",
@@ -88,25 +128,3 @@ const projectCard = function createProjectCart(arr){
             </div>`;
 }
 // //--------------------------------------------------------------------------------------------------
-//
-// const addOptions = function addOptions(arr) {
-//
-//     const select = rex.select;
-//     arr.forEach( el => {
-//
-//         let option = document.createElement("option");
-//             option.value = el.name;
-//             select.appendChild(option);
-//     })
-// }
-// //--------------------------------------------------------------------------------------------------
-// const getNamesProjects = function getNamesProjects() {
-//
-//     const url = '/inf/nameProjects';
-//
-//     fetch(url).then(response => response.json())
-//               .then(arr => addOptions(arr));
-// }
-// //--------------------------------------------------------------------------------------------------
-// getNamesProjects();
-// setInterval(getNamesProjects,50000);

@@ -71,22 +71,26 @@
             <div class="card border-info  mb-3">
                 <div class="card-header reports"><h3>Добавление нового проекта</h3></div>
                 <div class="card-body">
-                    <form  action="#" method="get" name="formProject">
+                    <form  action="#" method="post" name="formProject">
 
                         <p><input type="text" class="form-control"  name="name" placeholder="Имя проекта"></p>
                         <p><input type="text" class="form-control"  name="budget" placeholder="Бюджет"></p>
                         <p><input type="text" class="form-control"  name="photo_1" placeholder="Id Фото"></p>
                         <p><input type="text" class="form-control"  name="photo_2" placeholder="Id Фото"></p>
+                        <p><input type="text" class="form-control"  name="photo_3" placeholder="Id Фото"></p>
+                        <p><input type="text" class="form-control"  name="photo_4" placeholder="Id Фото"></p>
+                        <p><input type="text" class="form-control"  name="photo_5" placeholder="Id Фото"></p>
                         <p><input type="text" class="form-control"  name="video_1" placeholder="Id Видео"></p>
                         <p><input type="text" class="form-control"  name="video_2" placeholder="Id Видео"></p>
-                        <p><textarea class="form-control height"  name="text" placeholder="Описание проекта"></textarea></p>
+                        <p><textarea class="form-control height"  name="text_1" placeholder="Описание проекта"></textarea></p>
+                        <p><textarea class="form-control height"  name="text_2" placeholder="Описание проекта"></textarea></p>
 
                         <div class="custom-control custom-radio">
-                              <input type="radio" class="custom-control-input" id="customControlValidation2" name="published" required>
+                              <input type="radio" class="custom-control-input" value="1" id="customControlValidation2" name="published" required>
                               <label class="custom-control-label" for="customControlValidation2">Опубликовано</label>
                         </div>
                         <div class="custom-control custom-radio mb-3">
-                              <input type="radio" class="custom-control-input" id="customControlValidation3" name="published" required>
+                              <input type="radio" class="custom-control-input" value="0" id="customControlValidation3" name="published" required>
                               <label class="custom-control-label" for="customControlValidation3">Не опубликовано</label>
 
                         </div>
