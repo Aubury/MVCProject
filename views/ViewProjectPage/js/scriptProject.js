@@ -1,8 +1,9 @@
 let rex = {
     form : document.forms['formProject'],
     arrInp : document.forms['formProject'].querySelectorAll('.form-control'),
-    table  : document.querySelector('.tableProjects')
-
+    table  : document.querySelector('.tableProjects'),
+    massId : [],
+    massOriginal: []
 };
 
 //-----------------------------------------------------------------------------------------------------------------
@@ -90,7 +91,11 @@ const getProgects = function getMassProjects(){
 
     fetch('/inf/project').then( data => data.json())
         // .then(arr => console.log(arr));
-        .then(arr => projectCard(arr[1]));
+        .then(arr => {
+            projectCard(arr[1]);
+            rex.massOriginal.push(arr[0]);
+            // console.log(rex.massOriginal[0]);
+        });
 }
 //----------------------------------------------------------------------------------------------------
 const projectCard = function createProjectCart(arr){
@@ -100,8 +105,9 @@ const projectCard = function createProjectCart(arr){
         answ += `
                   <div class="card text-center border-warning">
                       <div class="card-header row justify-content-around">
-                        <p>Бюджет: <span class="italic">${el.budget}</span></p>
-                        <p>Собрали: <span class="italic">${el.raiser_money}</span></p>
+                        <div title="Редактировать проект"><i class="material-icons" id="${el.name}">create</i></div>
+                        <div class="flex-grow-1">Бюджет: <span class="italic">${el.budget}</span></div>
+                        <div class="flex-grow-1">Собрали: <span class="italic">${el.raiser_money}</span></div>
                       </div>
                       <div class="card-body">
                       <h5 class="card-title">Проект \"${el.name}\"</h5>
@@ -127,9 +133,25 @@ const projectCard = function createProjectCart(arr){
                     </div>
                 </div>`;
     });
-
+    rex.massId = document.querySelectorAll(".material-icons");
     rex.table.innerHTML = answ;
 
 }
 //--------------------------------------------------------------------------------------------------
+const getMassindex = function getMassIndexById(ev)
+{
+    const arr = rex.massOriginal[0];
+    if(ev.target.hasAttribute('id')){
+
+        arr.forEach( el =>{
+            if(el.name === ev.target.id){
+               // return el;
+               console.log(el);
+            }
+
+        });
+    }
+}
+//---------------------------------------------------------------------------------------------------
+rex.massId.forEach( el=> el.addEventListener('click', getMassindex));
 getProgects();
