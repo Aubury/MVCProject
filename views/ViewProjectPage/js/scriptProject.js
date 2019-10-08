@@ -1,6 +1,7 @@
 let rex = {
     form : document.forms['formProject'],
-    arrInp : document.forms['formProject'].querySelectorAll('.form-control')
+    arrInp : document.forms['formProject'].querySelectorAll('.form-control'),
+    table  : document.querySelector('.tableProjects')
 
 };
 
@@ -63,27 +64,13 @@ rex.form.addEventListener('submit', function (ev) {
         }
     ];
 
-    // inpArr.forEach((el) => {
-    //    el.inp.name === 'published' ? answ.push({[el.name]:el.inp.checked.value}) : answ.push({[el.name]:el.inp.value});
-    //
-    // });
-
-//     sendObj(inpArr);
-//
-//
-// });
-//
-// //-----------------------------------------------------------------------------------------------------
-// function sendObj(answ) {
 
     const fD = new FormData(),
          url = '/reg/addProject';
 
     inpArr.forEach((el) => { (el.inp.name === 'published')?
-        fD.append([el.name],el.inp.checked.value):
-        fD.append([el.name],el.inp.value);});
-    // fD.append('name', answ['name']);
-    // fD.append('budget', answ['budget']);
+        fD.append([el.name],el.inp.checked.value): fD.append([el.name],el.inp.value);});
+
 
     fetch(url, {
         method: "POST",
@@ -94,40 +81,55 @@ rex.form.addEventListener('submit', function (ev) {
 
                 rex.arrInp[i].value = '';
             }
+            getProgects();
         });
 }
 );
+//---------------------------------------------------------------------------------------------------
+const getProgects = function getMassProjects(){
 
+    fetch('/inf/project').then( data => data.json())
+        // .then(arr => console.log(arr));
+        .then(arr => projectCard(arr[1]));
+}
 //----------------------------------------------------------------------------------------------------
 const projectCard = function createProjectCart(arr){
 
     let answ = '';
-    answ += ` <div class="progect">
-                <h2 class="none">progects</h2>
-                <div class="progect__left__content">
-                    <div class="galery">
-                        <img src="/views/img/car.jpg" alt="">
+    arr.forEach( el => {
+        answ += `
+                  <div class="card text-center border-warning">
+                      <div class="card-header row justify-content-around">
+                        <p>Бюджет: <span class="italic">${el.budget}</span></p>
+                        <p>Собрали: <span class="italic">${el.raiser_money}</span></p>
+                      </div>
+                      <div class="card-body">
+                      <h5 class="card-title">Проект \"${el.name}\"</h5>
+                      <div class="row justify-content-around">
+                           <div class="col-sm-6 justify-content-between">
+                               <div class="mainImg"><img class="w-100" src="${el.photo_1}" alt=""></div>
+                               <p class="card-text">${el.text_1}</p>
+                            </div>
+                           <div class="col-sm-6 justify-content-between">
+                              <p class="card-text">${el.text_2}</p>
+                              <div class="row justify-content-around">
+                                <div class="sizeImg"><img class="padImg " src="${el.photo_2}" alt=""></div> 
+                                <div class="sizeImg"> <img class="padImg" src="${el.photo_3}" alt=""></div>
+                                <div class="sizeImg"><img class="padImg" src="${el.photo_4}" alt=""></div>
+                                <div class="sizeImg"><img class="padImg" src="${el.photo_5}" alt=""></div>
+                             </div>
+                           </div>   
+                      </div>
+                      <div class="row justify-content-around height"> 
+                            <p class="w-50 padImg">${el.video_1}</p>
+                            <p class="w-50 padImg">${el.video_2}</p>
+                      </div>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum doloremque ratione. Consectetur hic, consequuntur veniam odit est temporibus tempora praesentium quae, ratione quo totam mollitia eos possimus expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi officia omnis dolore corporis molestiae placeat recusandae numquam, itaque quos asperiores minima rem, autem ullam, quis fugiat mollitia quasi maiores ipsam!
-                    </p>
-                </div>
-                <div class="progect__right__content">
-                    <h2 id="progects">Первый проект</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat, praesentium ipsam odio quo ut inventore ratione dolor eius officiis nihil optio debitis quae velit voluptatibus esse, in nemo necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quidem dolorum sit aperiam dolore expedita ab ea fugiat laudantium aut explicabo a deserunt, nesciunt ut animi iure. Nobis, voluptates impedit!
-                    </p>
-                    <div class="galery">
-                        <img src="/views/img/car.jpg" alt="">
-                        <img src="/views/img/car.jpg" alt="">
-                        <img src="/views/img/car.jpg" alt="">
-                        <img src="/views/img/car.jpg" alt="">
-                    </div>
-                </div>
-                <div class="video">
-                        <img src="/views/img/video.jpg" alt="">
-                        <img src="/views/img/video.jpg" alt="">
-                    </div>
-            </div>`;
+                </div>`;
+    });
+
+    rex.table.innerHTML = answ;
+
 }
-// //--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+getProgects();

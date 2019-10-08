@@ -97,7 +97,7 @@ option{
 
 }
 .height{
-    height: 250px !important;
+    height: 20em !important;
 }
 nav{
     padding: 0 40px !important;
@@ -163,3 +163,24 @@ iframe{
     padding: 10px 5px;
     width: 100%;
 }
+.padImg{
+    padding: 5px !important;
+}
+.mainImg{
+    width: 100%;
+    height: 20em;
+}
+.mainImg img{
+    height: 100%;
+    width: auto;
+}
+.sizeImg{
+    width: 49.98%;
+    height: 10em;
+}
+.sizeImg img{
+    width: 100%;
+    height: 100%;
+}
+
+

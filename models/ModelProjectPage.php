@@ -46,12 +46,67 @@ class ModelProjectPage
            $sql->execute();
 
        }
+    }
+    public function getInformationProjects()
+    {
+        $prp = $this->db->con->prepare("SELECT * FROM `projects`");
+        $prp->execute();
+        $mass = $prp->fetchAll();
 
+        $originalMass = [];
+        $infMass = [];
 
+        foreach ($mass as $value){
+            array_push($originalMass,[
+                'name'        => $value['name'],
+                'budget'      => $value['budget'],
+                'raiser_money'=> $value['raiser_money'],
+                'published'=> $value['published'],
+                'photo_1'  => $value['photo_1'],
+                'photo_2'  => $value['photo_2'],
+                'photo_3'  => $value['photo_3'],
+                'photo_4'  => $value['photo_4'],
+                'photo_5'  => $value['photo_5'],
+                'video_1'  => $value['video_1'],
+                'video_2'  => $value['video_2'],
+                'text_1'   => $value['text_1'],
+                'text_2'   => $value['text_1']
+            ]);
+        }
+        foreach ($mass as $value){
+            array_push($infMass,[
+                'name'        => $value['name'],
+                'budget'      => $value['budget'],
+                'raiser_money'=> $value['raiser_money'],
+                'published'=> $value['published'],
+                'photo_1'  => $this->getPhotoInfo($value['photo_1']),
+                'photo_2'  => $this->getPhotoInfo($value['photo_2']),
+                'photo_3'  => $this->getPhotoInfo($value['photo_3']),
+                'photo_4'  => $this->getPhotoInfo($value['photo_4']),
+                'photo_5'  => $this->getPhotoInfo($value['photo_5']),
+                'video_1'  => $this->getVideoInfo($value['video_1']),
+                'video_2'  => $this->getVideoInfo($value['video_2']),
+                'text_1'   => $value['text_1'],
+                'text_2'   => $value['text_1']
+            ]);
+        }
+        echo json_encode([$originalMass, $infMass]);
+    }
+    public function getPhotoInfo($id)
+    {
+        $prp = $this->db->con->prepare("SELECT `name`, `direction` FROM `photos` WHERE `id`= {$id}");
+        $prp->execute();
+        $mass = $prp->fetchAll();
 
+        return "{$mass[0]['direction']}{$mass[0]['name']}";
+    }
+    public function getVideoInfo($id)
+    {
+        $prp = $this->db->con->prepare("SELECT `link` FROM `video` WHERE `id` = {$id}");
+        $prp->execute();
+        $mass = $prp->fetchAll();
 
-
-
+        return "{$mass[0]['link']}";
     }
 
 }

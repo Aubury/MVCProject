@@ -16,7 +16,7 @@ const creatTable = function creatActionTable(arr){
 
     //   Удаляю всех детей!!!
     while(table.hasChildNodes()){
-        table.removeChild(list.firstChild);
+        table.removeChild(table.firstChild);
     }
 
 

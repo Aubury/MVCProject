@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style><?php include_once ROOT . "/views/css/reset.css"?></style>
     <style><?php include_once ROOT . "/views/css/style.css" ?></style>
+<!--    <style>--><?php //include_once ROOT . "/views/ViewMainPage/css/style.css" ?><!--</style>-->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -103,55 +105,56 @@
                 </div>
               </div>
         </div>
-        <div class="col-8">
-          <table class="tableProjects table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col"></th>
-                  <th scope="col">Дата</th>
-                  <th scope="col">Заголовок</th>
-                  <th scope="col">Опубликовано</th>
-                  <th scope="col">Бюджет</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><i class="material-icons">create</i></td>
-                  <td>Adolf</td>
-                  <td>Occupied Poland</td>
-                  <td>24.05.67</td>
-                  <td>Adolf Hitler</td>
-                </tr>
-                <tr>
-                  <td><i class="material-icons">create</i></td>
-                  <td>Adolf</td>
-                  <td>23.02.11</td>
-                  <td>Joseph Gebbels</td>
-                  <td>Propagandized fascism</td>
-                </tr>
-                <tr>
-                    <td><i class="material-icons">create</i></td>
-                    <td>Adolf</td>
-                    <td>23.02.11</td>
-                    <td>Joseph Gebbels</td>
-                    <td>Propagandized fascism</td>
-                  </tr>
-                  <tr>
-                      <td><i class="material-icons">create</i></td>
-                      <td>Adolf</td>
-                      <td>23.02.11</td>
-                      <td>Joseph Gebbels</td>
-                      <td>Propagandized fascism</td>
-                    </tr>
-                    <tr>
-                        <td><i class="material-icons">create</i></td>
-                        <td>Adolf</td>
-                        <td>23.02.11</td>
-                        <td>Joseph Gebbels</td>
-                        <td>Propagandized fascism</td>
-                      </tr>
-              </tbody>
-            </table>
+        <div class="col-9">
+            <div class="row justify-content-around tableDg tableProjects"></div>
+<!--          <table class="tableProjects table table-hover">-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th scope="col"></th>-->
+<!--                  <th scope="col">Дата</th>-->
+<!--                  <th scope="col">Заголовок</th>-->
+<!--                  <th scope="col">Опубликовано</th>-->
+<!--                  <th scope="col">Бюджет</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--                <tr>-->
+<!--                  <td><i class="material-icons">create</i></td>-->
+<!--                  <td>Adolf</td>-->
+<!--                  <td>Occupied Poland</td>-->
+<!--                  <td>24.05.67</td>-->
+<!--                  <td>Adolf Hitler</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                  <td><i class="material-icons">create</i></td>-->
+<!--                  <td>Adolf</td>-->
+<!--                  <td>23.02.11</td>-->
+<!--                  <td>Joseph Gebbels</td>-->
+<!--                  <td>Propagandized fascism</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td><i class="material-icons">create</i></td>-->
+<!--                    <td>Adolf</td>-->
+<!--                    <td>23.02.11</td>-->
+<!--                    <td>Joseph Gebbels</td>-->
+<!--                    <td>Propagandized fascism</td>-->
+<!--                  </tr>-->
+<!--                  <tr>-->
+<!--                      <td><i class="material-icons">create</i></td>-->
+<!--                      <td>Adolf</td>-->
+<!--                      <td>23.02.11</td>-->
+<!--                      <td>Joseph Gebbels</td>-->
+<!--                      <td>Propagandized fascism</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td><i class="material-icons">create</i></td>-->
+<!--                        <td>Adolf</td>-->
+<!--                        <td>23.02.11</td>-->
+<!--                        <td>Joseph Gebbels</td>-->
+<!--                        <td>Propagandized fascism</td>-->
+<!--                      </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
       </div>
         
     </div>
