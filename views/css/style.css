@@ -191,5 +191,13 @@ iframe{
 i{
   cursor: pointer;
 }
+.icons{
+    width: 3em;
+    height: 100%;
+    /*border: 1px solid black;*/
+    margin: 0;
+    cursor: pointer;
+}
+
 
 

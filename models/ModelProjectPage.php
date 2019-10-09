@@ -16,7 +16,7 @@ class ModelProjectPage
        $prp = $this->db->con->prepare("SELECT `name` FROM `projects` WHERE `name` = '{$arr['name']}'");
        $prp->execute();
        $project = $prp->fetchAll();
-        var_dump($arr);
+
        if(count($project)=== 0){
 
            $sqlStr = $this->db->con->prepare("INSERT INTO `projects`(`name`, `budget`, `published`, `photo_1`, `photo_2`, `photo_3`, `photo_4`, `photo_5`, `video_1`, `video_2`, `text_1`, `text_2`) 

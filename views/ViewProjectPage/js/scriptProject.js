@@ -2,17 +2,10 @@ let rex = {
     form : document.forms['formProject'],
     arrInp : document.forms['formProject'].querySelectorAll('.form-control'),
     table  : document.querySelector('.tableProjects'),
-    massId : [],
+    arrIcons    : [],
     massOriginal: []
 };
-
-//-----------------------------------------------------------------------------------------------------------------
-//Обработчик отправки.
-rex.form.addEventListener('submit', function (ev) {
-
-    ev.preventDefault();
-
-    // let answ = [];
+const massInp = function massInputsForm(){
 
     let form = rex.form;
     const inpArr = [
@@ -64,7 +57,16 @@ rex.form.addEventListener('submit', function (ev) {
             name    : 'published',
         }
     ];
+    return inpArr;
+}
+//-----------------------------------------------------------------------------------------------------------------
+//Обработчик отправки.
+rex.form.addEventListener('submit', function (ev) {
 
+    ev.preventDefault();
+
+    const form = rex.form,
+        inpArr = massInp();
 
     const fD = new FormData(),
          url = '/reg/addProject';
@@ -90,11 +92,9 @@ rex.form.addEventListener('submit', function (ev) {
 const getProgects = function getMassProjects(){
 
     fetch('/inf/project').then( data => data.json())
-        // .then(arr => console.log(arr));
         .then(arr => {
             projectCard(arr[1]);
             rex.massOriginal.push(arr[0]);
-            // console.log(rex.massOriginal[0]);
         });
 }
 //----------------------------------------------------------------------------------------------------
@@ -105,9 +105,12 @@ const projectCard = function createProjectCart(arr){
         answ += `
                   <div class="card text-center border-warning">
                       <div class="card-header row justify-content-around">
-                        <div title="Редактировать проект"><i class="material-icons" id="${el.name}">create</i></div>
-                        <div class="flex-grow-1">Бюджет: <span class="italic">${el.budget}</span></div>
-                        <div class="flex-grow-1">Собрали: <span class="italic">${el.raiser_money}</span></div>
+                        <div title="Редактировать проект" class="icons flex-shrink-1 p-2">
+                         <i class="material-icons" id="${el.name}">create</i>
+                        </div>
+                      
+                        <div class="p-2 flex-grow-1">Бюджет: <span class="italic">${el.budget}</span></div>
+                        <div class="p-2 flex-grow-1">Собрали: <span class="italic">${el.raiser_money}</span></div>
                       </div>
                       <div class="card-body">
                       <h5 class="card-title">Проект \"${el.name}\"</h5>
@@ -133,9 +136,10 @@ const projectCard = function createProjectCart(arr){
                     </div>
                 </div>`;
     });
-    rex.massId = document.querySelectorAll(".material-icons");
-    rex.table.innerHTML = answ;
 
+    rex.table.innerHTML = answ;
+    rex.arrIcons.push(document.querySelectorAll(".icons"));
+    addListtener(rex.arrIcons[0]);
 }
 //--------------------------------------------------------------------------------------------------
 const getMassindex = function getMassIndexById(ev)
@@ -145,13 +149,34 @@ const getMassindex = function getMassIndexById(ev)
 
         arr.forEach( el =>{
             if(el.name === ev.target.id){
-               // return el;
-               console.log(el);
+               fillInp(el);
             }
 
         });
     }
 }
 //---------------------------------------------------------------------------------------------------
-rex.massId.forEach( el=> el.addEventListener('click', getMassindex));
+const addListtener = function addToArrListener(arr){
+    for (let i = 0; i < arr.length; i++ ){
+
+        arr[i].addEventListener('click', getMassindex);
+    }
+}
+//---------------------------------------------------------------------------------------------------
+const fillInp = function fillInputsForm(arr){
+
+    const inpArr = massInp(),
+         len = arr.length;
+
+
+    for(let i = 0; i < inpArr.length; i++){
+        for (key in arr) {
+            if(inpArr[i].name === key){
+                inpArr[i].inp.value = arr[key];
+            }
+        }
+
+    }
+}
+
 getProgects();
