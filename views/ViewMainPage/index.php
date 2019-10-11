@@ -15,7 +15,6 @@
         <button class="top topHide"><span>&lt;</span></button>
         <div class="container">
             <section class="left__header__content">
-                <h2 class="none">h2</h2>
                 <div class="logo">
                     <img src="/views/img/logo.png" alt="logo__company">
                 </div>
@@ -26,7 +25,6 @@
                 </div>
             </section>
             <section class="right__header__content">
-                <h2 class="none">h2</h2>
                 <div class="companySloganNone">
                     <p>Главное иметь мечту</p>
                 </div>
@@ -47,7 +45,6 @@
     <main class="main">
         <div class="container">
             <section class="about__us">
-                <h2 class="none">h2</h2>
                 <div class="about__us__left__content">
                     <h2>О нас</h2>
                     <p>
@@ -94,7 +91,6 @@
                     </div>
             </section>
             <section class="progect">
-                <h2 class="none">h2</h2>
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/house.jpg" alt="">
@@ -121,13 +117,11 @@
                     </div>
             </section>
             <section class="photoGalery">
-                <h2 class="none">h2</h2>
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
             </section>
             <section class="video">
-                <h2 class="none">h2</h2>
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
@@ -155,7 +149,6 @@
         </div>
     </footer>
    <section class="modal__certificate none">
-        <h2 class="none">h2</h2>
         <div class="modal__content__certificate">
             <img src="/views/img/page.jpg" alt="свидетельство">
             <input type="button" class="closeModalCertificate" value="X">
