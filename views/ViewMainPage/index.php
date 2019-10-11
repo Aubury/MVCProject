@@ -89,7 +89,7 @@
                         <img src="/views/img/video.jpg" alt="">
                     </div>
             </div>
-            <section class="section progect">
+            <div class="section progect">
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/house.jpg" alt="">
