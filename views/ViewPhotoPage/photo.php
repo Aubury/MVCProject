@@ -55,7 +55,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center topTxt">
             <div class="col-12 reports">
-                <span>Управление фотоконтентом</span>
+                <h2>Управление фотоконтентом</h2>
             </div>
         </div>
         <div class="row">
@@ -67,7 +67,7 @@
         <div class="row justify-content-around">
             <div class="col-3 ReportInfo">
                 <div class="card border-info  mb-3">
-                    <div class="card-header reports"><h3>Загрузить фото</h3></div>
+                    <div class="card-header"><h3>Загрузить фото</h3></div>
                         <div class="card-body">
                             <form name="formPhoto" action="#" method="post" enctype="multipart/form-data">
                                 <p> <input type="file" name="img_url" class="form-control-file"></p>
@@ -77,7 +77,7 @@
                         </div>
                 </div>
                 <div class="card border-info  mb-3">
-                    <div class="card-header reports"><h3>Удалить фото</h3></div>
+                    <div class="card-header"><h3>Удалить фото</h3></div>
                     <div class="card-body">
                         <form name="formDelPhoto" action="/reg/delPhoto" method="post">
                             <p><input type="text" class="inpText form-control"  name="id" placeholder="Id картинки">
@@ -89,7 +89,7 @@
             </div>
 
             <div class="col-9">
-                <div class="row justify-content-around tableDg tablePhoto"></div>
+                <div class="row justify-content-around tableDg tablePhoto border-warning"></div>
 
             </div>
         </div>

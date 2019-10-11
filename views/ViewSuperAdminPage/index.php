@@ -56,14 +56,14 @@
       <div class="container-fluid">
          <div class="row justify-content-center topTxt">
               <div class="col-12 reports">
-               <span>Жалобы и предложения</span>
+               <h2>Жалобы и предложения</h2>
               </div>
          </div>
          <div class="row justify-content-around">
              <div class="col-3 ReportInfo">
               <div class="card border-info  mb-3">
-                  <div class="card-header reports">
-                      <h3>Жалобы</h3>
+                  <div class="card-header">
+                      <h4>Жалобы</h4>
                   </div>
                       <div class="card-body">
                           <div>Новых: <span id="newComplaints"></span></div>
@@ -72,8 +72,8 @@
                       </div>
                   </div>
                  <div class="card border-info  mb-3">
-                     <div class="card-header reports">
-                     <h3>Дoбавить ответ</h3>
+                     <div class="card-header">
+                     <h4>Дoбавить ответ</h4>
                      </div>
                          <div class="card-body">
                              <form name="formAnswer" action="#" class="formAddUsers">
@@ -86,7 +86,7 @@
                          </div>
                  </div>
               </div>
-             <div class="col-8 tableReports">
+             <div class="col-8 tableReports border-warning">
 
             </div>
          </div>

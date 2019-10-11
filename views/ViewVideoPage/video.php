@@ -55,11 +55,11 @@
     <div class="container-fluid">
         <div class="row justify-content-center topTxt">
             <div class="col-12 reports">
-                <span>Управление видеоконтентом</span>
+                <h2>Управление видеоконтентом</h2>
             </div>
         </div>
         <div class="row">
-              <div class="col-4 col-lg-2 offset-lg-10"> 
+              <div class="col-4 col-md-3 offset-md-9 p-2">
                     <input onkeyup="tableSearch()" id="searchVideos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
               </div>
         </div> 
@@ -67,7 +67,7 @@
         <div class="row justify-content-around">
             <div class="col-3 ReportInfo">
                 <div class="card border-info  mb-3">
-                    <div class="card-header reports"><h3>Добавить видео</h3></div>
+                    <div class="card-header"><h3>Добавить видео</h3></div>
                     <div class="card-body">
                         <form name="formVideo" action="#" method="get">
                             <p><input type="text" class="inpText form-control"  name="name" placeholder="Заголовок"></p>
@@ -78,7 +78,7 @@
                         <span class="italic"></span></div>
                     </div>
                 <div class="card border-info  mb-3">
-                    <div class="card-header reports"><h3>Удалить видео</h3></div>
+                    <div class="card-header"><h3>Удалить видео</h3></div>
                     <div class="card-body">
                         <form name="formDelVideo" action="#" method="post">
                             <p><input type="text" class="inpText form-control"  name="id" placeholder="Id видео">
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="col-9">
-                <div class="row justify-content-around  tableDg tableVideos"></div>
+                <div class="row justify-content-around  tableDg tableVideos borderColor"></div>
 
             </div>
         </div>

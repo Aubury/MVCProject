@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Admin Control Panel</title>
+    <title>SuperAdmin</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -59,9 +60,9 @@
                     <h3>Жалобы</h3>
                 </div>
                 <div class="card-body">
-                    <div>Новых: <span class="newComplaints">123</span></div>
-                    <div>Всего: <span class="allComplaints">398</span></div>
-                    <div>Отвеченных: <span class="answeredComplaints">123</span></div>
+                    <div>Новых: <span id="newComplaints"></span></div>
+                    <div>Всего: <span id="allComplaints"></span></div>
+                    <div>Отвеченных: <span id="answeredComplaints"></span></div>
                 </div>
             </div>
             <div class="card border-info  mb-3">
@@ -70,60 +71,23 @@
                 </div>
                 <div class="card-body">
                     <form name="formAnswer" action="#" class="formAddUsers">
-                        <p><input type="text" class="form-control"  name="id" placeholder="№ Жалобы или предложения" required>
-                        <p><input type="text" class="form-control"  name="email" placeholder="email" required>
-                        <p><textarea class="form-control height" name="text" placeholder="Жалоба или предложения" required></textarea>
-                        <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Подать</button></p>
+                        <p><input type="text" class="form-control"  name="id" placeholder="№ Жалобы или предложения" required></p>
+                        <p><input type="text" class="form-control"  name="email" placeholder="email" required></p>
+                        <p><textarea class="form-control height" name="text" placeholder="Жалоба или предложения" required></textarea></p>
+                        <p class="col-12 col-xl-12"><input class="btn btn-block btn-success" type="submit" value="Отправить"></p>
                     </form>
                     <span class="italic"></span>
                 </div>
             </div>
         </div>
-        <div class="col-8 tableReports">
+        <div class="col-8 tableReports border-warning">
 
-            <div class="card border-warning mb-3" data-toggle="modal" data-target="#exampleModal">
-                <div class="card-header">
-                    <div class="row reporterInfo">
-                        <div class="col reporterName">Adolf Hitler</div>
-                        <div class="col reportDate">26.05.1945</div>
-                        <div class="col reportTime">21:30</div>
-                    </div>
-                </div>
-                <div class="card-body reportContent">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, debitis! Labore praesentium adipisci ea maxime accusamus excepturi molestias inventore cum ullam, cumque necessitatibus, reiciendis, magni nihil! Fugit autem vero quod!
-                </div>
-            </div>
-
-
-        </div>
-
-    </div>
-</div>
-
-
-<!-- модальное окно -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ответ на жалобу</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <textarea name="" id="textAreaForAdminModal" rows="5"></textarea>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
-                <button type="button" class="btn btn-primary">Отправить</button>
-            </div>
         </div>
     </div>
 </div>
 
-
-
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/bootstrap.min.js"?></script>
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/scriptAnswer.js"?></script>
+<script><?php include_once ROOT ."/views/ViewSuperAdminPage/js/scriptAnswer.js"?></script>
+<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/backInfo.js"?></script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
 
 </body>

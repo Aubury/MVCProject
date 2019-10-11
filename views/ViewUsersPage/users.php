@@ -55,17 +55,17 @@
 <div class="container-fluid">
   <div class="row justify-content-center topTxt">
       <div class="col-12 reports">
-          <span>Участники</span>
+          <h2>Участники</h2>
          </div>
   </div>
-  <div class="row justify-content-end offset-lg-4">
+  <div class="row justify-content-end offset-lg-4 p-2">
       <button type="button" class="btn btn-info print">Печать</button>
-      <input class="mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+      <input class="col-md-3 form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
   </div>
   <div class="row justify-content-around">
     <div class="col-3 ReportInfo">
         <div class="card border-info  mb-3">
-            <div class="card-header reports"><h3>Добавление нового участника</h3></div>
+            <div class="card-header"><h4>Добавление или редактировать участника</h4></div>
             <div class="card-body">
                 <form name="formUsers" action="#" method="get">
                     <p><input type="text" class="inpText form-control"  name="name" placeholder="Имя">
@@ -87,16 +87,13 @@
                         <span class="italic"></span></p>
                     <p><input type="text" class="inpText form-control" name="tax_code"  placeholder="ИНН">
                         <span class="italic"></span></p>
-<!--                    <p class="row">-->
-<!--                        <div class="col-12 col-xl-12"><input class="btn btn-block btn-danger" type="submit" value="Удалить"></div>-->
-                     <p class="col-12 col-xl-12"><input class="btn btn-block btn-success" type="submit" value="Добавить"></p>
-<!--                    </p>-->
+                     <p class="col-12 col-xl-12"><input class="btn btn-block btn-success" type="submit" value="Добавить / Редактировать"></p>
                 </form>
                 <span class="talic"></span>
             </div>
           </div>
         <div class="card border-info  mb-3">
-            <div class="card-header reports"><h3>Удаление участника</h3></div>
+            <div class="card-header"><h4>Удаление участника</h4></div>
             <div class="card-body">
                 <form name="formDelUser" action="#" method="get">
                     <p><input type="email" class="inpText form-control" name="email" placeholder="Email">

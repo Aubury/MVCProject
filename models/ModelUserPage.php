@@ -13,13 +13,23 @@ class ModelUserPage
 
    public function addUser($arr)
    {
-       $prp = $this->db->con->prepare("SELECT `email` FROM `users` WHERE `email`='{$arr['email']}'");
+       $prp = $this->db->con->prepare("SELECT * FROM `users` WHERE `email`='{$arr['email']}'");
        $prp->execute();
        $user = $prp->fetchAll();
-
+       $id = $user[0]['id'];
+//      var_dump($user);
+//      echo $id;
        if(count($user)>0){
 
-           echo "Такой пользователь уже есть в базе данных";
+           $prp = $this->db->con->prepare("UPDATE `users` SET `name`='{$arr['name']}',`patronymic`='{$arr['patronymic']}',`surname`='{$arr['surname']}',`email`='{$arr['email']}', `project_name`='{$arr['project_name']}', `address`='{$arr['address']}',`telephon`='{$arr['telephon']}',`tax_code`= {$arr['tax_code']} WHERE `id`= $id");
+           $prp->execute();
+           echo "Данные участника изменены";
+           $admin = $_COOKIE['user_id'];
+           $usr = $arr['name']." ".$arr['patronymic']." ".$arr['surname'];
+           $action = "Изменил(а) данные участника {$usr}";
+           $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+           $sql->execute();
+
        }else{
 
            $passH = password_hash($arr['password'], PASSWORD_BCRYPT);
@@ -85,17 +95,17 @@ class ModelUserPage
        foreach ($mass as $value){
 
            array_push($massUsers, [
-               $value['surname'],
-               $value['name'],
-               $value['patronymic'],
-               $value['telephon'],
-               $value['email'],
-               $value['address'],
-               $value['tax_code'],
-               $value['project_name'],
-               $value['share_investment'],
-               $value['invest_amount'],
-               $value['payment_time']
+             'surname'   => $value['surname'],
+             'name'      => $value['name'],
+             'patronymic'=> $value['patronymic'],
+             'telephon'  => $value['telephon'],
+             'email'     => $value['email'],
+             'address'   => $value['address'],
+             'tax_code'  => $value['tax_code'],
+             'project_name' => $value['project_name'],
+             'share_investment' =>  $value['share_investment'],
+             'invest_amount'    =>  $value['invest_amount'],
+             'payment_time'     =>  $value['payment_time']
            ]);
        }
       echo json_encode($massUsers);

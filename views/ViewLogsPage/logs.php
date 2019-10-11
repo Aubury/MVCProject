@@ -65,7 +65,7 @@
       </div>
   </div> 
   <div class="row">
-    <div class="col-12 infoTable">
+    <div class="col-12 infoTable border-warning">
 
   </div>
   </div>

@@ -60,7 +60,6 @@ const massInp = function massInputsForm(){
     return inpArr;
 }
 //-----------------------------------------------------------------------------------------------------------------
-//Обработчик отправки.
 rex.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
@@ -112,28 +111,37 @@ const projectCard = function createProjectCart(arr){
                         <div class="p-2 flex-grow-1">Бюджет: <span class="italic">${el.budget}</span></div>
                         <div class="p-2 flex-grow-1">Собрали: <span class="italic">${el.raiser_money}</span></div>
                       </div>
-                      <div class="card-body">
-                      <h5 class="card-title">Проект \"${el.name}\"</h5>
-                      <div class="row justify-content-around">
-                           <div class="col-sm-6 justify-content-between">
-                               <div class="mainImg"><img class="w-100" src="${el.photo_1}" alt=""></div>
-                               <p class="card-text">${el.text_1}</p>
-                            </div>
-                           <div class="col-sm-6 justify-content-between">
-                              <p class="card-text">${el.text_2}</p>
-                              <div class="row justify-content-around">
-                                <div class="sizeImg"><img class="padImg " src="${el.photo_2}" alt=""></div> 
-                                <div class="sizeImg"> <img class="padImg" src="${el.photo_3}" alt=""></div>
-                                <div class="sizeImg"><img class="padImg" src="${el.photo_4}" alt=""></div>
-                                <div class="sizeImg"><img class="padImg" src="${el.photo_5}" alt=""></div>
-                             </div>
-                           </div>   
-                      </div>
-                      <div class="row justify-content-around height"> 
+                      <div class="container">
+                      
+                                 <div class="row">
+                               
+                                   <div class="col colHeight">
+                                       <div class="mainImg"><img class="w-100" src="${el.photo_1}" alt=""></div>
+                                       <p class="card-text p-2">${el.text_1}</p>
+                                   </div>
+                           
+                                   <div class="col wrapper colHeight ">
+                                       <div class="col align-items-start">
+                                         <h2 class="card-title">Проект \"${el.name}\"</h2>
+                                         <p class="card-text p-2">${el.text_2}</p>
+                                       </div>
+                                 
+                                    
+                                      <div class="row">
+                                        <div class="sizeImg"><img class="padImg " src="${el.photo_2}" alt=""></div> 
+                                        <div class="sizeImg"> <img class="padImg" src="${el.photo_3}" alt=""></div>
+                                        <div class="sizeImg"><img class="padImg" src="${el.photo_4}" alt=""></div>
+                                        <div class="sizeImg"><img class="padImg" src="${el.photo_5}" alt=""></div>
+                                      </div>
+                                      
+                                   </div>
+                               </div>   
+                          
+                           <div class="row justify-content-around height"> 
                             <p class="w-50 padImg">${el.video_1}</p>
                             <p class="w-50 padImg">${el.video_2}</p>
                       </div>
-                    </div>
+                      </div>
                 </div>`;
     });
 

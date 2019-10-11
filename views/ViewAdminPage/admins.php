@@ -97,7 +97,7 @@
 
     </div>
 
-    <div class="col-8">
+    <div class="col-8 border-warning">
         <table class="tableAdmins table table-hover">
             <thead>
               <tr>

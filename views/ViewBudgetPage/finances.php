@@ -55,18 +55,18 @@
 <div class="container-fluid">
     <div class="row justify-content-center topTxt">
         <div class="col-12 reports">
-            <span>Управление финансами</span>
+            <h2>Управление финансами</h2>
         </div>
     </div>
     <div class="row">
-          <div class="col-4 col-lg-2 offset-lg-10">
+          <div class="col-4 col-md-3 offset-md-9 p-2">
                 <input onkeyup="tableSearch()" id="searchFinances" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
           </div>
     </div> 
     <div class="row justify-content-around">
         <div class="col-3 ReportInfo">
             <div class="card border-info  mb-3">
-                <div class="card-header reports"><h3>Создание платежа</h3></div>
+                <div class="card-header"><h3>Создание платежа</h3></div>
                 <div class="card-body formAddUsers">
                     <form name="formAddPay" action="" method="POST">
                        <p><select name="project_name" id="inputState" class="form-control"></p>

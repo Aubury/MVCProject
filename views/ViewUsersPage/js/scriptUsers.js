@@ -12,10 +12,92 @@ const rex = {
     infUsers   : document.querySelector('.tableUsers'),
     printButton: document.querySelector('.print'),
     table      : document.querySelector('#tableUsers'),
-    massUsers  : []
+    massUsers  : [],
+    arrIcons    : [],
+    massOriginal: []
 
 
 };
+//---------------------------------------------------------------------------------------------------
+const massInp = function massInputsForm(){
+
+    const form = rex.formAdd,
+        inpArr = [
+            {
+                inp     : form['name'],
+                info    : form['name'].nextElementSibling,
+                reg     : rex.nameRex,
+                msgError: '*Ввод только кириллицы или латиницы!',
+                name    : 'name',
+            },
+            {
+                inp     : form['patronymic'],
+                info    : form['patronymic'].nextElementSibling,
+                reg     : rex.nameRex,
+                msgError: '*Ввод только кириллицы или латиницы!',
+                name    : 'patronymic',
+            },
+            {
+                inp     : form['surname'],
+                info    : form['surname'].nextElementSibling,
+                reg     : rex.nameRex,
+                msgError: '*Ввод только кириллицы или латиницы!',
+                name    : 'surname',
+
+            },
+            {
+                inp     : form['email'],
+                info    : form['email'].nextElementSibling,
+                reg     : rex.emailRex,
+                name    : 'email',
+
+            },
+            {
+                inp     : form['project_name'],
+                info    : form['project_name'].nextElementSibling,
+                reg     : rex.projectRex,
+                name    : 'project_name',
+
+            },
+            {
+                inp     : form['share_investment'],
+                info    : form['share_investment'].nextElementSibling,
+                reg     : rex.amountRex,
+                msgError: '*Введите только 10 цифр!',
+                name    : 'share_investment',
+
+            },
+            {
+                inp     : form['address'],
+                info    : form['address'].nextElementSibling,
+                reg     : rex.addressRex,
+                msgError: '*Ввод только кириллицы или латиницы!',
+                name    : 'address',
+
+            },
+            {
+                inp     : form['telephon'],
+                info    : form['telephon'].nextElementSibling,
+                reg     : rex.telRex,
+                msgError: '*Ввод только цифр!',
+                name    : 'telephon',
+
+            },
+            {
+                inp     : form['tax_code'],
+                info    : form['tax_code'].nextElementSibling,
+                reg     : rex.taxRex,
+                msgError: '*Введите только 10 цифр!',
+                name    : 'tax_code',
+
+            },
+
+
+
+        ];
+
+    return inpArr;
+}
 //----------------------------------------------------------------------------------------------------
 function validate(inpArr){
 
@@ -31,107 +113,6 @@ function validate(inpArr){
         sendObj(answ);
     }
 }
-//----------------------------------------------------------------------------------------------------
-//Обработчик отправки.
- rex.formDel.addEventListener('submit', function (ev) {
-
-     ev.preventDefault();
-
-    const form = rex.formDel,
-          url = `/reg/delUser?email=${form['email'].value}`;
-
-    fetch(url).then((response)=> {  return response.text();})
-            .then((text)=>{rex.formDel.nextElementSibling.innerHTML = text;
-                for(let i=0; i<rex.arrInp.length; i++){
-
-                    rex.arrInp[i].value = '';
-                }
-            })
-
-});
-//----------------------------------------------------------------------------------------------------
-rex.formAdd.addEventListener('submit', function (ev) {
-
-    ev.preventDefault();
-
-    const form = rex.formAdd,
-          inpArr = [
-        {
-            inp     : form['name'],
-            info    : form['name'].nextElementSibling,
-            reg     : rex.nameRex,
-            msgError: '*Ввод только кириллицы или латиницы!',
-            name    : 'name',
-        },
-        {
-            inp     : form['patronymic'],
-            info    : form['patronymic'].nextElementSibling,
-            reg     : rex.nameRex,
-            msgError: '*Ввод только кириллицы или латиницы!',
-            name    : 'patronymic',
-        },
-        {
-            inp     : form['surname'],
-            info    : form['surname'].nextElementSibling,
-            reg     : rex.nameRex,
-            msgError: '*Ввод только кириллицы или латиницы!',
-            name    : 'surname',
-
-        },
-        {
-            inp     : form['email'],
-            info    : form['email'].nextElementSibling,
-            reg     : rex.emailRex,
-            name    : 'email',
-
-        },
-        {
-            inp     : form['project_name'],
-            info    : form['project_name'].nextElementSibling,
-            reg     : rex.projectRex,
-            name    : 'project_name',
-
-        },
-        {
-              inp     : form['share_investment'],
-              info    : form['share_investment'].nextElementSibling,
-              reg     : rex.amountRex,
-              msgError: '*Введите только 10 цифр!',
-              name    : 'share_investment',
-
-        },
-        {
-            inp     : form['address'],
-            info    : form['address'].nextElementSibling,
-            reg     : rex.addressRex,
-            msgError: '*Ввод только кириллицы или латиницы!',
-            name    : 'address',
-
-        },
-        {
-            inp     : form['telephon'],
-            info    : form['telephon'].nextElementSibling,
-            reg     : rex.telRex,
-            msgError: '*Ввод только цифр!',
-            name    : 'telephon',
-
-        },
-        {
-            inp     : form['tax_code'],
-            info    : form['tax_code'].nextElementSibling,
-            reg     : rex.taxRex,
-            msgError: '*Введите только 10 цифр!',
-            name    : 'tax_code',
-
-        },
-
-
-
-     ];
-
-        validate(inpArr);
-
-});
 //-----------------------------------------------------------------------------------------------------
 function checkInput(check){
     check.msgError = check.msgError || "Данные введены не корректно";
@@ -145,6 +126,14 @@ function checkInput(check){
     check.info.innerHTML = '';
     return true;
 }
+//----------------------------------------------------------------------------------------------------
+rex.formAdd.addEventListener('submit', function (ev) {
+
+    ev.preventDefault();
+    validate(massInp());
+
+});
+
 //-----------------------------------------------------------------------------------------------------
 function sendObj(answ){
 
@@ -154,12 +143,69 @@ function sendObj(answ){
 
     fetch(url).then((response)=> {  return response.text();})
         .then((text)=>{rex.formAdd.nextElementSibling.innerHTML = text;
-                     for(let i=0; i<rex.arrInp.length; i++){
+            for(let i=0; i<rex.arrInp.length; i++){
 
-                         rex.arrInp[i].value = '';
-                       }
-             })
+                rex.arrInp[i].value = '';
+                infUsers();
+            }
+        })
 }
+//----------------------------------------------------------------------------------------------------
+ rex.formDel.addEventListener('submit', function (ev) {
+
+     ev.preventDefault();
+
+    const form = rex.formDel,
+          url = `/reg/delUser?email=${form['email'].value}`;
+
+    fetch(url).then((response)=> {  return response.text();})
+            .then((text)=>{rex.formDel.nextElementSibling.innerHTML = text;
+                for(let i=0; i<rex.arrInp.length; i++){
+
+                    rex.arrInp[i].value = '';
+                    infUsers();
+                }
+            })
+
+});
+
+//-----------------------------------------------------------------------------------------------------
+const getMassindex = function getMassIndexById(ev)
+{
+    const arr = rex.massUsers;
+    if(ev.target.hasAttribute('id')){
+
+        arr.forEach( el =>{
+            if(el.email === ev.target.id){
+                fillInp(el);
+            }
+
+        });
+    }
+}
+//---------------------------------------------------------------------------------------------------
+const fillInp = function fillInputsForm(arr){
+
+    const inpArr = massInp();
+
+    for(let i = 0; i < inpArr.length; i++){
+        for (key in arr) {
+            if(inpArr[i].name === key){
+                inpArr[i].inp.value = arr[key];
+            }
+        }
+
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------
+const addListtener = function addToArrListener(arr){
+    for (let i = 0; i < arr.length; i++ ){
+
+        arr[i].addEventListener('click', getMassindex);
+    }
+}
+
 //============================Information Of Users=====================================================
 
 const createUsersTable = function createUsersTable(arr){
@@ -169,26 +215,27 @@ const createUsersTable = function createUsersTable(arr){
 
     //   Удаляю всех детей!!!
     while(table.hasChildNodes()){
-        table.removeChild(list.firstChild);
+        table.removeChild(table.firstChild);
     }
 
 
     //Формирую строки
-    let trs = "<tr><th></th><th></th><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
+    let trs = "<tr><th></th><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
     arr.forEach(el=>{
-        trs = `${trs}<tr><td><i class="material-icons">info</i></td>
-                         <td><i class="material-icons">create</i></td>   
-                         <td>${el[0]}<br>${el[1]}<br>${el[2]}<br></td>
-                         <td>Тел: ${el[3]}<br>Email: ${el[4]}<br>Адрес: ${el[5]}<br>ИНН: ${el[6]}<br></td>
-                         <td>${el[7]}<br></td>
-                         <td>${el[8]}<br></td>
-                         <td>${el[9]}<br></td>
-                         <td>${el[10]}<br></td></tr>`;
+        trs = `${trs}<tr><td class="icons"><i class="material-icons" id="${el.email}">create</i></td>   
+                         <td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td>
+                         <td>Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
+                         <td>${el.project_name}<br></td>
+                         <td>${el.share_investment}<br></td>
+                         <td>${el.invest_amount}<br></td>
+                         <td>${el.payment_time}<br></td></tr>`;
     });
 
     table.innerHTML = trs;
 
     rex.infUsers.appendChild(table);
+    rex.arrIcons.push(document.querySelectorAll(".icons"));
+    addListtener(rex.arrIcons[0]);
 }
 
 //------------------------------------------------------------------------------------------
@@ -208,12 +255,12 @@ const print = function printTable() {
     let trs = "<tr><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
 
     rex.massUsers.forEach(el=>{
-        trs = `${trs}<tr><td>${el[0]}<br>${el[1]}<br>${el[2]}<br></td>
-                         <td>Тел: ${el[3]}<br>Email: ${el[4]}<br>Адрес: ${el[5]}<br>ИНН: ${el[6]}<br></td>
-                         <td>${el[7]}<br></td>
-                         <td>${el[8]}<br></td>
-                         <td>${el[9]}<br></td>
-                         <td>${el[10]}<br></td></tr>`;
+        trs = `${trs}<tr><td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td></td>
+                         <td>Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
+                         <td>${el.project_name}<br></td>
+                         <td>${el.share_investment}<br></td>
+                         <td>${el.invest_amount}<br></td>
+                         <td>${el.payment_time}<br></td></tr>`;
     });
 
     table.innerHTML = trs;
@@ -250,4 +297,3 @@ const print = function printTable() {
 
 rex.printButton.addEventListener('click', print);
 infUsers();
-setInterval(infUsers, 100000);
