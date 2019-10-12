@@ -39,6 +39,7 @@ return[
     "inf/photos"        => "PhotoPage/TotalPhoto/adm/supAdm",
     "inf/budget"        => "BudgetPage/TotalInf/adm/supAdm",
     "inf/project"       => "ProjectPage/GetInfoProject/adm/supAdm",
+    "inf/admins"        => "AdminPage/TotalInfoAdmins/supAdm",
 
     "log/login"         => "Login/LogIn/none"
 

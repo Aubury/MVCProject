@@ -111,7 +111,7 @@ const projectCard = function createProjectCart(arr){
                         <div class="p-2 flex-grow-1">Бюджет: <span class="italic">${el.budget}</span></div>
                         <div class="p-2 flex-grow-1">Собрали: <span class="italic">${el.raiser_money}</span></div>
                       </div>
-                      <div class="container">
+                      <div class="container p-2">
                       
                                  <div class="row">
                                

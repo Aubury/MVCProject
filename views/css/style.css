@@ -130,7 +130,8 @@ th{
     background-color: #e2e2e2;
     border: 1px solid #c6c6c6;
     min-height: 50px;
-    /*text-align: center !important;*/
+    text-align: center !important;
+    vertical-align: center;
     font-weight: 600;
 
 }
@@ -138,6 +139,7 @@ td{
     border: 1px solid #c6c6c6;
     min-height: 50px;
     vertical-align: middle !important;
+    text-align: center;
 
 }
 tr{
@@ -225,5 +227,8 @@ i{
     border: 1px solid #ffc107!important;
     border-radius: 5px;
     box-shadow: 0px 0px 10px gray;
+}
+.tdTextLeft{
+    text-align: left !important;
 }
 

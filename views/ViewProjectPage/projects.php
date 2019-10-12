@@ -60,7 +60,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4 col-md-3 offset-md-8 p-2">
+        <div class="col-4 col-md-3 offset-md-9 p-2">
             <input onkeyup="tableSearch()" class="form-control mr-sm-3" id="searchProjects" type="search" placeholder="Поиск по таблице" aria-label="Search">
         </div>
     </div>
