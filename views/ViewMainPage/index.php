@@ -30,7 +30,7 @@
                         <input type="checkbox" class="hide" id="menu_logo">
                         <div class="logo_menu">
                             <label for="menu_logo">
-                                <img src="img/video.jpg" width="40" height="40" alt="">
+                                <img src="/views/img/video.jpg" width="40" height="40" alt="">
                             </label>
                         </div>
                         <div class="elements_menu">
