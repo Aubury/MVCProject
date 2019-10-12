@@ -25,6 +25,24 @@
                 </div>
             </div>
             <div class="section right__header__content">
+                <div class="navigation_group_mobile showHide">
+                    <div class="menu">
+                        <input type="checkbox" class="hide" id="menu_logo">
+                        <div class="logo_menu">
+                            <label for="menu_logo">
+                                <img src="img/video.jpg" width="40" height="40" alt="">
+                            </label>
+                        </div>
+                        <div class="elements_menu">
+                            <ul>
+                                <li class="countPeoples">Нас уже *****</li>
+                                <li>О нас</li>
+                                <li><a href="#progects">Наши проекты</a></li>
+                                <li><a href="#contacts">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="companySloganNone">
                     <p>Главное иметь мечту</p>
                 </div>
