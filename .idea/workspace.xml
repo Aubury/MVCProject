@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b87d1862-d4a4-4866-b5fd-8f3137f66d06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/models/ModelBudgetPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelBudgetPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
-              <caret line="96" column="97" selection-start-line="96" selection-start-column="97" selection-end-line="96" selection-end-column="97" />
+            <state relative-caret-position="417">
+              <caret line="88" column="59" lean-forward="true" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -40,6 +41,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/finances.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/js/searchFinances.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="20" selection-start-column="9" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -105,13 +124,13 @@
         <option value="$PROJECT_DIR$/views/ViewLogsPage/js/searchLogs.js" />
         <option value="$PROJECT_DIR$/views/ViewBudgetPage/js/searchFinances.js" />
         <option value="$PROJECT_DIR$/views/ViewProjectPage/js/searchProjects.js" />
-        <option value="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" />
         <option value="$PROJECT_DIR$/views/ViewSuperAdminPage/index.php" />
         <option value="$PROJECT_DIR$/views/ViewSuperAdminPage/js/backInfo.js" />
         <option value="$PROJECT_DIR$/models/ModelComplaints.php" />
         <option value="$PROJECT_DIR$/views/ViewSuperAdminPage/js/searchComplaints.js" />
         <option value="$PROJECT_DIR$/views/ViewPhotoPage/photo.php" />
         <option value="$PROJECT_DIR$/models/ModelBudgetPage.php" />
+        <option value="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" />
       </list>
     </option>
   </component>
@@ -140,6 +159,24 @@
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewBudgetPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewBudgetPage" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,12 +281,12 @@
       <workItem from="1570476070867" duration="29997000" />
       <workItem from="1570594046398" duration="16040000" />
       <workItem from="1570680361583" duration="15275000" />
-      <workItem from="1570767413550" duration="74405000" />
+      <workItem from="1570767413550" duration="74702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="848866000" />
+    <option name="totallyTimeSpent" value="849163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -574,9 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/js/searchFinances.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewLogsPage/js/searchLogs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -586,13 +620,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/js/searchProjects.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/finances.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewVideoPage/js/searchVideos.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -659,8 +686,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="96" column="97" selection-start-line="96" selection-start-column="97" selection-end-line="96" selection-end-column="97" />
+        <state relative-caret-position="417">
+          <caret line="88" column="59" lean-forward="true" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/js/searchFinances.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/finances.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
         </state>
       </provider>
     </entry>

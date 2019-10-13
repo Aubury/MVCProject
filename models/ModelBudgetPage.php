@@ -94,7 +94,7 @@ class ModelBudgetPage
     }
     private function getColumn($data, $email)
     {
-        $adprp = $this->db->con->prepare("SELECT '{$data}' FROM `users`  WHERE `email`='{$email}'");
+        $adprp = $this->db->con->prepare("SELECT $data FROM `users`  WHERE `email`='{$email}'");
         $adprp->execute();
         return $adprp->fetchColumn();
     }

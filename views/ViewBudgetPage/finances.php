@@ -60,7 +60,7 @@
     </div>
     <div class="row">
           <div class="col-4 col-md-3 offset-md-9 p-2">
-                <input onkeyup="myFunction()" id="searchFinances" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+                <input onkeyup="tableSearch()" id="searchFinances" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
           </div>
     </div> 
     <div class="row justify-content-around">
