@@ -102,6 +102,13 @@ class ModelLogin
 
         }
     }
+    public function ExitSite($id)
+    {
+        $action = "Покинул(а) сайт";
+        $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$id}', '{$action}')");
+        $sql->execute();
+
+    }
 
     public function redirect($url) {
 

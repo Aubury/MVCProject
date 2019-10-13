@@ -55,24 +55,24 @@
 <div class="container-fluid">
   <div class="row justify-content-center topTxt">
     <div class="col-12 reports">
-        <span>История действий администраторов</span>
+        <h2>История действий администраторов</h2>
        </div>
   </div> 
   <div class="row justify-content-around">
-      <div class="col-4 col-lg-2 offset-lg-10">
+      <div class="col-4 col-md-3 offset-md-9 p-2">
             <input onkeyup="tableSearch()" id="searchLogs" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
         
       </div>
   </div> 
   <div class="row">
     <div class="col-12 infoTable border-warning">
-
+    <table class="table table-hover tableLogs"></table>
   </div>
   </div>
 </div>
 
 
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/search/logs.js"?></script>
+<script><?php include_once ROOT . "/views/ViewLogsPage/js/searchLogs.js"?></script>
 <script><?php include_once ROOT . "/views/ViewLogsPage/js/scriptLogs.js"?></script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

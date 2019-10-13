@@ -60,7 +60,7 @@
         </div>
         <div class="row">
               <div class="col-4 col-md-3 offset-md-9 p-2">
-                    <input onkeyup="tableSearch()" id="searchVideos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+                    <input onkeyup="myFunction()" id="searchVideos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
               </div>
         </div> 
     
@@ -95,7 +95,7 @@
         </div>
       </div>
 
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/search/videos.js"?></script>
+<script><?php include_once ROOT . "/views/ViewVideoPage/js/searchVideos.js"?></script>
 <script><?php include_once ROOT . "/views/ViewVideoPage/js/scriptVideo.js"?></script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

@@ -22,6 +22,10 @@ class ControllerLogin
 
         $this->m->getIn($obj);
     }
+    public function actionExit()
+    {
+        $this->m->ExitSite($_POST['id_admin']);
+    }
 
 
 }

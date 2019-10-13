@@ -28,7 +28,6 @@ rex.form.addEventListener('submit', function (ev) {
     let answ = {};
 
     inpArr.forEach((el) => { answ[el.name] = el.inp.value; });
-
     sendObj(answ);
 
 });
@@ -42,9 +41,11 @@ function sendObj(answ) {
 
     fetch(url).then((response)=> {  return response.text();})
         .then((text)=>{rex.form.nextElementSibling.innerHTML = text;
-            // for(let i=0; i<rex.arrInp.length; i++){
-            //
-            //     rex.arrInp[i].value = '';
-            // }
+            for(let i=0; i<rex.arrInp.length; i++){
+
+                rex.arrInp[i].value = '';
+            }
+            setTimeout(()=> {rex.form.nextElementSibling.innerHTML = '';}, 10000);
+
         });
 }

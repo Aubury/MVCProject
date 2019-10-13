@@ -85,9 +85,7 @@
     </div>
   </div>
 </div>
-
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/bootstrap.min.js"?></script>
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/search/admins.js"?></script>
+<script><?php include_once ROOT . "/views/ViewAdminPage/js/searchAdmins.js"?></script>
 <script><?php include_once ROOT . "/views/ViewAdminPage/js/scriptAdmin.js"?></script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

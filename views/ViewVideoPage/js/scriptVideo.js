@@ -53,7 +53,7 @@ const videosTable = function createVideoTable(arr){
 
     arr.forEach( el =>{
         answer += `<div class="card align-self-end" style="width: 18rem;">
-           <h5 class="h5">${el[1]}</h5>
+           <h5 class="h5 list-group-item">${el[1]}</h5>
            <div class="iframe">${el[3]}</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Id - <span>${el[0]}</span></li>

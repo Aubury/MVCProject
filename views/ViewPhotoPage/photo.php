@@ -59,8 +59,8 @@
             </div>
         </div>
         <div class="row">
-              <div class="col-4 col-lg-2 offset-lg-10">
-                    <input onkeyup="tableSearch()" id="searchPhotos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+              <div class="col-4 col-md-3 offset-md-9 p-2">
+                    <input onkeyup="myFunction()" id="searchPhotos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
               </div>
         </div>
 
@@ -70,6 +70,7 @@
                     <div class="card-header"><h3>Загрузить фото</h3></div>
                         <div class="card-body">
                             <form name="formPhoto" action="#" method="post" enctype="multipart/form-data">
+                                <p><input type="text" class="inpText form-control" name="project" placeholder="Имя проекта">
                                 <p><input type="file" name="img_url" class="form-control-file"></p>
                                 <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></p>
                             </form>
@@ -79,7 +80,7 @@
                 <div class="card border-info  mb-3">
                     <div class="card-header"><h3>Удалить фото</h3></div>
                     <div class="card-body">
-                        <form name="formDelPhoto" action="/reg/delPhoto" method="post">
+                        <form name="formDelPhoto" action="#" method="post">
                             <p><input type="text" class="inpText form-control"  name="id" placeholder="Id картинки">
                             <p class="col-12 col-xl-12"><input class="btn btn-block btn-danger" type="submit" value="Удалить"></p>
                         </form>
@@ -94,6 +95,7 @@
             </div>
         </div>
       </div>
+<script><?php include_once ROOT . "/views/ViewPhotoPage/js/searchPhoto.js"?></script>
 <script><?php include_once ROOT . "/views/ViewPhotoPage/js/scriptPhoto.js"?></script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

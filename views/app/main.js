@@ -11,6 +11,7 @@ const displayNav = function displayNavigationBar(){
     if(getCookie('table')==='adm'){
         for (let i = 6; i < len; i++){
             nav[i].style.display = 'none';
+            document.title = "Админ панель";
         }
     }
 }
@@ -18,6 +19,14 @@ const displayNav = function displayNavigationBar(){
 document.addEventListener("DOMContentLoaded", displayNav);
 //--------------------------------------------------------------------------------
 objMain.exit.addEventListener('click', function () {
+
+    const fD = new FormData();
+          fD.append('id_admin', getCookie('user_id'));
+
+    fetch('/log/exit',{
+        method: "POST",
+        body: fD
+    }).then( text => text.text());
 
     setCookie('user_id','',0);
     setCookie('uPd','',0);

@@ -60,7 +60,7 @@
   </div>
   <div class="row justify-content-end offset-lg-4 p-2">
       <button type="button" class="btn btn-info print">Печать</button>
-      <input class="col-md-3 form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+      <input class="col-md-3 form-control mr-sm-3" type="search" id="searchUsers" placeholder="Поиск по таблице" aria-label="Search" onkeyup="tableSearch()">
   </div>
   <div class="row justify-content-around">
     <div class="col-3 ReportInfo">
@@ -99,7 +99,7 @@
     </div>
   </div>
 </div>
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/search/users.js"?></script>
+<script><?php include_once ROOT . "/views/ViewUsersPage/js/searchUsers.js"?></script>
 <script><?php include_once ROOT . "/views/ViewUsersPage/js/scriptUsers.js"?></script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

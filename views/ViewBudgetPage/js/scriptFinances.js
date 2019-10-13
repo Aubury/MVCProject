@@ -58,6 +58,8 @@ obj.form.addEventListener('submit', function (ev) {
             };
 
             getTotalInf();
+            setTimeout(()=> {form.nextElementSibling.innerHTML = '';}, 10000);
+
         })
 });
 //-------------------------------------------------------------------------------------------------

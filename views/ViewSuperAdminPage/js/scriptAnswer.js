@@ -47,5 +47,9 @@ function sendObj(answ) {
         method: "POST",
         body: fD
     }).then(e => e.text())
-        .then(data => obj.form.nextElementSibling.innerHTML = data);
+        .then(data =>{
+            obj.form.nextElementSibling.innerHTML = data;
+            setTimeout(()=> {obj.form.nextElementSibling.innerHTML = '';}, 10000);
+
+        });
 }

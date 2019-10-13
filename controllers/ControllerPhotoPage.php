@@ -31,7 +31,7 @@ class ControllerPhotoPage
                $image_info = getimagesize($_FILES["file"]["tmp_name"]);
                $width_height = $image_info[0]." x ".$image_info[1];
 
-               $this->m->DownloadImg($img_url, $tmp_name_img, $size_img, $width_height);
+               $this->m->DownloadImg($img_url, $tmp_name_img, $size_img, $width_height,$_POST['project_name']);
 
            } else {
                // выводим сообщение об ошибке

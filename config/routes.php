@@ -40,7 +40,8 @@ return[
     "inf/project"       => "ProjectPage/GetInfoProject/adm/supAdm",
     "inf/admins"        => "AdminPage/TotalInfoAdmins/supAdm",
 
-    "log/login"         => "Login/LogIn/none"
+    "log/login"         => "Login/LogIn/none",
+    "log/exit"          => "Login/Exit/none"
 
 
 ];

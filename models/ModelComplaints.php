@@ -96,7 +96,7 @@ class ModelComplaints
        foreach ($answ as $value)
        {
                array_push($massAnsw, [
-                       'Ответ на жалобу №'.$value['id_complaint'],
+                       'Ответ на жалобу № '.$value['id_complaint'],
                        $value['date_time'],
                        $value['text']? $value['text']: 'No answer'
                        ]
@@ -108,7 +108,7 @@ class ModelComplaints
 
                array_push($massCompl, [
                    $value['user'], 
-                   'Жалоба №'.$value['id'], 
+                   'Жалоба № '.$value['id'],
                    $value['email'],
                    $value['date'], 
                    $value['text']

@@ -59,7 +59,12 @@
                <h2>Жалобы и предложения</h2>
               </div>
          </div>
-         <div class="row justify-content-around">
+          <div class="row">
+              <div class="col-4 col-md-3 offset-md-8 p-2">
+                  <input onkeyup="myFunction()" id="searchComplaints" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+              </div>
+          </div>
+          <div class="row justify-content-around">
              <div class="col-3 ReportInfo">
               <div class="card border-info  mb-3">
                   <div class="card-header">
@@ -86,12 +91,12 @@
                          </div>
                  </div>
               </div>
-             <div class="col-8 tableReports border-warning">
+             <div class="col-8 tableReports border-warning" id="tableComplaints">
 
             </div>
          </div>
       </div>
-
+    <script><?php include_once ROOT ."/views/ViewSuperAdminPage/js/searchComplaints.js"?></script>
     <script><?php include_once ROOT ."/views/ViewSuperAdminPage/js/scriptAnswer.js"?></script>
     <script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/backInfo.js"?></script>
     <script><?php include_once ROOT . "/views/app/main.js"?></script>

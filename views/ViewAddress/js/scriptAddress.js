@@ -43,7 +43,11 @@ obj.formTeleph.addEventListener('submit', function (ev) {
         method: "POST",
         body: fD
     }).then(e => e.text())
-        .then(text => form.nextElementSibling.innerHTML = text);
+        .then(text =>{
+            form.nextElementSibling.innerHTML = text;
+            setTimeout(()=> {form.nextElementSibling.innerHTML = '';}, 10000);
+
+        });
 
 });
 //--------------------------------------------------------------------------------------

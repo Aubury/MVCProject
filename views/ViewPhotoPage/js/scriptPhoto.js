@@ -12,10 +12,11 @@ const photoTable = function createPhotoTable(arr) {
 
     arr.forEach(el => {
         answer += `<div class="card align-self-end" style="width: 18rem;">
-           <h5 class="h5">${el.name}</h5>
-          <div class="iframe"><img class="card-img-top" src="${el[4]}${el[1]}" alt="Card image cap"></div> 
+           <div class="list-group-item item">Проект - <span>${el.project_name}</span></div>
+           <h5 class="h5 list-group-item">${el.name}</h5>
+          <div class="iframe"><img class="card-img-top" src="${el.direction}${el.name}" alt="Card image cap"></div> 
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Id - <span>${el.id}</span></li>
+            <li class="list-group-item item">Id - <span>${el.id}</span></li>
             <li class="list-group-item">Размер - <span>${el.size}</span></li>
             <li class="list-group-item">Ширина_Высота - <span>${el.width_height}</span></li>
           </ul>
@@ -44,7 +45,7 @@ rex.form.addEventListener('submit', function (ev) {
     const url = '/reg/addPhoto',
         fD  = new FormData(),
         fileField = document.querySelector('input[type="file"]');
-
+    fD.append('project_name', rex.form['project'].value);
     fD.append('file', fileField.files[0]);
 
     fetch(url,{

@@ -46,9 +46,9 @@ const templateContainer = function createTemplateContainer(arr){
         const mainDiv = createAndClass('div', 'card', 'border-warning', 'mb-3'), //основной контейнер
         containerHeaderComp = createAndClass('div', 'card-header'),
         secondDivCompl = createAndClass('div', 'row'),
-        containerCompl = createAndClass('div', 'card-body');//text
+        containerCompl = createAndClass('div', 'card-body', 'compl');//text
 
-      createComplHeaders(secondDivCompl,arr['complains'][k]);
+        createComplHeaders(secondDivCompl,arr['complains'][k]);
 
         containerCompl.innerHTML = arr['complains'][k].pop();
         containerHeaderComp.appendChild(secondDivCompl);
@@ -62,8 +62,9 @@ const templateContainer = function createTemplateContainer(arr){
         containerHeaderAnsw.classList.add('card-header');
         secondDivAnsw.classList.add('row');
         containerAnsw.classList.add('card-body'); //text
+        containerAnsw.classList.add('compl'); //text
 
-        createComplHeaders(secondDivAnsw, arr['answers'][k]);
+        createAnswHeaders(secondDivAnsw, arr['answers'][k]);
 
 
         containerAnsw.innerHTML = arr['answers'][k].pop();
@@ -84,13 +85,26 @@ function createAndClass(name = 'div', ...classes){
 }
 
 function createComplHeaders(parent, arr) {
-    var newArr = arr.slice(0, -1);
-    newArr.forEach( el => {
-            const  div = createAndClass('div', 'col');
-            div.innerHTML = el;
-            parent.appendChild(div);
+    let newArr = arr.slice(0, -1);
 
-    });
+    for (let i = 0; i < newArr.length; i++){
+
+        let div = null;
+        (i === newArr.length-1) ? div = createAndClass('div', 'col'): div = createAndClass('div', 'col', 'item');
+        div.innerHTML = newArr[i];
+        parent.appendChild(div);
+    }
+
+}
+
+function createAnswHeaders(parent, arr) {
+var newArr = arr.slice(0, -1);
+newArr.forEach( el => {
+    const  div = createAndClass('div', 'col');
+    div.innerHTML = el;
+    parent.appendChild(div);
+
+});
 }
 
 getNumCompl();

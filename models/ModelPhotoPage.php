@@ -35,7 +35,7 @@ class ModelPhotoPage
         return true;
     }
 
-    public function DownloadImg($img_url, $tmp_name_img, $size_img, $width_height){
+    public function DownloadImg($img_url, $tmp_name_img, $size_img, $width_height, $project_name){
 
        $img_url_2= $this->TranslitPhp($img_url);
        $path = '/views/img/gallery/'; // Путь к папке
@@ -54,7 +54,7 @@ class ModelPhotoPage
 
            rename( ROOT ."/".$img_url_2,ROOT ."/".$path.$img_url_2);
 
-          $prp = $this->db->con->prepare("INSERT INTO `photos`(`name`, `size`, `width_height`, `direction`) VALUES ('{$img_url_2}', '{$size_img}', '{$width_height}', '{$path}')");
+          $prp = $this->db->con->prepare("INSERT INTO `photos`(`name`, `size`, `project_name`, `width_height`, `direction`) VALUES ('{$img_url_2}', '{$size_img}', '{$width_height}', '{$path}')");
           $prp->execute();
 
            $admin = $_COOKIE['user_id'];

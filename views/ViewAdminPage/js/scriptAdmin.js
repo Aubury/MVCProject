@@ -47,7 +47,6 @@ rex.formAdd.addEventListener('submit', function (ev) {
            answ[el.name] = el.inp.value;
 
     });
-
     sendObj(answ);
 });
 //-----------------------------------------------------------------------------------------------------
@@ -63,6 +62,8 @@ function sendObj(answ) {
 
                 rex.arrInp[i].value = '';
                 getAllAdmins();
+                setTimeout(()=> {rex.formAdd.nextElementSibling.innerHTML = '';}, 10000);
+
             }
         });
 }
