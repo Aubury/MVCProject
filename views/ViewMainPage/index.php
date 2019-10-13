@@ -8,6 +8,13 @@
     <style><?php include_once ROOT . "/views/ViewMainPage/css/fonts.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_960px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_768px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_640px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_600px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_500px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_430px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_375px.css"?></style>
     <title>GIM</title>
 </head>
 <body>
