@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b87d1862-d4a4-4866-b5fd-8f3137f66d06" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/photos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/photos.sql" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ViewMainPage/app/modalApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewMainPage/app/modalApp.js" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +43,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="660">
               <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="15" />
+=======
+            <state relative-caret-position="1936">
+              <caret line="88" column="59" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -48,19 +58,36 @@
         <entry file="file://$PROJECT_DIR$/controllers/ControllerPhotoPage.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
+<<<<<<< Updated upstream
               <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+=======
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/views/ViewPhotoPage/js/scriptPhoto.js">
+=======
+        <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/finances.php">
+>>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
               <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/ViewMainPage/app/modalApp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
@@ -103,11 +130,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/views/ViewMainPage/css/fonts.css" />
         <option value="$PROJECT_DIR$/views/ViewMainPage/index.php" />
         <option value="$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js" />
         <option value="$PROJECT_DIR$/views/ViewBudgetPage/scriptFinances.js" />
         <option value="$PROJECT_DIR$/views/ViewBudgetPage/js/finances.php" />
+=======
+        <option value="$PROJECT_DIR$/views/ViewPersonalPage/index.php" />
+        <option value="$PROJECT_DIR$/views/ViewPhotoPage/ViewPhotoPage.php" />
+        <option value="$PROJECT_DIR$/models/ModelVideoPage.php" />
+        <option value="$PROJECT_DIR$/controllers/ControllerVideoPage.php" />
+        <option value="$PROJECT_DIR$/controllers/ControllerBudgetPage.php" />
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/controllers/ControllerProjectPage.php" />
         <option value="$PROJECT_DIR$/models/ModelProjectPage.php" />
         <option value="$PROJECT_DIR$/controllers/ControllerBudgetPage.php" />
@@ -154,6 +189,12 @@
         <option value="$PROJECT_DIR$/models/ModelPhotoPage.php" />
         <option value="$PROJECT_DIR$/views/ViewPhotoPage/js/scriptPhoto.js" />
         <option value="$PROJECT_DIR$/views/ViewPhotoPage/photo.php" />
+<<<<<<< Updated upstream
+=======
+        <option value="$PROJECT_DIR$/models/ModelBudgetPage.php" />
+        <option value="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" />
+        <option value="$PROJECT_DIR$/views/ViewMainPage/app/modalApp.js" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -182,6 +223,7 @@
             <path>
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -197,12 +239,15 @@
             <path>
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> Stashed changes
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
               <item name="ViewPhotoPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -217,13 +262,21 @@
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="ViewVideoPage" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="ViewMainPage" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </path>
             <path>
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
               <item name="ViewVideoPage" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="ViewMainPage" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
             </path>
           </expand>
           <select />
@@ -319,18 +372,38 @@
       <workItem from="1569905086467" duration="23024000" />
       <workItem from="1569990350009" duration="14951000" />
       <workItem from="1570042250653" duration="5496000" />
+<<<<<<< Updated upstream
       <workItem from="1570078085483" duration="34707000" />
+=======
+      <workItem from="1570078085483" duration="35478000" />
+      <workItem from="1570162826125" duration="4803000" />
+      <workItem from="1570210528930" duration="1027000" />
+      <workItem from="1570348680657" duration="24191000" />
+      <workItem from="1570422552489" duration="5387000" />
+      <workItem from="1570476070867" duration="29997000" />
+      <workItem from="1570594046398" duration="16040000" />
+      <workItem from="1570680361583" duration="15275000" />
+      <workItem from="1570767413550" duration="74881000" />
+      <workItem from="1570979950727" duration="147000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="676970000" />
+=======
+    <option name="totallyTimeSpent" value="849489000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
+<<<<<<< Updated upstream
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21588486" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19296375" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -397,6 +470,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/views/ViewMainPage/app/modalApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -419,6 +493,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/css/main.css">
       <provider selected="true" editor-type-id="text-editor" />
+=======
+    <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-185" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewControlPanel/index.php" />
+    <entry file="file://$PROJECT_DIR$/controllers/ControllerControlPanel.php" />
+    <entry file="file://$PROJECT_DIR$/LogIn">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewSuperAdminPage/css/import.css" />
     <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/css/style.css">
@@ -656,6 +745,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/models/ModelPhotoPage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -673,6 +763,19 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1936">
+          <caret line="88" column="59" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ModelLogsPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -687,6 +790,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="80" column="62" selection-start-line="80" selection-start-column="62" selection-end-line="80" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewMainPage/app/modalApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
