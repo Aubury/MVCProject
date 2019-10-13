@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b87d1862-d4a4-4866-b5fd-8f3137f66d06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/ViewPhotoPage/js/searchPhoto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/searchComplaints.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerPhotoPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerPhotoPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ModelComplaints.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelComplaints.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ModelLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ModelLogsPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelLogsPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ModelPhotoPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelPhotoPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewAddress/js/scriptAddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewAddress/js/scriptAddress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewAdminPage/admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewAdminPage/admins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewAdminPage/js/scriptAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewAdminPage/js/scriptAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewLogsPage/js/scriptLogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewLogsPage/js/scriptLogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewLogsPage/logs.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewLogsPage/logs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/js/scriptComplaints.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPersonalPage/js/scriptComplaints.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewPhotoPage/js/scriptPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPhotoPage/js/scriptPhoto.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewPhotoPage/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPhotoPage/photo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewProjectPage/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewProjectPage/projects.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewSuperAdminPage/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/backInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/backInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/scriptAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/scriptAnswer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/search/admins.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewAdminPage/js/searchAdmins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/search/finances.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewBudgetPage/js/searchFinances.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/search/logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewLogsPage/js/searchLogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/search/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewProjectPage/js/searchProjects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/search/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewUsersPage/js/searchUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewSuperAdminPage/js/search/videos.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewVideoPage/js/searchVideos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewUsersPage/js/scriptUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewUsersPage/js/scriptUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewUsersPage/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewUsersPage/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewVideoPage/js/scriptVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewVideoPage/js/scriptVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewVideoPage/video.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewVideoPage/video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/app/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/app/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ModelBudgetPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelBudgetPage.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,56 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/ViewSuperAdminPage/js/searchComplaints.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/projects.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="73" column="93" lean-forward="true" selection-start-line="73" selection-start-column="93" selection-end-line="73" selection-end-column="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/ViewPhotoPage/photo.php">
+        <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="72" column="122" selection-start-line="72" selection-start-column="122" selection-end-line="72" selection-end-column="122" />
+            <state relative-caret-position="739">
+              <caret line="96" column="97" selection-start-line="96" selection-start-column="97" selection-end-line="96" selection-end-column="97" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/ViewSuperAdminPage/index.php">
+        <entry file="file://$PROJECT_DIR$/models/ModelLogsPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/ViewSuperAdminPage/js/backInfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2024">
-              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/ModelComplaints.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="98" column="42" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -139,7 +67,6 @@
         <option value="$PROJECT_DIR$/models/ModelVideoPage.php" />
         <option value="$PROJECT_DIR$/controllers/ControllerVideoPage.php" />
         <option value="$PROJECT_DIR$/controllers/ControllerBudgetPage.php" />
-        <option value="$PROJECT_DIR$/models/ModelBudgetPage.php" />
         <option value="$PROJECT_DIR$/controllers/ControllerProjectPage.php" />
         <option value="$PROJECT_DIR$/models/ModelUserPage.php" />
         <option value="$PROJECT_DIR$/LogIn" />
@@ -184,6 +111,7 @@
         <option value="$PROJECT_DIR$/models/ModelComplaints.php" />
         <option value="$PROJECT_DIR$/views/ViewSuperAdminPage/js/searchComplaints.js" />
         <option value="$PROJECT_DIR$/views/ViewPhotoPage/photo.php" />
+        <option value="$PROJECT_DIR$/models/ModelBudgetPage.php" />
       </list>
     </option>
   </component>
@@ -212,43 +140,6 @@
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewPhotoPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewProjectPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewProjectPage" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewSuperAdminPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewSuperAdminPage" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,12 +244,12 @@
       <workItem from="1570476070867" duration="29997000" />
       <workItem from="1570594046398" duration="16040000" />
       <workItem from="1570680361583" duration="15275000" />
-      <workItem from="1570767413550" duration="73149000" />
+      <workItem from="1570767413550" duration="74405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="847610000" />
+    <option name="totallyTimeSpent" value="848866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -410,13 +301,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/ViewMainPage/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="181" column="21" lean-forward="true" selection-start-line="180" selection-start-column="4" selection-end-line="181" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewMainPage/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1012">
@@ -531,20 +415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ModelLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="38" selection-start-line="38" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ModelLogsPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -752,10 +622,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewSuperAdminPage/js/searchComplaints.js">
+    <entry file="file://$PROJECT_DIR$/views/ViewPhotoPage/photo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="197">
+          <caret line="72" column="122" selection-start-line="72" selection-start-column="122" selection-end-line="72" selection-end-column="122" />
         </state>
       </provider>
     </entry>
@@ -766,10 +636,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewPhotoPage/photo.php">
+    <entry file="file://$PROJECT_DIR$/views/ViewSuperAdminPage/js/searchComplaints.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="72" column="122" selection-start-line="72" selection-start-column="122" selection-end-line="72" selection-end-column="122" />
+        <state relative-caret-position="132">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ModelLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1563">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ModelLogsPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="96" column="97" selection-start-line="96" selection-start-column="97" selection-end-line="96" selection-end-column="97" />
         </state>
       </provider>
     </entry>

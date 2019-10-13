@@ -83,15 +83,20 @@ class ModelBudgetPage
         }
        echo json_encode($arr);
     }
-    public function User($data)
+    public function User($email)
     {
-        $prp = $this->db->con->prepare("SELECT `name`, `patronymic`, `surname` FROM `users`  WHERE `email`='{$data}'");
-        $prp->execute();
-        $mass = $prp->fetchAll();
-
-        $name = "{$mass[0]['surname']} {$mass[0]['name']}  {$mass[0]['patronymic']}";
+        $nameUser = $this->getColumn('name', $email);
+        $patrUser = $this->getColumn('patronymic', $email);
+        $surUser = $this->getColumn('surname', $email);
+        $name = "{$surUser} {$nameUser} {$patrUser}";
         return $name;
 
+    }
+    private function getColumn($data, $email)
+    {
+        $adprp = $this->db->con->prepare("SELECT '{$data}' FROM `users`  WHERE `email`='{$email}'");
+        $adprp->execute();
+        return $adprp->fetchColumn();
     }
 
 }
