@@ -13,8 +13,9 @@ const rex = {
     printButton: document.querySelector('.print'),
     table      : document.querySelector('#tableUsers'),
     massUsers  : [],
-    arrIcons    : [],
-    massOriginal: []
+    massOriginal: [],
+    arrIcDel: [],
+    arrIcEd : []
 
 
 };
@@ -151,32 +152,38 @@ function sendObj(answ){
         })
 }
 //----------------------------------------------------------------------------------------------------
- rex.formDel.addEventListener('submit', function (ev) {
+const delUser = function DeleteUser(ev){
 
-     ev.preventDefault();
+     let  data = '';
+     if(ev.target.hasAttribute('id'))
+     {
+         data = ev.target.id.slice(ev.target.id.indexOf('_')+1);
+     }
 
-    const form = rex.formDel,
-          url = `/reg/delUser?email=${form['email'].value}`;
 
-    fetch(url).then((response)=> {  return response.text();})
-            .then((text)=>{rex.formDel.nextElementSibling.innerHTML = text;
-                for(let i=0; i<rex.arrInp.length; i++){
+     const url = '/reg/delUser',
+           fD = new FormData();
 
-                    rex.arrInp[i].value = '';
-                    infUsers();
-                }
-            })
+     fD.append('email', data);
 
-});
+    fetch(url,{
+        method: "POST",
+        body: fD
+    }).then(data=>  data.text())
+            .then(text=> window.location.reload())
+
+}
 
 //-----------------------------------------------------------------------------------------------------
 const getMassindex = function getMassIndexById(ev)
 {
     const arr = rex.massUsers;
+    let data = '';
     if(ev.target.hasAttribute('id')){
 
+        data = ev.target.id.slice(ev.target.id.indexOf('_')+1);
         arr.forEach( el =>{
-            if(el.email === ev.target.id){
+            if(el.email === data){
                 fillInp(el);
             }
 
@@ -199,13 +206,19 @@ const fillInp = function fillInputsForm(arr){
 }
 
 //-----------------------------------------------------------------------------------------------------
-const addListtener = function addToArrListener(arr){
+const addListtenerDel = function addToArrListenerDel(arr){
+    for (let i = 0; i < arr.length; i++ ){
+
+        arr[i].addEventListener('click', delUser);
+    }
+}
+//----------------------------------------------------------------------------------------------------
+const addListtenerEd = function addToArrListenerEd(arr){
     for (let i = 0; i < arr.length; i++ ){
 
         arr[i].addEventListener('click', getMassindex);
     }
 }
-
 //============================Information Of Users=====================================================
 
 const createUsersTable = function createUsersTable(arr){
@@ -220,9 +233,10 @@ const createUsersTable = function createUsersTable(arr){
 
 
     //Формирую строки
-    let trs = "<tr><th>Edit</th><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
+    let trs = "<tr><th>Delete</th><th>Edit</th><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
     arr.forEach(el=>{
-        trs = `${trs}<tr><td class="icons"><i class="material-icons" id="${el.email}">create</i></td>   
+        trs = `${trs}<tr><td class="iconsDel"><i class="material-icons" id="del_${el.email}">delete</i></td>   
+                         <td class="iconsEd"><i class="material-icons" id="ed_${el.email}">create</i></td>   
                          <td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td>
                          <td class="tdTextLeft">Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
                          <td>${el.project_name}<br></td>
@@ -234,9 +248,13 @@ const createUsersTable = function createUsersTable(arr){
     table.innerHTML = trs;
 
     rex.infUsers.appendChild(table);
-    rex.arrIcons.push(document.querySelectorAll(".icons"));
-    addListtener(rex.arrIcons[0]);
+    rex.arrIcDel.push(document.querySelectorAll(".iconsDel"));
+    rex.arrIcEd.push(document.querySelectorAll(".iconsEd"));
+    addListtenerDel(rex.arrIcDel[0]);
+    addListtenerEd(rex.arrIcEd[0]);
 }
+//-----------------------------------------------------------------------------------------
+
 
 //------------------------------------------------------------------------------------------
 
@@ -246,6 +264,7 @@ const infUsers = function TotalInformationOfUsers() {
         // .then(arr=>console.log(arr));
         .then(arr => createUsersTable(arr));
 }
+
 
 //------------------------------------------------------------------------------------------
 const print = function printTable() {

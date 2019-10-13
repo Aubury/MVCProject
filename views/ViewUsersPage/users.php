@@ -48,7 +48,7 @@
               <a class="nav-link" href="/show/Logs">Logs</a>
             </li>
           </ul>
-          <button class="btn btn-success">Выйти</button>
+            <button class="btn btn-success" id="exit">Выйти</button>
         </div>
       </nav>
 
@@ -92,17 +92,7 @@
                 <span class="talic"></span>
             </div>
           </div>
-        <div class="card border-info  mb-3">
-            <div class="card-header"><h4>Удаление участника</h4></div>
-            <div class="card-body">
-                <form name="formDelUser" action="#" method="get">
-                    <p><input type="email" class="inpText form-control" name="email" placeholder="Email">
-                        <span class="italic"></span></p>
-                        <p class="col-12 col-xl-12"><input class="btn btn-block btn-danger" type="submit" value="Удалить"></p>
-                </form>
-                <span class="talic"></span>
-            </div>
-          </div>
+
     </div>
     <div class="col-9 tableUsers">
         <table class="table table-hover" id="tableUsers"></table>

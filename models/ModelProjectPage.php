@@ -78,6 +78,7 @@ class ModelProjectPage
                 'name'        => $value['name'],
                 'budget'      => $value['budget'],
                 'raiser_money'=> $value['raiser_money'],
+                'users'    => $this->getAmountUsers($value['name']),
                 'published'=> $value['published'],
                 'photo_1'  => $this->getPhotoInfo($value['photo_1']),
                 'photo_2'  => $this->getPhotoInfo($value['photo_2']),
@@ -107,6 +108,13 @@ class ModelProjectPage
         $mass = $prp->fetchAll();
 
         return "{$mass[0]['link']}";
+    }
+    public function getAmountUsers($data)
+    {
+        $prp = $this->db->con->prepare("SELECT * FROM `users` WHERE `project_name`='{$data}'");
+        $prp->execute();
+        $users = $prp->fetchAll();
+        return count($users);
     }
 
 }

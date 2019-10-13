@@ -48,7 +48,7 @@
               <a class="nav-link" href="/show/Logs">Logs</a>
             </li>
           </ul>
-          <button class="btn btn-success">Выйти</button>
+            <button class="btn btn-success" id="exit">Выйти</button>
         </div>
       </nav>
 
@@ -91,6 +91,6 @@
 
 <script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/search/finances.js"?></script>
 <script><?php include_once ROOT . "/views/ViewBudgetPage/js/scriptFinances.js"?></Script>
-<!--<script>--><?php //include_once ROOT . "/views/app/main.js"?><!--</script>-->
+<script><?php include_once ROOT . "/views/app/main.js"?></script>
 </body>
 </html>

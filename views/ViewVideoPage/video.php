@@ -48,7 +48,7 @@
               <a class="nav-link" href="/show/Logs">Logs</a>
             </li>
           </ul>
-          <button class="btn btn-success">Выйти</button>
+            <button class="btn btn-success" id="exit">Выйти</button>
         </div>
       </nav>
 
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="col-9">
-                <div class="row justify-content-around  tableDg tableVideos borderColor"></div>
+                <div class="row justify-content-around  tableDg tableVideos"></div>
 
             </div>
         </div>

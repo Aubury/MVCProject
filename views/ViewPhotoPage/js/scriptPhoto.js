@@ -52,11 +52,11 @@ rex.form.addEventListener('submit', function (ev) {
         body: fD
     }).then((response)=> {  return response.text();})
         .then((text)=>{rex.form.nextElementSibling.innerHTML = text;
-            for(let i=0; i<rex.arrInp.length; i++){
-
-                rex.arrInp[i].value = '';
-            }
             getPhotos();
+            setTimeout(()=> {
+                rex.form.nextElementSibling.innerHTML = '';
+                fileField.value ='';}, 10000);
+
         });
 })
 //--------------------------------------------------------------------------------------------
@@ -75,11 +75,13 @@ rex.delForm.addEventListener('submit', function (ev) {
         body: fD
     }).then((response)=> {  return response.text();})
         .then((text)=>{rex.delForm.nextElementSibling.innerHTML = text;
-            for(let i=0; i<rex.arrInp.length; i++){
+            for(let i=0; i<rex.delForm.children.length; i++){
 
-                rex.arrInp[i].value = '';
+                rex.delForm.children[i].value = '';
             }
             getPhotos();
+            setTimeout(()=> rex.delForm.nextElementSibling.innerHTML = '', 10000);
+
         });
 
 })

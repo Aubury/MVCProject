@@ -48,7 +48,7 @@
                   <a class="nav-link" href="/show/Logs">Logs</a>
               </li>
           </ul>
-          <button class="btn btn-success">Выйти</button>
+            <button class="btn btn-success" id="exit">Выйти</button>
         </div>
       </nav>
 
@@ -67,7 +67,7 @@
                         <form name="formAddress" action="#" method="POST">
                             <textarea name="address" rows="3" style="width: 62vw;"></textarea>
                             <div class="row">
-                              <div class="col-3 offset-9"><button class="btn btn-block btn-success" type="submit">Добавить</button></div>
+                              <div class="col-4 offset-8"><button class="btn btn-block btn-success" type="submit">Добавить / Редактировать</button></div>
                             </div>
                         </form>
                         <span class="italic"></span>
@@ -84,7 +84,7 @@
                           <form name="formTelephones" action="#" method="POST">
                               <textarea name="telephones" rows="3" style="width: 62vw;"></textarea>
                               <div class="row">
-                                <div class="col-3 offset-9"><button class="btn btn-block btn-success" type="submit">Добавить</button></div>
+                                <div class="col-4 offset-8"><button class="btn btn-block btn-success" type="submit">Добавить / Редактировать</button></div>
                               </div>
                           </form>
                           <span class="italic"></span>
@@ -101,7 +101,7 @@
                             <form name="formLinkMap" action="#" method="POST">
                                 <textarea name="link" rows="3" style="width: 62vw;"></textarea>
                                 <div class="row">
-                                  <div class="col-3 offset-9"><button class="btn btn-block btn-success" type="submit">Добавить</button></div>
+                                  <div class="col-4 offset-8"><button class="btn btn-block btn-success" type="submit">Добавить / Редактировать</button></div>
                                 </div>
                             </form>
                             <span class="italic"></span>

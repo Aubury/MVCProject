@@ -42,17 +42,15 @@ class ModelLogin
                     $sql->execute();
 
                     if ($role) {
-
                         echo json_encode([
                             SITE . "/show/superAdmin",
                             $this->addUserLog($admin[0], 'supAdm')]);
 
 
                     } else {
-                        ;
                         echo json_encode([
-                            SITE . "/show/Panel"],
-                            $this->addUserLog($admin[0], 'adm'));
+                            SITE . "/show/superAdmin",
+                            $this->addUserLog($admin[0], 'adm')]);
                     }
 
                 }else{
@@ -94,7 +92,8 @@ class ModelLogin
         if(count($arr) == 0){
 
             $uPd = password_hash(time() . $user['email'], PASSWORD_BCRYPT);
-            $this->db->con->exec("INSERT INTO `logIn`(`user_id`, `uPd`, `role`, `table`) VALUES ( '{$user['id']}', '${uPd}', '{$user['role']}', '{$tab}')");
+            $this->db->con->exec("INSERT INTO `logIn`(`user_id`, `uPd`, `role`, `table`)
+                                           VALUES ( '{$user['id']}', '${uPd}', '{$user['role']}', '{$tab}')");
             return [$uPd, $user['id'], $tab];
 
 

@@ -88,6 +88,8 @@ function sendObj(answ) {
                 rex.arrInp[i].value = '';
             }
             getVideos();
+            setTimeout(()=> rex.form.nextElementSibling.innerHTML = '', 10000);
+
         });
 }
 //---------------------------------------------------------------------------------------------
@@ -110,6 +112,8 @@ rex.formDel.addEventListener('submit', function (ev) {
                 rex.arrInp[i].value = '';
             }
             getVideos();
+            setTimeout(()=> rex.formDel.nextElementSibling.innerHTML = '', 10000);
+
         });
 
 })

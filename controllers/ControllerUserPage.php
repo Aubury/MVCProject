@@ -23,7 +23,7 @@ class ControllerUserPage
 
    public function actionDelUser()
    {
-       $this->m->deleteUser($_GET['email']);
+       $this->m->deleteUser($_POST['email']);
    }
 
    public function actionShowUsersPage()

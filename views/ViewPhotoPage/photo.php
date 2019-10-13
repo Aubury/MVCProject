@@ -48,7 +48,7 @@
               <a class="nav-link" href="/show/Logs">Logs</a>
             </li>
           </ul>
-          <button class="btn btn-success">Выйти</button>
+            <button class="btn btn-success" id="exit">Выйти</button>
         </div>
       </nav>
 
@@ -70,7 +70,7 @@
                     <div class="card-header"><h3>Загрузить фото</h3></div>
                         <div class="card-body">
                             <form name="formPhoto" action="#" method="post" enctype="multipart/form-data">
-                                <p> <input type="file" name="img_url" class="form-control-file"></p>
+                                <p><input type="file" name="img_url" class="form-control-file"></p>
                                 <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></p>
                             </form>
                             <span class="italic"></span>
@@ -89,7 +89,7 @@
             </div>
 
             <div class="col-9">
-                <div class="row justify-content-around tableDg tablePhoto border-warning"></div>
+                <div class="row justify-content-around tableDg tablePhoto borderColor"></div>
 
             </div>
         </div>

@@ -84,6 +84,7 @@ rex.form.addEventListener('submit', function (ev) {
                 rex.arrInp[i].value = '';
             }
             getProgects();
+            setTimeout(()=> rex.form.nextElementSibling.innerHTML = '', 10000);
         });
 }
 );
@@ -104,19 +105,20 @@ const projectCard = function createProjectCart(arr){
         answ += `
                   <div class="card text-center border-warning">
                       <div class="card-header row justify-content-around">
-                        <div title="Редактировать проект" class="icons flex-shrink-1 p-2">
+                        <div title="Редактировать проект" class="icons flex-shrink-1 rightBorder p-2">
                          <i class="material-icons" id="${el.name}">create</i>
                         </div>
                       
                         <div class="p-2 flex-grow-1">Бюджет: <span class="italic">${el.budget}</span></div>
                         <div class="p-2 flex-grow-1">Собрали: <span class="italic">${el.raiser_money}</span></div>
+                          <div class="p-2 flex-grow-1">Участников: <span class="italic">${el.users}</span></div>
                       </div>
                       <div class="container p-2">
                       
                                  <div class="row">
                                
                                    <div class="col colHeight">
-                                       <div class="mainImg"><img class="w-100" src="${el.photo_1}" alt=""></div>
+                                       <div class="mainImg"><img src="${el.photo_1}" alt=""></div>
                                        <p class="card-text p-2">${el.text_1}</p>
                                    </div>
                            
