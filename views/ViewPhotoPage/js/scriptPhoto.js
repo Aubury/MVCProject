@@ -55,6 +55,7 @@ rex.form.addEventListener('submit', function (ev) {
         .then((text)=>{rex.form.nextElementSibling.innerHTML = text;
             getPhotos();
             setTimeout(()=> {
+                rex.form[0].value ='';
                 rex.form.nextElementSibling.innerHTML = '';
                 fileField.value ='';}, 10000);
 
@@ -81,7 +82,7 @@ rex.delForm.addEventListener('submit', function (ev) {
                 rex.delForm.children[i].value = '';
             }
             getPhotos();
-            setTimeout(()=> rex.delForm.nextElementSibling.innerHTML = '', 10000);
+            setTimeout(()=> rex.delForm.nextElementSibling.innerHTML = '', 1000);
 
         });
 

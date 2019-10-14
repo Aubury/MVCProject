@@ -54,7 +54,8 @@ class ModelPhotoPage
 
            rename( ROOT ."/".$img_url_2,ROOT ."/".$path.$img_url_2);
 
-          $prp = $this->db->con->prepare("INSERT INTO `photos`(`name`, `size`, `project_name`, `width_height`, `direction`) VALUES ('{$img_url_2}', '{$size_img}', '{$width_height}', '{$path}')");
+          $prp = $this->db->con->prepare("INSERT INTO `photos`(`name`, `project_name`, `size`, `width_height`, `direction`)
+                                                   VALUES ('{$img_url_2}', '{$project_name}', '{$size_img}', '{$width_height}', '{$path}')");
           $prp->execute();
 
            $admin = $_COOKIE['user_id'];

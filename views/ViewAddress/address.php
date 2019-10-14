@@ -111,7 +111,7 @@
               </div>
       </div>
 
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/bootstrap.min.js"?></script>
+<!--<script>--><?php //include_once ROOT . "/views/ViewSuperAdminPage/js/bootstrap.min.js"?><!--</script>-->
 <script><?php include_once ROOT . "/views/ViewAddress/js/scriptAddress.js"?></script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
 
