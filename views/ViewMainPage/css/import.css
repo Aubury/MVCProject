@@ -1,0 +1,11 @@
+@import "reset.css";
+@import "fonts.css";
+@import "style.css";
+@import "style_max960px.css";
+@import "style_max768px.css";
+@import "style_max640px.css";
+@import "style_max600px.css";
+@import "style_max500px.css";
+@import "style_max430px.css";
+@import "style_max375px.css";
+/* @import "/views/ViewMainPage/css/modal.css"; */

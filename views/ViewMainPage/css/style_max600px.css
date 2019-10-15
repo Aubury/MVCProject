@@ -90,6 +90,7 @@
         font-size: 35px;
         color: transparent;
         display: none;
+        user-select: none;
     }
     .right__header__content .userRoom button{
         padding: 5px;
