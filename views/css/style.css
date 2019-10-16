@@ -235,7 +235,7 @@ i{
 
 }
 textarea{
-    width: 90% !important;
+    width: 100% !important;
 }
 .card-header{
     border-top:1px solid rgba(0,0,0,.125);
@@ -246,4 +246,44 @@ textarea{
     font-style: italic;
 
 }
+/*----------------tooltip------------------------------*/
+/*.tootip{*/
+/*    position: absolute;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*    z-index: 99;*/
+/*    padding: 5px;*/
+/*    text-align: center;*/
+/*    width: 100px;*/
+/*}*/
+.posRel{
+    position: relative;
+}
+.title {
+    display: block;
+    position: absolute;
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    color: #fff;
+    content: attr(title);
+    left: 0;
+    top: 0;
+    padding: 5px 15px;
+    z-index: 98;
+}
+.title::after{
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 48%;
+    bottom: -20px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-top: 10px solid #333; /* Добавляем треугольник */
+}
+.none{
+    display: none;
+}
+
+
+
 

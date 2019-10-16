@@ -4,9 +4,7 @@ let obj = {
     arrInp : document.querySelectorAll(".form-control"),
     table  : document.querySelector('.tableFinances')
 };
-
 //--------------------------------------------------------------------------------------------------
-
 const addOptions = function addOptions(arr) {
 
     const select = obj.select;
@@ -30,10 +28,7 @@ const getNamesProjects = function getNamesProjects() {
     fetch(url).then(response => response.json())
         .then(arr => addOptions(arr));
 }
-
-
 //--------------------------------------------------------------------------------------------------
-
 obj.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
@@ -73,15 +68,12 @@ const replcomma = function comma(data) {
 
 }
 //--------------------------------------------------------------------------------------------------
-
 const getTotalInf = function getTotalInformation(){
 
     fetch('/inf/budget').then( data => data.json())
         .then( arr => buildTable(arr));
 }
 //--------------------------------------------------------------------------------------------------
-
-
 const buildTable = function table(arr) {
 
     const table = obj.table;
@@ -98,7 +90,6 @@ const buildTable = function table(arr) {
     table.innerHTML = trs;
 }
  //--------------------------------------------------------------------------------------------------
-
 getTotalInf();
 getNamesProjects();
 setInterval(getNamesProjects,500000);

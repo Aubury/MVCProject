@@ -26,14 +26,13 @@ objMain.exit.addEventListener('click', function () {
     fetch('/log/exit',{
         method: "POST",
         body: fD
-    }).then( text => text.text());
-
-    setCookie('user_id','',0);
-    setCookie('uPd','',0);
-    setCookie('table','',0);
-    window.location.reload();
-
-
+    }).then( text => text.json())
+        .then( data => {
+            setCookie('user_id','',0);
+            setCookie('uPd','',0);
+            setCookie('table','',0);
+            window.location.href = `http://${data[0]}`;
+        })
 })
 //--------------------------------------------------------------------------------
 function setCookie(cname, cvalue, exMins) {
@@ -58,9 +57,45 @@ function getCookie(cname) {
     }
     return "";
 }
-//
-// objLogo.logo.addEventListener('click', function () {
-//
-//
-//     window.location.href = 'http://vinash.netxi.in';
-// });
+//--------------title-------------------------------------------------------
+const  title = function TitleInput(ev){
+    lostFocus();
+    let target = ev.target,
+        title = target.nextElementSibling;
+
+    if(title != null && title.classList.contains('title')){
+
+        let coords = target.getBoundingClientRect();
+        title.style.width = coords.width;
+
+        title.classList.remove('none');
+
+        let top =  0 - (title.offsetHeight + 10);
+        title.style.top = top + 'px';
+
+    }else{
+
+        return;
+    }
+}
+//--------------------------------------------------------------------------------------------------
+const lostFocus = function InputBlur() {
+
+    for (let i = 0; i < obj.arrInp.length; i++) {
+        if(obj.arrInp[i].nextElementSibling != null){
+            obj.arrInp[i].nextElementSibling.classList.add('none');
+        }
+    }
+}
+
+//---------------------------------------------------------------------------------------------------
+const inpFocus = function addListenerInput(){
+
+    for (let i = 0; i < obj.arrInp.length; i++){
+        obj.arrInp[i].addEventListener('focus', title);
+        obj.arrInp[i].addEventListener('blur', lostFocus);
+    }
+}
+
+//---------------------------------------------------------------------------------------------------
+inpFocus();

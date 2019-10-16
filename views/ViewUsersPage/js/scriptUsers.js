@@ -148,7 +148,7 @@ function sendObj(answ){
 
                 rex.arrInp[i].value = '';
                 infUsers();
-                setTimeout(()=> {rex.formAdd.nextElementSibling.innerHTML = '';}, 10000);
+                setTimeout(()=> {rex.formAdd.nextElementSibling.innerHTML = '';}, 1000);
             }
         })
 }

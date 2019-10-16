@@ -17,7 +17,7 @@ class ControllerUserPage
     public function actionAddUser()
     {
         $obj =(array)json_decode($_GET['value']);
-        $obj['password'] = substr(hash('sha256', $obj['email'] . time()), rand(0, 40), 10);
+//        $obj['password'] = substr(hash('sha256', $obj['email'] . time()), rand(0, 40), 10);
         $this->m->addUser($obj);
    }
 

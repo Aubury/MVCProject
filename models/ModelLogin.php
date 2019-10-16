@@ -108,6 +108,8 @@ class ModelLogin
         $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$id}', '{$action}')");
         $sql->execute();
 
+        echo json_encode([SITE]);
+
     }
 
     public function redirect($url) {

@@ -73,10 +73,10 @@
                             <option>Выберите проект</option>
                         </select>
                        <p><input type="text" class="form-control" name="email_user" placeholder="Email плательщика"></p>
-                       <p><input type="text" class="form-control title" name="amount" placeholder="Сумма платежа"
-                                 title="Вводите сумму без пробелов"></p>
-                       <p><input type="text" class="form-control" name="timeDate" placeholder="Дата платежа( гггг-мм-дд )"
-                                 title="Вводить данные через тире и в формате год-месяц-число"></p>
+                       <p class="posRel"><input type="text" class="form-control" name="amount" placeholder="Сумма платежа">
+                                 <span class="title none">Вводите сумму без пробелов</span></p>
+                       <p class="posRel"><input type="text" class="form-control" name="timeDate" placeholder="Дата платежа( гггг-мм-дд )">
+                           <span class="title none">Вводить дату через тире и в формате <br /> гггг-мм-дд</span></p>
                        <p class="col-12 col-xl-12"><button class="btn btn-block btn-success" type="submit">Добавить</button></p>
                     </form>
                     <span class="italic"></span>

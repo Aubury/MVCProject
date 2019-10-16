@@ -21,7 +21,7 @@ class ModelUserPage
 //      echo $id;
        if(count($user)>0){
 
-           $prp = $this->db->con->prepare("UPDATE `users` SET `name`='{$arr['name']}',`patronymic`='{$arr['patronymic']}',`surname`='{$arr['surname']}',`email`='{$arr['email']}', `project_name`='{$arr['project_name']}', `address`='{$arr['address']}',`telephon`='{$arr['telephon']}',`tax_code`= {$arr['tax_code']} WHERE `id`= $id");
+           $prp = $this->db->con->prepare("UPDATE `users` SET `name`='{$arr['name']}',`patronymic`='{$arr['patronymic']}',`surname`='{$arr['surname']}',`email`='{$arr['email']}', `project_name`='{$arr['project_name']}', `share_investment`= '{$arr['share_investment']}', `address`='{$arr['address']}',`telephon`='{$arr['telephon']}',`tax_code`= {$arr['tax_code']} WHERE `id`= $id");
            $prp->execute();
            echo "Данные участника изменены";
            $admin = $_COOKIE['user_id'];
@@ -32,8 +32,8 @@ class ModelUserPage
 
        }else{
 
-           $passH = password_hash($arr['password'], PASSWORD_BCRYPT);
-
+           $obj['password'] = substr(hash('sha256', $arr['email'] . time()), rand(0, 40), 10);
+           $passH = password_hash($obj['password'], PASSWORD_BCRYPT);
            $sqlStr = "INSERT INTO `users`(`name`, `patronymic`, `surname`, `email`, `password`, `project_name`, `share_investment`, `address`, `telephon`, `tax_code`)
                   VALUES ('{$arr['name']}','{$arr['patronymic']}', '{$arr['surname']}','{$arr['email']}','{$passH}','{$arr['project_name']}', '{$arr['share_investment']}', '{$arr['address']}','{$arr['telephon']}','{$arr['tax_code']}')";
 
