@@ -247,15 +247,6 @@ textarea{
 
 }
 /*----------------tooltip------------------------------*/
-/*.tootip{*/
-/*    position: absolute;*/
-/*    background-color: black;*/
-/*    color: white;*/
-/*    z-index: 99;*/
-/*    padding: 5px;*/
-/*    text-align: center;*/
-/*    width: 100px;*/
-/*}*/
 .posRel{
     position: relative;
 }

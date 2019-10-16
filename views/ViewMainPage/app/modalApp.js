@@ -56,7 +56,7 @@ function sendObj(answ) {
                  setCookie('user_id', data[1][1], 1);
                  setCookie('uPd', data[1][0], 1);
                  setCookie('table', data[1][2], 1);
-                 window.location.href = `http://${data[0]}`;
+                 window.location.href = `${data[0]}`;
              }else {
 
                  obj.form.nextElementSibling.innerHTML = data;

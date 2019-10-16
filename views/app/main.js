@@ -1,7 +1,8 @@
 const objMain = {
     logo : document.querySelector('.logo'),
     exit : document.querySelector('#exit'),
-    nav  : document.querySelectorAll('li')
+    nav  : document.querySelectorAll('li'),
+    form : document.forms[0]
 }
 //--------------------------------------------------------------------------------
 const displayNav = function displayNavigationBar(){
@@ -31,7 +32,7 @@ objMain.exit.addEventListener('click', function () {
             setCookie('user_id','',0);
             setCookie('uPd','',0);
             setCookie('table','',0);
-            window.location.href = `http://${data[0]}`;
+            window.location.href = `${data[0]}`;
         })
 })
 //--------------------------------------------------------------------------------
@@ -61,7 +62,7 @@ function getCookie(cname) {
 const  title = function TitleInput(ev){
     lostFocus();
     let target = ev.target,
-        title = target.nextElementSibling;
+        title = target.parentElement.lastElementChild;
 
     if(title != null && title.classList.contains('title')){
 
@@ -81,9 +82,11 @@ const  title = function TitleInput(ev){
 //--------------------------------------------------------------------------------------------------
 const lostFocus = function InputBlur() {
 
-    for (let i = 0; i < obj.arrInp.length; i++) {
-        if(obj.arrInp[i].nextElementSibling != null){
-            obj.arrInp[i].nextElementSibling.classList.add('none');
+    const form = objMain.form;
+          arr = form.elements;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i].parentElement.lastElementChild != null && arr[i].parentElement.lastElementChild.classList.contains('title')){
+            arr[i].parentElement.lastElementChild.classList.add('none');
         }
     }
 }
@@ -91,9 +94,11 @@ const lostFocus = function InputBlur() {
 //---------------------------------------------------------------------------------------------------
 const inpFocus = function addListenerInput(){
 
-    for (let i = 0; i < obj.arrInp.length; i++){
-        obj.arrInp[i].addEventListener('focus', title);
-        obj.arrInp[i].addEventListener('blur', lostFocus);
+    const form = objMain.form,
+          arr = form.elements;
+    for (let i = 0; i < arr.length; i++){
+        arr[i].addEventListener('focus', title);
+        arr[i].addEventListener('blur', lostFocus);
     }
 }
 
