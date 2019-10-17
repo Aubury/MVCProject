@@ -127,8 +127,8 @@ header{
 }
 .left__main__content{
     margin: 20px 0 20px 0;
-    width: 33.32%;
-    border-right: 2px solid #afbfd3;
+    width: 30%;
+    /*border-right: 1.2px solid #dee2e6;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between !important;
@@ -148,6 +148,7 @@ header{
     padding: 5px 0 5px 20px;
     margin: 10px 0 10px 0;
     box-shadow: 0px 0px 5px #3f414d;
+    background-color: rgba(0,0,0,.03);
     transition: all .3s;
 }
 .list__projects p:first-child{
@@ -157,7 +158,12 @@ header{
     background-color: blue;
     color: white;
 }
-.
+.active{
+    box-shadow: -1px -2px 2px #9196a5,
+    -1px 2px 2px #9196a5 !important;
+    background-color: white !important;
+    border-right: none !important;
+}
 /* .complaints__offers textarea{
     font-family: 'Roboto Condensed';
     letter-spacing: 0px;
@@ -351,3 +357,4 @@ iframe{
 .none{
     display: none;
 }
+

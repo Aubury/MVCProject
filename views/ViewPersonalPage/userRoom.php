@@ -66,7 +66,7 @@
         <div class="_container">
             <div class="left__main__content">
                 <div class="list__projects">
-                    <p class="tab" data-for="aboutUs">О нас</p>
+                    <p class="tab active" data-for="aboutUs">О нас</p>
                     <p class="tab" data-for="project__1">Проект 1</p>
                     <p class="tab" data-for="project__2">Проект 2</p>
                     <p class="tab" data-for="project__3">Проект 3</p>
@@ -221,7 +221,7 @@
         </div>
     </footer>
 <!--    <script src="/views/ViewPersonalPage/js/app.js"></script>-->
-<!--    <script src="/views/ViewPersonalPage/js/show_progect.js"></script>-->
+    <script src="/views/ViewPersonalPage/js/show_progect.js"></script>
     <script src="/views/ViewPersonalPage/js/scriptComplaints.js"></script>
     <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

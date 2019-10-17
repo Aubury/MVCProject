@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b87d1862-d4a4-4866-b5fd-8f3137f66d06" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/css/import.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/css/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/js/scriptComplaints.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPersonalPage/js/scriptComplaints.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/js/show_progect.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPersonalPage/js/show_progect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
     </list>
@@ -32,17 +29,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            <state relative-caret-position="307">
+              <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
               <folding>
                 <element signature="n#div#1;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#4;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="123" column="18" lean-forward="true" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -60,7 +67,16 @@
         <entry file="file://$PROJECT_DIR$/views/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="739">
-              <caret line="327" column="25" selection-start-line="327" selection-start-column="25" selection-end-line="327" selection-end-column="25" />
+              <caret line="334" lean-forward="true" selection-start-line="334" selection-end-line="334" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/js/show_progect.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -126,13 +142,13 @@
         <option value="$PROJECT_DIR$/views/ViewSuperAdminPage/js/backInfo.js" />
         <option value="$PROJECT_DIR$/views/ViewSuperAdminPage/index.php" />
         <option value="$PROJECT_DIR$/views/ViewPersonalPage/css/style.css" />
-        <option value="$PROJECT_DIR$/views/ViewPersonalPage/js/show_progect.js" />
         <option value="$PROJECT_DIR$/views/ViewPersonalPage/js/scriptComplaints.js" />
         <option value="$PROJECT_DIR$/views/ViewMainPage/css/style.css" />
-        <option value="$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css" />
         <option value="$PROJECT_DIR$/views/ViewPersonalPage/css/import.css" />
         <option value="$PROJECT_DIR$/views/css/style.css" />
+        <option value="$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css" />
         <option value="$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php" />
+        <option value="$PROJECT_DIR$/views/ViewPersonalPage/js/show_progect.js" />
       </list>
     </option>
   </component>
@@ -304,12 +320,12 @@
       <workItem from="1571198869371" duration="20955000" />
       <workItem from="1571252502866" duration="3222000" />
       <workItem from="1571255916880" duration="410000" />
-      <workItem from="1571285810564" duration="32092000" />
+      <workItem from="1571285810564" duration="38114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="915284000" />
+    <option name="totallyTimeSpent" value="921306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -658,24 +674,10 @@
     <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/js/app.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/js/show_progect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/css/import.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="21" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -689,20 +691,35 @@
     <entry file="file://$PROJECT_DIR$/views/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="739">
-          <caret line="327" column="25" selection-start-line="327" selection-start-column="25" selection-end-line="327" selection-end-column="25" />
+          <caret line="334" lean-forward="true" selection-start-line="334" selection-end-line="334" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="123" column="18" lean-forward="true" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        <state relative-caret-position="307">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
           <folding>
             <element signature="n#div#1;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#4;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/js/show_progect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
         </state>
       </provider>
     </entry>
