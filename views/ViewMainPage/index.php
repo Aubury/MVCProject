@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style><?php include_once ROOT . "/views/css/reset.css"?></style>
-    <style><?php include_once ROOT . "/views/ViewMainPage/css/fonts.css"?></style>
+    <style><?php include_once ROOT . "/views/css/fonts.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
     <title>GIM</title>

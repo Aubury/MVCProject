@@ -65,7 +65,8 @@ class ModelLogin
                     $str = $this->db->con->prepare("UPDATE `users` SET `last_visit`= NOW() WHERE `email`='{$arr['email']}'");
                     $str->execute();
                     $this->addUserLog($user[0], 'usr');//TODO: same as admin!!!
-                    echo json_encode([SITE . "/show/User"]);
+                    echo json_encode([SITE . "/show/User",
+                        $this->addUserLog($user[0], 'adm')]);
 
 
                 }else{

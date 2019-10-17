@@ -115,13 +115,14 @@ html{
 /* ----------------------------main-------------------------------- */
 .main .container{
     justify-content: space-between;
+
 }
 .main .left__main__content{
-    margin: 20px 0 0 0;
+    margin: 20px 0 20px 0;
     width: 29%;
 }
 .main .right__main__content{
-    margin: 20px 0 0 0;
+    margin: 20px 0 20px 0;
     width: 69%;
 }
 .list__projects{

@@ -14,10 +14,13 @@ class ModelComplaints
 
     public function addComplaints($arr)
     {
+        $user_id = $_COOKIE['user_id'];
+        $prp = $this->db->con->prepare("SELECT * FROM `users` WHERE `id`={$user_id}");
+        $prp->execute();
+        $user = $prp->fetchAll();
 
         $sqlStr = "INSERT INTO `complaints_suggestions`(`user`, `email`, `text` )
-                   VALUES ('{$arr['user']}', '{$arr['email']}','{$arr['text']}')";
-
+                   VALUES ('{$user[0]['user']}', '{$user[0]['email']}','{$arr['text']}')";
         $this->db->con->exec($sqlStr);
         $id = $this->db->con->lastInsertId();
 

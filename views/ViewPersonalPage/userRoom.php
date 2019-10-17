@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="userRoom_html_style/import.css">
+    <link rel="stylesheet" href="/views/ViewPersonalPage/css/import.css">
+    <link rel="stylesheet" href="/views/css/style.css">
+<!--    <link rel="stylesheet" href="/views/css/forms.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>userRoom</title>
 </head>
 <body>
     <header class="header">
-        <button class="top topHide"><span>&lt;</span></button>
+        <button class="top topHide"><span>&lt</span></button>
         <div class="container">
             <section class="left__header__content">
                 <div class="logo">
-                    <img src="userRoom_html_img/logo.png" alt="logo__company">
+                    <img src="/views/img/logo.png" alt="logo__company">
                 </div>
                 <div class="companySlogan">
                     <p>Главное</p>
@@ -49,11 +55,18 @@
                     <p class="tab" data-for="project__3">Проект 3</p>
                     <p class="tab" data-for="project__4">Проект 4</p>
                 </div>
+
                 <div class="complaints__offers">
-                    <h2>Жалобы и предложения</h2>
-                    <textarea name="" id="" cols="35" rows="20"></textarea>
-                    <input type="button" value="Отправить" data-hehe='ohoho'>
+                        <h3>Дoбавить жалобу</h3>
+                    <div class="card-body">
+                        <form name="formComplaints" action="#" class="formAddUsers" method="">
+                            <p><textarea class="form-control height" name="text" placeholder="Жалоба или предложения"></textarea></p>
+                            <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Подать</button></p>
+                        </form>
+                        <span class="italic"></span>
+                    </div>
                 </div>
+
             </div>
             <div class="right__main__content">
                 <h2 class="none">h2</h2>
@@ -64,7 +77,7 @@
                     <h2>Первый проект</h2>
                     <div class="logo_pay">
                         <figure class="logo">
-                            <img src="userRoom_html_img/car.jpg" alt="car">
+                            <img src="/views/img/car.jpg" alt="car">
                             <figcaption class="none">Логотип проекта</figcaption>
                         </figure>
                         <aside class="pay">
@@ -90,7 +103,7 @@
                     <h2>Второй проект</h2>
                     <div class="logo_pay">
                         <figure class="logo">
-                            <img src="userRoom_html_img/house.jpg" alt="car">
+                            <img src="/views/img/house.jpg" alt="car">
                             <figcaption class="none">Логотип проекта</figcaption>
                         </figure>
                         <aside class="pay">
@@ -116,7 +129,7 @@
                     <h2>Третий проект</h2>
                     <div class="logo_pay">
                         <figure class="logo">
-                            <img src="userRoom_html_img/dream.jpg" alt="car">
+                            <img src="/views/img/dream.jpg" alt="car">
                             <figcaption class="none">Логотип проекта</figcaption>
                         </figure>
                         <aside class="pay">
@@ -142,7 +155,7 @@
                     <h2>Четвертый проект</h2>
                     <div class="logo_pay">
                         <figure class="logo">
-                            <img src="userRoom_html_img/dream.jpg" alt="car">
+                            <img src="/views/img/dream.jpg" alt="car">
                             <figcaption class="none">Логотип проекта</figcaption>
                         </figure>
                         <aside class="pay">
@@ -186,7 +199,9 @@
             </div>
         </div>
     </footer>
-    <script src="userRoom_html_app/app.js"></script>
-    <script src="userRoom_html_app/show_progect.js"></script>
+    <script src="/views/ViewPersonalPage/js/app.js"></script>
+    <script src="/views/ViewPersonalPage/js/show_progect.js"></script>
+    <script src="/views/ViewPersonalPage/js/scriptComplaints.js"></script>
+
 </body>
 </html>
