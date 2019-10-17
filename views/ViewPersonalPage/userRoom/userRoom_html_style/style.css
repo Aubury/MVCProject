@@ -1,0 +1,337 @@
+html{
+    scroll-behavior: smooth;
+}
+.header,
+.main,
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Condensed';
+}
+.header,
+.footer{
+    color: white;
+    background-color: rgb(32,36,45);
+}
+.hide{
+    display: none;
+}
+.container{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.left__header__content,
+.right__header__content{
+    width: 50%;
+    display: flex;
+}
+.left__header__content{
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px ;
+}
+.left__header__content div{
+    margin: 0 0 0 0;
+    width: 50%;
+}
+.left__header__content .companySlogan p{
+    width: 100%;
+    font-size: 50px;
+    user-select: none;
+}
+.left__header__content .companySlogan p:first-child{
+    text-align: left;
+    padding: 0 0 0 0;
+}
+.left__header__content .companySlogan p:nth-child(2){
+    text-align: center;
+    padding: 15px 0 15px 0;
+}
+.left__header__content .companySlogan p:last-child{
+    text-align: right;
+    padding: 0 0 0 0;
+}
+.left__header__content .companySlogan{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left__header__content img{
+    width: 280px;
+    height: 180px;
+}
+.right__header__content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.right__header__content .companySloganNone,
+.right__header__content .userRoom,
+.right__header__content nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 20px 0;
+}
+.right__header__content .companySloganNone{
+    font-size: 35px;
+    color: transparent;
+    user-select: none;
+}
+.right__header__content .userRoom button{
+    padding: 10px;
+    font-family: 'Roboto Condensed';
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: 0 !important;
+    transition: all .3s;
+}
+.right__header__content .userRoom button:hover{
+    background-color: rgb(8,126,177);
+    border: solid 2px white;
+    color: white;
+}
+.navigation{
+    display: flex;
+}
+.navigation li{
+    user-select: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+    border-left: solid 3px transparent;
+    padding: 5px 20px 5px 20px;
+    color: transparent;
+}
+.navigation li:last-child{
+    padding: 5px 0px 5px 20px;
+}
+
+
+
+
+/* ----------------------------main-------------------------------- */
+.main .container{
+    justify-content: space-between;
+}
+.main .left__main__content{
+    margin: 20px 0 0 0;
+    width: 29%;
+}
+.main .right__main__content{
+    margin: 20px 0 0 0;
+    width: 69%;
+}
+.list__projects{
+    margin: 0 0 20px 0;
+    font-size: 20px;
+}
+.list__projects p{
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 5px 0 5px 20px;
+    margin: 10px 0 10px 0;
+    box-shadow: 0px 0px 5px #3f414d;
+    transition: all .3s;
+}
+.list__projects p:first-child{
+    margin: 0 0 10px 0;
+}
+.list__projects p:hover{
+    background-color: blue;
+    color: white;
+}
+/* .complaints__offers textarea{
+    font-family: 'Roboto Condensed';
+    letter-spacing: 0px;
+    line-height: 1; 
+} */
+.complaints__offers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0 0 0;
+    box-shadow: 0px 0px 5px #3f414d;
+}
+.complaints__offers h2{
+    margin: 0 0 10px 0;
+    font-size: 30px;
+    text-align: center;
+}
+.complaints__offers input{
+    font-family: 'Roboto Condensed';
+    margin: 10px 0 10px 0;
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+.list{
+    margin: 0 0 20px 0;
+    padding: 0 20px 20px 20px;
+    box-shadow: 0px 0px 5px #3f414d;
+}
+.list h2{
+    padding: 5px 0 10px 0px;
+    font-size: 30px;
+}
+.list .logo_pay{
+    display: flex;
+    justify-content: space-between;
+}
+.list .logo_pay .logo,
+.list .logo_pay .pay{
+    width: 45%;
+}
+.list .logo_pay img{
+    width: 300px;
+}
+.logo_pay .pay p{
+    width: 100%;
+    font-size: 30px;
+}
+.list .logo_pay .pay{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.list .article{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 10px 0 0 0;
+}
+.list .pay_score{
+    margin: 10px 0 0 0;
+    display: flex;
+    font-size: 20px;
+}
+.list .pay_score p{
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+.list .pay_score aside{
+    box-shadow: 0px 0px 5px #3f414d;
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.list .pay_score article{
+    padding: 0 0 0 10px;
+    text-align: justify;
+    line-height: 1.2;
+    width: 65%;
+}
+
+
+/* --------------------------footer------------------------------------ */
+
+.footer{
+    padding: 30px 0 30px 0;
+}
+.map,
+.contacts{
+    width: 50%;
+}
+iframe{
+    width: 100%;
+}
+.contacts{
+    display: flex;
+}
+.adress p,
+.phone p{
+    width: 100%;
+    font-size: 30px;
+    line-height: 1.3;
+    color: white;
+}
+.adress,
+.phone{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+
+
+
+/* -------------------------button back to top-------------------------------- */
+
+.top span{
+    font-size: 40px;
+}
+.top{
+    width: 70px;
+    height: 70px;
+    transform: rotate(90deg); 
+    font-family: 'Roboto Condensed';
+    color: white;
+    background-color: #3f414d;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    outline: 0 !important;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 50%;
+}
+.top:hover{
+    background-color: rgb(8,126,177);
+    color: white;
+}
+.topHide{
+    right: -150px;
+    bottom: -150px;
+}
+
+
+
+
+/* ----------------------------modal window---------------------------------- */
+
+.modal__certificate{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+}
+.modal__content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.modal__content img{
+    width: 1000px;
+}
+.modal__content input{
+    cursor: pointer;
+    font-size: 30px;
+    margin: 30px 0 0 30px;
+    padding: 13px 20px 13px 20px;
+    border-radius: 50%; 
+    border: solid 1px white;
+    outline: none !important;
+}
+
+.none{
+    display: none;
+}
