@@ -24,7 +24,12 @@ class ControllerLogin
     }
     public function actionExit()
     {
-        $this->m->ExitSite($_POST['id_admin']);
+        $obj = [
+            'id'    => $_POST['id'],
+            'table' => $_POST['table']
+        ];
+
+        $this->m->ExitSite($obj);
     }
 
 

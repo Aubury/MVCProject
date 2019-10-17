@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", displayNav);
 objMain.exit.addEventListener('click', function () {
 
     const fD = new FormData();
-          fD.append('id_admin', getCookie('user_id'));
+          fD.append('id', getCookie('user_id'));
+          fD.append('table', getCookie('table'));
+
 
     fetch('/log/exit',{
         method: "POST",

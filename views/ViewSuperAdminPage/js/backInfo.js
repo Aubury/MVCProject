@@ -2,10 +2,56 @@ const objInf = {
     allCompl : document.querySelector("#allComplaints"),
     allAnsw  : document.querySelector("#answeredComplaints"),
     newCompl : document.querySelector("#newComplaints"),
-    container: document.querySelector(".tableReports")
-
-
+    container: document.querySelector(".tableReports"),
+    form : document.forms['formAnswer']
 }
+//-----------------------------------------------------------------------------
+const massInp = function ArrInputs(){
+
+    let form = objInf.form;
+    const inpArr = [
+        {
+            inp     : form['id'],
+            name    : 'id',
+        },
+        {
+            inp     : form['email'],
+            name    : 'email',
+        },
+        {
+            inp     : form['text'],
+            name    : 'text',
+        }
+    ];
+   return inpArr;
+}
+
+//-----------------------------------------------------------------------------
+
+objInf.form.addEventListener('submit', function (ev) {
+
+    ev.preventDefault();
+
+    const inpArr = massInp();
+
+    let fD = new FormData(),
+        url = '/reg/addAnswer';
+
+    inpArr.forEach(el => fD.append([el.name],el.inp.value));
+
+    fetch(url, {
+        method: "POST",
+        body: fD
+    }).then(e => e.text())
+        .then(data =>{
+            objInf.form.nextElementSibling.innerHTML = data;
+            inpArr.forEach( el => el.inp.value = '');
+            fillUpcontainer();
+            setTimeout(()=> {objInf.form.nextElementSibling.innerHTML = '';}, 10000);
+
+        });
+});
+//-------------------------------------------------------------------------------------------------------
 
 const getNumCompl = function getTotalNumberComplaints(){
 
@@ -114,7 +160,6 @@ getNumAnsw();
 setInterval(getNumAnsw, 50000);
 
 fillUpcontainer();
-setInterval(fillUpcontainer, 50000);
 
 getNumNewCompl();
 setInterval(getNumNewCompl, 50000);

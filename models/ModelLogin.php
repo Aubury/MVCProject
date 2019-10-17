@@ -66,7 +66,7 @@ class ModelLogin
                     $str->execute();
                     $this->addUserLog($user[0], 'usr');//TODO: same as admin!!!
                     echo json_encode([SITE . "/show/User",
-                        $this->addUserLog($user[0], 'adm')]);
+                        $this->addUserLog($user[0], 'usr')]);
 
 
                 }else{
@@ -103,11 +103,17 @@ class ModelLogin
 
         }
     }
-    public function ExitSite($id)
+    public function ExitSite($arr)
     {
-        $action = "Покинул(а) сайт";
-        $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$id}', '{$action}')");
-        $sql->execute();
+        if($arr['table'] != 'usr'){
+            $prp = $this->db->con->prepare("UPDATE `admins` SET `logOut`=NOW()  WHERE `id`={$arr['id']}");
+            $prp->execute();
+
+            $action = "Покинул(а) сайт";
+            $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ({$arr['id']}, '{$action}')");
+            $sql->execute();
+
+        }
 
         echo json_encode([SITE]);
 

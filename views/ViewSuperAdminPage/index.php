@@ -97,7 +97,6 @@
          </div>
       </div>
     <script><?php include_once ROOT ."/views/ViewSuperAdminPage/js/searchComplaints.js"?></script>
-    <script><?php include_once ROOT ."/views/ViewSuperAdminPage/js/scriptAnswer.js"?></script>
     <script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/backInfo.js"?></script>
     <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

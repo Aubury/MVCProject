@@ -32,7 +32,7 @@
                     <p>Главное иметь мечту</p>
                 </div>
                 <div class="userRoom">
-                    <button>Выход</button>
+                    <button class="btn btn-success" id="exit">Выйти</button>
                 </div>
                 <nav class="nav">
                     <ul class="navigation">
@@ -59,7 +59,7 @@
                 <div class="complaints__offers">
                         <h3>Дoбавить жалобу</h3>
                     <div class="card-body">
-                        <form name="formComplaints" action="#" class="formAddUsers" method="">
+                        <form name="formComplaints" action="#" class="formAddUsers" method="post">
                             <p><textarea class="form-control height" name="text" placeholder="Жалоба или предложения"></textarea></p>
                             <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Подать</button></p>
                         </form>
@@ -202,6 +202,7 @@
     <script src="/views/ViewPersonalPage/js/app.js"></script>
     <script src="/views/ViewPersonalPage/js/show_progect.js"></script>
     <script src="/views/ViewPersonalPage/js/scriptComplaints.js"></script>
+    <script><?php include_once ROOT . "/views/app/main.js"?></script>
 
 </body>
 </html>

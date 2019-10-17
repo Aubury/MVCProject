@@ -22,4 +22,4 @@ rex.form.addEventListener('submit', function (ev) {
             rex.form['text'].value = '';
             setTimeout(()=> {rex.form.nextElementSibling.innerHTML = '';}, 10000);
         })
-}
+});

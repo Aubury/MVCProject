@@ -39,7 +39,7 @@ rex.formAdd.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
 
-    let form = rex.formAdd;
+    let form = rex.formAdd,
         inpArr = massInp(),
             answ = {};
 
