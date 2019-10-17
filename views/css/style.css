@@ -274,7 +274,60 @@ textarea{
 .none{
     display: none;
 }
+.borderRit{
+    border-right: none;
+}
+/*-------------------------------------------------------------------------------- */
 
+.userHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    font-family: 'Roboto Condensed';
+    height: 10em;
+    color: white;
+    padding: 1em 10em;
+    background-color: rgb(32,36,45);
+}
+.userHeader .headerItem:nth-child(2){
+    width: 16.67%;
+    padding: 0 !important;
+}
+.headerItem{
+    width: 20%;
+    height: 100%;
+    padding: 2px;
+}
+.headerItem img{
+    width:auto;
+    height: 99.96%;
+}
+.slogan{
+   display: flex;
+    flex-direction: column;
+    font-size: 2em;
+}
+.slogan p{
+    margin-bottom: 0;
+}
+.slogan p:nth-child(2){
+    align-self: center;
+}
+.slogan p:last-child{
+    align-self: flex-end;
+}
+.userHeader .headerItem:last-child{
+    width: 16.67%;
+    margin: auto 0 auto auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
 
 
 

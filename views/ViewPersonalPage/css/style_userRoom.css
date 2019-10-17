@@ -6,8 +6,15 @@ html{
 .footer{
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     font-family: 'Roboto Condensed';
+}
+header{
+    height: 7em;
+}
+.logo{
+    width: 30%;
 }
 .header,
 .footer{
@@ -17,9 +24,10 @@ html{
 .hide{
     display: none;
 }
-.container{
+._container{
     width: 1200px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 .left__header__content,
@@ -30,7 +38,7 @@ html{
 .left__header__content{
     justify-content: space-between;
     align-items: center;
-    font-size: 30px ;
+    font-size: 1.2em;
 }
 .left__header__content div{
     margin: 0 0 0 0;
@@ -38,7 +46,7 @@ html{
 }
 .left__header__content .companySlogan p{
     width: 100%;
-    font-size: 50px;
+    font-size: 1.5em;
     user-select: none;
 }
 .left__header__content .companySlogan p:first-child{
@@ -58,8 +66,8 @@ html{
     flex-wrap: wrap;
 }
 .left__header__content img{
-    width: 280px;
-    height: 180px;
+    width: 10em;
+    height: auto;
 }
 .right__header__content{
     display: flex;
@@ -113,13 +121,18 @@ html{
 
 
 /* ----------------------------main-------------------------------- */
-.main .container{
+.main ._container{
     justify-content: space-between;
 
 }
-.main .left__main__content{
+.left__main__content{
     margin: 20px 0 20px 0;
-    width: 29%;
+    width: 33.32%;
+    border-right: 2px solid #afbfd3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+
 }
 .main .right__main__content{
     margin: 20px 0 20px 0;
@@ -144,6 +157,7 @@ html{
     background-color: blue;
     color: white;
 }
+.
 /* .complaints__offers textarea{
     font-family: 'Roboto Condensed';
     letter-spacing: 0px;
@@ -155,6 +169,7 @@ html{
     justify-content: center;
     padding: 10px 0 0 0;
     box-shadow: 0px 0px 5px #3f414d;
+    width: 91.63% !important;
 }
 .complaints__offers h2{
     margin: 0 0 10px 0;
@@ -183,7 +198,7 @@ html{
     display: flex;
     justify-content: space-between;
 }
-.list .logo_pay .logo,
+/*.list .logo_pay .logo,*/
 .list .logo_pay .pay{
     width: 45%;
 }
