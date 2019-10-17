@@ -67,10 +67,10 @@
             <div class="left__main__content">
                 <div class="list__projects">
                     <p class="tab active" data-for="aboutUs">О нас</p>
-                    <p class="tab" data-for="project__1">Проект 1</p>
-                    <p class="tab" data-for="project__2">Проект 2</p>
-                    <p class="tab" data-for="project__3">Проект 3</p>
-                    <p class="tab" data-for="project__4">Проект 4</p>
+<!--                    <p class="tab" data-for="project__1">Проект 1</p>-->
+<!--                    <p class="tab" data-for="project__2">Проект 2</p>-->
+<!--                    <p class="tab" data-for="project__3">Проект 3</p>-->
+<!--                    <p class="tab" data-for="project__4">Проект 4</p>-->
                 </div>
                 <div class="p-2">
                     <div class="card">
@@ -90,114 +90,112 @@
 
             </div>
             <div class="right__main__content">
-                <h2 class="none">h2</h2>
                 <div class="aboutUs">
-
                 </div>
-                <div class="project__1 none list">
-                    <h2>Первый проект</h2>
-                    <div class="logo_pay">
-                        <figure class="logo">
-                            <img src="/views/img/car.jpg" alt="car">
-                            <figcaption class="none">Логотип проекта</figcaption>
-                        </figure>
-                        <aside class="pay">
-                            <p>Бюджет проекта $$$</p>
-                            <p>Мой вклад $$$</p>
-                        </aside>
-                    </div>
-                    <article class="article">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quo molestias impedit culpa aspernatur voluptate eum iste corrupti nam! Tempora fuga reprehenderit officia reiciendis voluptas ullam! Vitae autem tenetur facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat natus, exercitationem error perferendis unde blanditiis laboriosam amet dicta possimus ipsa eos laudantium? Perspiciatis repudiandae hic natus. Quaerat, animi beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis rerum quas ipsum ducimus corporis aliquam, nobis, reiciendis totam atque voluptas dolorem architecto sed veniam voluptatum sequi dicta neque necessitatibus minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sequi, magnam soluta aperiam et fugit! Culpa quia error quas consectetur, numquam, fugiat sunt, dolore earum provident ducimus minus autem ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore impedit eaque nostrum optio itaque esse autem aliquid. Aspernatur, officiis. Amet possimus, eos voluptatum ullam sit delectus blanditiis eum neque.
-                    </article>
-                    <div class="pay_score">
-                        <aside>
-                            <p>Номера счетов</p>
-                            <p>**************</p>
-                            <p>***************</p>
-                        </aside>
-                        <article>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique debitis ipsa voluptates sit saepe molestiae minus, atque harum voluptatum iusto. Tempore sapiente similique aspernatur quos non adipisci aperiam ipsum beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ab magnam culpa architecto molestias sint fugit rerum sunt, quo maiores voluptatem a aliquid repellat, nisi, quibusdam esse distinctio! Officiis, corporis.
-                        </article>
-                    </div>
-                </div>
-                <div class="project__2 none list">
-                    <h2>Второй проект</h2>
-                    <div class="logo_pay">
-                        <figure class="logo">
-                            <img src="/views/img/house.jpg" alt="car">
-                            <figcaption class="none">Логотип проекта</figcaption>
-                        </figure>
-                        <aside class="pay">
-                            <p>Бюджет проекта $$$</p>
-                            <p>Мой вклад $$$</p>
-                        </aside>
-                    </div>
-                    <article class="article">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quo molestias impedit culpa aspernatur voluptate eum iste corrupti nam! Tempora fuga reprehenderit officia reiciendis voluptas ullam! Vitae autem tenetur facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat natus, exercitationem error perferendis unde blanditiis laboriosam amet dicta possimus ipsa eos laudantium? Perspiciatis repudiandae hic natus. Quaerat, animi beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis rerum quas ipsum ducimus corporis aliquam, nobis, reiciendis totam atque voluptas dolorem architecto sed veniam voluptatum sequi dicta neque necessitatibus minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sequi, magnam soluta aperiam et fugit! Culpa quia error quas consectetur, numquam, fugiat sunt, dolore earum provident ducimus minus autem ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore impedit eaque nostrum optio itaque esse autem aliquid. Aspernatur, officiis. Amet possimus, eos voluptatum ullam sit delectus blanditiis eum neque.
-                    </article>
-                    <div class="pay_score">
-                        <aside>
-                            <p>Номера счетов</p>
-                            <p>**************</p>
-                            <p>***************</p>
-                        </aside>
-                        <article>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique debitis ipsa voluptates sit saepe molestiae minus, atque harum voluptatum iusto. Tempore sapiente similique aspernatur quos non adipisci aperiam ipsum beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ab magnam culpa architecto molestias sint fugit rerum sunt, quo maiores voluptatem a aliquid repellat, nisi, quibusdam esse distinctio! Officiis, corporis.
-                        </article>
-                    </div>
-                </div>
-                <div class="project__3 none list">
-                    <h2>Третий проект</h2>
-                    <div class="logo_pay">
-                        <figure class="logo">
-                            <img src="/views/img/dream.jpg" alt="car">
-                            <figcaption class="none">Логотип проекта</figcaption>
-                        </figure>
-                        <aside class="pay">
-                            <p>Бюджет проекта $$$</p>
-                            <p>Мой вклад $$$</p>
-                        </aside>
-                    </div>
-                    <article class="article">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quo molestias impedit culpa aspernatur voluptate eum iste corrupti nam! Tempora fuga reprehenderit officia reiciendis voluptas ullam! Vitae autem tenetur facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat natus, exercitationem error perferendis unde blanditiis laboriosam amet dicta possimus ipsa eos laudantium? Perspiciatis repudiandae hic natus. Quaerat, animi beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis rerum quas ipsum ducimus corporis aliquam, nobis, reiciendis totam atque voluptas dolorem architecto sed veniam voluptatum sequi dicta neque necessitatibus minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sequi, magnam soluta aperiam et fugit! Culpa quia error quas consectetur, numquam, fugiat sunt, dolore earum provident ducimus minus autem ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore impedit eaque nostrum optio itaque esse autem aliquid. Aspernatur, officiis. Amet possimus, eos voluptatum ullam sit delectus blanditiis eum neque.
-                    </article>
-                    <div class="pay_score">
-                        <aside>
-                            <p>Номера счетов</p>
-                            <p>**************</p>
-                            <p>***************</p>
-                        </aside>
-                        <article>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique debitis ipsa voluptates sit saepe molestiae minus, atque harum voluptatum iusto. Tempore sapiente similique aspernatur quos non adipisci aperiam ipsum beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ab magnam culpa architecto molestias sint fugit rerum sunt, quo maiores voluptatem a aliquid repellat, nisi, quibusdam esse distinctio! Officiis, corporis.
-                        </article>
-                    </div>
-                </div>
-                <div class="project__4 none list">
-                    <h2>Четвертый проект</h2>
-                    <div class="logo_pay">
-                        <figure class="logo">
-                            <img src="/views/img/dream.jpg" alt="car">
-                            <figcaption class="none">Логотип проекта</figcaption>
-                        </figure>
-                        <aside class="pay">
-                            <p>Бюджет проекта $$$</p>
-                            <p>Мой вклад $$$</p>
-                        </aside>
-                    </div>
-                    <article class="article">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quo molestias impedit culpa aspernatur voluptate eum iste corrupti nam! Tempora fuga reprehenderit officia reiciendis voluptas ullam! Vitae autem tenetur facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat natus, exercitationem error perferendis unde blanditiis laboriosam amet dicta possimus ipsa eos laudantium? Perspiciatis repudiandae hic natus. Quaerat, animi beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis rerum quas ipsum ducimus corporis aliquam, nobis, reiciendis totam atque voluptas dolorem architecto sed veniam voluptatum sequi dicta neque necessitatibus minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sequi, magnam soluta aperiam et fugit! Culpa quia error quas consectetur, numquam, fugiat sunt, dolore earum provident ducimus minus autem ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore impedit eaque nostrum optio itaque esse autem aliquid. Aspernatur, officiis. Amet possimus, eos voluptatum ullam sit delectus blanditiis eum neque.
-                    </article>
-                    <div class="pay_score">
-                        <aside>
-                            <p>Номера счетов</p>
-                            <p>**************</p>
-                            <p>***************</p>
-                        </aside>
-                        <article>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique debitis ipsa voluptates sit saepe molestiae minus, atque harum voluptatum iusto. Tempore sapiente similique aspernatur quos non adipisci aperiam ipsum beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ab magnam culpa architecto molestias sint fugit rerum sunt, quo maiores voluptatem a aliquid repellat, nisi, quibusdam esse distinctio! Officiis, corporis.
-                        </article>
-                    </div>
-                </div>
+<!--                <div class="project__1 none list">-->
+<!--                    <h2>Первый проект</h2>-->
+<!--                    <div class="logo_pay">-->
+<!--                        <figure class="logo">-->
+<!--                            <img src="/views/img/car.jpg" alt="car">-->
+<!--                            <figcaption class="none">Логотип проекта</figcaption>-->
+<!--                        </figure>-->
+<!--                        <aside class="pay">-->
+<!--                            <p>Бюджет проекта $$$</p>-->
+<!--                            <p>Мой вклад $$$</p>-->
+<!--                        </aside>-->
+<!--                    </div>-->
+<!--                    <article class="article">-->
+<!--                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quo molestias impedit culpa aspernatur voluptate eum iste corrupti nam! Tempora fuga reprehenderit officia reiciendis voluptas ullam! Vitae autem tenetur facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat natus, exercitationem error perferendis unde blanditiis laboriosam amet dicta possimus ipsa eos laudantium? Perspiciatis repudiandae hic natus. Quaerat, animi beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis rerum quas ipsum ducimus corporis aliquam, nobis, reiciendis totam atque voluptas dolorem architecto sed veniam voluptatum sequi dicta neque necessitatibus minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sequi, magnam soluta aperiam et fugit! Culpa quia error quas consectetur, numquam, fugiat sunt, dolore earum provident ducimus minus autem ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore impedit eaque nostrum optio itaque esse autem aliquid. Aspernatur, officiis. Amet possimus, eos voluptatum ullam sit delectus blanditiis eum neque.-->
+<!--                    </article>-->
+<!--                    <div class="pay_score">-->
+<!--                        <aside>-->
+<!--                            <p>Номера счетов</p>-->
+<!--                            <p>**************</p>-->
+<!--                            <p>***************</p>-->
+<!--                        </aside>-->
+<!--                        <article>-->
+<!--                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique debitis ipsa voluptates sit saepe molestiae minus, atque harum voluptatum iusto. Tempore sapiente similique aspernatur quos non adipisci aperiam ipsum beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ab magnam culpa architecto molestias sint fugit rerum sunt, quo maiores voluptatem a aliquid repellat, nisi, quibusdam esse distinctio! Officiis, corporis.-->
+<!--                        </article>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="project__2 none list">-->
+<!--                    <h2>Второй проект</h2>-->
+<!--                    <div class="logo_pay">-->
+<!--                        <figure class="logo">-->
+<!--                            <img src="/views/img/house.jpg" alt="car">-->
+<!--                            <figcaption class="none">Логотип проекта</figcaption>-->
+<!--                        </figure>-->
+<!--                        <aside class="pay">-->
+<!--                            <p>Бюджет проекта $$$</p>-->
+<!--                            <p>Мой вклад $$$</p>-->
+<!--                        </aside>-->
+<!--                    </div>-->
+<!--                    <article class="article">-->
+<!--                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quo molestias impedit culpa aspernatur voluptate eum iste corrupti nam! Tempora fuga reprehenderit officia reiciendis voluptas ullam! Vitae autem tenetur facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat natus, exercitationem error perferendis unde blanditiis laboriosam amet dicta possimus ipsa eos laudantium? Perspiciatis repudiandae hic natus. Quaerat, animi beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis rerum quas ipsum ducimus corporis aliquam, nobis, reiciendis totam atque voluptas dolorem architecto sed veniam voluptatum sequi dicta neque necessitatibus minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sequi, magnam soluta aperiam et fugit! Culpa quia error quas consectetur, numquam, fugiat sunt, dolore earum provident ducimus minus autem ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore impedit eaque nostrum optio itaque esse autem aliquid. Aspernatur, officiis. Amet possimus, eos voluptatum ullam sit delectus blanditiis eum neque.-->
+<!--                    </article>-->
+<!--                    <div class="pay_score">-->
+<!--                        <aside>-->
+<!--                            <p>Номера счетов</p>-->
+<!--                            <p>**************</p>-->
+<!--                            <p>***************</p>-->
+<!--                        </aside>-->
+<!--                        <article>-->
+<!--                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique debitis ipsa voluptates sit saepe molestiae minus, atque harum voluptatum iusto. Tempore sapiente similique aspernatur quos non adipisci aperiam ipsum beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ab magnam culpa architecto molestias sint fugit rerum sunt, quo maiores voluptatem a aliquid repellat, nisi, quibusdam esse distinctio! Officiis, corporis.-->
+<!--                        </article>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="project__3 none list">-->
+<!--                    <h2>Третий проект</h2>-->
+<!--                    <div class="logo_pay">-->
+<!--                        <figure class="logo">-->
+<!--                            <img src="/views/img/dream.jpg" alt="car">-->
+<!--                            <figcaption class="none">Логотип проекта</figcaption>-->
+<!--                        </figure>-->
+<!--                        <aside class="pay">-->
+<!--                            <p>Бюджет проекта $$$</p>-->
+<!--                            <p>Мой вклад $$$</p>-->
+<!--                        </aside>-->
+<!--                    </div>-->
+<!--                    <article class="article">-->
+<!--                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quo molestias impedit culpa aspernatur voluptate eum iste corrupti nam! Tempora fuga reprehenderit officia reiciendis voluptas ullam! Vitae autem tenetur facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat natus, exercitationem error perferendis unde blanditiis laboriosam amet dicta possimus ipsa eos laudantium? Perspiciatis repudiandae hic natus. Quaerat, animi beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis rerum quas ipsum ducimus corporis aliquam, nobis, reiciendis totam atque voluptas dolorem architecto sed veniam voluptatum sequi dicta neque necessitatibus minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sequi, magnam soluta aperiam et fugit! Culpa quia error quas consectetur, numquam, fugiat sunt, dolore earum provident ducimus minus autem ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore impedit eaque nostrum optio itaque esse autem aliquid. Aspernatur, officiis. Amet possimus, eos voluptatum ullam sit delectus blanditiis eum neque.-->
+<!--                    </article>-->
+<!--                    <div class="pay_score">-->
+<!--                        <aside>-->
+<!--                            <p>Номера счетов</p>-->
+<!--                            <p>**************</p>-->
+<!--                            <p>***************</p>-->
+<!--                        </aside>-->
+<!--                        <article>-->
+<!--                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique debitis ipsa voluptates sit saepe molestiae minus, atque harum voluptatum iusto. Tempore sapiente similique aspernatur quos non adipisci aperiam ipsum beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ab magnam culpa architecto molestias sint fugit rerum sunt, quo maiores voluptatem a aliquid repellat, nisi, quibusdam esse distinctio! Officiis, corporis.-->
+<!--                        </article>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="project__4 none list">-->
+<!--                    <h2>Четвертый проект</h2>-->
+<!--                    <div class="logo_pay">-->
+<!--                        <figure class="logo">-->
+<!--                            <img src="/views/img/dream.jpg" alt="car">-->
+<!--                            <figcaption class="none">Логотип проекта</figcaption>-->
+<!--                        </figure>-->
+<!--                        <aside class="pay">-->
+<!--                            <p>Бюджет проекта $$$</p>-->
+<!--                            <p>Мой вклад $$$</p>-->
+<!--                        </aside>-->
+<!--                    </div>-->
+<!--                    <article class="article">-->
+<!--                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quo molestias impedit culpa aspernatur voluptate eum iste corrupti nam! Tempora fuga reprehenderit officia reiciendis voluptas ullam! Vitae autem tenetur facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat natus, exercitationem error perferendis unde blanditiis laboriosam amet dicta possimus ipsa eos laudantium? Perspiciatis repudiandae hic natus. Quaerat, animi beatae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis rerum quas ipsum ducimus corporis aliquam, nobis, reiciendis totam atque voluptas dolorem architecto sed veniam voluptatum sequi dicta neque necessitatibus minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sequi, magnam soluta aperiam et fugit! Culpa quia error quas consectetur, numquam, fugiat sunt, dolore earum provident ducimus minus autem ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore impedit eaque nostrum optio itaque esse autem aliquid. Aspernatur, officiis. Amet possimus, eos voluptatum ullam sit delectus blanditiis eum neque.-->
+<!--                    </article>-->
+<!--                    <div class="pay_score">-->
+<!--                        <aside>-->
+<!--                            <p>Номера счетов</p>-->
+<!--                            <p>**************</p>-->
+<!--                            <p>***************</p>-->
+<!--                        </aside>-->
+<!--                        <article>-->
+<!--                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique debitis ipsa voluptates sit saepe molestiae minus, atque harum voluptatum iusto. Tempore sapiente similique aspernatur quos non adipisci aperiam ipsum beatae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ab magnam culpa architecto molestias sint fugit rerum sunt, quo maiores voluptatem a aliquid repellat, nisi, quibusdam esse distinctio! Officiis, corporis.-->
+<!--                        </article>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </main>
@@ -224,6 +222,8 @@
     <script src="/views/ViewPersonalPage/js/show_progect.js"></script>
     <script src="/views/ViewPersonalPage/js/scriptComplaints.js"></script>
     <script><?php include_once ROOT . "/views/app/main.js"?></script>
+    <script src="/views/ViewPersonalPage/js/infoProject.js"></script>
+
 
 </body>
 </html>
