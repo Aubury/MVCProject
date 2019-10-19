@@ -65,6 +65,21 @@
   <div class="row justify-content-around">
     <div class="col-3 ReportInfo">
         <div class="card border-info  mb-3">
+            <div class="card-header"><h4>Добавление участника к проекту</h4></div>
+            <div class="card-body">
+                <form name="formAddToProject" action="#" method="post">
+                    <p><select name="project_name" id="inputState" class="form-control">
+                            <option>Выберите проект</option>
+                        </select></p>
+                    <p><input type="email" class="form-control" name="email" placeholder="Email"></p>
+                    <p class="posRel"><input type="text" class="form-control" name="share_investment"  placeholder="Сумма инвестиции">
+                        <span class="title none">Вводите сумму без пробелов</span></p>
+                    <p class="col-12 col-xl-12"><input class="btn btn-block btn-success" type="submit" value="Добавить"></p>
+                </form>
+                <span class="talic"></span>
+            </div>
+        </div>
+        <div class="card border-info  mb-3">
             <div class="card-header"><h4>Добавление или редактировать участника</h4></div>
             <div class="card-body">
                 <form name="formUsers" action="#" method="get">
@@ -76,11 +91,6 @@
                         <span class="italic"></span></p>
                     <p><input type="email" class="inpText form-control" name="email" placeholder="Email">
                         <span class="italic"></span></p>
-                    <p><input type="text" class="inpText form-control" name="project_name"  placeholder="Проект">
-                        <span class="italic"></span></p>
-                    <p class="posRel"><input type="text" class="inpText form-control" name="share_investment"  placeholder="Сумма инвестиции">
-                        <span class="italic"></span>
-                        <span class="title none">Вводите сумму без пробелов</span></p>
                     <p><input type="text" class="inpText form-control" name="address"  placeholder="Адрес">
                         <span class="italic"></span></p>
                     <p><input type="tel" class="inpText form-control" name="telephon" id="phone"  placeholder="+7 (123) 456-78-90"

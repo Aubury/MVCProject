@@ -142,7 +142,7 @@ const projectCard = function createProjectCart(arr){
                            <div class="row justify-content-around height"> 
                             <p class="w-50 padImg">${el.video_1}</p>
                             <p class="w-50 padImg">${el.video_2}</p>
-                      </div>
+                           </div>
                       </div>
                 </div>`;
     });

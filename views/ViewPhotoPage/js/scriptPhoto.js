@@ -82,7 +82,7 @@ rex.delForm.addEventListener('submit', function (ev) {
                 rex.delForm.children[i].value = '';
             }
             getPhotos();
-            setTimeout(()=> rex.delForm.nextElementSibling.innerHTML = '', 1000);
+            setTimeout(()=> rex.delForm.nextElementSibling.innerHTML = '', 500);
 
         });
 

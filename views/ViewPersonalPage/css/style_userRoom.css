@@ -25,7 +25,7 @@ header{
     display: none;
 }
 ._container{
-    width: 1200px;
+    width: 1400px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -131,7 +131,7 @@ header{
     /*border-right: 1.2px solid #dee2e6;*/
     display: flex;
     flex-direction: column;
-    justify-content: space-between !important;
+    /*justify-content: space-between !important;*/
 
 }
 .main .right__main__content{
@@ -171,85 +171,133 @@ header{
 } */
 .complaints__offers{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
     justify-content: center;
-    padding: 10px 0 0 0;
+    /*padding: 10px 0 0 0;*/
     box-shadow: 0px 0px 5px #3f414d;
-    width: 91.63% !important;
+    width: 100% !important;
+}
+.complaints__offers>div:first-child{
+    width: 100%;
 }
 .complaints__offers h2{
     margin: 0 0 10px 0;
     font-size: 30px;
     text-align: center;
 }
-.complaints__offers input{
-    font-family: 'Roboto Condensed';
-    margin: 10px 0 10px 0;
-    padding: 10px 15px 10px 15px;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: .5px;
-}
-
+/*.complaints__offers input{*/
+/*    font-family: 'Roboto Condensed';*/
+/*    margin: 10px 0 10px 0;*/
+/*    padding: 10px 15px 10px 15px;*/
+/*    font-size: 15px;*/
+/*    font-weight: bold;*/
+/*    letter-spacing: .5px;*/
+/*}*/
 .list{
     margin: 0 0 20px 0;
-    padding: 0 20px 20px 20px;
+    /*padding: 0 20px 20px 20px;*/
     box-shadow: 0px 0px 5px #3f414d;
 }
-.list h2{
-    padding: 5px 0 10px 0px;
-    font-size: 30px;
-}
-.list .logo_pay{
-    display: flex;
-    justify-content: space-between;
-}
-/*.list .logo_pay .logo,*/
-.list .logo_pay .pay{
-    width: 45%;
-}
-.list .logo_pay img{
-    width: 300px;
-}
-.logo_pay .pay p{
-    width: 100%;
-    font-size: 30px;
-}
-.list .logo_pay .pay{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.list .article{
-    text-align: justify;
-    font-size: 20px;
-    line-height: 1.2;
-    margin: 10px 0 0 0;
-}
-.list .pay_score{
-    margin: 10px 0 0 0;
-    display: flex;
-    font-size: 20px;
-}
-.list .pay_score p{
-    font-size: 30px;
-    width: 100%;
+h2{
     text-align: center;
 }
-.list .pay_score aside{
+/*.list h2{*/
+/*    padding: 5px 0 10px 0px;*/
+/*    font-size: 30px;*/
+/*}*/
+/*.list .logo_pay{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+/*!*.list .logo_pay .logo,*!*/
+/*.list .logo_pay .pay{*/
+/*    width: 45%;*/
+/*}*/
+/*.list .logo_pay img{*/
+/*    width: 300px;*/
+/*}*/
+/*.logo_pay .pay p{*/
+/*    width: 100%;*/
+/*    font-size: 30px;*/
+/*}*/
+/*.list .logo_pay .pay{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    align-items: center;*/
+/*}*/
+/*.list .article{*/
+/*    text-align: justify;*/
+/*    font-size: 20px;*/
+/*    line-height: 1.2;*/
+/*    margin: 10px 0 0 0;*/
+/*}*/
+/*.list .pay_score{*/
+/*    margin: 10px 0 0 0;*/
+/*    display: flex;*/
+/*    font-size: 20px;*/
+/*}*/
+/*.list .pay_score p{*/
+/*    font-size: 30px;*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*}*/
+.aside{
     box-shadow: 0px 0px 5px #3f414d;
-    width: 35%;
+    /*width: 35%;*/
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.list .pay_score article{
-    padding: 0 0 0 10px;
-    text-align: justify;
-    line-height: 1.2;
-    width: 65%;
+.cardFooter{
+    width: 100%;
+    min-height: 3em;
+    margin: 2px 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
 }
+.cardFooter>div:first-child{
+    width: 33.32%;
+    padding: 2px;
+    margin: 20px 0;
+}
+.cardFooter>div:last-child{
+    width: 58.31%;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.heightMainCsrd{
+    min-height: 25px;
+}
+.card-text{
+    text-align: left;
+}
+.mainPhoto{
+    width: 41.65%;
+    height: auto;
+    margin: 7px 15px 4px 0;
+    float: left;
+}
+.card-text{
+    text-align: left;
+    padding: 0 2px;
+    font-size: 1.2em;
+}
+
+
+/*.list .pay_score article{*/
+/*    padding: 0 0 0 10px;*/
+/*    text-align: justify;*/
+/*    line-height: 1.2;*/
+/*    width: 65%;*/
+/*}*/
 
 
 /* --------------------------footer------------------------------------ */
@@ -353,7 +401,6 @@ iframe{
     border: solid 1px white;
     outline: none !important;
 }
-
 .none{
     display: none;
 }

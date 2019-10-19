@@ -17,7 +17,8 @@
     <title>userRoom</title>
 </head>
 <body>
-    <header class="userHeader">
+<header class="hederContainer">
+    <div class="userHeader">
         <div class="headerItem">
             <img src="/views/img/logo.png" alt="logo__company">
         </div>
@@ -30,6 +31,8 @@
         <div class="headerItem">
             <button class="btn btn-success" id="exit">Выйти</button>
         </div>
+</header>
+
 
 <!---->
 <!--        <div class="_container">-->
@@ -72,8 +75,8 @@
 <!--                    <p class="tab" data-for="project__3">Проект 3</p>-->
 <!--                    <p class="tab" data-for="project__4">Проект 4</p>-->
                 </div>
-                <div class="p-2">
-                    <div class="card">
+                <div class="complaints__offers">
+
                         <div class="card-header">
                             <h3>Дoбавить жалобу</h3>
                         </div>
@@ -84,14 +87,24 @@
                             </form>
                             <span class="italic"></span>
                         </div>
-                    </div>
                 </div>
 
 
             </div>
             <div class="right__main__content">
-                <div class="aboutUs">
+                <div class="aboutUs list">
+                    <div class="card-header row justify-content-around">
+                        <div class="p-2 flex-grow-1"> <h2>О нас</h2></div>
+                    </div>
+                    <div class="container p-2">
+                        <div class="heightMainCsrd">
+                            <p class="center">Здесь должен быть текст </p>
+                            <p class="center">О НАС</p>
+                        </div>
+                    </div>
+                    <div class="cardFooter"></div>
                 </div>
+            </div>
 <!--                <div class="project__1 none list">-->
 <!--                    <h2>Первый проект</h2>-->
 <!--                    <div class="logo_pay">-->
@@ -219,7 +232,7 @@
         </div>
     </footer>
 <!--    <script src="/views/ViewPersonalPage/js/app.js"></script>-->
-    <script src="/views/ViewPersonalPage/js/show_progect.js"></script>
+<!--    <script src="/views/ViewPersonalPage/js/show_progect.js"></script>-->
     <script src="/views/ViewPersonalPage/js/scriptComplaints.js"></script>
     <script><?php include_once ROOT . "/views/app/main.js"?></script>
     <script src="/views/ViewPersonalPage/js/infoProject.js"></script>

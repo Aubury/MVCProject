@@ -2,6 +2,7 @@
 
 return[
     "reg/addUser"    => "UserPage/AddUser/adm/supAdm",
+    "reg/addUsPrj"   => "UserPage/AddUserProgect/adm/supAdm",
     "reg/delUser"    => "UserPage/DelUser/adm/supAdm",
     "reg/addVideo"   => "VideoPage/AddVideo/adm/supAdm",
     "reg/addProject" => "ProjectPage/AddProject/adm/supAdm",
@@ -39,6 +40,7 @@ return[
     "inf/budget"        => "BudgetPage/TotalInf/adm/supAdm",
     "inf/project"       => "ProjectPage/GetInfoProject/none",
     "inf/admins"        => "AdminPage/TotalInfoAdmins/supAdm",
+    "inf/userInvest"    => "ProjectPage/UserProjectMoney/none",
 
     "log/login"         => "Login/LogIn/none",
     "log/exit"          => "Login/Exit/none"

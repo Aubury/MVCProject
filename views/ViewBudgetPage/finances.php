@@ -69,9 +69,9 @@
                 <div class="card-header"><h3>Создание платежа</h3></div>
                 <div class="card-body formAddUsers">
                     <form name="formAddPay" action="" method="POST">
-                       <p><select name="project_name" id="inputState" class="form-control"></p>
+                       <p><select name="project_name" id="inputState" class="form-control">
                             <option>Выберите проект</option>
-                        </select>
+                        </select></p>
                        <p><input type="text" class="form-control" name="email_user" placeholder="Email плательщика"></p>
                        <p class="posRel"><input type="text" class="form-control" name="amount" placeholder="Сумма платежа">
                                  <span class="title none">Вводите сумму без пробелов</span></p>

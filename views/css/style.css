@@ -62,7 +62,7 @@
 .reportForm{
     border: 1px solid black;
     margin-bottom: 20px;
-    
+
 }
 .reportTxt{
 
@@ -183,8 +183,9 @@ iframe{
     width: 100% !important;
 }
 .sizeImg{
-    width: 49.98%;
+    width: 49.98% !important;
     height: 10em;
+
 }
 .sizeImg img{
     width: 100%;
@@ -194,7 +195,7 @@ iframe{
     margin: 0 !important;
 }
 i{
-  cursor: pointer;
+    cursor: pointer;
 }
 .icons{
     width: 3em;
@@ -239,6 +240,7 @@ textarea{
 }
 .card-header{
     border-top:1px solid rgba(0,0,0,.125);
+    text-align: center;
 }
 .compl{
     font-size: 1.2em;
@@ -278,17 +280,23 @@ textarea{
     border-right: none;
 }
 /*-------------------------------------------------------------------------------- */
-
+.hederContainer{
+    background-color: rgb(32,36,45);
+    color: white;
+    width: 100%;
+    height: 10em;
+}
 .userHeader{
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
     font-family: 'Roboto Condensed';
-    height: 10em;
-    color: white;
-    padding: 1em 7em;
-    background-color: rgb(32,36,45);
+    height: 100%;
+    width: 1400px;
+    margin: 0 auto;
+    padding: 1em;
+
 }
 .userHeader .headerItem:nth-child(2){
     width: 16.67%;
@@ -304,7 +312,7 @@ textarea{
     height: 99.96%;
 }
 .slogan{
-   display: flex;
+    display: flex;
     flex-direction: column;
     font-size: 2em;
 }
@@ -328,7 +336,8 @@ textarea{
     justify-content: center;
     justify-items: center;
 }
-.
-
-
-
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

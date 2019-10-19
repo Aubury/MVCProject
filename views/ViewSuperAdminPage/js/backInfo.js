@@ -123,13 +123,13 @@ const templateContainer = function createTemplateContainer(arr){
         info.appendChild(mainDiv);
     }
 }
-
+//--------------------------------------------------------------------------------
 function createAndClass(name = 'div', ...classes){
     const el = document.createElement(name);
     el.classList.add(...classes);
     return el;
 }
-
+//-----------------------------------------------------------------------------------
 function createComplHeaders(parent, arr) {
     let newArr = arr.slice(0, -1);
 
@@ -142,7 +142,7 @@ function createComplHeaders(parent, arr) {
     }
 
 }
-
+//-------------------------------------------------------------------------------------
 function createAnswHeaders(parent, arr) {
 var newArr = arr.slice(0, -1);
 newArr.forEach( el => {
@@ -152,7 +152,7 @@ newArr.forEach( el => {
 
 });
 }
-
+//-----------------------------------------------------------------------------------
 getNumCompl();
 setInterval(getNumCompl, 50000);
 

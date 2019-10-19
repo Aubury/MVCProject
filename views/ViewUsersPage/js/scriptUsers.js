@@ -8,10 +8,12 @@ const rex = {
     amountRex  : /[\d+]{0,}/,
     formAdd    : document.forms['formUsers'],
     formDel    : document.forms['formDelUser'],
-    arrInp     : document.forms['formUsers'].querySelectorAll('.form-control'),
+    formProject: document.forms['formAddToProject'],
+    arrInp     : document.forms['formUsers'].querySelectorAll('.inpText'),
     infUsers   : document.querySelector('.tableUsers'),
     printButton: document.querySelector('.print'),
     table      : document.querySelector('#tableUsers'),
+    select : document.querySelector('#inputState'),
     massUsers  : [],
     massOriginal: [],
     arrIcDel: [],
@@ -231,19 +233,20 @@ const createUsersTable = function createUsersTable(arr){
     while(table.hasChildNodes()){
         table.removeChild(table.firstChild);
     }
-
-
     //Формирую строки
     let trs = "<tr><th>Delete</th><th>Edit</th><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
     arr.forEach(el=>{
-        trs = `${trs}<tr><td class="iconsDel"><i class="material-icons" id="del_${el.email}">delete</i></td>   
+        el['project'].forEach( item=>{
+
+            trs = `${trs}<tr><td class="iconsDel"><i class="material-icons" id="del_${el.email}">delete</i></td>   
                          <td class="iconsEd"><i class="material-icons" id="ed_${el.email}">create</i></td>   
                          <td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td>
                          <td class="tdTextLeft">Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
-                         <td>${el.project_name}<br></td>
-                         <td>${el.share_investment}<br></td>
-                         <td>${el.invest_amount}<br></td>
-                         <td>${el.payment_time}<br></td></tr>`;
+                         <td>${item.project_name}<br></td>
+                         <td>${item.share_investment}<br></td>
+                         <td>${item.invest_amount}<br></td>
+                         <td>${item.payment_time}<br></td></tr>`;
+        })
     });
 
     table.innerHTML = trs;
@@ -255,8 +258,67 @@ const createUsersTable = function createUsersTable(arr){
     addListtenerEd(rex.arrIcEd[0]);
 }
 //-----------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
+const replcomma = function comma(data) {
 
+    let newData = '';
 
+    (data.indexOf(",") !== -1) ? newData = data.replace(',','.') : newData = data;
+
+    return newData;
+
+}
+//----------------------------------------------------------------------------------------
+rex.formProject.addEventListener('submit',function (ev) {
+
+    ev.preventDefault();
+    const url = '/reg/addUsPrj',
+        form = rex.formProject,
+        fD = new FormData();
+    fD.append('email',form['email'].value);
+    fD.append('project_name', form['project_name'].value);
+    fD.append('share_investment', replcomma(form['share_investment'].value));
+
+    fetch(url,{
+        method : "POST",
+        body : fD
+    }).then(el=>el.text())
+        .then(text=>{
+            form.nextElementSibling.innerHTML = text;
+            setTimeout(()=> {
+                for(let i =0; i < form.elements.length-1; i++ ){
+                    form.elements[i].value = '';
+                }
+                  form.nextElementSibling.innerHTML = '';
+            }, 5000);
+        })
+
+})
+//-----------------------------------------------------------------------------------
+const addOptions = function addOptions(arr) {
+
+    const select = rex.select;
+
+    while(select.hasChildNodes()){
+        select.removeChild(select.firstChild);
+    }
+    let op = new Option('Выберите проект');
+    select.append(op);
+    arr.forEach( el => {
+
+        let option = new Option(el.name, el.name);
+        select.append(option);
+    })
+}
+//------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+const getNamesProjects = function getNamesProjects() {
+
+    const url = '/inf/nameProjects';
+
+    fetch(url).then(response => response.json())
+        .then(arr => addOptions(arr));
+}
 //------------------------------------------------------------------------------------------
 
 const infUsers = function TotalInformationOfUsers() {
@@ -274,13 +336,16 @@ const print = function printTable() {
     //Формирую строки
     let trs = "<tr><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
 
+    // rex.massUsers.forEach(el=>{
     rex.massUsers.forEach(el=>{
+        el['project'].forEach( item=>{
         trs = `${trs}<tr><td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td></td>
                          <td>Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
-                         <td>${el.project_name}<br></td>
-                         <td>${el.share_investment}<br></td>
-                         <td>${el.invest_amount}<br></td>
-                         <td>${el.payment_time}<br></td></tr>`;
+                          <td>${item.project_name}<br></td>
+                         <td>${item.share_investment}<br></td>
+                         <td>${item.invest_amount}<br></td>
+                         <td>${item.payment_time}<br></td></tr>`;
+        })
     });
 
     table.innerHTML = trs;
@@ -317,3 +382,4 @@ const print = function printTable() {
 
 rex.printButton.addEventListener('click', print);
 infUsers();
+getNamesProjects();

@@ -78,7 +78,7 @@ class ModelProjectPage
                 'name'        => $value['name'],
                 'budget'      => $value['budget'],
                 'raiser_money'=> $value['raiser_money'],
-                'users'    => $this->getAmountUsers($value['name']),
+                'users'    => $this->getAmountUsers($value['id']),
                 'published'=> $value['published'],
                 'photo_1'  => $this->getPhotoInfo($value['photo_1']),
                 'photo_2'  => $this->getPhotoInfo($value['photo_2']),
@@ -111,10 +111,29 @@ class ModelProjectPage
     }
     public function getAmountUsers($data)
     {
-        $prp = $this->db->con->prepare("SELECT * FROM `users` WHERE `project_name`='{$data}'");
+        $prp = $this->db->con->prepare("SELECT `id_user` FROM `projectUserInvestment` WHERE `id_project`='{$data}'");
+//        $prp = $this->db->con->prepare("SELECT * FROM `users` WHERE `project_name`='{$data}'");
         $prp->execute();
         $users = $prp->fetchAll();
         return count($users);
     }
+    public function getTotalInvestAmount($project, $id){
+
+        $prp = $this->db->con->prepare("SELECT `share_investment`, `invest_amount` FROM `users` 
+                                        WHERE `project_name`='{$project}' AND `id`={$id}");
+        $prp->execute();
+        $totalMoney = $prp->fetchAll();
+
+        $money = [];
+        foreach ($totalMoney as $value){
+            array_push($money,[
+                'share_investment' => $value['share_investment'],
+                'invest_amount'    => $value['invest_amount']
+            ]);
+        }
+
+        echo json_encode([$money]);
+    }
+
 
 }

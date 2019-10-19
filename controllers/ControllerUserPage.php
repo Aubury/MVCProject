@@ -17,7 +17,6 @@ class ControllerUserPage
     public function actionAddUser()
     {
         $obj =(array)json_decode($_GET['value']);
-//        $obj['password'] = substr(hash('sha256', $obj['email'] . time()), rand(0, 40), 10);
         $this->m->addUser($obj);
    }
 
@@ -33,6 +32,16 @@ class ControllerUserPage
    public function actionTotalUsers()
    {
        $this->m->TotalInformationUsers();
+   }
+   public function actionAddUserProgect()
+   {
+       $obj = [
+           'project_name' => $_POST['project_name'],
+           'email' => $_POST['email'],
+           'share_investment' => $_POST['share_investment']
+       ];
+//       var_dump($obj);
+       $this->m->addUserProject($obj);
    }
 
 

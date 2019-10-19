@@ -30,5 +30,11 @@ class ControllerProjectPage
     {
         $this->m->getInformationProjects();
     }
+    public function actionUserProjectMoney()
+    {
+        $id = $_COOKIE['user_id'];
+        $project = $_POST['project'];
+        $this->m->getTotalInvestAmount($project, $id);
+    }
 
 }
