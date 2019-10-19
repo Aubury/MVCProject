@@ -32,18 +32,13 @@ const getProgects = function getMassProjects(){
         .then(arr => creatProject(arr[1]));
 }
 //--------------------------------------------------------------------------
-const getTotalPayments = function getUserPayments(project) {
+const getTotalPayments = function getUserPayments() {
 
-    const fD = new FormData(),
-         url = '/inf/userInvest';
-    fD.append('project', project);
+    const url = '/inf/userInvest';
 
-    fetch(url, {
-        method : 'POST',
-        body : fD
-    }).then(mass => mass.json())
-        .then(userMoney => { let newArr = userMoney;
-                                 return  newArr; });
+    fetch(url).then(mass => mass.json())
+        .then(mass => dom.userInvest.push(mass))
+        .then(getProgects());
         // .then(arr => console.log(arr));
 
 }
@@ -55,10 +50,10 @@ const deleteActione = function classAction() {
 const creatProject = function creatProject(arr) {
     let i = 1;
     arr.forEach( el => { let p = creatTab(el.name, i),
-                            div = projectCard(el, i);
-                        dom.tabsContainer.appendChild(p);
-                        dom.projectContainer.appendChild(div);
-                        i++;
+        div = projectCard(el, i);
+        dom.tabsContainer.appendChild(p);
+        dom.projectContainer.appendChild(div);
+        i++;
     });
     ready();
 }
@@ -80,20 +75,20 @@ const creatTab = function createTabs(name, i) {
 //-----------------------------------------------------------------------------
 const projectCard = function createProjectCart(arr, i){
 
-    let userInvest =  getTotalPayments(arr.name),
-        share_investment = null,
-        invest_amount = null;
+    let share_investment = 0,
+        invest_amount = 0;
 
-    // (userInvest.share_investment != 0)? share_investment = userInvest.share_investment : 0;
-    // (userInvest.invest_amount != 0)? invest_amount = userInvest.invest_amount : 0;
-
-
+    dom.userInvest[0].forEach(
+        el => {if(el.project == arr.name){
+                       share_investment = el.share_investment;
+                       invest_amount = el.invest_amount;
+         }});
 
     let answ = '',
         projectCart  = document.createElement('div');
-        projectCart.classList.add(`project__${i}`, 'none', 'list');
+    projectCart.classList.add(`project__${i}`, 'none', 'list');
 
-      answ += `<div class="card-header row justify-content-around">
+    answ += `<div class="card-header row justify-content-around">
                   <div class="p-2 flex-grow-1">Бюджет: <span class="italic">${arr.budget}</span></div>
                   <div class="p-2 flex-grow-1">Ваша доля вклада: <span class="italic">${share_investment}</span></div>
                   <div class="p-2 flex-grow-1">Вы вложили: <span class="italic">${invest_amount}</span></div>
@@ -122,29 +117,11 @@ const projectCard = function createProjectCart(arr, i){
                      </div>
                  </div>
               </div>`;
-    // answ += `<h2>${arr.name}</h2>
-    //                 <div class="logo_pay">
-    //                 <figure class="logo">
-    //                     <img src="${arr.photo_1}" alt=" ">
-    //                     <figcaption class="none">Логотип проекта</figcaption>
-    //                 </figure>
-    //                 <aside class="pay">
-    //                     <p>Бюджет проекта ${arr.budget}</p>
-    //                     <p>Мой вклад $$$</p>
-    //                 </aside>
-    //                 </div>
-    //                 <article class="article">${arr.text_1}</article>
-    //                 <div class="pay_score">
-    //                 <aside>
-    //                     <p>Номера счетов</p>
-    //                     <p>**************</p>
-    //                     <p>***************</p>
-    //                 </aside>
-    //                 <article>${arr.text_2}</article>
-    //             </div>`;
-      projectCart.innerHTML = answ;
+
+    projectCart.innerHTML = answ;
 
     return projectCart;
 }
 //-----------------------------------------------------------------------------
-getProgects();
+// getProgects();
+getTotalPayments();
