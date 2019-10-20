@@ -308,28 +308,32 @@ h2{
 .map,
 .contacts{
     width: 50%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
 }
 iframe{
-    width: 100%;
+    width: 70%;
+    height: 20em;
 }
 .contacts{
     display: flex;
-}
-.adress p,
-.phone p{
-    width: 100%;
-    font-size: 30px;
+    font-size: 1.5em;
     line-height: 1.3;
     color: white;
+
 }
+/*.adress p,*/
+/*.phone p{*/
+/*    width: 100%;*/
+/*   */
+/*}*/
 .adress,
 .phone{
     width: 50%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
+    flex-direction: column;
+
 }
 
 
@@ -403,5 +407,16 @@ iframe{
 }
 .none{
     display: none;
+}
+/*----------------------------------------------*/
+@media only screen and (max-width: 1400px) {
+    ._container,.userHeader{
+        width: 1200px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    ._container, .userHeader{
+        width: 1000px;
+    }
 }
 

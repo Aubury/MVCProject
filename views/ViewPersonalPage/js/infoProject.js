@@ -1,16 +1,23 @@
 let dom = {
     tabsContainer : document.querySelector('.list__projects'),
     projectContainer : document.querySelector('.right__main__content'),
+    select     : document.querySelector('#inputGroupSelect02'),
+    option     : document.querySelector('#option'),
     lists      : [],
     tabs       : [],
+    options    : [],
     userInvest : [],
-    hide       : 'none'
+    hide       : 'none',
+    map        : document.querySelector('.map'),
+    address    : document.querySelector('.address'),
+    phone      : document.querySelector('.phone')
 }
 //----------------------------------------------------------------------------
 const ready = function fillMass() {
 
     dom.tabs.push(document.querySelectorAll('.tab'));
     dom.lists.push(document.querySelectorAll('.list'));
+    dom.options.push(document.querySelector('.tabOp'));
 
     dom.tabs[0].forEach(tab => tab.addEventListener('click', e => {
         deleteActione();
@@ -24,7 +31,9 @@ const ready = function fillMass() {
             }
         });
     }));
+    dom.option.addEventListener('click', )
 }
+
 //----------------------------------------------------------------------------
 const getProgects = function getMassProjects(){
 
@@ -47,12 +56,30 @@ const deleteActione = function classAction() {
     dom.tabs[0].forEach( el => el.classList.remove('active'));
 }
 //--------------------------------------------------------------------------
+const addOptions = function addOptions(name, i) {
+
+    let option = new Option(`Проект \"${name}\"`,`project__${i}`);
+       option.setAttribute('data-for', `project__${i}`);
+       option.classList.add('tabOp');
+    return option;
+}
+//----------------------------------------------------------------------------
 const creatProject = function creatProject(arr) {
     let i = 1;
+    const select = dom.select;
+
+    while(select.hasChildNodes()){
+        select.removeChild(select.firstChild);
+    }
+    let op = new Option('Выберите проект');
+    select.append(op);
+
     arr.forEach( el => { let p = creatTab(el.name, i),
-        div = projectCard(el, i);
+        div = projectCard(el, i),
+        option = addOptions(el.name, i);
         dom.tabsContainer.appendChild(p);
         dom.projectContainer.appendChild(div);
+        select.append(option);
         i++;
     });
     ready();
@@ -122,6 +149,43 @@ const projectCard = function createProjectCart(arr, i){
 
     return projectCart;
 }
+//----------------------------------------------------------------------------
+const splitStr = function StringToMass(str) {
+
+    let comma = ',';
+    let mass = str.split(comma);
+    return mass;
+}
+//---------------------------------------------------------------------------
+const fillFooter = function FillFooter(arr){
+ let map = arr.link,
+     phone = splitStr(arr.phone),
+     address = splitStr(arr.address);
+
+ dom.map.innerHTML = map;
+
+ phone.forEach(el=> {
+     let p = document.createElement('p');
+         p.innerHTML = el.trim();
+         dom.phone.appendChild(p);
+ });
+
+ address.forEach(el=> {
+     let p =document.createElement('p');
+     p.innerHTML = el.trim();
+     dom.address.appendChild(p);
+ })
+
+
+}
+
 //-----------------------------------------------------------------------------
-// getProgects();
+const getAddress = function getAddress(){
+
+    fetch('/inf/contacts').then( mass => mass.json())
+        .then(mass => fillFooter(mass));
+        // .then(mass => console.log(mass));
+}
+//-----------------------------------------------------------------------------
+getAddress();
 getTotalPayments();

@@ -6,7 +6,7 @@
        login   - petrov@petr.com
        pasword - cc61b055c0
 //------------------------------------
-       login   - poliak@ pol.com
+       login   - poliak@pol.com
  	   pasword - c95a08b893	
 	   
 //================================================	

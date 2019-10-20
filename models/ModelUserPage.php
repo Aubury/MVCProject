@@ -40,7 +40,7 @@ class ModelUserPage
 
            $regD = [
                'email' => $arr['email'],
-               'password' => $arr['password']
+               'password' => $obj['password']
            ];
 
            $this->db->con->exec($sqlStr);

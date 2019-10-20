@@ -41,6 +41,7 @@ return[
     "inf/project"       => "ProjectPage/GetInfoProject/none",
     "inf/admins"        => "AdminPage/TotalInfoAdmins/supAdm",
     "inf/userInvest"    => "ProjectPage/UserProjectMoney/none",
+    "inf/contacts"      => "Address/GetContacts/none",
 
     "log/login"         => "Login/LogIn/none",
     "log/exit"          => "Login/Exit/none"

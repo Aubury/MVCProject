@@ -55,21 +55,21 @@ const massInp = function massInputsForm(){
                 name    : 'email',
 
             },
-            {
-                inp     : form['project_name'],
-                info    : form['project_name'].nextElementSibling,
-                reg     : rex.projectRex,
-                name    : 'project_name',
-
-            },
-            {
-                inp     : form['share_investment'],
-                info    : form['share_investment'].nextElementSibling,
-                reg     : rex.amountRex,
-                msgError: '*Введите только 10 цифр!',
-                name    : 'share_investment',
-
-            },
+            // {
+            //     inp     : form['project_name'],
+            //     info    : form['project_name'].nextElementSibling,
+            //     reg     : rex.projectRex,
+            //     name    : 'project_name',
+            //
+            // },
+            // {
+            //     inp     : form['share_investment'],
+            //     info    : form['share_investment'].nextElementSibling,
+            //     reg     : rex.amountRex,
+            //     msgError: '*Введите только 10 цифр!',
+            //     name    : 'share_investment',
+            //
+            // },
             {
                 inp     : form['address'],
                 info    : form['address'].nextElementSibling,
@@ -228,6 +228,10 @@ const createUsersTable = function createUsersTable(arr){
 
     rex.massUsers = arr;
     const table = rex.table;
+    let project_name = 'Не участвует в проекте',
+        share_investment = 'Не участвует в проекте',
+        invest_amount = 'Не участвует в проекте',
+        payment_time = 'Не участвует в проекте';
 
     //   Удаляю всех детей!!!
     while(table.hasChildNodes()){
@@ -236,9 +240,10 @@ const createUsersTable = function createUsersTable(arr){
     //Формирую строки
     let trs = "<tr><th>Delete</th><th>Edit</th><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
     arr.forEach(el=>{
-        el['project'].forEach( item=>{
+        if(el.project.length > 0) {
 
-            trs = `${trs}<tr><td class="iconsDel"><i class="material-icons" id="del_${el.email}">delete</i></td>   
+            el['project'].forEach(item => {
+                trs = `${trs}<tr><td class="iconsDel"><i class="material-icons" id="del_${el.email}">delete</i></td>   
                          <td class="iconsEd"><i class="material-icons" id="ed_${el.email}">create</i></td>   
                          <td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td>
                          <td class="tdTextLeft">Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
@@ -246,7 +251,20 @@ const createUsersTable = function createUsersTable(arr){
                          <td>${item.share_investment}<br></td>
                          <td>${item.invest_amount}<br></td>
                          <td>${item.payment_time}<br></td></tr>`;
-        })
+
+            })
+        }else {
+
+            trs = `${trs}<tr><td class="iconsDel"><i class="material-icons" id="del_${el.email}">delete</i></td>   
+                         <td class="iconsEd"><i class="material-icons" id="ed_${el.email}">create</i></td>   
+                         <td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td>
+                         <td class="tdTextLeft">Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
+                         <td>${project_name}<br></td>
+                         <td>${share_investment}<br></td>
+                         <td>${invest_amount}<br></td>
+                         <td>${payment_time}<br></td></tr>`;
+
+        }
     });
 
     table.innerHTML = trs;
@@ -257,7 +275,6 @@ const createUsersTable = function createUsersTable(arr){
     addListtenerDel(rex.arrIcDel[0]);
     addListtenerEd(rex.arrIcEd[0]);
 }
-//-----------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------
 const replcomma = function comma(data) {
 
@@ -333,19 +350,33 @@ const infUsers = function TotalInformationOfUsers() {
 const print = function printTable() {
 
     const table = document.createElement('table');
+    let project_name = 'Не участвует в проекте',
+        share_investment = 'Не участвует в проекте',
+        invest_amount = 'Не участвует в проекте',
+        payment_time = 'Не участвует в проекте';
     //Формирую строки
     let trs = "<tr><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
 
     // rex.massUsers.forEach(el=>{
     rex.massUsers.forEach(el=>{
-        el['project'].forEach( item=>{
-        trs = `${trs}<tr><td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td></td>
+        if(el.project.length > 0) {
+            el['project'].forEach(item => {
+                trs = `${trs}<tr><td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td></td>
                          <td>Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
                           <td>${item.project_name}<br></td>
                          <td>${item.share_investment}<br></td>
                          <td>${item.invest_amount}<br></td>
                          <td>${item.payment_time}<br></td></tr>`;
-        })
+            })
+        }else{
+            trs = `${trs}<tr><td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td></td>
+                         <td>Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
+                          <td>${project_name}<br></td>
+                         <td>${share_investment}<br></td>
+                         <td>${invest_amount}<br></td>
+                         <td>${payment_time}<br></td></tr>`;
+        }
+
     });
 
     table.innerHTML = trs;
