@@ -248,6 +248,9 @@ textarea{
     font-style: italic;
 
 }
+.alert{
+    margin-bottom: 0 !important;
+}
 /*----------------tooltip------------------------------*/
 .posRel{
     position: relative;
@@ -299,13 +302,23 @@ textarea{
 
 }
 .userHeader .headerItem:nth-child(2){
-    width: 16.67%;
+    /*width: 16.67%;*/
     padding: 0 !important;
 }
 .headerItem{
-    width: 20%;
+    width: 16.67%;
     height: 100%;
+    margin: 5px 10px;
     padding: 2px;
+    display: flex;
+    font-size: 2em;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+
+
 }
 .headerItem img{
     width:auto;
@@ -319,22 +332,32 @@ textarea{
 .slogan p{
     margin-bottom: 0;
 }
+.slogan p:first-child{
+    align-self: flex-start;
+}
+
 .slogan p:nth-child(2){
     align-self: center;
+    margin: 0 5px;
 }
 .slogan p:last-child{
     align-self: flex-end;
+}
+.userHeader .headerItem:nth-child(3){
+    width: calc(100% - (16.67%*3));
+    color: #faeba9;
+    margin: 0 auto;
 }
 .userHeader .headerItem:last-child{
     width: 16.67%;
     margin: auto 0 auto auto;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*align-content: center;*/
+    /*justify-content: center;*/
+    /*justify-items: center;*/
 }
 .center{
     display: flex;

@@ -78,6 +78,7 @@ class ModelProjectPage
                 'name'        => $value['name'],
                 'budget'      => $value['budget'],
                 'raiser_money'=> $value['raiser_money'],
+                'totalRM'  => $this->TotalRiserMoney(),
                 'users'    => $this->getAmountUsers($value['id']),
                 'published'=> $value['published'],
                 'photo_1'  => $this->getPhotoInfo($value['photo_1']),
@@ -140,6 +141,14 @@ class ModelProjectPage
         $prp =$this->db->con->prepare("SELECT  `name` FROM `projects` WHERE `id`='{$id}'");
         $prp->execute();
         return $prp->fetchColumn();
+    }
+    public function TotalRiserMoney()
+    {
+        $prp = $this->db->con->prepare("SELECT SUM(`raiser_money`) FROM `projects`");
+        $prp->execute();
+        $money = $prp->fetchAll();
+        return $money[0];
+
     }
 
 

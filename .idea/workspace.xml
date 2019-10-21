@@ -3,16 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b87d1862-d4a4-4866-b5fd-8f3137f66d06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogIn" beforeDir="false" afterPath="$PROJECT_DIR$/LogIn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ControllerAddress.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerAddress.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ModelAddress.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelAddress.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ModelUserPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelUserPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewAddress/js/scriptAddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewAddress/js/scriptAddress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ModelProjectPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ModelProjectPage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/js/infoProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPersonalPage/js/infoProject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ViewUsersPage/js/scriptUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewUsersPage/js/scriptUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,21 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="31" column="68" lean-forward="true" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" selection-start-line="6" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="198">
+              <caret line="30" column="56" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -61,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="288" column="11" selection-start-line="288" selection-start-column="1" selection-end-line="288" selection-end-column="11" />
+            <state relative-caret-position="431">
+              <caret line="251" column="31" selection-start-line="251" selection-start-column="31" selection-end-line="251" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -70,20 +53,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="417" column="17" selection-start-line="417" selection-start-column="17" selection-end-line="417" selection-end-column="17" />
+            <state relative-caret-position="638">
+              <caret line="146" column="22" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/ModelAddress.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+            <state relative-caret-position="554">
+              <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
               <folding>
-                <element signature="n#addPhones#0;n#ModelAddress#0;n#!!top" />
-                <element signature="n#addLink#0;n#ModelAddress#0;n#!!top" />
+                <element signature="e#274#1448#0" />
               </folding>
             </state>
           </provider>
@@ -92,26 +74,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/js/infoProject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+            <state relative-caret-position="1012">
+              <caret line="125" column="26" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
               <folding>
-                <element signature="e#1371#1575#0" />
-                <element signature="e#1699#1765#0" />
                 <element signature="n#!!block;n#createAndClass#0" />
-                <element signature="e#2787#4879#0" />
-                <element signature="e#4909#4917#0" />
-                <element signature="e#5001#5027#0" />
-                <element signature="e#5149#5293#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LogIn">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/ModelProjectPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="484">
+              <caret line="63" column="26" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="26" />
+              <folding>
+                <element signature="n#addProject#0;n#ModelProjectPage#0;n#!!top" />
+                <element signature="n#getVideoInfo#0;n#ModelProjectPage#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,14 +145,11 @@
         <option value="$PROJECT_DIR$/models/ModelPhotoPage.php" />
         <option value="$PROJECT_DIR$/views/ViewPhotoPage/js/scriptPhoto.js" />
         <option value="$PROJECT_DIR$/views/ViewPersonalPage/js/show_progect.js" />
-        <option value="$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js" />
-        <option value="$PROJECT_DIR$/views/css/style.css" />
         <option value="$PROJECT_DIR$/controllers/ControllerBudgetPage.php" />
         <option value="$PROJECT_DIR$/models/ModelBudgetPage.php" />
         <option value="$PROJECT_DIR$/views/ViewBudgetPage/finances.php" />
         <option value="$PROJECT_DIR$/views/ViewUsersPage/users.php" />
         <option value="$PROJECT_DIR$/controllers/ControllerUserPage.php" />
-        <option value="$PROJECT_DIR$/models/ModelProjectPage.php" />
         <option value="$PROJECT_DIR$/controllers/ControllerProjectPage.php" />
         <option value="$PROJECT_DIR$/models/ModelUserPage.php" />
         <option value="$PROJECT_DIR$/views/ViewUsersPage/js/scriptUsers.js" />
@@ -181,9 +158,12 @@
         <option value="$PROJECT_DIR$/config/routes.php" />
         <option value="$PROJECT_DIR$/LogIn" />
         <option value="$PROJECT_DIR$/models/ModelAddress.php" />
-        <option value="$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css" />
         <option value="$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php" />
+        <option value="$PROJECT_DIR$/models/ModelProjectPage.php" />
+        <option value="$PROJECT_DIR$/views/css/style.css" />
         <option value="$PROJECT_DIR$/views/ViewPersonalPage/js/infoProject.js" />
+        <option value="$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css" />
+        <option value="$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js" />
       </list>
     </option>
   </component>
@@ -237,13 +217,26 @@
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewBudgetPage" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewPersonalPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewBudgetPage" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewPersonalPage" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewProjectPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewProjectPage" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -358,18 +351,19 @@
       <workItem from="1571255916880" duration="410000" />
       <workItem from="1571285810564" duration="43294000" />
       <workItem from="1571372309706" duration="57754000" />
-      <workItem from="1571553262931" duration="23147000" />
+      <workItem from="1571553262931" duration="29422000" />
+      <workItem from="1571630987276" duration="6522000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1007387000" />
+    <option name="totallyTimeSpent" value="1020184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21428572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21641791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -447,13 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1914">
           <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="90" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="13" selection-end-column="90" />
         </state>
       </provider>
     </entry>
@@ -563,27 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/finances.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="62" column="70" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/app/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -615,24 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2222">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ModelProjectPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="117" column="29" lean-forward="true" selection-start-line="117" selection-start-column="29" selection-end-line="117" selection-end-column="29" />
-          <folding>
-            <element signature="n#addProject#0;n#ModelProjectPage#0;n#!!top" />
-            <element signature="n#getVideoInfo#0;n#ModelProjectPage#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,6 +666,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LogIn">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ModelBudgetPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-727">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/ModelAddress.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="783">
@@ -725,58 +691,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/style.css">
+    <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/finances.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="288" column="11" selection-start-line="288" selection-start-column="1" selection-end-line="288" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="417" column="17" selection-start-line="417" selection-start-column="17" selection-end-line="417" selection-end-column="17" />
+        <state relative-caret-position="1364">
+          <caret line="62" column="70" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewBudgetPage/js/scriptFinances.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" selection-start-line="6" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="286">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/userRoom.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="31" column="68" lean-forward="true" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+        <state relative-caret-position="198">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="91" column="97" lean-forward="true" selection-start-line="91" selection-start-column="97" selection-end-line="91" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="251" column="31" selection-start-line="251" selection-start-column="31" selection-end-line="251" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ModelProjectPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="63" column="26" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="26" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#addProject#0;n#ModelProjectPage#0;n#!!top" />
+            <element signature="n#getVideoInfo#0;n#ModelProjectPage#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/js/infoProject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        <state relative-caret-position="1012">
+          <caret line="125" column="26" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
           <folding>
-            <element signature="e#1371#1575#0" />
-            <element signature="e#1699#1765#0" />
             <element signature="n#!!block;n#createAndClass#0" />
-            <element signature="e#2787#4879#0" />
-            <element signature="e#4909#4917#0" />
-            <element signature="e#5001#5027#0" />
-            <element signature="e#5149#5293#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LogIn">
+    <entry file="file://$PROJECT_DIR$/views/ViewPersonalPage/css/style_userRoom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="638">
+          <caret line="146" column="22" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ViewProjectPage/js/scriptProject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+          <folding>
+            <element signature="e#274#1448#0" />
+          </folding>
         </state>
       </provider>
     </entry>

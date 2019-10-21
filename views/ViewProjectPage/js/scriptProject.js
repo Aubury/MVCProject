@@ -5,6 +5,7 @@ let rex = {
     arrIcons    : [],
     massOriginal: []
 };
+//---------------------------------------------------------------------------------------
 const massInp = function massInputsForm(){
 
     let form = rex.form;
@@ -59,7 +60,7 @@ const massInp = function massInputsForm(){
     ];
     return inpArr;
 }
-//-----------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 rex.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
@@ -79,16 +80,19 @@ rex.form.addEventListener('submit', function (ev) {
         body: fD
     }).then(response=>  response.text())
         .then(text=>{rex.form.nextElementSibling.innerHTML = text;
-            for(let i=0; i<rex.arrInp.length; i++){
-
-                rex.arrInp[i].value = '';
-            }
-            getProgects();
-            setTimeout(()=> rex.form.nextElementSibling.innerHTML = '', 10000);
+            // for(let i=0; i<rex.arrInp.length; i++){
+            //
+            //     rex.arrInp[i].value = '';
+            // }
+            // getProgects();
+            setTimeout(()=>{
+                // rex.form.nextElementSibling.innerHTML = '';
+                window.location.reload();
+            }, 3000);
         });
 }
 );
-//---------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 const getProgects = function getMassProjects(){
 
     fetch('/inf/project').then( data => data.json())
@@ -97,13 +101,24 @@ const getProgects = function getMassProjects(){
             rex.massOriginal.push(arr[0]);
         });
 }
-//----------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
 const projectCard = function createProjectCart(arr){
 
-    let answ = '';
+
+
+    let answ = '',
+        infPublishNo = `<div class="alert alert-warning flex-grow-1" role="alert">
+                         Не опубликовано!
+                        </div>`,
+        infPublishYes = `<div class="alert alert-success flex-grow-1" role="alert">
+                         Oпубликовано!
+                        </div>`;
     arr.forEach( el => {
-        answ += `
+        let publish = el.published;
+
+            answ += `
                   <div class="card text-center border-warning">
+                  ${(publish == '1') ? infPublishYes : infPublishNo}
                       <div class="card-header row justify-content-around">
                         <div title="Редактировать проект" class="icons flex-shrink-1 rightBorder p-2">
                          <i class="material-icons" id="${el.name}">create</i>

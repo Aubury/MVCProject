@@ -3,6 +3,7 @@ let dom = {
     projectContainer : document.querySelector('.right__main__content'),
     select     : document.querySelector('#inputGroupSelect02'),
     option     : document.querySelector('#option'),
+    tRm        : document.querySelector('#trm'),
     lists      : [],
     tabs       : [],
     options    : [],
@@ -19,6 +20,9 @@ const ready = function fillMass() {
     dom.lists.push(document.querySelectorAll('.list'));
     dom.options.push(document.querySelector('.tabOp'));
 
+    dom.tabsContainer.firstElementChild.classList.add('active');
+    dom.lists[0][0].classList.remove('none');
+
     dom.tabs[0].forEach(tab => tab.addEventListener('click', e => {
         deleteActione();
         dom.lists[0].forEach(list => {
@@ -31,7 +35,18 @@ const ready = function fillMass() {
             }
         });
     }));
-    dom.option.addEventListener('click', )
+    dom.option.addEventListener('click', ()=>{
+          let el = dom.select.dataset.for;
+        dom.lists[0].forEach(list => {
+            //Скрываю все вкладки
+            list.classList.add(dom.hide);
+
+            if(list.classList.contains(el)){
+                list.classList.remove(dom.hide);
+            }
+        });
+
+    })
 }
 
 //----------------------------------------------------------------------------
@@ -74,13 +89,18 @@ const creatProject = function creatProject(arr) {
     let op = new Option('Выберите проект');
     select.append(op);
 
-    arr.forEach( el => { let p = creatTab(el.name, i),
-        div = projectCard(el, i),
-        option = addOptions(el.name, i);
-        dom.tabsContainer.appendChild(p);
-        dom.projectContainer.appendChild(div);
-        select.append(option);
-        i++;
+    arr.forEach( el => {
+        if(el.published == '1'){
+
+            let p = creatTab(el.name, i),
+                div = projectCard(el, i),
+                option = addOptions(el.name, i);
+
+            dom.tabsContainer.appendChild(p);
+            dom.projectContainer.appendChild(div);
+            select.append(option);
+            i++;
+        }
     });
     ready();
 }
@@ -103,7 +123,10 @@ const creatTab = function createTabs(name, i) {
 const projectCard = function createProjectCart(arr, i){
 
     let share_investment = 0,
-        invest_amount = 0;
+        invest_amount = 0,
+        budget = dom.tRm;
+
+    budget.innerHTML = arr.totalRM[0];
 
     dom.userInvest[0].forEach(
         el => {if(el.project == arr.name){
@@ -116,10 +139,15 @@ const projectCard = function createProjectCart(arr, i){
     projectCart.classList.add(`project__${i}`, 'none', 'list');
 
     answ += `<div class="card-header row justify-content-around">
-                  <div class="p-2 flex-grow-1">Бюджет: <span class="italic">${arr.budget}</span></div>
-                  <div class="p-2 flex-grow-1">Ваша доля вклада: <span class="italic">${share_investment}</span></div>
-                  <div class="p-2 flex-grow-1">Вы вложили: <span class="italic">${invest_amount}</span></div>
-              </div>
+                  <div class="col p-2 flex-grow-1">
+                      <p>Бюджет: <span class="italic">${arr.budget}</span></p>
+                      <p>Вложили: <span class="italic">${arr.raiser_money}</span></p>
+                  </div>
+                  <div class="col p-2 flex-grow-1">
+                      <p>Ваша доля вклада: <span class="italic">${share_investment}</span></p>
+                      <p>Вы вложили: <span class="italic">${invest_amount}</span></p>
+                  </div>
+               </div>
               <div class="container p-2">
                <div class="heightMainCsrd">
                      <h2>Проект \"${arr.name}\"</h2>
