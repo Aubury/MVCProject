@@ -8,14 +8,20 @@
     <style><?php include_once ROOT . "/views/ViewMainPage/css/fonts.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max960px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max768px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max640px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max600px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max500px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max430px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max375px.css"?></style>
     <title>GIM</title>
 </head>
 <body>
     <header class="header">
         <button class="top topHide"><span>&lt;</span></button>
         <div class="container">
-            <section class="left__header__content">
-                <h2 class="none">h2</h2>
+            <div class="section left__header__content">
                 <div class="logo">
                     <img src="/views/img/logo.png" alt="logo__company">
                 </div>
@@ -24,9 +30,26 @@
                     <p>иметь</p>
                     <p>мечту</p>
                 </div>
-            </section>
-            <section class="right__header__content">
-                <h2 class="none">h2</h2>
+            </div>
+            <div class="section right__header__content">
+                <div class="navigation_group_mobile showHide">
+                    <div class="menu">
+                        <input type="checkbox" class="hide" id="menu_logo">
+                        <div class="logo_menu">
+                            <label for="menu_logo">
+                                <img src="/views/img/video.jpg" width="40" height="40" alt="">
+                            </label>
+                        </div>
+                        <div class="elements_menu">
+                            <ul>
+                                <li class="countPeoples">Нас уже *****</li>
+                                <li>О нас</li>
+                                <li><a href="#progects">Наши проекты</a></li>
+                                <li><a href="#contacts">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="companySloganNone">
                     <p>Главное иметь мечту</p>
                 </div>
@@ -41,13 +64,12 @@
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
-            </section>
+            </div>
         </div>
     </header>
     <main class="main">
         <div class="container">
-            <section class="about__us">
-                <h2 class="none">h2</h2>
+            <div class="section about__us">
                 <div class="about__us__left__content">
                     <h2>О нас</h2>
                     <p>
@@ -65,11 +87,10 @@
                     <img src="/views/img/video.jpg" alt="">
                     <img src="/views/img/video.jpg" alt="">
                 </div>
-            </section>
-            <section class="progect">
-                <h2 class="none">progects</h2>
+            </div>
+            <div class="section progect">
                 <div class="progect__left__content">
-                    <div class="galery">
+                    <div class="img__progect">
                         <img src="/views/img/car.jpg" alt="">
                     </div>
                     <p>
@@ -92,11 +113,10 @@
                         <img src="/views/img/video.jpg" alt="">
                         <img src="/views/img/video.jpg" alt="">
                     </div>
-            </section>
-            <section class="progect">
-                <h2 class="none">h2</h2>
+            </div>
+            <div class="section progect">
                 <div class="progect__left__content">
-                    <div class="galery">
+                    <div class="img__progect">
                         <img src="/views/img/house.jpg" alt="">
                     </div>
                     <p>
@@ -116,23 +136,21 @@
                     </div>
                 </div>
                 <div class="video">
-                        <img src="/views/img/video.jpg" alt="">
-                        <img src="/views/img/video.jpg" alt="">
-                    </div>
-            </section>
-            <section class="photoGalery">
-                <h2 class="none">h2</h2>
+                    <img src="/views/img/video.jpg" alt="">
+                    <img src="/views/img/video.jpg" alt="">
+                </div>
+            </div>
+            <div class="section photoGalery">
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
-            </section>
-            <section class="video">
-                <h2 class="none">h2</h2>
+            </div>
+            <div class="section video">
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
-            </section>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -154,13 +172,12 @@
             </div>
         </div>
     </footer>
-   <section class="modal__certificate none">
-        <h2 class="none">h2</h2>
+   <div class="section modal__certificate none">
         <div class="modal__content__certificate">
             <img src="/views/img/page.jpg" alt="свидетельство">
             <input type="button" class="closeModalCertificate" value="X">
         </div>
-   </section>
+    </div>
 
     <div class="modal" id="modal">
         <div class="modalForm">

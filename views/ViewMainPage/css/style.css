@@ -1,3 +1,4 @@
+/* do not download to github */
 html{
     scroll-behavior: smooth;
 }
@@ -76,6 +77,7 @@ html{
 .right__header__content .companySloganNone{
     font-size: 35px;
     color: transparent;
+    user-select: none;
 }
 .right__header__content .userRoom button{
     padding: 10px;
@@ -124,10 +126,10 @@ html{
 
 
 }
-/* ------------------------------------------------------------ */
+/* ------------------------main------------------------------------ */
 
 
-.main section{
+.main .section{
     margin: 30px 0 30px 0;
     padding: 10px;
     display: flex;
@@ -209,7 +211,7 @@ html{
 }
 
 
-section .video{
+.section .video{
     width: 100%;
 }
 .video{
@@ -222,6 +224,7 @@ section .video{
     margin: 10px 0 10px 0;
 }
 
+/* -------------------------footer---------------------------------- */
 
 .footer{
     padding: 30px 0 30px 0;
@@ -317,65 +320,12 @@ iframe{
     outline: none !important;
 }
 
-/* ----------------------------modal__userRoom---------------------------------- */
-
-.modal__userRoom{/* фон модального окна личного кабинета */
-    font-family: 'Roboto Condensed';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    overflow: auto;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100vh;
-}
-.modal__content__userRoom{/* контейнер модального окна личного кабинета */
-   padding: 0 0 40px 40px;
-   display: flex;
-   justify-content: space-between;
-   align-items: flex-start;
-   flex-wrap: wrap;
-   width: 40%;
-   background-color: #fff;
-}
-.modal__content__userRoom h2{
-    width: 80%;
-    font-size: 25px;
-    margin: 20px 0 20px 0;
-    text-align: center;
-}
-.modal__content__userRoom p{
-    width: 100%;
-    margin: 10px 0 0 0;
-}
-.modal__content__userRoom input{
-    margin: 0 0 20px 0;
-    width: 80%;
-    height: 50px;
-    font-size: 20px;
-}
-.modal__content__userRoom .closeUserRoom{/* закрыть модальное окно личного кабинета */
-    outline: none !important;
-    position: relative;
-    top: -30px;
-    left: 30px;
-    cursor: pointer;
-    width: 40px;
-    text-align: center;
-    margin: 0 0 0 0;
-    padding: 0 10px 0 10px;
-    border: none;
-    border-radius: 50%;
-}
-.modal__content__userRoom .int{
-    width: 100px;
-    margin: 0 0 0 0;
-}
 
 .none{
+    display: none;
+}
+
+
+.showHide{
     display: none;
 }
