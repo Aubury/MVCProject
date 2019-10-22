@@ -95,8 +95,7 @@ const creatProject = function creatProject(arr) {
     while(select.hasChildNodes()){
         select.removeChild(select.firstChild);
     }
-    // let op = new Option('Выберите проект');
-    // select.append(op);
+
 
     arr.forEach( el => {
         if(el.published == '1'){

@@ -134,13 +134,13 @@ const projectCard = function createProjectCart(arr){
                                
                                    <div class="col colHeight">
                                        <div class="mainImg"><img src="${el.photo_1}" alt=""></div>
-                                       <p class="card-text p-2">${el.text_1}</p>
+                                       <p class="card-text p-2 text-left">${el.text_2}</p>
                                    </div>
                            
                                    <div class="col wrapper colHeight ">
                                        <div class="col align-items-start">
                                          <h2 class="card-title">Проект \"${el.name}\"</h2>
-                                         <p class="card-text p-2">${el.text_2}</p>
+                                         <p class="card-text p-2 text-left">${el.text_1}</p>
                                        </div>
                                  
                                     
