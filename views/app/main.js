@@ -34,6 +34,7 @@ objMain.exit.addEventListener('click', function () {
             setCookie('user_id','',0);
             setCookie('uPd','',0);
             setCookie('table','',0);
+            setCookie('SameSite','None',365);
             window.location.href = `${data[0]}`;
         })
 })

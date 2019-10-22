@@ -1,7 +1,9 @@
 <?php
 
 
-class ModelProjectPage
+use ControllerProjectPage;
+
+class ModelProjectPage extends ControllerProjectPage
 {
     private $db;
 

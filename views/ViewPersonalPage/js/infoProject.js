@@ -4,6 +4,7 @@ let dom = {
     select     : document.querySelector('#inputGroupSelect02'),
     option     : document.querySelector('#option'),
     tRm        : document.querySelector('#trm'),
+    selector   : document.querySelector('#selector'),
     lists      : [],
     tabs       : [],
     options    : [],
@@ -11,8 +12,10 @@ let dom = {
     hide       : 'none',
     map        : document.querySelector('.map'),
     address    : document.querySelector('.address'),
-    phone      : document.querySelector('.phone')
+    phone      : document.querySelector('.phone'),
+
 }
+
 //----------------------------------------------------------------------------
 const ready = function fillMass() {
 
@@ -36,7 +39,7 @@ const ready = function fillMass() {
         });
     }));
     dom.option.addEventListener('click', ()=>{
-          let el = dom.select.dataset.for;
+          let el = dom.select.value;
         dom.lists[0].forEach(list => {
             //Скрываю все вкладки
             list.classList.add(dom.hide);
@@ -52,7 +55,10 @@ const ready = function fillMass() {
 //----------------------------------------------------------------------------
 const getProgects = function getMassProjects(){
 
-    fetch('/inf/project').then( data => data.json())
+    fetch('/inf/project',{
+        method:"POST",
+        header:('Set-Cookie: cross-site-cookie=name; SameSite=None; Secure')
+    }).then( data => data.json())
         .then(arr => creatProject(arr[1]));
 }
 //--------------------------------------------------------------------------
@@ -60,7 +66,10 @@ const getTotalPayments = function getUserPayments() {
 
     const url = '/inf/userInvest';
 
-    fetch(url).then(mass => mass.json())
+    fetch(url,{
+        method:"POST",
+        header:('Set-Cookie: cross-site-cookie=name; SameSite=None; Secure')
+    }).then(mass => mass.json())
         .then(mass => dom.userInvest.push(mass))
         .then(getProgects());
         // .then(arr => console.log(arr));
@@ -86,8 +95,8 @@ const creatProject = function creatProject(arr) {
     while(select.hasChildNodes()){
         select.removeChild(select.firstChild);
     }
-    let op = new Option('Выберите проект');
-    select.append(op);
+    // let op = new Option('Выберите проект');
+    // select.append(op);
 
     arr.forEach( el => {
         if(el.published == '1'){
@@ -210,10 +219,14 @@ const fillFooter = function FillFooter(arr){
 //-----------------------------------------------------------------------------
 const getAddress = function getAddress(){
 
-    fetch('/inf/contacts').then( mass => mass.json())
+    fetch('/inf/contacts',{
+        method:'POST',
+        header:('Set-Cookie: cross-site-cookie=name; SameSite=None; Secure')
+    }).then( mass => mass.json())
         .then(mass => fillFooter(mass));
         // .then(mass => console.log(mass));
 }
 //-----------------------------------------------------------------------------
+
 getAddress();
 getTotalPayments();

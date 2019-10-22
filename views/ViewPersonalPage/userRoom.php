@@ -20,30 +20,35 @@
 <header class="hederContainer">
     <div class="userHeader">
         <div class="headerItem">
-            <img src="/views/img/logo.png" alt="logo__company">
-        </div>
-        <div class="headerItem slogan">
-            <p>Главное</p>
-            <p>иметь</p>
-            <p>мечту</p>
+            <div >
+                <img src="/views/img/logo.png" alt="logo__company">
+            </div>
+            <div class="slogan">
+                <p>Главное</p>
+                <p>иметь</p>
+                <p>мечту</p>
+            </div>
         </div>
         <div class="headerItem">
             <p>Общая сумма: <span class="italic" id="trm"></span></p>
-        </div>
-        <div class="headerItem">
-            <button class="btn btn-success" id="exit">Выйти</button>
+           <div>
+               <button class="btn btn-success" id="exit">Выйти</button>
+           </div>
+
         </div>
 </header>
     <main class="main">
         <div class="_container">
-            <div class="input-group mb-3">
-                <select class="custom-select" id="inputGroupSelect02">
-                    <option selected>Choose...</option>
-                </select>
-                <div class="input-group-append">
-                    <label class="input-group-text" for="inputGroupSelect02" id="option">Options</label>
+
+                <div class="input-group mb-3 " id="selector">
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected></option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02" id="option"><span class="italic">Выбрать</span></label>
+                    </div>
                 </div>
-            </div>
+
             <div class="left__main__content">
                 <div class="list__projects">
                 </div>
@@ -61,20 +66,7 @@
                         </div>
                 </div>
             </div>
-            <div class="right__main__content">
-<!--                <div class="aboutUs list">-->
-<!--                    <div class="card-header row justify-content-around">-->
-<!--                        <div class="p-2 flex-grow-1"> <h2>О нас</h2></div>-->
-<!--                    </div>-->
-<!--                    <div class="container p-2">-->
-<!--                        <div class="heightMainCsrd">-->
-<!--                            <p class="center">Здесь должен быть текст </p>-->
-<!--                            <p class="center">О НАС</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="cardFooter"></div>-->
-<!--                </div>-->
-            </div>
+             <div class="right__main__content"></div>
 
             </div>
         </div>
