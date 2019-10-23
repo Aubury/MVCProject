@@ -1,5 +1,10 @@
 const obj = {
-    form : document.forms['logIn']
+    form  : document.forms['logIn'],
+    users : document.querySelector('#users'),
+    map        : document.querySelector('.map'),
+    address    : document.querySelector('.address'),
+    phone      : document.querySelector('.phone'),
+
 };
 //-----------------------------------------------------------------------------------------------------------------
 //Обработчик отправки.
@@ -75,3 +80,63 @@ function setCookie(cname, cvalue, exdays) {
   const expires = "expires="+ d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+//-----------------------------------------------------------------------------
+const getUsers = function getAmountUsers() {
+
+    fetch('/inf/amtUsers',{
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, cors, *same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+        headers: {
+            'Content-Type': 'application/json',
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        }
+    }).then( data => data.json())
+        .then( data => obj.users.innerHTML = data);
+}
+//----------------------------------------------------------------------------
+const splitStr = function StringToMass(str) {
+
+    let comma = ',';
+    let mass = str.split(comma);
+    return mass;
+}
+//---------------------------------------------------------------------------
+const fillFooter = function FillFooter(arr){
+    let map = arr.link,
+        phone = splitStr(arr.phone),
+        address = splitStr(arr.address);
+
+    obj.map.innerHTML = map;
+
+    phone.forEach(el=> {
+        let p = document.createElement('p');
+        p.innerHTML = el.trim();
+        obj.phone.appendChild(p);
+    });
+
+    address.forEach(el=> {
+        let p =document.createElement('p');
+        p.innerHTML = el.trim();
+        obj.address.appendChild(p);
+    })
+
+
+}
+
+//-----------------------------------------------------------------------------
+const getAddress = function getAddress(){
+
+    fetch('/inf/contacts',{
+        method:'POST',
+        credentials: 'same-origin', // include, *same-origin, omit
+        header:('Set-Cookie: cross-site-cookie=name; SameSite=None; Secure')
+    }).then( mass => mass.json())
+        .then(mass => fillFooter(mass));
+    // .then(mass => console.log(mass));
+}
+//-----------------------------------------------------------------------------
+
+getAddress();
+getUsers();

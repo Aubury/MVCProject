@@ -140,10 +140,7 @@ class ModelUserPage
              'address'   => $value['address'],
              'tax_code'  => $value['tax_code'],
              'project'   => $this->infoUserProject($value['id']),
-//             'share_investment' =>  $value['share_investment'],
-//             'invest_amount'    =>  $value['invest_amount'],
-//             'payment_time'     =>  $value['payment_time']
-           ]);
+               ]);
        }
       echo json_encode($massUsers);
 
@@ -172,5 +169,13 @@ class ModelUserPage
         $prp->execute();
         $name = $prp->fetchColumn();
         return $name;
+    }
+    public function AmountUsers()
+    {
+        $prp = $this->db->con->prepare("SELECT  COUNT(`email`) FROM `users`");
+        $prp->execute();
+        $users = $prp->fetchColumn();
+       echo json_encode($users[0]);
+
     }
 }

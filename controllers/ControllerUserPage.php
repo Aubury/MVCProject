@@ -43,6 +43,10 @@ class ControllerUserPage
 //       var_dump($obj);
        $this->m->addUserProject($obj);
    }
+   public function actionAmountUsers()
+   {
+       $this->m->AmountUsers();
+   }
 
 
 }

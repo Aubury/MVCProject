@@ -18,6 +18,7 @@
 </head>
 <body>
 <header class="hederContainer">
+    <button class="top topHide"><span>&lt;</span></button>
     <div class="userHeader">
         <div class="headerItem">
             <div >

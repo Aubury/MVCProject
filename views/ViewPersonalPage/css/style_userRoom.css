@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -10,12 +13,7 @@ html{
     justify-content: center;
     font-family: 'Roboto Condensed';
 }
-header{
-    height: 7em;
-}
-.logo{
-    width: 30%;
-}
+
 .header,
 .footer{
     color: white;
@@ -30,95 +28,6 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
 }
-.left__header__content,
-.right__header__content{
-    width: 50%;
-    display: flex;
-}
-.left__header__content{
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2em;
-}
-.left__header__content div{
-    margin: 0 0 0 0;
-    width: 50%;
-}
-.left__header__content .companySlogan p{
-    width: 100%;
-    font-size: 1.5em;
-    user-select: none;
-}
-.left__header__content .companySlogan p:first-child{
-    text-align: left;
-    padding: 0 0 0 0;
-}
-.left__header__content .companySlogan p:nth-child(2){
-    text-align: center;
-    padding: 15px 0 15px 0;
-}
-.left__header__content .companySlogan p:last-child{
-    text-align: right;
-    padding: 0 0 0 0;
-}
-.left__header__content .companySlogan{
-    display: flex;
-    flex-wrap: wrap;
-}
-.left__header__content img{
-    width: 10em;
-    height: auto;
-}
-.right__header__content{
-    display: flex;
-    flex-wrap: wrap;
-}
-.right__header__content .companySloganNone,
-.right__header__content .userRoom,
-.right__header__content nav{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0 20px 0;
-}
-.right__header__content .companySloganNone{
-    font-size: 35px;
-    color: transparent;
-    user-select: none;
-}
-.right__header__content .userRoom button{
-    padding: 10px;
-    font-family: 'Roboto Condensed';
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
-    outline: 0 !important;
-    transition: all .3s;
-}
-.right__header__content .userRoom button:hover{
-    background-color: rgb(8,126,177);
-    border: solid 2px white;
-    color: white;
-}
-.navigation{
-    display: flex;
-}
-.navigation li{
-    user-select: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 20px;
-    border-left: solid 3px transparent;
-    padding: 5px 20px 5px 20px;
-    color: transparent;
-}
-.navigation li:last-child{
-    padding: 5px 0px 5px 20px;
-}
-
-
-
 
 /* ----------------------------main-------------------------------- */
 .main ._container{
@@ -247,7 +156,7 @@ h2{
     background-color: rgb(32,36,45);
     color: white;
     width: 100%;
-    height: 10em;
+    height: 11em;
 }
 .userHeader{
     display: flex;
@@ -257,7 +166,7 @@ h2{
     font-family: 'Roboto Condensed';
     height: 100%;
     width: 1400px;
-    margin: 0 auto;
+    margin: 5px auto;
     padding: 1em;
 
 }
@@ -289,28 +198,30 @@ h2{
     width: 50%;
     height: 100%;
     padding: 7px 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center !important;
 }
 .headerItem:nth-child(2)>div{
     width: 16.67%;
 }
-.headerItem:nth-child(2)>p{
+.headerItem:nth-child(2)>p:first-child{
     width: calc(100% - 16.67%);
     text-align: center;
+    margin-bottom: 0;
 }
 
 .headerItem img{
     width:100%;
     height: auto;
-    /*margin-top: 10px;*/
+
 }
 .slogan{
     display: flex;
     flex-direction: column;
-    /*flex-wrap: wrap;*/
-    /*font-size: 1.8em;*/
     color: #f9e196;
     font-family: 'Nexa Script';
-    line-height: 1em;
+    line-height: 1.2em;
 }
 
 .slogan p:first-child{

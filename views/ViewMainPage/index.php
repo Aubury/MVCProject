@@ -8,46 +8,46 @@
     <style><?php include_once ROOT . "/views/css/fonts.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>GIM</title>
 </head>
 <body>
-    <header class="header">
-        <button class="top topHide"><span>&lt;</span></button>
-        <div class="container">
-            <section class="left__header__content">
-                <h2 class="none">h2</h2>
-                <div class="logo">
-                    <img src="/views/img/logo.png" alt="logo__company">
+<header class="hederContainer">
+    <button class="top topHide"><span>&lt;</span></button>
+    <div class="userHeader">
+        <div class="headerItem">
+            <div >
+                <img src="/views/img/logo.png" alt="logo__company">
+            </div>
+            <div class="slogan">
+                <p>Главное</p>
+                <p>иметь</p>
+                <p>мечту</p>
+            </div>
+        </div>
+        <div class="headerItem">
+                <div>
+                    <a href="#modal"><button class="btn btn-primary btn-lg">Личный кабинет</button></a>
                 </div>
-                <div class="companySlogan">
-                    <p>Главное</p>
-                    <p>иметь</p>
-                    <p>мечту</p>
-                </div>
-            </section>
-            <section class="right__header__content">
-                <h2 class="none">h2</h2>
-                <div class="companySloganNone">
-                    <p>Главное иметь мечту</p>
-                </div>
-                <div class="userRoom">
-                    <a href="#modal"><button>Личный кабинет</button></a>
-                </div>
-                <nav class="nav">
+                <div>
                     <ul class="navigation">
-                        <li class="countPeoples">Нас уже *****</li>
+                        <li class="countPeoples">Нас уже: <span id="users"></span></li>
+<!--                        <li><a href="#history">История кооператива</a></li>-->
                         <li>О нас</li>
                         <li><a href="#progects">Наши проекты</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
-                </nav>
-            </section>
+                </div>
+            </div>
         </div>
     </header>
-    <main class="main">
-        <div class="container">
-            <section class="about__us">
-                <h2 class="none">h2</h2>
+<main class="main">
+        <div class="_container">
+
+            <div class="about__us section">
                 <div class="about__us__left__content">
                     <h2>О нас</h2>
                     <p>
@@ -65,9 +65,9 @@
                     <img src="/views/img/video.jpg" alt="">
                     <img src="/views/img/video.jpg" alt="">
                 </div>
-            </section>
-            <section class="progect">
-                <h2 class="none">progects</h2>
+            </div>
+
+            <div class="progect section">
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/car.jpg" alt="">
@@ -92,9 +92,9 @@
                         <img src="/views/img/video.jpg" alt="">
                         <img src="/views/img/video.jpg" alt="">
                     </div>
-            </section>
-            <section class="progect">
-                <h2 class="none">h2</h2>
+            </div>
+
+            <div class="progect section">
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/house.jpg" alt="">
@@ -103,8 +103,8 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum doloremque ratione. Consectetur hic, consequuntur veniam odit est temporibus tempora praesentium quae, ratione quo totam mollitia eos possimus expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi officia omnis dolore corporis molestiae placeat recusandae numquam, itaque quos asperiores minima rem, autem ullam, quis fugiat mollitia quasi maiores ipsam!
                     </p>
                 </div>
-                <div class="progect__right__content">
-                    <h2>Второй проект</h2>
+                <div class="progect__right__content ">
+
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat, praesentium ipsam odio quo ut inventore ratione dolor eius officiis nihil optio debitis quae velit voluptatibus esse, in nemo necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quidem dolorum sit aperiam dolore expedita ab ea fugiat laudantium aut explicabo a deserunt, nesciunt ut animi iure. Nobis, voluptates impedit!
                     </p>
@@ -119,50 +119,62 @@
                         <img src="/views/img/video.jpg" alt="">
                         <img src="/views/img/video.jpg" alt="">
                     </div>
-            </section>
-            <section class="photoGalery">
-                <h2 class="none">h2</h2>
+            </div>
+
+            <div class="photoGalery section">
+
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
-            </section>
-            <section class="video">
-                <h2 class="none">h2</h2>
+            </div>
+
+            <div class="video section">
+
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
-            </section>
+            </div>
         </div>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.1486209940017!2d35.0265741730128!3d48.4728628098349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2fa0263091d%3A0xc38083f2d464521a!2z0L_RgNC-0YHQv9C10LrRgiDQlNC80LjRgtGA0LjRjyDQr9Cy0L7RgNC90LjRhtC60L7Qs9C-LCAxMDEsINCU0L3QuNC_0YDQviwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDQ5MDAw!5e0!3m2!1sru!2sua!4v1553808840361!5m2!1sru!2sua" height="350" style="border:0" allowfullscreen></iframe>
-            </div>
-            <div class="contacts" id="contacts">
-                <div class="adress">
-                    <p>г. Воронеж<p>
-                    <p>ул. Лизюкова</p>
-                </div>
-                <div class="phone">
-                    <p>+12345667789</p>
-                    <p>+12345667789</p>
-                    <p>+12345667789</p>
-                    <p>+12345667789</p>
-                </div>
-            </div>
+
+<footer class="footer">
+    <div class="_container">
+        <div class="map"></div>
+        <div class="contacts row justify-content-around">
+            <div class="address p-2 flex-grow-1"></div>
+            <div class="phone p-2 flex-grow-1"></div>
         </div>
-    </footer>
-   <section class="modal__certificate none">
-        <h2 class="none">h2</h2>
-        <div class="modal__content__certificate">
+    </div>
+</footer>
+<!--    <footer class="footer">-->
+<!--        <div class="container">-->
+<!--            <div class="map">-->
+<!--                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.1486209940017!2d35.0265741730128!3d48.4728628098349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2fa0263091d%3A0xc38083f2d464521a!2z0L_RgNC-0YHQv9C10LrRgiDQlNC80LjRgtGA0LjRjyDQr9Cy0L7RgNC90LjRhtC60L7Qs9C-LCAxMDEsINCU0L3QuNC_0YDQviwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDQ5MDAw!5e0!3m2!1sru!2sua!4v1553808840361!5m2!1sru!2sua" height="350" style="border:0" allowfullscreen></iframe>-->
+<!--            </div>-->
+<!--            <div class="contacts" id="contacts">-->
+<!--                <div class="adress">-->
+<!--                    <p>г. Воронеж<p>-->
+<!--                    <p>ул. Лизюкова</p>-->
+<!--                </div>-->
+<!--                <div class="phone">-->
+<!--                    <p>+12345667789</p>-->
+<!--                    <p>+12345667789</p>-->
+<!--                    <p>+12345667789</p>-->
+<!--                    <p>+12345667789</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </footer>-->
+
+
+   <div class="modal__certificate none">
+       <div class="modal__content__certificate">
             <img src="/views/img/page.jpg" alt="свидетельство">
             <input type="button" class="closeModalCertificate" value="X">
         </div>
-   </section>
-
-    <div class="modal" id="modal">
+   </div>
+   <div class="modal" id="modal">
         <div class="modalForm">
             <header>
                 <h2>Введите данные</h2>
