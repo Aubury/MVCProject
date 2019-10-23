@@ -2,20 +2,21 @@ const obj = {
     infoBlock : document.querySelector('.infoTable'),
     table     : document.querySelector('.tableLogs')
 };
+//--------------------------------------------------------------------------------------------
 const getInf = function getInfoLogs() {
 
     fetch('/inf/Logs').then(d => d.json())
         // .then(d=> console.log(d));
         .then( d => creatTable(d));
 }
-
+//----------------------------------------------------------------------------------------------
 const creatTable = function creatActionTable(arr){
 
     const table = obj.table;
 
     //   Удаляю всех детей!!!
     while(table.hasChildNodes()){
-        table.removeChild(list.firstChild);
+        table.removeChild(table.firstChild);
     }
 
     //Формирую строки
@@ -28,7 +29,7 @@ const creatTable = function creatActionTable(arr){
 
 }
 
-
+//-----------------------------------------------------------------------------------------------
 
 getInf();
 setInterval(getInf, 1000000);

@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .logo{
     width: 90px;
     height: auto;
@@ -98,7 +101,7 @@ option{
 
 }
 .height{
-    height: 250px !important;
+    height: 20em !important;
 }
 nav{
     padding: 0 40px !important;
@@ -168,7 +171,6 @@ iframe{
     padding: 10px 5px;
     width: 100%;
 }
-
 .padImg{
     padding: 5px !important;
 }
@@ -315,7 +317,6 @@ textarea{
 /*    align-content: center;*/
 /*    justify-content: center;*/
 /*    justify-items: center;*/
-
 
 
 /*}*/

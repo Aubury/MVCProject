@@ -33,5 +33,9 @@ class ControllerBudgetPage
     {
         $this->m->ShowAllProjectsName();
     }
+    public function actionTotalInf()
+    {
+        $this->m->TotalInformationProject();
+    }
 
 }

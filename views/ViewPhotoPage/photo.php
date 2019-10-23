@@ -60,17 +60,14 @@
             </div>
         </div>
         <div class="row">
-
               <div class="col-4 col-md-3 offset-md-9 p-2">
                     <input onkeyup="myFunction()" id="searchPhotos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
-
               </div>
-        </div> 
-    
+        </div>
+
         <div class="row justify-content-around">
             <div class="col-3 ReportInfo">
                 <div class="card border-info  mb-3">
-
                     <div class="card-header"><h3>Загрузить фото</h3></div>
                         <div class="card-body">
                             <form name="formPhoto" action="#" method="post" enctype="multipart/form-data">
@@ -87,11 +84,12 @@
                         <form name="formDelPhoto" action="#" method="post">
                             <p><input type="text" class="inpText form-control"  name="id" placeholder="Id картинки">
                             <p class="col-12 col-xl-12"><input class="btn btn-block btn-danger" type="submit" value="Удалить"></p>
-
                         </form>
-                        <span class="italic"></span></div>
+                        <span class="italic"></span>
                     </div>
-                    </div>
+                </div>
+            </div>
+
             <div class="col-9">
                 <div class="row justify-content-around tableDg tablePhoto borderColor"></div>
 

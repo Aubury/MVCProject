@@ -16,12 +16,9 @@ class ControllerProjectPage
 
     public function actionAddProject()
     {
-       $obj = [
-           'name'   => $_POST['name'],
-           'budget' => $_POST['budget']
-       ];
 
-        $this->m->addProject($obj);
+        $this->m->addProject($_POST);
+//        var_dump($_POST);
     }
 
 
@@ -29,7 +26,6 @@ class ControllerProjectPage
     {
         $this->v->showFormProject();
     }
-
     public function actionGetInfoProject()
     {
         $this->m->getInformationProjects();
@@ -40,6 +36,5 @@ class ControllerProjectPage
 //        $project = $_POST['project'];
         $this->m->getTotalInvestAmount($id);
     }
-
 
 }

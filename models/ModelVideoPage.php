@@ -49,4 +49,16 @@ class ModelVideoPage
 
         echo json_encode($videos);
     }
+    public function DelVideo($id)
+    {
+        $prp = $this->db->con->prepare("DELETE FROM `video` WHERE `id` = '{$id}'");
+        $prp->execute();
+
+        $admin = $_COOKIE['user_id'];
+        $action = "Удалил(а) видео из сервер";
+        $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+        $sql->execute();
+
+        echo "Файл удален успешно!";
+    }
 }

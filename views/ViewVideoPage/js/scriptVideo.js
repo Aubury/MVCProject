@@ -1,5 +1,6 @@
 let rex = {
-    form : document.forms['formVideo'],
+    form   : document.forms['formVideo'],
+    formDel: document.forms['formDelVideo'],
     arrInp : document.forms['formVideo'].querySelectorAll('.inpText'),
     table  : document.querySelector('.tableVideos')
 };
@@ -29,7 +30,7 @@ rex.form.addEventListener('submit', function (ev) {
     let answ = {};
 
     inpArr.forEach((el) => {
-        (el.name == "link") ? answ[el.name] = strIframe(el.inp.value, 'width="560" height="315"')
+        (el.name === "link") ? answ[el.name] = strIframe(el.inp.value, 'width="560" height="315"')
                               :answ[el.name] = el.inp.value;
     });
 
@@ -43,22 +44,7 @@ const strIframe = function deletePartOfString(str, pattern) {
     return newStr;
 
 }
-//---------------------------------------------------------------------------------------------
-function sendObj(answ) {
 
-    let str = encodeURIComponent(JSON.stringify(answ)),
-        url = `/reg/addVideo?value=${str}`;
-
-
-    fetch(url).then((response)=> {  return response.text();})
-        .then((text)=>{rex.form.nextElementSibling.innerHTML = text;
-                for(let i=0; i<rex.arrInp.length; i++){
-
-                    rex.arrInp[i].value = '';
-                }
-                getVideos();
-            });
-}
 //---------------------------------------------------------------------------------------------
 
 const videosTable = function createVideoTable(arr){
@@ -88,7 +74,6 @@ const getVideos = function getVideos(){
     fetch('/inf/videos').then( inf => inf.json())
         .then( arr => videosTable(arr));
 }
-
 //---------------------------------------------------------------------------------------------
 function sendObj(answ) {
 
@@ -133,6 +118,5 @@ rex.formDel.addEventListener('submit', function (ev) {
 
 })
 //-------------------------------------------------------------------------------------------
-
 getVideos();
 

@@ -64,7 +64,6 @@
                 <input onkeyup="tableSearch()" id="searchFinances" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
           </div>
     </div> 
-
     <div class="row justify-content-around">
         <div class="col-3 ReportInfo">
             <div class="card border-info  mb-3">
@@ -75,62 +74,24 @@
                             <option>Выберите проект</option>
                         </select></p>
                        <p><input type="text" class="form-control" name="email_user" placeholder="Email плательщика"></p>
-
                        <p class="posRel"><input type="text" class="form-control" name="amount" placeholder="Сумма платежа">
                                  <span class="title none">Вводите сумму без пробелов</span></p>
                        <p class="posRel"><input type="text" class="form-control" name="timeDate" placeholder="Дата платежа( гггг-мм-дд )">
                            <span class="title none">Вводить дату через тире и в формате <br /> гггг-мм-дд</span></p>
                        <p class="col-12 col-xl-12"><button class="btn btn-block btn-success" type="submit">Добавить</button></p>
-
                     </form>
                     <span class="italic"></span>
                 </div>
-              </div>
+            </div>
         </div>
-
-        <div class="col-8">
-          <table class="tableFinances table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">Дата</th>
-                  <th scope="col">Счет</th>
-                  <th scope="col">Сумма</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>22.22.22</td>
-                  <td>1939</td>
-                  <td>100000$</td>
-                </tr>
-                <tr>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-                
-                
-              </tbody>
-            </table>
-      </div>
-
+        <div class="col-9">
+          <table class="tableFinances table table-hover"></table>
+        </div>
     </div>
-
 </div>
 
 <script><?php include_once ROOT . "/views/ViewBudgetPage/js/searchFinances.js"?></script>
 <script><?php include_once ROOT . "/views/ViewBudgetPage/js/scriptFinances.js"?></Script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
-
 </body>
 </html>
