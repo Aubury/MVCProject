@@ -13,34 +13,24 @@ class ModelUserPage
 
    public function addUser($arr)
    {
-       $prp = $this->db->con->prepare("SELECT * FROM `users` WHERE `email`='{$arr['email']}'");
+       $prp = $this->db->con->prepare("SELECT `email` FROM `users` WHERE `email`='{$arr['email']}'");
        $prp->execute();
        $user = $prp->fetchAll();
-       $id = $user[0]['id'];
 
        if(count($user)>0){
 
-
-           $prp = $this->db->con->prepare("UPDATE `users` SET `name`='{$arr['name']}',`patronymic`='{$arr['patronymic']}',`surname`='{$arr['surname']}',`email`='{$arr['email']}', `address`='{$arr['address']}',`telephon`='{$arr['telephon']}',`tax_code`= {$arr['tax_code']} WHERE `id`= $id");
-           $prp->execute();
-           echo "Данные участника изменены";
-           $admin = $_COOKIE['user_id'];
-           $usr = $arr['name']." ".$arr['patronymic']." ".$arr['surname'];
-           $action = "Изменил(а) данные участника {$usr}";
-           $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
-           $sql->execute();
-
+           echo "Такой пользователь уже есть в базе данных";
        }else{
 
-           $obj['password'] = substr(hash('sha256', $arr['email'] . time()), rand(0, 40), 10);
-           $passH = password_hash($obj['password'], PASSWORD_BCRYPT);
-           $sqlStr = "INSERT INTO `users`(`name`, `patronymic`, `surname`, `email`, `password`, `address`, `telephon`, `tax_code`)
-                  VALUES ('{$arr['name']}','{$arr['patronymic']}', '{$arr['surname']}','{$arr['email']}','{$passH}','{$arr['address']}','{$arr['telephon']}','{$arr['tax_code']}')";
+           $passH = password_hash($arr['password'], PASSWORD_BCRYPT);
+
+           $sqlStr = "INSERT INTO `users`(`name`, `patronymic`, `surname`, `email`, `password`, `project_name`, `share_investment`, `address`, `telephon`, `tax_code`)
+                  VALUES ('{$arr['name']}','{$arr['patronymic']}', '{$arr['surname']}','{$arr['email']}','{$passH}','{$arr['project_name']}', '{$arr['share_investment']}', '{$arr['address']}','{$arr['telephon']}','{$arr['tax_code']}')";
 
 
            $regD = [
                'email' => $arr['email'],
-               'password' => $obj['password']
+               'password' => $arr['password']
            ];
 
            $this->db->con->exec($sqlStr);
@@ -50,46 +40,10 @@ class ModelUserPage
 
            $admin = $_COOKIE['user_id'];
            $usr = $arr['name']." ".$arr['patronymic']." ".$arr['surname'];
-           $action = "Добавил(а) участника {$usr}";
+           $action = "Добавил(а) участника {$usr} к проекту {$arr['project_name']}";
            $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
            $sql->execute();
 
-       }
-   }
-   public function addUserProject($obj)
-   {
-       //вывод ID участника
-       $prpUsr = $this->db->con->prepare("SELECT `id` FROM `users` WHERE `email`='{$obj['email']}'");
-       $prpUsr->execute();
-       $id_user = $prpUsr->fetchColumn();
-
-       //вывод ID проекта
-       $prpPrj = $this->db->con->prepare("SELECT `id` FROM `projects` WHERE `name`='{$obj['project_name']}'");
-       $prpPrj->execute();
-       $id_proj = $prpPrj->fetchColumn();
-
-       //вывод ID соотношения проекта и участника для оплаты
-       $prpUsPr = $this->db->con->prepare("SELECT `id` FROM `projectUserInvestment` 
-                                                    WHERE `id_project`='{$id_proj}' AND `id_user`='{$id_user}'");
-       $prpUsPr->execute();
-       $id_UsPr = $prpUsPr->fetchColumn();
-
-       if($id_UsPr>0){
-
-           echo "Такой участник уже есть в проекту";
-
-       }else{
-
-           $prj =$this->db->con->prepare("INSERT INTO `projectUserInvestment`(`id_project`, `id_user`, `share_investment`)
-                                              VALUES ('{$id_proj}', '{$id_user}', '{$obj['share_investment']}')");
-           $prj->execute();
-
-           $admin = $_COOKIE['user_id'];
-           $action = "Добавил(а) участника к проекту {$obj['project_name']}";
-           $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
-           $sql->execute();
-
-           echo "Участник добавлен к проекту";
        }
    }
 
@@ -122,8 +76,7 @@ class ModelUserPage
 
     public function TotalInformationUsers()
     {
-
-       $prp = $this->db->con->prepare("SELECT * FROM `users`");
+       $prp = $this->db->con->prepare("SELECT * FROM `users` ORDER BY `users`.`project_name` ASC");
        $prp->execute();
        $mass = $prp->fetchAll();
 
@@ -132,50 +85,20 @@ class ModelUserPage
        foreach ($mass as $value){
 
            array_push($massUsers, [
-             'surname'   => $value['surname'],
-             'name'      => $value['name'],
-             'patronymic'=> $value['patronymic'],
-             'telephon'  => $value['telephon'],
-             'email'     => $value['email'],
-             'address'   => $value['address'],
-             'tax_code'  => $value['tax_code'],
-             'project'   => $this->infoUserProject($value['id']),
-               ]);
+               $value['surname'],
+               $value['name'],
+               $value['patronymic'],
+               $value['telephon'],
+               $value['email'],
+               $value['address'],
+               $value['tax_code'],
+               $value['project_name'],
+               $value['share_investment'],
+               $value['invest_amount'],
+               $value['payment_time']
+           ]);
        }
       echo json_encode($massUsers);
-
-    }
-    public function infoUserProject($id_user)
-    {
-        $prp = $this->db->con->prepare("SELECT * FROM `projectUserInvestment` WHERE `id_user`='{$id_user}'");
-        $prp->execute();
-        $mass = $prp->fetchAll();
-
-        $arrWithNames = [];
-        foreach ($mass as $value){
-            array_push($arrWithNames,[
-                'project_name'    => $this->projectName($value['id_project']),
-                'share_investment'=> $value['share_investment'],
-                'invest_amount'   => $value['invest_amount'],
-                'payment_time'    => $value['payment_time']
-            ]);
-        }
-
-        return $arrWithNames;
-    }
-    public function projectName($id_project)
-    {
-        $prp = $this->db->con->prepare("SELECT `name` FROM `projects` WHERE `id`='{$id_project}'");
-        $prp->execute();
-        $name = $prp->fetchColumn();
-        return $name;
-    }
-    public function AmountUsers()
-    {
-        $prp = $this->db->con->prepare("SELECT  COUNT(`email`) FROM `users`");
-        $prp->execute();
-        $users = $prp->fetchColumn();
-       echo json_encode($users[0]);
 
     }
 }

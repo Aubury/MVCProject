@@ -21,6 +21,8 @@ class ControllerAdminPage
     public function actionAddAdmin()
     {
         $obj =(array)json_decode($_GET['value']);
+        $obj['password'] = substr(hash('sha256', $obj['email'] . time()), rand(0, 40), 10);
+
         $this->m->addAdmin($obj);
     }
 
@@ -28,10 +30,6 @@ class ControllerAdminPage
     {
 
         $this->m->DeleteAdmin($_POST['email']);
-    }
-    public function actionTotalInfoAdmins()
-    {
-        $this->m->TotalInf();
     }
 
 

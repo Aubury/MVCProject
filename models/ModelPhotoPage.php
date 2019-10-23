@@ -35,36 +35,35 @@ class ModelPhotoPage
         return true;
     }
 
-    public function DownloadImg($img_url, $tmp_name_img, $size_img, $width_height, $project_name){
+    public function DownloadImg($img_url, $tmp_name_img, $size_img, $width_height){
 
-        $img_url_2= $this->TranslitPhp($img_url);
-        $path = '/views/img/gallery/'; // Путь к папке
+       $img_url_2= $this->TranslitPhp($img_url);
+       $path = '/views/img/gallery/'; // Путь к папке
 
-        $file_type = substr($img_url_2, strrpos($img_url_2, '.')+1); // Получаем Расширение файла
-        $pos = strpos($img_url_2, ".");
-        $fn = substr($img_url_2, 0, $pos);
-        $file_name = $fn;
-        $img_url_2 = $file_name.mt_rand(0, 10000).".".$file_type;
+       $file_type = substr($img_url_2, strrpos($img_url_2, '.')+1); // Получаем Расширение файла
+       $pos = strpos($img_url_2, ".");
+       $fn = substr($img_url_2, 0, $pos);
+       $file_name = $fn;
+       $img_url_2 = $file_name.mt_rand(0, 10000).".".$file_type;
 
-        if(!copy($tmp_name_img, $img_url_2)){
+       if(!copy($tmp_name_img, $img_url_2)){
 
-            echo "failed to copy $tmp_name_img";
+           echo "failed to copy $tmp_name_img";
 
-        }else{
+       }else{
 
-            rename( ROOT ."/".$img_url_2,ROOT ."/".$path.$img_url_2);
+           rename( ROOT ."/".$img_url_2,ROOT ."/".$path.$img_url_2);
 
-            $prp = $this->db->con->prepare("INSERT INTO `photos`(`name`, `project_name`, `size`, `width_height`, `direction`)
-                                                   VALUES ('{$img_url_2}', '{$project_name}', '{$size_img}', '{$width_height}', '{$path}')");
-            $prp->execute();
+          $prp = $this->db->con->prepare("INSERT INTO `photos`(`name`, `size`, `width_height`, `direction`) VALUES ('{$img_url_2}', '{$size_img}', '{$width_height}', '{$path}')");
+          $prp->execute();
 
-            $admin = $_COOKIE['user_id'];
-            $action = "Загрузил(а) фотографию на сервер";
-            $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
-            $sql->execute();
+           $admin = $_COOKIE['user_id'];
+           $action = "Загрузил(а) фотографию на сервер";
+           $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+           $sql->execute();
 
-            echo "Файл успешно загружен!";
-        }
+           echo "Файл успешно загружен!";
+       }
 
     }
     public function TranslitPhp($url){
@@ -80,7 +79,7 @@ class ModelPhotoPage
         $prp->execute();
         $mass = $prp->fetchAll();
 
-        echo json_encode($mass);
+       echo json_encode($mass);
     }
     public function DelPhoto($id)
     {

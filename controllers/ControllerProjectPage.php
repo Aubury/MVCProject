@@ -26,6 +26,7 @@ class ControllerProjectPage
     {
         $this->v->showFormProject();
     }
+<<<<<<< HEAD
     public function actionGetInfoProject()
     {
         $this->m->getInformationProjects();
@@ -36,5 +37,7 @@ class ControllerProjectPage
 //        $project = $_POST['project'];
         $this->m->getTotalInvestAmount($id);
     }
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 
 }

@@ -21,7 +21,7 @@ class ControllerBudgetPage
            'amount'       => $_POST['amount'],
            'timeDate'     => $_POST['timeDate']
        ];
-
+//       var_dump($obj);
        $this->m->addMoney($obj);
    }
 

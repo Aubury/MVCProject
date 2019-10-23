@@ -1,6 +1,5 @@
 const obj = {
-    infoBlock : document.querySelector('.infoTable'),
-    table     : document.querySelector('.tableLogs')
+    infoBlock : document.querySelector('.infoTable')
 };
 //--------------------------------------------------------------------------------------------
 const getInf = function getInfoLogs() {
@@ -12,12 +11,14 @@ const getInf = function getInfoLogs() {
 //----------------------------------------------------------------------------------------------
 const creatTable = function creatActionTable(arr){
 
-    const table = obj.table;
+    const table = document.createElement('table');
+          table.classList.add('table', 'table-hover');
 
     //   Удаляю всех детей!!!
     while(table.hasChildNodes()){
         table.removeChild(table.firstChild);
     }
+
 
     //Формирую строки
     let trs = "<tr><th>Администратор</th><th>Действие</th><th>Дата</th></tr>";
@@ -27,6 +28,7 @@ const creatTable = function creatActionTable(arr){
 
     table.innerHTML = trs;
 
+    obj.infoBlock.appendChild(table);
 }
 
 //-----------------------------------------------------------------------------------------------

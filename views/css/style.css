@@ -57,15 +57,14 @@
 }
 .reports{
     text-align: center;
-    margin: 20px auto;
 }
 .reportForm{
     border: 1px solid black;
     margin-bottom: 20px;
-
+    
 }
 .reportTxt{
-
+   
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
 }
@@ -122,16 +121,13 @@ table{
     border-collapse: collapse;
     border: 1px solid #c6c6c6;
     background-color: rgba(0,0,0,.03);
-    box-shadow: 0px 0px 10px gray;
-
 
 }
 th{
     background-color: #e2e2e2;
     border: 1px solid #c6c6c6;
     min-height: 50px;
-    text-align: center !important;
-    vertical-align: center;
+    /*text-align: center !important;*/
     font-weight: 600;
 
 }
@@ -139,7 +135,6 @@ td{
     border: 1px solid #c6c6c6;
     min-height: 50px;
     vertical-align: middle !important;
-    text-align: center;
 
 }
 tr{
@@ -171,6 +166,7 @@ iframe{
     padding: 10px 5px;
     width: 100%;
 }
+<<<<<<< HEAD
 .padImg{
     padding: 5px !important;
 }
@@ -335,32 +331,8 @@ textarea{
 /*.slogan p:first-child{*/
 /*    align-self: flex-start;*/
 /*}*/
+=======
 
-/*.slogan p:nth-child(2){*/
-/*    align-self: center;*/
-/*    margin: 0 5px;*/
-/*}*/
-/*.slogan p:last-child{*/
-/*    align-self: flex-end;*/
-/*}*/
-/*.userHeader .headerItem:nth-child(3){*/
-/*    width: calc(100% - (16.67%*3));*/
-/*    color: #faeba9;*/
-/*    margin: 0 auto;*/
-/*}*/
-/*.userHeader .headerItem:last-child{*/
-/*    width: 16.67%;*/
-/*    margin: auto 0 auto auto;*/
-/*    text-align: center;*/
-/*    !*display: flex;*!*/
-/*    !*flex-direction: column;*!*/
-/*    !*align-items: center;*!*/
-/*    !*align-content: center;*!*/
-/*    !*justify-content: center;*!*/
-/*    !*justify-items: center;*!*/
-/*}*/
-/*.center{*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
+
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+

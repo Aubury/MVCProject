@@ -42,15 +42,17 @@ class ModelLogin
                     $sql->execute();
 
                     if ($role) {
+
                         echo json_encode([
                             SITE . "/show/superAdmin",
                             $this->addUserLog($admin[0], 'supAdm')]);
 
 
                     } else {
+                        ;
                         echo json_encode([
-                            SITE . "/show/superAdmin",
-                            $this->addUserLog($admin[0], 'adm')]);
+                            SITE . "/show/Panel"],
+                            $this->addUserLog($admin[0], 'adm'));
                     }
 
                 }else{
@@ -65,8 +67,7 @@ class ModelLogin
                     $str = $this->db->con->prepare("UPDATE `users` SET `last_visit`= NOW() WHERE `email`='{$arr['email']}'");
                     $str->execute();
                     $this->addUserLog($user[0], 'usr');//TODO: same as admin!!!
-                    echo json_encode([SITE . "/show/User",
-                        $this->addUserLog($user[0], 'usr')]);
+                    echo json_encode([SITE . "/show/User"]);
 
 
                 }else{
@@ -93,8 +94,7 @@ class ModelLogin
         if(count($arr) == 0){
 
             $uPd = password_hash(time() . $user['email'], PASSWORD_BCRYPT);
-            $this->db->con->exec("INSERT INTO `logIn`(`user_id`, `uPd`, `role`, `table`)
-                                           VALUES ( '{$user['id']}', '${uPd}', '{$user['role']}', '{$tab}')");
+            $this->db->con->exec("INSERT INTO `logIn`(`user_id`, `uPd`, `role`, `table`) VALUES ( '{$user['id']}', '${uPd}', '{$user['role']}', '{$tab}')");
             return [$uPd, $user['id'], $tab];
 
 
@@ -102,21 +102,6 @@ class ModelLogin
             return [$arr[0]['uPd'], $arr[0]['user_id'], $arr[0]['table']];   
 
         }
-    }
-    public function ExitSite($arr)
-    {
-        if($arr['table'] != 'usr'){
-            $prp = $this->db->con->prepare("UPDATE `admins` SET `logOut`=NOW()  WHERE `id`={$arr['id']}");
-            $prp->execute();
-
-            $action = "Покинул(а) сайт";
-            $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ({$arr['id']}, '{$action}')");
-            $sql->execute();
-
-        }
-
-        echo json_encode([SITE]);
-
     }
 
     public function redirect($url) {

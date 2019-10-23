@@ -4,7 +4,9 @@ let obj = {
     arrInp : document.querySelectorAll(".form-control"),
     table  : document.querySelector('.tableFinances')
 };
+
 //--------------------------------------------------------------------------------------------------
+
 const addOptions = function addOptions(arr) {
 
     const select = obj.select;
@@ -29,6 +31,7 @@ const getNamesProjects = function getNamesProjects() {
         .then(arr => addOptions(arr));
 }
 //--------------------------------------------------------------------------------------------------
+
 obj.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
@@ -51,10 +54,14 @@ obj.form.addEventListener('submit', function (ev) {
 
                 obj.arrInp[i].value = '';
             };
+<<<<<<< HEAD
 
             getTotalInf();
             setTimeout(()=> {form.nextElementSibling.innerHTML = '';}, 10000);
 
+=======
+            getNamesProjects();
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
         })
 });
 //-------------------------------------------------------------------------------------------------
@@ -62,6 +69,7 @@ const replcomma = function comma(data) {
 
     let newData = '';
 
+<<<<<<< HEAD
     (data.indexOf(",") !== -1) ? newData = data.replace(',','.') : newData = data;
 
     return newData;
@@ -91,5 +99,9 @@ const buildTable = function table(arr) {
 }
  //--------------------------------------------------------------------------------------------------
 getTotalInf();
+=======
+
+
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 getNamesProjects();
 setInterval(getNamesProjects,500000);

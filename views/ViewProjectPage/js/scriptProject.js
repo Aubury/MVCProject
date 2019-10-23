@@ -5,9 +5,21 @@ let rex = {
     arrIcons    : [],
     massOriginal: []
 };
+<<<<<<< HEAD
 //---------------------------------------------------------------------------------------
 const massInp = function massInputsForm(){
 
+=======
+
+//-----------------------------------------------------------------------------------------------------------------
+//Обработчик отправки.
+rex.form.addEventListener('submit', function (ev) {
+
+    ev.preventDefault();
+
+    let answ = {};
+
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     let form = rex.form;
     const inpArr = [
         {
@@ -58,6 +70,7 @@ const massInp = function massInputsForm(){
             name    : 'published',
         }
     ];
+<<<<<<< HEAD
     return inpArr;
 }
 //---------------------------------------------------------------------------------------
@@ -67,6 +80,21 @@ rex.form.addEventListener('submit', function (ev) {
 
     const form = rex.form,
         inpArr = massInp();
+=======
+
+    inpArr.forEach((el) => {
+        answ[el.name] = el.inp.value;
+
+    });
+
+    sendObj(answ);
+
+
+});
+
+//-----------------------------------------------------------------------------------------------------
+function sendObj(answ) {
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 
     const fD = new FormData(),
          url = '/reg/addProject';
@@ -80,6 +108,7 @@ rex.form.addEventListener('submit', function (ev) {
         body: fD
     }).then(response=>  response.text())
         .then(text=>{rex.form.nextElementSibling.innerHTML = text;
+<<<<<<< HEAD
             // for(let i=0; i<rex.arrInp.length; i++){
             //
             //     rex.arrInp[i].value = '';
@@ -175,11 +204,15 @@ const getMassindex = function getMassIndexById(ev)
         arr.forEach( el =>{
             if(el.name === ev.target.id){
                fillInp(el);
-            }
+=======
+            for(let i=0; i<rex.arrInp.length; i++){
 
+                rex.arrInp[i].value = '';
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+            }
         });
-    }
 }
+<<<<<<< HEAD
 //---------------------------------------------------------------------------------------------------
 const addListtener = function addToArrListener(arr){
     for (let i = 0; i < arr.length; i++ ){
@@ -205,3 +238,28 @@ const fillInp = function fillInputsForm(arr){
 }
 
 getProgects();
+=======
+// //--------------------------------------------------------------------------------------------------
+//
+// const addOptions = function addOptions(arr) {
+//
+//     const select = rex.select;
+//     arr.forEach( el => {
+//
+//         let option = document.createElement("option");
+//             option.value = el.name;
+//             select.appendChild(option);
+//     })
+// }
+// //--------------------------------------------------------------------------------------------------
+// const getNamesProjects = function getNamesProjects() {
+//
+//     const url = '/inf/nameProjects';
+//
+//     fetch(url).then(response => response.json())
+//               .then(arr => addOptions(arr));
+// }
+// //--------------------------------------------------------------------------------------------------
+// getNamesProjects();
+// setInterval(getNamesProjects,50000);
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage

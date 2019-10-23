@@ -17,12 +17,13 @@ class ControllerUserPage
     public function actionAddUser()
     {
         $obj =(array)json_decode($_GET['value']);
+        $obj['password'] = substr(hash('sha256', $obj['email'] . time()), rand(0, 40), 10);
         $this->m->addUser($obj);
    }
 
    public function actionDelUser()
    {
-       $this->m->deleteUser($_POST['email']);
+       $this->m->deleteUser($_GET['email']);
    }
 
    public function actionShowUsersPage()
@@ -32,20 +33,6 @@ class ControllerUserPage
    public function actionTotalUsers()
    {
        $this->m->TotalInformationUsers();
-   }
-   public function actionAddUserProgect()
-   {
-       $obj = [
-           'project_name' => $_POST['project_name'],
-           'email' => $_POST['email'],
-           'share_investment' => $_POST['share_investment']
-       ];
-//       var_dump($obj);
-       $this->m->addUserProject($obj);
-   }
-   public function actionAmountUsers()
-   {
-       $this->m->AmountUsers();
    }
 
 

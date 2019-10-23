@@ -1,13 +1,14 @@
+<<<<<<< HEAD
 /**{*/
 /*    box-sizing: border-box;*/
 /*}*/
+=======
+/* do not download to github */
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 html{
     scroll-behavior: smooth;
 }
-/*header{*/
-/*    height: 13em;*/
-/*}*/
-
+.header,
 .main,
 .footer{
     width: 100%;
@@ -23,104 +24,63 @@ html{
 .hide{
     display: none;
 }
-._container{
-    width: 1400px;
+.container{
+    width: 1200px;
     display: flex;
     flex-wrap: wrap;
 }
-/*--------------------------------------------------------*/
-.hederContainer{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(32,36,45);
-    color: white;
-    width: 100%;
-    height: 12em;
-}
-.userHeader{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    font-family: 'Roboto Condensed';
-    height: 100%;
-    width: 1400px;
-    margin: 5px auto;
-    padding: 1em;
-
-}
-.headerItem{
-    height: 100%;
-    margin: 5px 10px;
-    padding: 2px;
-    display: flex;
-    font-size: 2em;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-
-}
-.headerItem:nth-child(1){
-    width: 33.32%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.headerItem:nth-child(2){
-    width: calc(100% - 33.32%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.headerItem:nth-child(1) div{
+.left__header__content,
+.right__header__content{
     width: 50%;
-    height: 100%;
-    padding: 7px 5px;
     display: flex;
-    justify-content: center;
-    text-align: center !important;
 }
-.headerItem img{
-    width:100%;
-    height: auto;
-
-}
-.slogan{
-    display: flex;
-    flex-direction: column;
-    font-size: 1.2em !important;
-    /*color: #f9e196;*/
-    font-family: 'Roboto Condensed';
-    line-height: 1.3em;
-}
-
-.slogan p:first-child{
-    align-self: flex-start;
-    margin: 0;
-}
-
-.slogan p:nth-child(2){
-    align-self: center;
-    margin: 0 5px;
-}
-.slogan p:last-child{
-    align-self: flex-start;
-}
-
-.center{
-    display: flex;
-    justify-content: center;
+.left__header__content{
+    justify-content: space-between;
     align-items: center;
+    font-size: 30px ;
 }
-.headerItem:nth-child(2) div:last-child{
-    display: flex;
+.left__header__content div{
+    margin: 0 0 0 0;
+    width: 50%;
+}
+.left__header__content .companySlogan p{
     width: 100%;
-    align-self: flex-end;
-    justify-content: flex-end;
-    text-align: right;
+    font-size: 50px;
+    user-select: none;
 }
+.left__header__content .companySlogan p:first-child{
+    text-align: left;
+    padding: 0 0 0 0;
+}
+.left__header__content .companySlogan p:nth-child(2){
+    text-align: center;
+    padding: 15px 0 15px 0;
+}
+.left__header__content .companySlogan p:last-child{
+    text-align: right;
+    padding: 0 0 0 0;
+}
+.left__header__content .companySlogan{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left__header__content img{
+    width: 280px;
+    height: 180px;
+}
+.right__header__content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.right__header__content .companySloganNone,
+.right__header__content .userRoom,
+.right__header__content nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 20px 0;
+}
+<<<<<<< HEAD
 .headerItem:nth-child(2) div:first-child{
     width: 100%;
     margin-bottom: 20px;
@@ -128,111 +88,30 @@ html{
     align-self: center;
     justify-content: flex-end;
     text-align: right;
+=======
+.right__header__content .companySloganNone{
+    font-size: 35px;
+    color: transparent;
+    user-select: none;
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 }
-.headerItem:nth-child(2) button{
-    /*padding: 10px;*/
-    /*font-family: 'Roboto Condensed';*/
-    /*font-size: 15px;*/
-    /*font-weight: bold;*/
-    /*border-radius: 2px;*/
-    /*letter-spacing: 1px;*/
+.right__header__content .userRoom button{
+    padding: 10px;
+    font-family: 'Roboto Condensed';
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
     cursor: pointer;
-    /*outline: 0 !important;*/
-    /*transition: all .3s;*/
+    outline: 0 !important;
+    transition: all .3s;
 }
-ul{
-    margin-bottom: 0 !important;
+.right__header__content .userRoom button:hover{
+    background-color: rgb(8,126,177);
+    border: solid 2px white;
+    color: white;
 }
-/*.headerItem:nth-child(2) button:hover{*/
-/*    background-color: rgb(8,126,177);*/
-/*    border: solid 2px white;*/
-/*    color: white;*/
-/*}*/
-
-/*--------------------------------------------------------*/
-/*.left__header__content{*/
-/*    width: 40%;*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    font-size: 2.5em;*/
-/*    line-height: 1.2em;*/
-/*    margin: auto 0;*/
-/*    padding: 10px;*/
-/*}*/
-/*.right__header__content{*/
-/*   width: 60%;*/
-/*    display: flex;*/
-/*}*/
-
-/*.left__header__content>div:first-child{*/
-/*    margin: 10px;*/
-/*    width: 60%;*/
-/*}*/
-/*.left__header__content>div:last-child{*/
-/*    margin: 10px 0;*/
-/*    width: 40%;*/
-/*}*/
-/*.left__header__content .companySlogan p{*/
-/*    width: 100%;*/
-/*    !*font-size: 50px;*!*/
-/*    user-select: none;*/
-/*}*/
-/*.left__header__content .companySlogan p:first-child{*/
-/*    text-align: left;*/
-/*    !*padding: 0 0 0 0;*!*/
-/*}*/
-/*.left__header__content .companySlogan p:nth-child(2){*/
-/*    text-align: center;*/
-/*    !*padding: 15px 0 15px 0;*!*/
-/*}*/
-/*.left__header__content .companySlogan p:last-child{*/
-/*    text-align: left;*/
-/*    !*padding: 0 0 0 0;*!*/
-/*}*/
-/*.left__header__content .companySlogan{*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*}*/
-/*.left__header__content img{*/
-/*    width: 90%;*/
-/*    height: auto;*/
-/*}*/
-/*.right__header__content{*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*}*/
-/*.right__header__content .companySloganNone,*/
-/*.right__header__content .userRoom,*/
-/*.right__header__content nav{*/
-/*    width: 100%;*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*    !*margin: 20px 0 20px 0;*!*/
-/*}*/
-/*.right__header__content .companySloganNone{*/
-/*    font-size: 1.5em;*/
-/*    color: transparent;*/
-/*}*/
-/*.right__header__content .userRoom button{*/
-/*    padding: 10px;*/
-/*    font-family: 'Roboto Condensed';*/
-/*    font-size: 15px;*/
-/*    font-weight: bold;*/
-/*    border-radius: 2px;*/
-/*    letter-spacing: 1px;*/
-/*    cursor: pointer;*/
-/*    outline: 0 !important;*/
-/*    transition: all .3s;*/
-/*}*/
-/*.right__header__content .userRoom button:hover{*/
-/*    background-color: rgb(8,126,177);*/
-/*    border: solid 2px white;*/
-/*    color: white;*/
-/*}*/
 .navigation{
     display: flex;
-    justify-items: flex-end;
 }
 .navigation a{
     color: white;
@@ -241,13 +120,11 @@ ul{
 }
 .navigation li{
     font-weight: bold;
-    font-style: italic;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     cursor: pointer;
-    font-size: .8em;
+    font-size: 20px;
     border-left: solid 3px transparent;
-    padding: 5px 10px 5px 10px;
-    margin-left: .5em;
+    padding: 5px 20px 5px 20px;
     color: white;
     transition: all .3s;
 }
@@ -258,18 +135,29 @@ ul{
 .navigation a:hover{
     color: rgb(8,126,177);
 }
-.navigation li:last-child {
+.navigation li:last-child{
     padding: 5px 0px 5px 20px;
+<<<<<<< HEAD
 }
 /*.countPeoples{*/
 /*    !*color: #f9e196 !important;*!*/
 /*    font-size: 1.4em !important;*/
 /*}*/
+=======
 
-/* ------------------------------------------------------------ */
+
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 
 
+}
+/* ------------------------main------------------------------------ */
+
+<<<<<<< HEAD
 .section{
+=======
+
+.main .section{
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     margin: 30px 0 30px 0;
     padding: 10px;
     display: flex;
@@ -364,46 +252,49 @@ ul{
     margin: 10px 0 10px 0;
 }
 
+<<<<<<< HEAD
 /*----------------------footer-----------------------------*/
+=======
+/* -------------------------footer---------------------------------- */
+
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 .footer{
     padding: 30px 0 30px 0;
 }
 .map,
 .contacts{
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-}
-.map{
-    width: 40%;
+    width: 50%;
 }
 iframe{
-    width: 70%;
-    height: 20em;
+    width: 100%;
 }
 .contacts{
-    width: calc(100% - 40%);
     display: flex;
-    font-size: 1.5em;
+}
+.adress p,
+.phone p{
+    width: 100%;
+    font-size: 30px;
     line-height: 1.3;
     color: white;
-
 }
 .adress,
 .phone{
     width: 50%;
     display: flex;
-    flex-direction: column;
-
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
 }
-/*-----------------------------Button Top----------------------------*/
+
 .top span{
     font-size: 40px;
 }
 .top{
     width: 70px;
     height: 70px;
-    transform: rotate(90deg);
+    transform: rotate(90deg); 
     font-family: 'Roboto Condensed';
     color: white;
     background-color: #3f414d;

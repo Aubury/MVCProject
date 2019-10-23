@@ -8,99 +8,14 @@ const rex = {
     amountRex  : /[\d+]{0,}/,
     formAdd    : document.forms['formUsers'],
     formDel    : document.forms['formDelUser'],
-    formProject: document.forms['formAddToProject'],
-    arrInp     : document.forms['formUsers'].querySelectorAll('.inpText'),
+    arrInp     : document.forms['formUsers'].querySelectorAll('.form-control'),
     infUsers   : document.querySelector('.tableUsers'),
     printButton: document.querySelector('.print'),
     table      : document.querySelector('#tableUsers'),
-    select : document.querySelector('#inputState'),
-    massUsers  : [],
-    massOriginal: [],
-    arrIcDel: [],
-    arrIcEd : []
+    massUsers  : []
 
 
 };
-//---------------------------------------------------------------------------------------------------
-const massInp = function massInputsForm(){
-
-    const form = rex.formAdd,
-        inpArr = [
-            {
-                inp     : form['name'],
-                info    : form['name'].nextElementSibling,
-                reg     : rex.nameRex,
-                msgError: '*Ввод только кириллицы или латиницы!',
-                name    : 'name',
-            },
-            {
-                inp     : form['patronymic'],
-                info    : form['patronymic'].nextElementSibling,
-                reg     : rex.nameRex,
-                msgError: '*Ввод только кириллицы или латиницы!',
-                name    : 'patronymic',
-            },
-            {
-                inp     : form['surname'],
-                info    : form['surname'].nextElementSibling,
-                reg     : rex.nameRex,
-                msgError: '*Ввод только кириллицы или латиницы!',
-                name    : 'surname',
-
-            },
-            {
-                inp     : form['email'],
-                info    : form['email'].nextElementSibling,
-                reg     : rex.emailRex,
-                name    : 'email',
-
-            },
-            // {
-            //     inp     : form['project_name'],
-            //     info    : form['project_name'].nextElementSibling,
-            //     reg     : rex.projectRex,
-            //     name    : 'project_name',
-            //
-            // },
-            // {
-            //     inp     : form['share_investment'],
-            //     info    : form['share_investment'].nextElementSibling,
-            //     reg     : rex.amountRex,
-            //     msgError: '*Введите только 10 цифр!',
-            //     name    : 'share_investment',
-            //
-            // },
-            {
-                inp     : form['address'],
-                info    : form['address'].nextElementSibling,
-                reg     : rex.addressRex,
-                msgError: '*Ввод только кириллицы или латиницы!',
-                name    : 'address',
-
-            },
-            {
-                inp     : form['telephon'],
-                info    : form['telephon'].nextElementSibling,
-                reg     : rex.telRex,
-                msgError: '*Ввод только цифр!',
-                name    : 'telephon',
-
-            },
-            {
-                inp     : form['tax_code'],
-                info    : form['tax_code'].nextElementSibling,
-                reg     : rex.taxRex,
-                msgError: '*Введите только 10 цифр!',
-                name    : 'tax_code',
-
-            },
-
-
-
-        ];
-
-    return inpArr;
-}
 //----------------------------------------------------------------------------------------------------
 function validate(inpArr){
 
@@ -116,6 +31,107 @@ function validate(inpArr){
         sendObj(answ);
     }
 }
+//----------------------------------------------------------------------------------------------------
+//Обработчик отправки.
+ rex.formDel.addEventListener('submit', function (ev) {
+
+     ev.preventDefault();
+
+    const form = rex.formDel,
+          url = `/reg/delUser?email=${form['email'].value}`;
+
+    fetch(url).then((response)=> {  return response.text();})
+            .then((text)=>{rex.formDel.nextElementSibling.innerHTML = text;
+                for(let i=0; i<rex.arrInp.length; i++){
+
+                    rex.arrInp[i].value = '';
+                }
+            })
+
+});
+//----------------------------------------------------------------------------------------------------
+rex.formAdd.addEventListener('submit', function (ev) {
+
+    ev.preventDefault();
+
+    const form = rex.formAdd,
+          inpArr = [
+        {
+            inp     : form['name'],
+            info    : form['name'].nextElementSibling,
+            reg     : rex.nameRex,
+            msgError: '*Ввод только кириллицы или латиницы!',
+            name    : 'name',
+        },
+        {
+            inp     : form['patronymic'],
+            info    : form['patronymic'].nextElementSibling,
+            reg     : rex.nameRex,
+            msgError: '*Ввод только кириллицы или латиницы!',
+            name    : 'patronymic',
+        },
+        {
+            inp     : form['surname'],
+            info    : form['surname'].nextElementSibling,
+            reg     : rex.nameRex,
+            msgError: '*Ввод только кириллицы или латиницы!',
+            name    : 'surname',
+
+        },
+        {
+            inp     : form['email'],
+            info    : form['email'].nextElementSibling,
+            reg     : rex.emailRex,
+            name    : 'email',
+
+        },
+        {
+            inp     : form['project_name'],
+            info    : form['project_name'].nextElementSibling,
+            reg     : rex.projectRex,
+            name    : 'project_name',
+
+        },
+        {
+              inp     : form['share_investment'],
+              info    : form['share_investment'].nextElementSibling,
+              reg     : rex.amountRex,
+              msgError: '*Введите только 10 цифр!',
+              name    : 'share_investment',
+
+        },
+        {
+            inp     : form['address'],
+            info    : form['address'].nextElementSibling,
+            reg     : rex.addressRex,
+            msgError: '*Ввод только кириллицы или латиницы!',
+            name    : 'address',
+
+        },
+        {
+            inp     : form['telephon'],
+            info    : form['telephon'].nextElementSibling,
+            reg     : rex.telRex,
+            msgError: '*Ввод только цифр!',
+            name    : 'telephon',
+
+        },
+        {
+            inp     : form['tax_code'],
+            info    : form['tax_code'].nextElementSibling,
+            reg     : rex.taxRex,
+            msgError: '*Введите только 10 цифр!',
+            name    : 'tax_code',
+
+        },
+
+
+
+     ];
+
+        validate(inpArr);
+
+});
 //-----------------------------------------------------------------------------------------------------
 function checkInput(check){
     check.msgError = check.msgError || "Данные введены не корректно";
@@ -129,14 +145,6 @@ function checkInput(check){
     check.info.innerHTML = '';
     return true;
 }
-//----------------------------------------------------------------------------------------------------
-rex.formAdd.addEventListener('submit', function (ev) {
-
-    ev.preventDefault();
-    validate(massInp());
-
-});
-
 //-----------------------------------------------------------------------------------------------------
 function sendObj(answ){
 
@@ -146,81 +154,11 @@ function sendObj(answ){
 
     fetch(url).then((response)=> {  return response.text();})
         .then((text)=>{rex.formAdd.nextElementSibling.innerHTML = text;
-            for(let i=0; i<rex.arrInp.length; i++){
+                     for(let i=0; i<rex.arrInp.length; i++){
 
-                rex.arrInp[i].value = '';
-                infUsers();
-                setTimeout(()=> {rex.formAdd.nextElementSibling.innerHTML = '';}, 1000);
-            }
-        })
-}
-//----------------------------------------------------------------------------------------------------
-const delUser = function DeleteUser(ev){
-
-     let  data = '';
-     if(ev.target.hasAttribute('id'))
-     {
-         data = ev.target.id.slice(ev.target.id.indexOf('_')+1);
-     }
-
-
-     const url = '/reg/delUser',
-           fD = new FormData();
-
-     fD.append('email', data);
-
-    fetch(url,{
-        method: "POST",
-        body: fD
-    }).then(data=>  data.text())
-            .then(text=> window.location.reload())
-
-}
-
-//-----------------------------------------------------------------------------------------------------
-const getMassindex = function getMassIndexById(ev)
-{
-    const arr = rex.massUsers;
-    let data = '';
-    if(ev.target.hasAttribute('id')){
-
-        data = ev.target.id.slice(ev.target.id.indexOf('_')+1);
-        arr.forEach( el =>{
-            if(el.email === data){
-                fillInp(el);
-            }
-
-        });
-    }
-}
-//---------------------------------------------------------------------------------------------------
-const fillInp = function fillInputsForm(arr){
-
-    const inpArr = massInp();
-
-    for(let i = 0; i < inpArr.length; i++){
-        for (key in arr) {
-            if(inpArr[i].name === key){
-                inpArr[i].inp.value = arr[key];
-            }
-        }
-
-    }
-}
-
-//-----------------------------------------------------------------------------------------------------
-const addListtenerDel = function addToArrListenerDel(arr){
-    for (let i = 0; i < arr.length; i++ ){
-
-        arr[i].addEventListener('click', delUser);
-    }
-}
-//----------------------------------------------------------------------------------------------------
-const addListtenerEd = function addToArrListenerEd(arr){
-    for (let i = 0; i < arr.length; i++ ){
-
-        arr[i].addEventListener('click', getMassindex);
-    }
+                         rex.arrInp[i].value = '';
+                       }
+             })
 }
 //============================Information Of Users=====================================================
 
@@ -228,114 +166,31 @@ const createUsersTable = function createUsersTable(arr){
 
     rex.massUsers = arr;
     const table = rex.table;
-    let project_name = 'Не участвует в проекте',
-        share_investment = 'Не участвует в проекте',
-        invest_amount = 'Не участвует в проекте',
-        payment_time = 'Не участвует в проекте';
 
     //   Удаляю всех детей!!!
     while(table.hasChildNodes()){
-        table.removeChild(table.firstChild);
+        table.removeChild(list.firstChild);
     }
+
+
     //Формирую строки
-    let trs = "<tr><th>Delete</th><th>Edit</th><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
+    let trs = "<tr><th></th><th></th><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
     arr.forEach(el=>{
-        if(el.project.length > 0) {
-
-            el['project'].forEach(item => {
-                trs = `${trs}<tr><td class="iconsDel"><i class="material-icons" id="del_${el.email}">delete</i></td>   
-                         <td class="iconsEd"><i class="material-icons" id="ed_${el.email}">create</i></td>   
-                         <td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td>
-                         <td class="tdTextLeft">Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
-                         <td>${item.project_name}<br></td>
-                         <td>${item.share_investment}<br></td>
-                         <td>${item.invest_amount}<br></td>
-                         <td>${item.payment_time}<br></td></tr>`;
-
-            })
-        }else {
-
-            trs = `${trs}<tr><td class="iconsDel"><i class="material-icons" id="del_${el.email}">delete</i></td>   
-                         <td class="iconsEd"><i class="material-icons" id="ed_${el.email}">create</i></td>   
-                         <td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td>
-                         <td class="tdTextLeft">Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
-                         <td>${project_name}<br></td>
-                         <td>${share_investment}<br></td>
-                         <td>${invest_amount}<br></td>
-                         <td>${payment_time}<br></td></tr>`;
-
-        }
+        trs = `${trs}<tr><td><i class="material-icons">info</i></td>
+                         <td><i class="material-icons">create</i></td>   
+                         <td>${el[0]}<br>${el[1]}<br>${el[2]}<br></td>
+                         <td>Тел: ${el[3]}<br>Email: ${el[4]}<br>Адрес: ${el[5]}<br>ИНН: ${el[6]}<br></td>
+                         <td>${el[7]}<br></td>
+                         <td>${el[8]}<br></td>
+                         <td>${el[9]}<br></td>
+                         <td>${el[10]}<br></td></tr>`;
     });
 
     table.innerHTML = trs;
 
     rex.infUsers.appendChild(table);
-    rex.arrIcDel.push(document.querySelectorAll(".iconsDel"));
-    rex.arrIcEd.push(document.querySelectorAll(".iconsEd"));
-    addListtenerDel(rex.arrIcDel[0]);
-    addListtenerEd(rex.arrIcEd[0]);
 }
-//-------------------------------------------------------------------------------------------------
-const replcomma = function comma(data) {
 
-    let newData = '';
-
-    (data.indexOf(",") !== -1) ? newData = data.replace(',','.') : newData = data;
-
-    return newData;
-
-}
-//----------------------------------------------------------------------------------------
-rex.formProject.addEventListener('submit',function (ev) {
-
-    ev.preventDefault();
-    const url = '/reg/addUsPrj',
-        form = rex.formProject,
-        fD = new FormData();
-    fD.append('email',form['email'].value);
-    fD.append('project_name', form['project_name'].value);
-    fD.append('share_investment', replcomma(form['share_investment'].value));
-
-    fetch(url,{
-        method : "POST",
-        body : fD
-    }).then(el=>el.text())
-        .then(text=>{
-            form.nextElementSibling.innerHTML = text;
-            setTimeout(()=> {
-                for(let i =0; i < form.elements.length-1; i++ ){
-                    form.elements[i].value = '';
-                }
-                  form.nextElementSibling.innerHTML = '';
-            }, 5000);
-        })
-
-})
-//-----------------------------------------------------------------------------------
-const addOptions = function addOptions(arr) {
-
-    const select = rex.select;
-
-    while(select.hasChildNodes()){
-        select.removeChild(select.firstChild);
-    }
-    let op = new Option('Выберите проект');
-    select.append(op);
-    arr.forEach( el => {
-
-        let option = new Option(el.name, el.name);
-        select.append(option);
-    })
-}
-//------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------------
-const getNamesProjects = function getNamesProjects() {
-
-    const url = '/inf/nameProjects';
-
-    fetch(url).then(response => response.json())
-        .then(arr => addOptions(arr));
-}
 //------------------------------------------------------------------------------------------
 
 const infUsers = function TotalInformationOfUsers() {
@@ -345,38 +200,20 @@ const infUsers = function TotalInformationOfUsers() {
         .then(arr => createUsersTable(arr));
 }
 
-
 //------------------------------------------------------------------------------------------
 const print = function printTable() {
 
     const table = document.createElement('table');
-    let project_name = 'Не участвует в проекте',
-        share_investment = 'Не участвует в проекте',
-        invest_amount = 'Не участвует в проекте',
-        payment_time = 'Не участвует в проекте';
     //Формирую строки
     let trs = "<tr><th>ФИО</th><th>Контакты</th><th>Проект</th><th>Общая сумма вложений</th><th>Проплатили</th><th>Дата последней оплаты</th></tr>";
 
-    // rex.massUsers.forEach(el=>{
     rex.massUsers.forEach(el=>{
-        if(el.project.length > 0) {
-            el['project'].forEach(item => {
-                trs = `${trs}<tr><td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td></td>
-                         <td>Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
-                          <td>${item.project_name}<br></td>
-                         <td>${item.share_investment}<br></td>
-                         <td>${item.invest_amount}<br></td>
-                         <td>${item.payment_time}<br></td></tr>`;
-            })
-        }else{
-            trs = `${trs}<tr><td>${el.surname}<br>${el.name}<br>${el.patronymic}<br></td></td>
-                         <td>Тел: ${el.telephon}<br>Email: ${el.email}<br>Адрес: ${el.address}<br>ИНН: ${el.tax_code}<br></td>
-                          <td>${project_name}<br></td>
-                         <td>${share_investment}<br></td>
-                         <td>${invest_amount}<br></td>
-                         <td>${payment_time}<br></td></tr>`;
-        }
-
+        trs = `${trs}<tr><td>${el[0]}<br>${el[1]}<br>${el[2]}<br></td>
+                         <td>Тел: ${el[3]}<br>Email: ${el[4]}<br>Адрес: ${el[5]}<br>ИНН: ${el[6]}<br></td>
+                         <td>${el[7]}<br></td>
+                         <td>${el[8]}<br></td>
+                         <td>${el[9]}<br></td>
+                         <td>${el[10]}<br></td></tr>`;
     });
 
     table.innerHTML = trs;
@@ -413,4 +250,4 @@ const print = function printTable() {
 
 rex.printButton.addEventListener('click', print);
 infUsers();
-getNamesProjects();
+setInterval(infUsers, 100000);

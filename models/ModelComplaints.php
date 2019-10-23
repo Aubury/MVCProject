@@ -14,26 +14,21 @@ class ModelComplaints
 
     public function addComplaints($arr)
     {
-        $user_id = $_COOKIE['user_id'];
-        $prp = $this->db->con->prepare("SELECT * FROM `users` WHERE `id`={$user_id}");
-        $prp->execute();
-        $user = $prp->fetchAll();
-        $name = "{$user[0]['surname']} {$user[0]['name']}  {$user[0]['patronymic']}";
-//        var_dump([$name, $user[0]['email'], $arr]);
 
         $sqlStr = "INSERT INTO `complaints_suggestions`(`user`, `email`, `text` )
-                   VALUES ('{$name}', '{$user[0]['email']}','{$arr}')";
+                   VALUES ('{$arr['user']}', '{$arr['email']}','{$arr['text']}')";
+
         $this->db->con->exec($sqlStr);
         $id = $this->db->con->lastInsertId();
 
-        $strAnsw = "INSERT INTO `answers`(`id_complaint`, `email`) VALUES ('{$id}', '{$user[0]['email']}')";
+        $strAnsw = "INSERT INTO `answers`(`id_complaint`, `email`) VALUES ('{$id}', '{$arr['email']}')";
         $this->db->con->exec($strAnsw);
 
 
         echo "Жалоба под № $id подана на рассмотрение";
 
         $regD = [
-            'email'    => $user[0]['email'],
+            'email'    => $arr['email'],
             'id'       => $id,
 
         ];
@@ -53,14 +48,14 @@ class ModelComplaints
 
     private function selectTotalComplaints()
     {
-        $prp = $this->db->con->prepare("SELECT * FROM `complaints_suggestions` ORDER BY `id` DESC");
+        $prp = $this->db->con->prepare("SELECT * FROM `complaints_suggestions`");
         $prp->execute();
         return $prp->fetchAll();
     }
 
     private function selectTotalAnswers()
     {
-        $prp = $this->db->con->prepare("SELECT * FROM `answers` ORDER BY `answers`.`id_complaint` DESC");
+        $prp = $this->db->con->prepare("SELECT * FROM `answers`");
         $prp->execute();
         return $prp->fetchAll();
     }
@@ -76,11 +71,11 @@ class ModelComplaints
         if(array_key_exists('user_id', $_COOKIE)){
             $admin = $_COOKIE['user_id'];
 
-            $prp = $this->db->con->prepare("SELECT * FROM `admins` WHERE `id`='{$admin}'");
+            $prp = $this->db->con->prepare("SELECT * FROM `admins` WHERE `id` = '{$admin}'");
             $prp->execute();
             $arr = $prp->fetchAll();
 
-            $lastVisit = $arr[0]['logOut'];
+            $lastVisit = $arr[0]['last_visit'];
 
             $sql = $this->db->con->prepare("SELECT * FROM `complaints_suggestions` WHERE `date` > '{$lastVisit}'");
             $sql->execute();
@@ -101,7 +96,7 @@ class ModelComplaints
        foreach ($answ as $value)
        {
                array_push($massAnsw, [
-                       'Ответ на жалобу № '.$value['id_complaint'],
+                       'Ответ на жалобу №'.$value['id_complaint'],
                        $value['date_time'],
                        $value['text']? $value['text']: 'No answer'
                        ]
@@ -113,7 +108,7 @@ class ModelComplaints
 
                array_push($massCompl, [
                    $value['user'], 
-                   'Жалоба № '.$value['id'],
+                   'Жалоба №'.$value['id'], 
                    $value['email'],
                    $value['date'], 
                    $value['text']
