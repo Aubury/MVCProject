@@ -5,38 +5,9 @@ let rex = {
     arrIcons    : [],
     massOriginal: []
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 //---------------------------------------------------------------------------------------
 const massInp = function massInputsForm(){
 
-=======
-
-//-----------------------------------------------------------------------------------------------------------------
-//Обработчик отправки.
-rex.form.addEventListener('submit', function (ev) {
-
-    ev.preventDefault();
-=======
-
-//-----------------------------------------------------------------------------------------------------------------
-//Обработчик отправки.
-rex.form.addEventListener('submit', function (ev) {
-
-    ev.preventDefault();
-
-    let answ = {};
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-
-    let answ = {};
-
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-=======
-//---------------------------------------------------------------------------------------
-const massInp = function massInputsForm(){
-
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     let form = rex.form;
     const inpArr = [
         {
@@ -87,43 +58,15 @@ const massInp = function massInputsForm(){
             name    : 'published',
         }
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     return inpArr;
 }
 //---------------------------------------------------------------------------------------
 rex.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
-<<<<<<< HEAD
 
     const form = rex.form,
         inpArr = massInp();
-=======
-=======
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-
-    inpArr.forEach((el) => {
-        answ[el.name] = el.inp.value;
-
-    });
-
-    sendObj(answ);
-
-
-});
-
-//-----------------------------------------------------------------------------------------------------
-function sendObj(answ) {
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-=======
-
-    const form = rex.form,
-        inpArr = massInp();
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 
     const fD = new FormData(),
          url = '/reg/addProject';
@@ -137,11 +80,6 @@ function sendObj(answ) {
         body: fD
     }).then(response=>  response.text())
         .then(text=>{rex.form.nextElementSibling.innerHTML = text;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
             // for(let i=0; i<rex.arrInp.length; i++){
             //
             //     rex.arrInp[i].value = '';
@@ -237,15 +175,11 @@ const getMassindex = function getMassIndexById(ev)
         arr.forEach( el =>{
             if(el.name === ev.target.id){
                fillInp(el);
-=======
-            for(let i=0; i<rex.arrInp.length; i++){
-
-                rex.arrInp[i].value = '';
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
             }
+
         });
+    }
 }
-<<<<<<< HEAD
 //---------------------------------------------------------------------------------------------------
 const addListtener = function addToArrListener(arr){
     for (let i = 0; i < arr.length; i++ ){
@@ -270,44 +204,4 @@ const fillInp = function fillInputsForm(arr){
     }
 }
 
-<<<<<<< HEAD
 getProgects();
-=======
-=======
-            for(let i=0; i<rex.arrInp.length; i++){
-
-                rex.arrInp[i].value = '';
-            }
-        });
-}
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-// //--------------------------------------------------------------------------------------------------
-//
-// const addOptions = function addOptions(arr) {
-//
-//     const select = rex.select;
-//     arr.forEach( el => {
-//
-//         let option = document.createElement("option");
-//             option.value = el.name;
-//             select.appendChild(option);
-//     })
-// }
-// //--------------------------------------------------------------------------------------------------
-// const getNamesProjects = function getNamesProjects() {
-//
-//     const url = '/inf/nameProjects';
-//
-//     fetch(url).then(response => response.json())
-//               .then(arr => addOptions(arr));
-// }
-// //--------------------------------------------------------------------------------------------------
-// getNamesProjects();
-// setInterval(getNamesProjects,50000);
-<<<<<<< HEAD
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-=======
-getProgects();
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
-=======
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage

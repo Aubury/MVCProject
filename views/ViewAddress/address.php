@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style><?php include_once ROOT . "/views/css/reset.css"?></style>
     <style><?php include_once ROOT . "/views/css/style.css" ?></style>
+    <style><?php include_once ROOT . "/views/css/fonts.css"?></style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,7 +49,7 @@
                   <a class="nav-link" href="/show/Logs">Logs</a>
               </li>
           </ul>
-          <button class="btn btn-success">Выйти</button>
+            <button class="btn btn-success" id="exit">Выйти</button>
         </div>
       </nav>
 
@@ -67,7 +68,7 @@
                         <form name="formAddress" action="#" method="POST">
                             <textarea name="address" rows="3" style="width: 62vw;"></textarea>
                             <div class="row">
-                              <div class="col-3 offset-9"><button class="btn btn-block btn-success" type="submit">Добавить</button></div>
+                              <div class="col-4 offset-8"><button class="btn btn-block btn-success" type="submit">Добавить / Редактировать</button></div>
                             </div>
                         </form>
                         <span class="italic"></span>
@@ -84,7 +85,7 @@
                           <form name="formTelephones" action="#" method="POST">
                               <textarea name="telephones" rows="3" style="width: 62vw;"></textarea>
                               <div class="row">
-                                <div class="col-3 offset-9"><button class="btn btn-block btn-success" type="submit">Добавить</button></div>
+                                <div class="col-4 offset-8"><button class="btn btn-block btn-success" type="submit">Добавить / Редактировать</button></div>
                               </div>
                           </form>
                           <span class="italic"></span>
@@ -101,7 +102,7 @@
                             <form name="formLinkMap" action="#" method="POST">
                                 <textarea name="link" rows="3" style="width: 62vw;"></textarea>
                                 <div class="row">
-                                  <div class="col-3 offset-9"><button class="btn btn-block btn-success" type="submit">Добавить</button></div>
+                                  <div class="col-4 offset-8"><button class="btn btn-block btn-success" type="submit">Добавить / Редактировать</button></div>
                                 </div>
                             </form>
                             <span class="italic"></span>
@@ -111,7 +112,7 @@
               </div>
       </div>
 
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/bootstrap.min.js"?></script>
+<!--<script>--><?php //include_once ROOT . "/views/ViewSuperAdminPage/js/bootstrap.min.js"?><!--</script>-->
 <script><?php include_once ROOT . "/views/ViewAddress/js/scriptAddress.js"?></script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

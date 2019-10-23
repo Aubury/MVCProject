@@ -2,10 +2,56 @@ const objInf = {
     allCompl : document.querySelector("#allComplaints"),
     allAnsw  : document.querySelector("#answeredComplaints"),
     newCompl : document.querySelector("#newComplaints"),
-    container: document.querySelector(".tableReports")
-
-
+    container: document.querySelector(".tableReports"),
+    form : document.forms['formAnswer']
 }
+//-----------------------------------------------------------------------------
+const massInp = function ArrInputs(){
+
+    let form = objInf.form;
+    const inpArr = [
+        {
+            inp     : form['id'],
+            name    : 'id',
+        },
+        {
+            inp     : form['email'],
+            name    : 'email',
+        },
+        {
+            inp     : form['text'],
+            name    : 'text',
+        }
+    ];
+   return inpArr;
+}
+
+//-----------------------------------------------------------------------------
+
+objInf.form.addEventListener('submit', function (ev) {
+
+    ev.preventDefault();
+
+    const inpArr = massInp();
+
+    let fD = new FormData(),
+        url = '/reg/addAnswer';
+
+    inpArr.forEach(el => fD.append([el.name],el.inp.value));
+
+    fetch(url, {
+        method: "POST",
+        body: fD
+    }).then(e => e.text())
+        .then(data =>{
+            objInf.form.nextElementSibling.innerHTML = data;
+            inpArr.forEach( el => el.inp.value = '');
+            fillUpcontainer();
+            setTimeout(()=> {objInf.form.nextElementSibling.innerHTML = '';}, 10000);
+
+        });
+});
+//-------------------------------------------------------------------------------------------------------
 
 const getNumCompl = function getTotalNumberComplaints(){
 
@@ -46,9 +92,9 @@ const templateContainer = function createTemplateContainer(arr){
         const mainDiv = createAndClass('div', 'card', 'border-warning', 'mb-3'), //основной контейнер
         containerHeaderComp = createAndClass('div', 'card-header'),
         secondDivCompl = createAndClass('div', 'row'),
-        containerCompl = createAndClass('div', 'card-body');//text
+        containerCompl = createAndClass('div', 'card-body', 'compl');//text
 
-      createComplHeaders(secondDivCompl,arr['complains'][k]);
+        createComplHeaders(secondDivCompl,arr['complains'][k]);
 
         containerCompl.innerHTML = arr['complains'][k].pop();
         containerHeaderComp.appendChild(secondDivCompl);
@@ -62,8 +108,9 @@ const templateContainer = function createTemplateContainer(arr){
         containerHeaderAnsw.classList.add('card-header');
         secondDivAnsw.classList.add('row');
         containerAnsw.classList.add('card-body'); //text
+        containerAnsw.classList.add('compl'); //text
 
-        createComplHeaders(secondDivAnsw, arr['answers'][k]);
+        createAnswHeaders(secondDivAnsw, arr['answers'][k]);
 
 
         containerAnsw.innerHTML = arr['answers'][k].pop();
@@ -76,23 +123,36 @@ const templateContainer = function createTemplateContainer(arr){
         info.appendChild(mainDiv);
     }
 }
-
+//--------------------------------------------------------------------------------
 function createAndClass(name = 'div', ...classes){
     const el = document.createElement(name);
     el.classList.add(...classes);
     return el;
 }
-
+//-----------------------------------------------------------------------------------
 function createComplHeaders(parent, arr) {
-    var newArr = arr.slice(0, -1);
-    newArr.forEach( el => {
-            const  div = createAndClass('div', 'col');
-            div.innerHTML = el;
-            parent.appendChild(div);
+    let newArr = arr.slice(0, -1);
 
-    });
+    for (let i = 0; i < newArr.length; i++){
+
+        let div = null;
+        (i === newArr.length-1) ? div = createAndClass('div', 'col'): div = createAndClass('div', 'col', 'item');
+        div.innerHTML = newArr[i];
+        parent.appendChild(div);
+    }
+
 }
+//-------------------------------------------------------------------------------------
+function createAnswHeaders(parent, arr) {
+var newArr = arr.slice(0, -1);
+newArr.forEach( el => {
+    const  div = createAndClass('div', 'col');
+    div.innerHTML = el;
+    parent.appendChild(div);
 
+});
+}
+//-----------------------------------------------------------------------------------
 getNumCompl();
 setInterval(getNumCompl, 50000);
 
@@ -100,7 +160,6 @@ getNumAnsw();
 setInterval(getNumAnsw, 50000);
 
 fillUpcontainer();
-setInterval(fillUpcontainer, 50000);
 
 getNumNewCompl();
 setInterval(getNumNewCompl, 50000);

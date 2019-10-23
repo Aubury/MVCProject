@@ -18,22 +18,37 @@ class ModelBudgetPage
         $sql = $this->db->con->prepare("SELECT * FROM `users` WHERE `email`='{$obj['email_user']}'");
         $sql->execute();
         $user = $sql->fetchAll();
+        //вывод ID проекта
+        $prpPrj = $this->db->con->prepare("SELECT `id` FROM `projects` WHERE `name`='{$obj['project_name']}'");
+        $prpPrj->execute();
+        $id_project = $prpPrj->fetchColumn();
 
         if(count($user)>0){
-            if($user[0]['project_name'] == $obj['project_name']){
+            //вывод ID записи плательщика в проекте
+            $strUP = $this->db->con->prepare("SELECT `id` FROM `projectUserInvestment` 
+                                                        WHERE `id_project`={$id_project} AND `id_user`={$user[0]['id']}");
+            $strUP->execute();
+            $id_usrPrj = $strUP->fetchColumn();
+
+            if($id_usrPrj>0){
 
                 //запись в базу 'budget'
                 $prp = $this->db->con->prepare("INSERT INTO `budget`(`project_name`, `email_user`, `amount`, `timeDate`)
                                                  VALUES ('{$obj['project_name']}', '{$obj['email_user']}', '{$obj['amount']}', '{$obj['timeDate']}')");
                 $prp->execute();
-                //запись в базу  'users'
-                $str = $this->db->con->prepare("UPDATE `users` SET `invest_amount`= invest_amount + '{$obj['amount']}',`payment_time`='{$obj['timeDate']}'
-                                                 WHERE `email`='{$obj['email_user']}'");
-                $str->execute();
+//                //запись в базу  'users'
+//                $str = $this->db->con->prepare("UPDATE `users` SET `invest_amount`= invest_amount + '{$obj['amount']}',`payment_time`='{$obj['timeDate']}'
+//                                                 WHERE `email`='{$obj['email_user']}'");
+//                $str->execute();
 
                 //запись в базу 'projects'
                 $proj = $this->db->con->prepare("UPDATE `projects` SET `raiser_money`= raiser_money + '{$obj['amount']}' WHERE `name`= '{$obj['project_name']}'");
                 $proj->execute();
+
+                //запись в базу `projectUserInvestment`
+                $prpUP = $this->db->con->prepare("UPDATE `projectUserInvestment` SET `invest_amount`=`invest_amount`+{$obj['amount']} ,`payment_time`='{$obj['timeDate']}' WHERE `id`=$id_usrPrj");
+                $prpUP->execute();
+
 
                 $admin = $_COOKIE['user_id'];
                 $name = "{$user[0]['surname']} {$user[0]['name']}  {$user[0]['patronymic']}";
@@ -65,11 +80,6 @@ class ModelBudgetPage
 
         echo json_encode($names);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     public function TotalInformationProject()
     {
         $prp = $this->db->con->prepare("SELECT * FROM `budget` ORDER BY `timeDate` DESC");
@@ -104,11 +114,4 @@ class ModelBudgetPage
         return $adprp->fetchColumn();
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
-=======
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 }

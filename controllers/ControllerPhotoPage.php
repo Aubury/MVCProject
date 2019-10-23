@@ -19,7 +19,10 @@ class ControllerPhotoPage
    }
    public function actionAddPhoto()
    {
-       // если была произведена отправка формы
+       $project = $_POST['project_name'];
+
+
+ //       если была произведена отправка формы
        if(isset($_FILES['file'])) {
            // проверяем, можно ли загружать изображение
            $check = $this->m->Can_upload($_FILES['file']);
@@ -31,7 +34,7 @@ class ControllerPhotoPage
                $image_info = getimagesize($_FILES["file"]["tmp_name"]);
                $width_height = $image_info[0]." x ".$image_info[1];
 
-               $this->m->DownloadImg($img_url, $tmp_name_img, $size_img, $width_height);
+               $this->m->DownloadImg($img_url, $tmp_name_img, $size_img, $width_height,$project);
 
            } else {
                // выводим сообщение об ошибке

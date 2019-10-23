@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style><?php include_once ROOT . "/views/css/reset.css"?></style>
     <style><?php include_once ROOT . "/views/css/style.css" ?></style>
+    <style><?php include_once ROOT . "/views/css/fonts.css"?></style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,26 +49,26 @@
               <a class="nav-link" href="/show/Logs">Logs</a>
             </li>
           </ul>
-          <button class="btn btn-success">Выйти</button>
+            <button class="btn btn-success" id="exit">Выйти</button>
         </div>
       </nav>
 
     <div class="container-fluid">
         <div class="row justify-content-center topTxt">
             <div class="col-12 reports">
-                <span>Управление видеоконтентом</span>
+                <h2>Управление видеоконтентом</h2>
             </div>
         </div>
         <div class="row">
-              <div class="col-4 col-lg-2 offset-lg-10"> 
-                    <input onkeyup="tableSearch()" id="searchVideos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+              <div class="col-4 col-md-3 offset-md-9 p-2">
+                    <input onkeyup="myFunction()" id="searchVideos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
               </div>
         </div> 
     
         <div class="row justify-content-around">
             <div class="col-3 ReportInfo">
                 <div class="card border-info  mb-3">
-                    <div class="card-header reports"><h3>Добавить видео</h3></div>
+                    <div class="card-header"><h3>Добавить видео</h3></div>
                     <div class="card-body">
                         <form name="formVideo" action="#" method="get">
                             <p><input type="text" class="inpText form-control"  name="name" placeholder="Заголовок"></p>
@@ -77,11 +78,6 @@
                         </form>
                         <span class="italic"></span></div>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                 <div class="card border-info  mb-3">
                     <div class="card-header"><h3>Удалить видео</h3></div>
                     <div class="card-body">
@@ -90,13 +86,6 @@
                             <p class="col-12 col-xl-12"><input class="btn btn-block btn-danger" type="submit" value="Удалить"></p>
                         </form>
                         <span class="italic"></span>
-<<<<<<< HEAD
-=======
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
-=======
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                     </div>
                 </div>
             </div>
@@ -107,7 +96,7 @@
         </div>
       </div>
 
-<script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/search/videos.js"?></script>
+<script><?php include_once ROOT . "/views/ViewVideoPage/js/searchVideos.js"?></script>
 <script><?php include_once ROOT . "/views/ViewVideoPage/js/scriptVideo.js"?></script>
 <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

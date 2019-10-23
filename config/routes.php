@@ -2,6 +2,7 @@
 
 return[
     "reg/addUser"    => "UserPage/AddUser/adm/supAdm",
+    "reg/addUsPrj"   => "UserPage/AddUserProgect/adm/supAdm",
     "reg/delUser"    => "UserPage/DelUser/adm/supAdm",
     "reg/addVideo"   => "VideoPage/AddVideo/adm/supAdm",
     "reg/addProject" => "ProjectPage/AddProject/adm/supAdm",
@@ -20,9 +21,8 @@ return[
     "show/Projects"  => "ProjectPage/ShowProjects/adm/supAdm",
     "show/Admins"    => "AdminPage/ShowAdminPage/adm/supAdm",
     "show/Budget"    => "BudgetPage/ShowBudgetPage/adm/supAdm",
-    "show/superAdmin"   => "SuperAdminPage/ShowSuperAdminPage/supAdm",
+    "show/superAdmin"   => "SuperAdminPage/ShowSuperAdminPage/adm/supAdm",
     "show/User"         => "PersonalPage/ShowPersonalPage/usr",
-    "show/Panel"        => "ControlPanel/ShowControlPanel/adm",
     "show/Address"      => "Address/ShowPanelAddress/supAdm",
     "show/BuildStartPage" => "StartPage/BuildStartPage/none",
     "show/Logs"       => "LogsPage/ShowLogsPage/supAdm",
@@ -37,11 +37,6 @@ return[
     "inf/users"         => "UserPage/TotalUsers/adm/supAdm",
     "inf/videos"        => "VideoPage/TotalVideo/adm/supAdm",
     "inf/photos"        => "PhotoPage/TotalPhoto/adm/supAdm",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     "inf/budget"        => "BudgetPage/TotalInf/adm/supAdm",
     "inf/project"       => "ProjectPage/GetInfoProject/none",
     "inf/admins"        => "AdminPage/TotalInfoAdmins/supAdm",
@@ -51,14 +46,6 @@ return[
 
     "log/login"         => "Login/LogIn/none",
     "log/exit"          => "Login/Exit/none"
-=======
-
-    "log/login"         => "Login/LogIn/none"
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-=======
-
-    "log/login"         => "Login/LogIn/none"
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 
 
 ];

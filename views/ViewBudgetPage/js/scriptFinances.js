@@ -4,9 +4,7 @@ let obj = {
     arrInp : document.querySelectorAll(".form-control"),
     table  : document.querySelector('.tableFinances')
 };
-
 //--------------------------------------------------------------------------------------------------
-
 const addOptions = function addOptions(arr) {
 
     const select = obj.select;
@@ -31,7 +29,6 @@ const getNamesProjects = function getNamesProjects() {
         .then(arr => addOptions(arr));
 }
 //--------------------------------------------------------------------------------------------------
-
 obj.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
@@ -54,36 +51,17 @@ obj.form.addEventListener('submit', function (ev) {
 
                 obj.arrInp[i].value = '';
             };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             getTotalInf();
             setTimeout(()=> {form.nextElementSibling.innerHTML = '';}, 10000);
 
-<<<<<<< HEAD
-=======
-            getNamesProjects();
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
-=======
-            getNamesProjects();
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
         })
 });
 //-------------------------------------------------------------------------------------------------
 const replcomma = function comma(data) {
-<<<<<<< HEAD
 
     let newData = '';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-    let newData = '';
-
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     (data.indexOf(",") !== -1) ? newData = data.replace(',','.') : newData = data;
 
     return newData;
@@ -113,15 +91,5 @@ const buildTable = function table(arr) {
 }
  //--------------------------------------------------------------------------------------------------
 getTotalInf();
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 getNamesProjects();
 setInterval(getNamesProjects,500000);

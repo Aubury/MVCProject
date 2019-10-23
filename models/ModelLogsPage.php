@@ -27,16 +27,21 @@ class ModelLogsPage
                 ]);
         }
         echo json_encode($allLogs);
-
-
     }
 
     private function getName($id)
     {
-        $adprp = $this->db->con->prepare("SELECT `name`, `patronymic`, `surname` FROM `admins` WHERE `id`={$id}");
-        $adprp->execute();
-        $adm = $adprp->fetchAll();
-        $name = "{$adm[0]['surname']} {$adm[0]['name']}  {$adm[0]['patronymic']}";
+        $nameAdm = $this->getColumn('name',$id);
+        $patrAdm = $this->getColumn('patronymic',$id);
+        $surAdm = $this->getColumn('surname',$id);
+        $name = "{$surAdm} {$nameAdm} {$patrAdm}";
         return $name;
+    }
+
+    private function getColumn($data, $id)
+    {
+        $adprp = $this->db->con->prepare("SELECT {$data} FROM `admins` WHERE `id`={$id}");
+        $adprp->execute();
+        return $adprp->fetchColumn();
     }
 }

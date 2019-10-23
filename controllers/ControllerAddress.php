@@ -35,4 +35,8 @@ class ControllerAddress
    {
        $this->v->showAddress();
    }
+   public function actionGetContacts()
+   {
+       $this->m->GetContacts();
+   }
 }

@@ -53,7 +53,7 @@ const videosTable = function createVideoTable(arr){
 
     arr.forEach( el =>{
         answer += `<div class="card align-self-end" style="width: 18rem;">
-           <h5 class="h5">${el[1]}</h5>
+           <h5 class="h5 list-group-item">${el[1]}</h5>
            <div class="iframe">${el[3]}</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Id - <span>${el[0]}</span></li>
@@ -74,11 +74,6 @@ const getVideos = function getVideos(){
     fetch('/inf/videos').then( inf => inf.json())
         .then( arr => videosTable(arr));
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 //---------------------------------------------------------------------------------------------
 function sendObj(answ) {
 
@@ -123,12 +118,5 @@ rex.formDel.addEventListener('submit', function (ev) {
 
 })
 //-------------------------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
-=======
->>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
-=======
->>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 getVideos();
 
