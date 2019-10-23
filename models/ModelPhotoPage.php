@@ -93,6 +93,18 @@ class ModelPhotoPage
 
         echo "Файл удален успешно!";
     }
+    public function DelPhoto($id)
+    {
+        $prp = $this->db->con->prepare("DELETE FROM `photos` WHERE `id` = '{$id}'");
+        $prp->execute();
+
+        $admin = $_COOKIE['user_id'];
+        $action = "Удалил(а) фотографию из сервер";
+        $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+        $sql->execute();
+
+        echo "Файл удален успешно!";
+    }
 
 //    public function getRandomFileName($path, $extension='')
 //    {

@@ -66,6 +66,9 @@ class ModelBudgetPage
         echo json_encode($names);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     public function TotalInformationProject()
     {
         $prp = $this->db->con->prepare("SELECT * FROM `budget` ORDER BY `timeDate` DESC");
@@ -100,6 +103,9 @@ class ModelBudgetPage
         return $adprp->fetchColumn();
     }
 
+<<<<<<< HEAD
 =======
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 }

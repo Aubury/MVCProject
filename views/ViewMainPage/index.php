@@ -9,10 +9,14 @@
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<<<<<<< HEAD
 =======
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max960px.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max768px.css"?></style>
@@ -22,6 +26,8 @@
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max430px.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max375px.css"?></style>
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     <title>GIM</title>
 </head>
 <body>
@@ -33,6 +39,9 @@
                 <img src="/views/img/logo.png" alt="logo__company">
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
             <div class="slogan">
                 <p>Главное</p>
                 <p>иметь</p>
@@ -42,6 +51,7 @@
         <div class="headerItem">
                 <div>
                     <a href="#modal"><button class="btn btn-primary btn-lg">Личный кабинет</button></a>
+<<<<<<< HEAD
 =======
             <div class="section right__header__content">
                 <div class="navigation_group_mobile showHide">
@@ -68,6 +78,8 @@
                 <div class="userRoom">
                     <a href="#modal"><button>Личный кабинет</button></a>
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                 </div>
                 <nav class="nav">
                     <ul class="navigation">
@@ -76,6 +88,7 @@
                         <li><a href="#progects">Наши проекты</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
             </div>
@@ -94,6 +107,16 @@
         <div class="container">
             <div class="section about__us">
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+                </div>
+            </div>
+        </div>
+    </header>
+<main class="main">
+        <div class="_container">
+
+            <div class="about__us section">
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                 <div class="about__us__left__content">
                     <h2>О нас</h2>
                     <p>
@@ -115,9 +138,12 @@
 <<<<<<< HEAD
 
             <div class="progect section">
+<<<<<<< HEAD
 =======
             <div class="section progect">
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/car.jpg" alt="">
@@ -146,9 +172,12 @@
 <<<<<<< HEAD
 
             <div class="progect section">
+<<<<<<< HEAD
 =======
             <div class="section progect">
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/house.jpg" alt="">
@@ -171,6 +200,7 @@
                 </div>
                 <div class="video">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="/views/img/video.jpg" alt="">
                         <img src="/views/img/video.jpg" alt="">
                     </div>
@@ -185,6 +215,15 @@
             </div>
             <div class="section photoGalery">
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+                        <img src="/views/img/video.jpg" alt="">
+                        <img src="/views/img/video.jpg" alt="">
+                    </div>
+            </div>
+
+            <div class="photoGalery section">
+
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
@@ -203,6 +242,7 @@
             </div>
         </div>
     </main>
+<<<<<<< HEAD
     <footer class="footer">
         <div class="container">
             <div class="map">
@@ -222,6 +262,16 @@
             </div>
         </div>
 <<<<<<< HEAD
+=======
+
+<footer class="footer">
+    <div class="_container">
+        <div class="map"></div>
+        <div class="contacts row justify-content-around">
+            <div class="address p-2 flex-grow-1"></div>
+            <div class="phone p-2 flex-grow-1"></div>
+        </div>
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     </div>
 </footer>
 <!--    <footer class="footer">-->
@@ -252,6 +302,7 @@
         </div>
    </div>
    <div class="modal" id="modal">
+<<<<<<< HEAD
 =======
     </footer>
    <div class="section modal__certificate none">
@@ -263,6 +314,8 @@
 
     <div class="modal" id="modal">
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
         <div class="modalForm">
             <header>
                 <h2>Введите данные</h2>

@@ -74,11 +74,15 @@
                         </select>
                        <p><input type="text" class="form-control" name="email_user" placeholder="Email плательщика"></p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                        <p class="posRel"><input type="text" class="form-control" name="amount" placeholder="Сумма платежа">
                                  <span class="title none">Вводите сумму без пробелов</span></p>
                        <p class="posRel"><input type="text" class="form-control" name="timeDate" placeholder="Дата платежа( гггг-мм-дд )">
                            <span class="title none">Вводить дату через тире и в формате <br /> гггг-мм-дд</span></p>
                        <p class="col-12 col-xl-12"><button class="btn btn-block btn-success" type="submit">Добавить</button></p>
+<<<<<<< HEAD
 =======
                        <p><input type="text" class="form-control" name="amount" placeholder="Сумма платежа"></p>
                        <p><input type="text" class="form-control" name="timeDate" placeholder="Дата платежа( гггг-мм-дд )"></p>
@@ -86,6 +90,8 @@
                           <div class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></div>
                         </div>
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                     </form>
                     <span class="italic"></span>
                 </div>

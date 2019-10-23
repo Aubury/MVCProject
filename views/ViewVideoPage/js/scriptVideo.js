@@ -75,6 +75,9 @@ const getVideos = function getVideos(){
         .then( arr => videosTable(arr));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 //---------------------------------------------------------------------------------------------
 function sendObj(answ) {
 
@@ -119,7 +122,10 @@ rex.formDel.addEventListener('submit', function (ev) {
 
 })
 //-------------------------------------------------------------------------------------------
+<<<<<<< HEAD
 =======
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 getVideos();
 

@@ -6,6 +6,7 @@ let rex = {
     massOriginal: []
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 //---------------------------------------------------------------------------------------
 const massInp = function massInputsForm(){
 
@@ -20,6 +21,11 @@ rex.form.addEventListener('submit', function (ev) {
     let answ = {};
 
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+//---------------------------------------------------------------------------------------
+const massInp = function massInputsForm(){
+
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     let form = rex.form;
     const inpArr = [
         {
@@ -71,12 +77,16 @@ rex.form.addEventListener('submit', function (ev) {
         }
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     return inpArr;
 }
 //---------------------------------------------------------------------------------------
 rex.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
+<<<<<<< HEAD
 
     const form = rex.form,
         inpArr = massInp();
@@ -95,6 +105,11 @@ rex.form.addEventListener('submit', function (ev) {
 //-----------------------------------------------------------------------------------------------------
 function sendObj(answ) {
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+
+    const form = rex.form,
+        inpArr = massInp();
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 
     const fD = new FormData(),
          url = '/reg/addProject';
@@ -109,6 +124,9 @@ function sendObj(answ) {
     }).then(response=>  response.text())
         .then(text=>{rex.form.nextElementSibling.innerHTML = text;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
             // for(let i=0; i<rex.arrInp.length; i++){
             //
             //     rex.arrInp[i].value = '';
@@ -237,6 +255,7 @@ const fillInp = function fillInputsForm(arr){
     }
 }
 
+<<<<<<< HEAD
 getProgects();
 =======
 // //--------------------------------------------------------------------------------------------------
@@ -263,3 +282,6 @@ getProgects();
 // getNamesProjects();
 // setInterval(getNamesProjects,50000);
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+getProgects();
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage

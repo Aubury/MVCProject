@@ -38,6 +38,9 @@ return[
     "inf/videos"        => "VideoPage/TotalVideo/adm/supAdm",
     "inf/photos"        => "PhotoPage/TotalPhoto/adm/supAdm",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     "inf/budget"        => "BudgetPage/TotalInf/adm/supAdm",
     "inf/project"       => "ProjectPage/GetInfoProject/none",
     "inf/admins"        => "AdminPage/TotalInfoAdmins/supAdm",

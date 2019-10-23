@@ -70,9 +70,12 @@ function sendObj(answ) {
 
 <<<<<<< HEAD
 //----------------------------------------------------------------------------
+<<<<<<< HEAD
 =======
 //--------------------------------------------------------------------
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));

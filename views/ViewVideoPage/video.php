@@ -78,6 +78,9 @@
                         <span class="italic"></span></div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                 <div class="card border-info  mb-3">
                     <div class="card-header"><h3>Удалить видео</h3></div>
                     <div class="card-body">
@@ -86,8 +89,11 @@
                             <p class="col-12 col-xl-12"><input class="btn btn-block btn-danger" type="submit" value="Удалить"></p>
                         </form>
                         <span class="italic"></span>
+<<<<<<< HEAD
 =======
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                     </div>
                 </div>
             </div>
