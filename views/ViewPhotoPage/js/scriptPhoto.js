@@ -57,7 +57,7 @@ rex.form.addEventListener('submit', function (ev) {
             setTimeout(()=> {
                 rex.form[0].value ='';
                 rex.form.nextElementSibling.innerHTML = '';
-                fileField.value ='';}, 10000);
+                fileField.value ='';}, 5000);
 
         });
 })
