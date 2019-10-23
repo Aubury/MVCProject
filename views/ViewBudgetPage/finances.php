@@ -75,6 +75,7 @@
                        <p><input type="text" class="form-control" name="email_user" placeholder="Email плательщика"></p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
                        <p class="posRel"><input type="text" class="form-control" name="amount" placeholder="Сумма платежа">
@@ -84,14 +85,19 @@
                        <p class="col-12 col-xl-12"><button class="btn btn-block btn-success" type="submit">Добавить</button></p>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                        <p><input type="text" class="form-control" name="amount" placeholder="Сумма платежа"></p>
                        <p><input type="text" class="form-control" name="timeDate" placeholder="Дата платежа( гггг-мм-дд )"></p>
                         <div class="row">
                           <div class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></div>
                         </div>
+<<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                     </form>
                     <span class="italic"></span>
                 </div>

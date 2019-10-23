@@ -80,6 +80,7 @@ class ModelPhotoPage
         $mass = $prp->fetchAll();
 
        echo json_encode($mass);
+<<<<<<< HEAD
     }
     public function DelPhoto($id)
     {
@@ -104,6 +105,8 @@ class ModelPhotoPage
         $sql->execute();
 
         echo "Файл удален успешно!";
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     }
 
 //    public function getRandomFileName($path, $extension='')

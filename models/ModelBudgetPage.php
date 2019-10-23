@@ -67,6 +67,7 @@ class ModelBudgetPage
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     public function TotalInformationProject()
@@ -108,4 +109,6 @@ class ModelBudgetPage
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 }

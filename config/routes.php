@@ -39,6 +39,7 @@ return[
     "inf/photos"        => "PhotoPage/TotalPhoto/adm/supAdm",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     "inf/budget"        => "BudgetPage/TotalInf/adm/supAdm",
@@ -50,6 +51,10 @@ return[
 
     "log/login"         => "Login/LogIn/none",
     "log/exit"          => "Login/Exit/none"
+=======
+
+    "log/login"         => "Login/LogIn/none"
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 
     "log/login"         => "Login/LogIn/none"

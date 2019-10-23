@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**{*/
 /*    box-sizing: border-box;*/
 /*}*/
@@ -11,6 +12,9 @@
 /*    box-sizing: border-box;*/
 /*}*/
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+/* do not download to github */
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 html{
     scroll-behavior: smooth;
 }
@@ -88,6 +92,7 @@ html{
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 .headerItem:nth-child(2) div:first-child{
@@ -99,13 +104,18 @@ html{
     text-align: right;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 .right__header__content .companySloganNone{
     font-size: 35px;
     color: transparent;
     user-select: none;
+<<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 }
 .right__header__content .userRoom button{
     padding: 10px;
@@ -150,6 +160,7 @@ html{
 .navigation li:last-child{
     padding: 5px 0px 5px 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 /*.countPeoples{*/
 /*    !*color: #f9e196 !important;*!*/
@@ -173,6 +184,17 @@ html{
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+
+
+
+
+}
+/* ------------------------main------------------------------------ */
+
+
+.main .section{
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     margin: 30px 0 30px 0;
     padding: 10px;
     display: flex;
@@ -269,8 +291,11 @@ html{
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*----------------------footer-----------------------------*/
 =======
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 /* -------------------------footer---------------------------------- */
 
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage

@@ -7,6 +7,7 @@ let rex = {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //---------------------------------------------------------------------------------------
 const massInp = function massInputsForm(){
 
@@ -17,6 +18,16 @@ const massInp = function massInputsForm(){
 rex.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
+=======
+
+//-----------------------------------------------------------------------------------------------------------------
+//Обработчик отправки.
+rex.form.addEventListener('submit', function (ev) {
+
+    ev.preventDefault();
+
+    let answ = {};
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 
     let answ = {};
 
@@ -78,6 +89,7 @@ const massInp = function massInputsForm(){
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     return inpArr;
@@ -91,6 +103,8 @@ rex.form.addEventListener('submit', function (ev) {
     const form = rex.form,
         inpArr = massInp();
 =======
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 
     inpArr.forEach((el) => {
         answ[el.name] = el.inp.value;
@@ -123,6 +137,7 @@ function sendObj(answ) {
         body: fD
     }).then(response=>  response.text())
         .then(text=>{rex.form.nextElementSibling.innerHTML = text;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -258,6 +273,14 @@ const fillInp = function fillInputsForm(arr){
 <<<<<<< HEAD
 getProgects();
 =======
+=======
+            for(let i=0; i<rex.arrInp.length; i++){
+
+                rex.arrInp[i].value = '';
+            }
+        });
+}
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 // //--------------------------------------------------------------------------------------------------
 //
 // const addOptions = function addOptions(arr) {
@@ -281,7 +304,10 @@ getProgects();
 // //--------------------------------------------------------------------------------------------------
 // getNamesProjects();
 // setInterval(getNamesProjects,50000);
+<<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 getProgects();
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage

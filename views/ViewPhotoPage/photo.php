@@ -61,6 +61,7 @@
         <div class="row">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div class="col-4 col-md-3 offset-md-9 p-2">
                     <input onkeyup="myFunction()" id="searchPhotos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
 =======
@@ -71,12 +72,17 @@
               <div class="col-4 col-md-3 offset-md-9 p-2">
                     <input onkeyup="myFunction()" id="searchPhotos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+              <div class="col-4 col-lg-2 offset-lg-10"> 
+                    <input onkeyup="tableSearch()" id="searchPhotos" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
               </div>
         </div>
 
         <div class="row justify-content-around">
             <div class="col-3 ReportInfo">
                 <div class="card border-info  mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -101,13 +107,20 @@
 =======
                     <div class="card-header reports"><h3>Добавить фото</h3></div>
                     <div class="card-body">
+=======
+                    <div class="card-header reports"><h3>Добавить фото</h3></div>
+                    <div class="card-body">
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                         <form name="formPhoto" action="/reg/addPhoto" method="post" enctype="multipart/form-data">
 <!--                            <p><input type="text" class="inpText form-control"  name="name" placeholder="Заголовок"></p>-->
                             <p> <input type="file" name="img_url" class="form-control-file"></p>
                             <p class="col-12 col-xl-12"> <button class="btn btn-block btn-success" type="submit">Добавить</button></p>
+<<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                         </form>
                         <span class="italic"></span>
                     </div>

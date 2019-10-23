@@ -14,6 +14,7 @@ const photoTable = function createPhotoTable(arr) {
         answer += `<div class="card align-self-end" style="width: 18rem;">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
            <div class="list-group-item item">Проект - <span>${el.project_name}</span></div>
            <h5 class="h5 list-group-item">${el.name}</h5>
           <div class="iframe"><img class="card-img-top" src="${el.direction}${el.name}" alt="Card image cap"></div> 
@@ -26,6 +27,10 @@ const photoTable = function createPhotoTable(arr) {
            <h5 class="h5 list-group-item">${el.name}</h5>
           <div class="iframe"><img class="card-img-top" src="${el.direction}${el.name}" alt="Card image cap"></div> 
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+           <h5 class="h5">${el.name}</h5>
+           <img class="card-img-top" src="${el[4]}${el[1]}" alt="Card image cap">
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Id - <span>${el.id}</span></li>
             <li class="list-group-item">Размер - <span>${el.size}</span></li>
@@ -46,6 +51,7 @@ const getPhotos = function getPhotos(){
         // .then((arr => console.log(arr)));
         .then( arr => photoTable(arr));
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -107,5 +113,7 @@ rex.delForm.addEventListener('submit', function (ev) {
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 getPhotos();
 

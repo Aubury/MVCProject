@@ -9,12 +9,15 @@
     <style><?php include_once ROOT . "/views/css/style.css" ?></style>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <style><?php include_once ROOT . "/views/css/fonts.css"?></style>
 =======
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
     <style><?php include_once ROOT . "/views/css/fonts.css"?></style>
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -113,10 +116,13 @@
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div class="col-9">
             <div class="row justify-content-around tableProjects"></div>
         </div>
 =======
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
         <div class="col-8">
           <table class="tableProjects table table-hover">
               <thead>
@@ -168,12 +174,15 @@
             </table>
       </div>
         
+<<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
         <div class="col-9">
             <div class="row justify-content-around tableProjects"></div>
         </div>
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     </div>
 
 

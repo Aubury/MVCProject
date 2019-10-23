@@ -55,6 +55,7 @@ obj.form.addEventListener('submit', function (ev) {
                 obj.arrInp[i].value = '';
             };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             getTotalInf();
             setTimeout(()=> {form.nextElementSibling.innerHTML = '';}, 10000);
@@ -65,6 +66,9 @@ obj.form.addEventListener('submit', function (ev) {
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+            getNamesProjects();
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
         })
 });
 //-------------------------------------------------------------------------------------------------
@@ -73,6 +77,7 @@ const replcomma = function comma(data) {
 
     let newData = '';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -111,6 +116,9 @@ getTotalInf();
 <<<<<<< HEAD
 =======
 
+=======
+
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======

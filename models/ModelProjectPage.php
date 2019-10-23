@@ -17,6 +17,7 @@ class ModelProjectPage
        $prp->execute();
        $project = $prp->fetchAll();
 
+<<<<<<< HEAD
        if(count($project)=== 0){
 
 <<<<<<< HEAD
@@ -157,6 +158,18 @@ class ModelProjectPage
 
 
 =======
+        $admin = $_COOKIE['user_id'];
+        $action = "Добавил(а) проект {$arr['name']} в базу данных";
+        $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");
+        $sql->execute();
+
+        echo "Проект добавлен";
+    }
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+        $sqlStr = $this->db->con->prepare("INSERT INTO `projects`(`name`, `budget`) VALUES ('{$arr['name']}','{$arr['budget']}')");
+        $sqlStr->execute();
+
         $admin = $_COOKIE['user_id'];
         $action = "Добавил(а) проект {$arr['name']} в базу данных";
         $sql = $this->db->con->prepare("INSERT INTO `weWatchingYou`(`id_admin`, `actions`) VALUES ('{$admin}', '{$action}')");

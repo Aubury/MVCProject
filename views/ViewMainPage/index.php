@@ -10,6 +10,7 @@
     <style><?php include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,6 +19,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max960px.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max768px.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max640px.css"?></style>
@@ -77,9 +80,12 @@
                 </div>
                 <div class="userRoom">
                     <a href="#modal"><button>Личный кабинет</button></a>
+<<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                 </div>
                 <nav class="nav">
                     <ul class="navigation">
@@ -90,6 +96,7 @@
                     </ul>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>
             </div>
         </div>
@@ -99,6 +106,8 @@
 
             <div class="about__us section">
 =======
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                 </nav>
             </div>
         </div>
@@ -106,6 +115,7 @@
     <main class="main">
         <div class="container">
             <div class="section about__us">
+<<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
                 </div>
@@ -117,6 +127,8 @@
 
             <div class="about__us section">
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                 <div class="about__us__left__content">
                     <h2>О нас</h2>
                     <p>
@@ -136,6 +148,7 @@
                 </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <div class="progect section">
 <<<<<<< HEAD
@@ -144,6 +157,9 @@
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+            <div class="section progect">
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/car.jpg" alt="">
@@ -170,6 +186,7 @@
                     </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <div class="progect section">
 <<<<<<< HEAD
@@ -178,6 +195,9 @@
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+            <div class="section progect">
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/house.jpg" alt="">
@@ -201,6 +221,7 @@
                 <div class="video">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src="/views/img/video.jpg" alt="">
                         <img src="/views/img/video.jpg" alt="">
                     </div>
@@ -209,11 +230,14 @@
             <div class="photoGalery section">
 
 =======
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                     <img src="/views/img/video.jpg" alt="">
                     <img src="/views/img/video.jpg" alt="">
                 </div>
             </div>
             <div class="section photoGalery">
+<<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
                         <img src="/views/img/video.jpg" alt="">
@@ -224,14 +248,20 @@
             <div class="photoGalery section">
 
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
                 <img src="/views/img/house.jpg" alt="">
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <div class="video section">
 
+=======
+            <div class="section video">
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
             <div class="section video">
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
@@ -243,6 +273,9 @@
         </div>
     </main>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     <footer class="footer">
         <div class="container">
             <div class="map">
@@ -260,6 +293,7 @@
                     <p>+12345667789</p>
                 </div>
             </div>
+<<<<<<< HEAD
         </div>
 <<<<<<< HEAD
 =======
@@ -304,6 +338,9 @@
    <div class="modal" id="modal">
 <<<<<<< HEAD
 =======
+=======
+        </div>
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     </footer>
    <div class="section modal__certificate none">
         <div class="modal__content__certificate">
@@ -313,9 +350,12 @@
     </div>
 
     <div class="modal" id="modal">
+<<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
         <div class="modalForm">
             <header>
                 <h2>Введите данные</h2>
