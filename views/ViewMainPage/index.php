@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -75,6 +76,27 @@
                         </div>
                     </div>
                 </div>
+=======
+    <title>GIM</title>
+</head>
+<body>
+    <header class="header">
+        <button class="top topHide"><span>&lt;</span></button>
+        <div class="container">
+            <section class="left__header__content">
+                <h2 class="none">h2</h2>
+                <div class="logo">
+                    <img src="/views/img/logo.png" alt="logo__company">
+                </div>
+                <div class="companySlogan">
+                    <p>Главное</p>
+                    <p>иметь</p>
+                    <p>мечту</p>
+                </div>
+            </section>
+            <section class="right__header__content">
+                <h2 class="none">h2</h2>
+>>>>>>> parent of 2c98357... marge MainPage
                 <div class="companySloganNone">
                     <p>Главное иметь мечту</p>
                 </div>
@@ -109,11 +131,12 @@
 =======
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
                 </nav>
-            </div>
+            </section>
         </div>
     </header>
     <main class="main">
         <div class="container">
+<<<<<<< HEAD
             <div class="section about__us">
 <<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
@@ -129,6 +152,10 @@
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+            <section class="about__us">
+                <h2 class="none">h2</h2>
+>>>>>>> parent of 2c98357... marge MainPage
                 <div class="about__us__left__content">
                     <h2>О нас</h2>
                     <p>
@@ -146,6 +173,7 @@
                     <img src="/views/img/video.jpg" alt="">
                     <img src="/views/img/video.jpg" alt="">
                 </div>
+<<<<<<< HEAD
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +188,11 @@
 =======
             <div class="section progect">
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+            </section>
+            <section class="progect">
+                <h2 class="none">progects</h2>
+>>>>>>> parent of 2c98357... marge MainPage
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/car.jpg" alt="">
@@ -184,6 +217,7 @@
                         <img src="/views/img/video.jpg" alt="">
                         <img src="/views/img/video.jpg" alt="">
                     </div>
+<<<<<<< HEAD
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,6 +232,11 @@
 =======
             <div class="section progect">
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+            </section>
+            <section class="progect">
+                <h2 class="none">h2</h2>
+>>>>>>> parent of 2c98357... marge MainPage
                 <div class="progect__left__content">
                     <div class="galery">
                         <img src="/views/img/house.jpg" alt="">
@@ -219,6 +258,7 @@
                     </div>
                 </div>
                 <div class="video">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,11 +305,25 @@
 =======
             <div class="section video">
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+                        <img src="/views/img/video.jpg" alt="">
+                        <img src="/views/img/video.jpg" alt="">
+                    </div>
+            </section>
+            <section class="photoGalery">
+                <h2 class="none">h2</h2>
+                <img src="/views/img/house.jpg" alt="">
+                <img src="/views/img/house.jpg" alt="">
+                <img src="/views/img/house.jpg" alt="">
+            </section>
+            <section class="video">
+                <h2 class="none">h2</h2>
+>>>>>>> parent of 2c98357... marge MainPage
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
-            </div>
+            </section>
         </div>
     </main>
 <<<<<<< HEAD
@@ -342,12 +396,13 @@
         </div>
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
     </footer>
-   <div class="section modal__certificate none">
+   <section class="modal__certificate none">
+        <h2 class="none">h2</h2>
         <div class="modal__content__certificate">
             <img src="/views/img/page.jpg" alt="свидетельство">
             <input type="button" class="closeModalCertificate" value="X">
         </div>
-    </div>
+   </section>
 
     <div class="modal" id="modal">
 <<<<<<< HEAD

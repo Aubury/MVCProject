@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**{*/
 /*    box-sizing: border-box;*/
 /*}*/
@@ -15,6 +16,8 @@
 =======
 /* do not download to github */
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 2c98357... marge MainPage
 html{
     scroll-behavior: smooth;
 }
@@ -109,6 +112,7 @@ html{
 .right__header__content .companySloganNone{
     font-size: 35px;
     color: transparent;
+<<<<<<< HEAD
     user-select: none;
 <<<<<<< HEAD
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
@@ -116,6 +120,8 @@ html{
 >>>>>>> parent of 1f249eb... Merge pull request #2 from Aubury/Dacemmi2mmi2_mainPage
 =======
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+>>>>>>> parent of 2c98357... marge MainPage
 }
 .right__header__content .userRoom button{
     padding: 10px;
@@ -190,11 +196,15 @@ html{
 
 
 }
-/* ------------------------main------------------------------------ */
+/* ------------------------------------------------------------ */
 
 
+<<<<<<< HEAD
 .main .section{
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
+=======
+.main section{
+>>>>>>> parent of 2c98357... marge MainPage
     margin: 30px 0 30px 0;
     padding: 10px;
     display: flex;
@@ -276,7 +286,7 @@ html{
 }
 
 
-.section .video{
+section .video{
     width: 100%;
 }
 .video{
@@ -292,11 +302,14 @@ html{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*----------------------footer-----------------------------*/
 =======
 =======
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 /* -------------------------footer---------------------------------- */
+=======
+>>>>>>> parent of 2c98357... marge MainPage
 
 >>>>>>> parent of e316925... Merge branch 'master' into Dacemmi2mmi2_mainPage
 =======
