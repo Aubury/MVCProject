@@ -29,11 +29,6 @@ class ControllerVideoPage
     {
         $this->m->TotalVideo();
     }
-    public function actionDelVideo()
-    {
-       $this->m->DelVideo($_POST['id']);
-    }
-
 
 
 }

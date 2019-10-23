@@ -79,6 +79,9 @@ class ModelComplaints
             $prp = $this->db->con->prepare("SELECT * FROM `admins` WHERE `id`='{$admin}'");
             $prp->execute();
             $arr = $prp->fetchAll();
+//            echo "<pre>";
+//            var_dump($arr);
+//            echo "</pre>";
 
             $lastVisit = $arr[0]['logOut'];
 

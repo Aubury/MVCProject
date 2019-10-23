@@ -43,10 +43,6 @@ class ControllerPhotoPage
        }
 
    }
-   public function actionDelPhoto()
-   {
-       $this->m->DelPhoto($_POST['id']);
-   }
 
    public function actionTotalPhoto()
    {

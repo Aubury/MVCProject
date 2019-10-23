@@ -1,8 +1,7 @@
 let obj = {
     select : document.querySelector('#inputState'),
     form   : document.forms['formAddPay'],
-    arrInp : document.querySelectorAll(".form-control"),
-    table  : document.querySelector('.tableFinances')
+    arrInp : document.querySelectorAll(".form-control")
 };
 //--------------------------------------------------------------------------------------------------
 const addOptions = function addOptions(arr) {
@@ -32,13 +31,15 @@ const getNamesProjects = function getNamesProjects() {
 obj.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
+
+
     const url = '/reg/AddMoney',
           fD  = new FormData(),
           form = obj.form;
 
     fD.append('project_name', form['project_name'].value);
     fD.append('email_user', form['email_user'].value);
-    fD.append('amount', replcomma(form['amount'].value));
+    fD.append('amount', form['amount'].value);
     fD.append('timeDate', form['timeDate'].value);
 
     fetch(url,{
@@ -54,20 +55,10 @@ obj.form.addEventListener('submit', function (ev) {
 
             getTotalInf();
             setTimeout(()=> {form.nextElementSibling.innerHTML = '';}, 10000);
-
         })
 });
-//-------------------------------------------------------------------------------------------------
-const replcomma = function comma(data) {
-
-    let newData = '';
-
-    (data.indexOf(",") !== -1) ? newData = data.replace(',','.') : newData = data;
-
-    return newData;
-
-}
 //--------------------------------------------------------------------------------------------------
+
 const getTotalInf = function getTotalInformation(){
 
     fetch('/inf/budget').then( data => data.json())
@@ -91,5 +82,6 @@ const buildTable = function table(arr) {
 }
  //--------------------------------------------------------------------------------------------------
 getTotalInf();
+
 getNamesProjects();
 setInterval(getNamesProjects,500000);

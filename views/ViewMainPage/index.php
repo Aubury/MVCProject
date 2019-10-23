@@ -8,29 +8,55 @@
     <style><?php include_once ROOT . "/views/css/fonts.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/style.css"?></style>
     <style><?php include_once ROOT . "/views/ViewMainPage/css/modal.css"?></style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max960px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max768px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max640px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max600px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max500px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max430px.css"?></style>
+    <style><?php include_once ROOT . "/views/ViewMainPage/css/style_max375px.css"?></style>
     <title>GIM</title>
 </head>
 <body>
-<header class="hederContainer">
-    <button class="top topHide"><span>&lt;</span></button>
-    <div class="userHeader">
-        <div class="headerItem">
-            <div >
-                <img src="/views/img/logo.png" alt="logo__company">
+    <header class="header">
+        <button class="top topHide"><span>&lt;</span></button>
+        <div class="container">
+            <div class="section left__header__content">
+                <div class="logo">
+                    <img src="/views/img/logo.png" alt="logo__company">
+                </div>
+                <div class="companySlogan">
+                    <p>Главное</p>
+                    <p>иметь</p>
+                    <p>мечту</p>
+                </div>
             </div>
-            <div class="slogan">
-                <p>Главное</p>
-                <p>иметь</p>
-                <p>мечту</p>
-            </div>
-        </div>
-        <div class="headerItem">
-                <div>
-                    <a href="#modal"><button class="btn btn-primary btn-lg">Личный кабинет</button></a>
+            <div class="section right__header__content">
+                <div class="navigation_group_mobile showHide">
+                    <div class="menu">
+                        <input type="checkbox" class="hide" id="menu_logo">
+                        <div class="logo_menu">
+                            <label for="menu_logo">
+                                <img src="/views/img/video.jpg" width="40" height="40" alt="">
+                            </label>
+                        </div>
+                        <div class="elements_menu">
+                            <ul>
+                                <li class="countPeoples">Нас уже *****</li>
+                                <li>О нас</li>
+                                <li><a href="#progects">Наши проекты</a></li>
+                                <li><a href="#contacts">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="companySloganNone">
+                    <p>Главное иметь мечту</p>
+                </div>
+                <div class="userRoom">
+                    <a href="#modal"><button>Личный кабинет</button></a>
+
                 </div>
                 <div>
                     <ul class="navigation">
@@ -40,14 +66,15 @@
                         <li><a href="#progects">Наши проекты</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
-                </div>
+
+                </nav>
             </div>
         </div>
     </header>
-<main class="main">
-        <div class="_container">
+    <main class="main">
+        <div class="container">
+            <div class="section about__us">
 
-            <div class="about__us section">
                 <div class="about__us__left__content">
                     <h2>О нас</h2>
                     <p>
@@ -67,9 +94,10 @@
                 </div>
             </div>
 
-            <div class="progect section">
+            <div class="section progect">
+
                 <div class="progect__left__content">
-                    <div class="galery">
+                    <div class="img__progect">
                         <img src="/views/img/car.jpg" alt="">
                     </div>
                     <p>
@@ -94,9 +122,10 @@
                     </div>
             </div>
 
-            <div class="progect section">
+            <div class="section progect">
+
                 <div class="progect__left__content">
-                    <div class="galery">
+                    <div class="img__progect">
                         <img src="/views/img/house.jpg" alt="">
                     </div>
                     <p>
@@ -116,19 +145,19 @@
                     </div>
                 </div>
                 <div class="video">
-                        <img src="/views/img/video.jpg" alt="">
-                        <img src="/views/img/video.jpg" alt="">
-                    </div>
+
+                    <img src="/views/img/video.jpg" alt="">
+                    <img src="/views/img/video.jpg" alt="">
+                </div>
+            </div>
+            <div class="section photoGalery">
+
+                <img src="/views/img/house.jpg" alt="">
+                <img src="/views/img/house.jpg" alt="">
+                <img src="/views/img/house.jpg" alt="">
             </div>
 
-            <div class="photoGalery section">
-
-                <img src="/views/img/house.jpg" alt="">
-                <img src="/views/img/house.jpg" alt="">
-                <img src="/views/img/house.jpg" alt="">
-            </div>
-
-            <div class="video section">
+            <div class="section video">
 
                 <img src="/views/img/video.jpg" alt="">
                 <img src="/views/img/video.jpg" alt="">
@@ -145,6 +174,17 @@
             <div class="address p-2 flex-grow-1"></div>
             <div class="phone p-2 flex-grow-1"></div>
         </div>
+
+    </footer>
+   <div class="section modal__certificate none">
+        <div class="modal__content__certificate">
+            <img src="/views/img/page.jpg" alt="свидетельство">
+            <input type="button" class="closeModalCertificate" value="X">
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+
     </div>
 </footer>
 <!--    <footer class="footer">-->
@@ -175,6 +215,7 @@
         </div>
    </div>
    <div class="modal" id="modal">
+
         <div class="modalForm">
             <header>
                 <h2>Введите данные</h2>

@@ -1,12 +1,12 @@
 let rex = {
     form : document.forms['formProject'],
-    arrInp : document.forms['formProject'].querySelectorAll('.form-control'),
-    table  : document.querySelector('.tableProjects'),
-    arrIcons    : [],
-    massOriginal: []
+    arrInp : document.forms['formProject'].querySelectorAll('.form-control')
+
 };
+
 //---------------------------------------------------------------------------------------
 const massInp = function massInputsForm(){
+
 
     let form = rex.form;
     const inpArr = [
@@ -17,69 +17,40 @@ const massInp = function massInputsForm(){
         {
             inp     : form['budget'],
             name    : 'budget',
-        },
-        {
-            inp     : form['photo_1'],
-            name    : 'photo_1',
-        },
-        {
-            inp     : form['photo_2'],
-            name    : 'photo_2',
-        },
-        {
-            inp     : form['photo_3'],
-            name    : 'photo_3',
-        },
-        {
-            inp     : form['photo_4'],
-            name    : 'photo_4',
-        },
-        {
-            inp     : form['photo_5'],
-            name    : 'photo_5',
-        },
-        {
-            inp     : form['video_1'],
-            name    : 'video_1',
-        },{
-            inp     : form['video_2'],
-            name    : 'video_2',
-        },
-        {
-            inp     : form['text_1'],
-            name    : 'text_1',
-        },
-        {
-            inp     : form['text_2'],
-            name    : 'text_2',
-        },
-        {
-            inp     : form['published'],
-            name    : 'published',
         }
     ];
+
     return inpArr;
 }
 //---------------------------------------------------------------------------------------
 rex.form.addEventListener('submit', function (ev) {
 
-    ev.preventDefault();
 
-    const form = rex.form,
-        inpArr = massInp();
+    inpArr.forEach((el) => {
+        answ[el.name] = el.inp.value;
+
+    });
+
+    sendObj(answ);
+
+
+});
+
+//-----------------------------------------------------------------------------------------------------
+function sendObj(answ) {
 
     const fD = new FormData(),
          url = '/reg/addProject';
 
-    inpArr.forEach((el) => { (el.inp.name === 'published')?
-        fD.append([el.name],el.inp.checked.value): fD.append([el.name],el.inp.value);});
-
+    fD.append('name', answ['name']);
+    fD.append('budget', answ['budget']);
 
     fetch(url, {
         method: "POST",
         body: fD
     }).then(response=>  response.text())
         .then(text=>{rex.form.nextElementSibling.innerHTML = text;
+
             // for(let i=0; i<rex.arrInp.length; i++){
             //
             //     rex.arrInp[i].value = '';
@@ -205,3 +176,4 @@ const fillInp = function fillInputsForm(arr){
 }
 
 getProgects();
+

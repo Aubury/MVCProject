@@ -80,6 +80,7 @@ class ModelBudgetPage
 
         echo json_encode($names);
     }
+
     public function TotalInformationProject()
     {
         $prp = $this->db->con->prepare("SELECT * FROM `budget` ORDER BY `timeDate` DESC");
@@ -113,5 +114,6 @@ class ModelBudgetPage
         $adprp->execute();
         return $adprp->fetchColumn();
     }
+
 
 }
