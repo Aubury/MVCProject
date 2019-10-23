@@ -3,9 +3,7 @@ let obj = {
     form   : document.forms['formAddPay'],
     arrInp : document.querySelectorAll(".form-control")
 };
-
 //--------------------------------------------------------------------------------------------------
-
 const addOptions = function addOptions(arr) {
 
     const select = obj.select;
@@ -30,7 +28,6 @@ const getNamesProjects = function getNamesProjects() {
         .then(arr => addOptions(arr));
 }
 //--------------------------------------------------------------------------------------------------
-
 obj.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
@@ -55,12 +52,36 @@ obj.form.addEventListener('submit', function (ev) {
 
                 obj.arrInp[i].value = '';
             };
-            getNamesProjects();
+
+            getTotalInf();
+            setTimeout(()=> {form.nextElementSibling.innerHTML = '';}, 10000);
         })
 });
 //--------------------------------------------------------------------------------------------------
 
+const getTotalInf = function getTotalInformation(){
 
+    fetch('/inf/budget').then( data => data.json())
+        .then( arr => buildTable(arr));
+}
+//--------------------------------------------------------------------------------------------------
+const buildTable = function table(arr) {
+
+    const table = obj.table;
+    //   Удаляю всех детей!!!
+    while (table.hasChildNodes()) {
+        table.removeChild(table.firstChild);
+    }
+
+    let trs = "<tr><th>Время платежа</th><th>Плательщик</th><th>Сумма платежа</th><th>Проект</th></tr>";
+    arr.forEach(el => {
+        trs = `${trs}<tr><td>${el[0]}</td><td>${el[1]}</td><td>${el[2]}</td><td>${el[3]}</td></tr>`;
+    });
+
+    table.innerHTML = trs;
+}
+ //--------------------------------------------------------------------------------------------------
+getTotalInf();
 
 getNamesProjects();
 setInterval(getNamesProjects,500000);

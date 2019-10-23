@@ -18,8 +18,7 @@ class ControllerComplaints
     public function actionAddComplaints()
     {
 
-        $obj =(array)json_decode($_GET['value']);
-        $this->m->addComplaints($obj);
+        $this->m->addComplaints($_POST['text']);
     }
 
     public function actionNumComplaints()

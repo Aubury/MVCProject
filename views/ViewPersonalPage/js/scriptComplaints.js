@@ -1,6 +1,6 @@
 let rex = {
-    form : document.forms['formComplaints'],
-    arrInp : document.forms['formComplaints'].querySelectorAll('.inpText'),
+    form : document.forms['formComplaints']
+    // arrInp : document.forms['formComplaints'].querySelectorAll('.inpText'),
 };
 
 //-----------------------------------------------------------------------------------------------------------------
@@ -9,42 +9,17 @@ rex.form.addEventListener('submit', function (ev) {
 
     ev.preventDefault();
 
-    let form = rex.form;
-    const inpArr = [
-        {
-            inp     : form['user'],
-            name    : 'user',
-        },
-        {
-            inp     : form['email'],
-            name    : 'email',
-        },
-        {
-            inp     : form['text'],
-            name    : 'text',
-        }
-    ];
+    const url = '/reg/addComplaints',
+          fD = new FormData();
 
-    let answ = {};
-
-    inpArr.forEach((el) => { answ[el.name] = el.inp.value; });
-
-    sendObj(answ);
-
+    fD.append('text',rex.form['text'].value);
+    fetch(url,{
+        method : 'POST',
+        body : fD
+    }).then( data => data.text())
+        .then( text =>{
+            rex.form.nextElementSibling.innerHTML = text;
+            rex.form['text'].value = '';
+            setTimeout(()=> {rex.form.nextElementSibling.innerHTML = '';}, 10000);
+        })
 });
-
-//-----------------------------------------------------------------------------------------------------
-function sendObj(answ) {
-
-    let str = encodeURIComponent(JSON.stringify(answ)),
-        url = `/reg/addComplaints?value=${str}`;
-
-
-    fetch(url).then((response)=> {  return response.text();})
-        .then((text)=>{rex.form.nextElementSibling.innerHTML = text;
-            // for(let i=0; i<rex.arrInp.length; i++){
-            //
-            //     rex.arrInp[i].value = '';
-            // }
-        });
-}

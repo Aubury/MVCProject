@@ -2,6 +2,7 @@
 
 return[
     "reg/addUser"    => "UserPage/AddUser/adm/supAdm",
+    "reg/addUsPrj"   => "UserPage/AddUserProgect/adm/supAdm",
     "reg/delUser"    => "UserPage/DelUser/adm/supAdm",
     "reg/addVideo"   => "VideoPage/AddVideo/adm/supAdm",
     "reg/addProject" => "ProjectPage/AddProject/adm/supAdm",
@@ -18,9 +19,8 @@ return[
     "show/Projects"  => "ProjectPage/ShowProjects/adm/supAdm",
     "show/Admins"    => "AdminPage/ShowAdminPage/adm/supAdm",
     "show/Budget"    => "BudgetPage/ShowBudgetPage/adm/supAdm",
-    "show/superAdmin"   => "SuperAdminPage/ShowSuperAdminPage/supAdm",
+    "show/superAdmin"   => "SuperAdminPage/ShowSuperAdminPage/adm/supAdm",
     "show/User"         => "PersonalPage/ShowPersonalPage/usr",
-    "show/Panel"        => "ControlPanel/ShowControlPanel/adm",
     "show/Address"      => "Address/ShowPanelAddress/supAdm",
     "show/BuildStartPage" => "StartPage/BuildStartPage/none",
     "show/Logs"       => "LogsPage/ShowLogsPage/supAdm",
@@ -36,7 +36,16 @@ return[
     "inf/videos"        => "VideoPage/TotalVideo/adm/supAdm",
     "inf/photos"        => "PhotoPage/TotalPhoto/adm/supAdm",
 
-    "log/login"         => "Login/LogIn/none"
+    "inf/budget"        => "BudgetPage/TotalInf/adm/supAdm",
+    "inf/project"       => "ProjectPage/GetInfoProject/none",
+    "inf/admins"        => "AdminPage/TotalInfoAdmins/supAdm",
+    "inf/userInvest"    => "ProjectPage/UserProjectMoney/none",
+    "inf/contacts"      => "Address/GetContacts/none",
+    "inf/amtUsers"      => "UserPage/AmountUsers/none",
+
+
+    "log/login"         => "Login/LogIn/none",
+    "log/exit"          => "Login/Exit/none"
 
 
 ];

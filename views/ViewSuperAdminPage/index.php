@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style><?php include_once ROOT . "/views/css/reset.css"?></style>
     <style><?php include_once ROOT . "/views/css/style.css" ?></style>
+    <style><?php include_once ROOT . "/views/css/fonts.css"?></style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -49,21 +50,26 @@
               <a class="nav-link" href="/show/Logs">Logs</a>
             </li>
           </ul>
-          <button class="btn btn-success">Выйти</button>
+            <button class="btn btn-success" id="exit">Выйти</button>
         </div>
       </nav>
 
       <div class="container-fluid">
          <div class="row justify-content-center topTxt">
               <div class="col-12 reports">
-               <span>Жалобы и предложения</span>
+               <h2>Жалобы и предложения</h2>
               </div>
          </div>
-         <div class="row justify-content-around">
+          <div class="row">
+              <div class="col-4 col-md-3 offset-md-8 p-2">
+                  <input onkeyup="myFunction()" id="searchComplaints" class="form-control mr-sm-3" type="search" placeholder="Поиск по таблице" aria-label="Search">
+              </div>
+          </div>
+          <div class="row justify-content-around">
              <div class="col-3 ReportInfo">
               <div class="card border-info  mb-3">
-                  <div class="card-header reports">
-                      <h3>Жалобы</h3>
+                  <div class="card-header">
+                      <h4>Жалобы</h4>
                   </div>
                       <div class="card-body">
                           <div>Новых: <span id="newComplaints"></span></div>
@@ -72,8 +78,8 @@
                       </div>
                   </div>
                  <div class="card border-info  mb-3">
-                     <div class="card-header reports">
-                     <h3>Дoбавить ответ</h3>
+                     <div class="card-header">
+                     <h4>Дoбавить ответ</h4>
                      </div>
                          <div class="card-body">
                              <form name="formAnswer" action="#" class="formAddUsers">
@@ -86,13 +92,12 @@
                          </div>
                  </div>
               </div>
-             <div class="col-8 tableReports">
+             <div class="col-8 tableReports border-warning" id="tableComplaints">
 
             </div>
          </div>
       </div>
-
-    <script><?php include_once ROOT ."/views/ViewSuperAdminPage/js/scriptAnswer.js"?></script>
+    <script><?php include_once ROOT ."/views/ViewSuperAdminPage/js/searchComplaints.js"?></script>
     <script><?php include_once ROOT . "/views/ViewSuperAdminPage/js/backInfo.js"?></script>
     <script><?php include_once ROOT . "/views/app/main.js"?></script>
 

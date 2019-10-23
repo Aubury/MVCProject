@@ -67,7 +67,7 @@ const videosTable = function createVideoTable(arr){
 
     arr.forEach( el =>{
         answer += `<div class="card align-self-end" style="width: 18rem;">
-           <h5 class="h5">${el[1]}</h5>
+           <h5 class="h5 list-group-item">${el[1]}</h5>
            <div class="iframe">${el[3]}</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Id - <span>${el[0]}</span></li>
@@ -88,5 +88,51 @@ const getVideos = function getVideos(){
     fetch('/inf/videos').then( inf => inf.json())
         .then( arr => videosTable(arr));
 }
+
+//---------------------------------------------------------------------------------------------
+function sendObj(answ) {
+
+    let str = encodeURIComponent(JSON.stringify(answ)),
+        url = `/reg/addVideo?value=${str}`;
+
+
+    fetch(url).then((response)=> {  return response.text();})
+        .then((text)=>{rex.form.nextElementSibling.innerHTML = text;
+            for(let i=0; i<rex.arrInp.length; i++){
+
+                rex.arrInp[i].value = '';
+            }
+            getVideos();
+            setTimeout(()=> rex.form.nextElementSibling.innerHTML = '', 10000);
+
+        });
+}
+//---------------------------------------------------------------------------------------------
+rex.formDel.addEventListener('submit', function (ev) {
+
+    ev.preventDefault();
+
+    const url = '/reg/delVideo',
+         fD = new FormData();
+
+    fD.append('id',rex.formDel['id'].value);
+
+    fetch(url,{
+        method: "POST",
+        body: fD
+    }).then((response)=> {  return response.text();})
+        .then((text)=>{rex.formDel.nextElementSibling.innerHTML = text;
+            for(let i=0; i<rex.arrInp.length; i++){
+
+                rex.arrInp[i].value = '';
+            }
+            getVideos();
+            setTimeout(()=> rex.formDel.nextElementSibling.innerHTML = '', 10000);
+
+        });
+
+})
+//-------------------------------------------------------------------------------------------
+
 getVideos();
 

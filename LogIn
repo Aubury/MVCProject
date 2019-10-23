@@ -6,13 +6,13 @@
        login   - petrov@petr.com
        pasword - cc61b055c0
 //------------------------------------
-       login   - poliak@ pol.com
+       login   - poliak@pol.com
  	   pasword - c95a08b893	
 	   
 //================================================	
     *****   ADMINS   *****   
-		login   - aubury@ukr.net   - superAdmin
-		pasword - 7bf26fb801
+		login   - ivanov@iva.nov   - superAdmin
+		pasword - 6d3efd1c69
 //------------------------------------------------		
-        login   - nfaubury@gmail.com   - admin
-		pasword - 
+        login   - petrov@pet   - admin
+		pasword - e59a6ce6a0
