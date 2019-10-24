@@ -4,6 +4,7 @@ const obj = {
     map        : document.querySelector('.map'),
     address    : document.querySelector('.address'),
     phone      : document.querySelector('.phone'),
+    project   : document.querySelector('#projects')
 
 };
 //-----------------------------------------------------------------------------------------------------------------
@@ -137,6 +138,64 @@ const getAddress = function getAddress(){
     // .then(mass => console.log(mass));
 }
 //-----------------------------------------------------------------------------
+const creatProject = function creatProject(arr) {
 
+    arr.forEach( el => {
+        if(el.published == '1'){
+
+            let div = projectCard(el);
+            obj.project.appendChild(div);
+
+        }
+    });
+
+}
+//-----------------------------------------------------------------------------
+const getProgects = function getMassProjects(){
+
+    fetch('/inf/project',{
+        method:"POST",
+        header:('Set-Cookie: cross-site-cookie=name; SameSite=None; Secure')
+    }).then( data => data.json())
+        .then(arr => creatProject(arr[1]));
+}
+
+//-----------------------------------------------------------------------------
+const projectCard = function createProjectCart(arr) {
+
+    let answ = '',
+        projectCart = document.createElement('div');
+       projectCart.classList.add("section", "progect");
+
+    answ += `<div class="progect__left__content colHeight">
+                    <div class="img__progect">
+                        <img src="${arr.photo_1}" alt="">
+                    </div>
+                    <p>${arr.text_1}</p>
+                </div>
+                <div class="progect__right__content colHeight">
+                    <div>
+                        <h2>Проект \"${arr.name}\"</h2>
+                        <p>${arr.text_2}</p>
+                   </div>
+                    
+                    <div class="galery">
+                        <img src="${arr.photo_2}" alt="">
+                        <img src="${arr.photo_3}" alt="">
+                        <img src="${arr.photo_4}" alt="">
+                        <img src="${arr.photo_5}" alt="">
+                    </div>
+                </div>
+                <div class="video">
+                    <p>${arr.video_1}</p>
+                    <p>${arr.video_2}</p>
+                </div>`;
+
+    projectCart.innerHTML = answ;
+
+    return projectCart;
+}
+//-----------------------------------------------------------------------------
 getAddress();
 getUsers();
+getProgects();

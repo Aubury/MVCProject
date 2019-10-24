@@ -211,10 +211,22 @@ h2{
 }
 .progect__left__content,
 .progect__right__content{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
     width: 48%;
 }
+.progect__right__content{
+    justify-content: space-between;
+}
+.colHeight{
+    min-height: 48em!important;
+}
 .progect__left__content p{
-    text-align: right;
+    margin-top: 10px;
+}
+.progect____content p{
+    margin-top: 10px;
 }
 .progect__left__content img{
     width: 100%;
@@ -245,6 +257,7 @@ h2{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.video p,
 .video img{
     width: 49%;
     margin: 10px 0;

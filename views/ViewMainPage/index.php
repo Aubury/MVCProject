@@ -99,69 +99,73 @@
                 <img src="/views/img/video.jpg" alt="">
             </div>
         </div>
-        <div class="section progect">
-            <div class="progect__left__content">
-                <div class="img__progect">
-                    <img src="/views/img/car.jpg" alt="">
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum doloremque ratione. Consectetur hic, consequuntur veniam odit est temporibus tempora praesentium quae, ratione quo totam mollitia eos possimus expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi officia omnis dolore corporis molestiae placeat recusandae numquam, itaque quos asperiores minima rem, autem ullam, quis fugiat mollitia quasi maiores ipsam!
-                </p>
-            </div>
-            <div class="progect__right__content">
-                <h2 id="progects">Первый проект</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat, praesentium ipsam odio quo ut inventore ratione dolor eius officiis nihil optio debitis quae velit voluptatibus esse, in nemo necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quidem dolorum sit aperiam dolore expedita ab ea fugiat laudantium aut explicabo a deserunt, nesciunt ut animi iure. Nobis, voluptates impedit!
-                </p>
-                <div class="galery">
-                    <img src="/views/img/car.jpg" alt="">
-                    <img src="/views/img/car.jpg" alt="">
-                    <img src="/views/img/car.jpg" alt="">
-                    <img src="/views/img/car.jpg" alt="">
-                </div>
-            </div>
-            <div class="video">
-                <img src="/views/img/video.jpg" alt="">
-                <img src="/views/img/video.jpg" alt="">
-            </div>
+        <div id="projects">
+<!--            <div class="section progect">-->
+<!--                <div class="progect__left__content">-->
+<!--                    <div class="img__progect">-->
+<!--                        <img src="/views/img/car.jpg" alt="">-->
+<!--                    </div>-->
+<!--                    <p>-->
+<!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum doloremque ratione. Consectetur hic, consequuntur veniam odit est temporibus tempora praesentium quae, ratione quo totam mollitia eos possimus expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi officia omnis dolore corporis molestiae placeat recusandae numquam, itaque quos asperiores minima rem, autem ullam, quis fugiat mollitia quasi maiores ipsam!-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="progect__right__content">-->
+<!--                    <h2 id="progects">Первый проект</h2>-->
+<!--                    <p>-->
+<!--                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat, praesentium ipsam odio quo ut inventore ratione dolor eius officiis nihil optio debitis quae velit voluptatibus esse, in nemo necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quidem dolorum sit aperiam dolore expedita ab ea fugiat laudantium aut explicabo a deserunt, nesciunt ut animi iure. Nobis, voluptates impedit!-->
+<!--                    </p>-->
+<!--                    <div class="galery">-->
+<!--                        <img src="/views/img/car.jpg" alt="">-->
+<!--                        <img src="/views/img/car.jpg" alt="">-->
+<!--                        <img src="/views/img/car.jpg" alt="">-->
+<!--                        <img src="/views/img/car.jpg" alt="">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="video">-->
+<!--                    <img src="/views/img/video.jpg" alt="">-->
+<!--                    <img src="/views/img/video.jpg" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="section progect">-->
+<!--                <div class="progect__left__content">-->
+<!--                    <div class="img__progect">-->
+<!--                        <img src="/views/img/house.jpg" alt="">-->
+<!--                    </div>-->
+<!--                    <p>-->
+<!--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum doloremque ratione. Consectetur hic, consequuntur veniam odit est temporibus tempora praesentium quae, ratione quo totam mollitia eos possimus expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi officia omnis dolore corporis molestiae placeat recusandae numquam, itaque quos asperiores minima rem, autem ullam, quis fugiat mollitia quasi maiores ipsam!-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="progect__right__content">-->
+<!--                    <h2>Второй проект</h2>-->
+<!--                    <p>-->
+<!--                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat, praesentium ipsam odio quo ut inventore ratione dolor eius officiis nihil optio debitis quae velit voluptatibus esse, in nemo necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quidem dolorum sit aperiam dolore expedita ab ea fugiat laudantium aut explicabo a deserunt, nesciunt ut animi iure. Nobis, voluptates impedit!-->
+<!--                    </p>-->
+<!--                    <div class="galery">-->
+<!--                        <img src="/views/img/house.jpg" alt="">-->
+<!--                        <img src="/views/img/house.jpg" alt="">-->
+<!--                        <img src="/views/img/house.jpg" alt="">-->
+<!--                        <img src="/views/img/house.jpg" alt="">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="video">-->
+<!--                    <img src="/views/img/video.jpg" alt="">-->
+<!--                    <img src="/views/img/video.jpg" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
-        <div class="section progect">
-            <div class="progect__left__content">
-                <div class="img__progect">
-                    <img src="/views/img/house.jpg" alt="">
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum doloremque ratione. Consectetur hic, consequuntur veniam odit est temporibus tempora praesentium quae, ratione quo totam mollitia eos possimus expedita. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi officia omnis dolore corporis molestiae placeat recusandae numquam, itaque quos asperiores minima rem, autem ullam, quis fugiat mollitia quasi maiores ipsam!
-                </p>
-            </div>
-            <div class="progect__right__content">
-                <h2>Второй проект</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fugiat, praesentium ipsam odio quo ut inventore ratione dolor eius officiis nihil optio debitis quae velit voluptatibus esse, in nemo necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quidem dolorum sit aperiam dolore expedita ab ea fugiat laudantium aut explicabo a deserunt, nesciunt ut animi iure. Nobis, voluptates impedit!
-                </p>
-                <div class="galery">
-                    <img src="/views/img/house.jpg" alt="">
-                    <img src="/views/img/house.jpg" alt="">
-                    <img src="/views/img/house.jpg" alt="">
-                    <img src="/views/img/house.jpg" alt="">
-                </div>
-            </div>
-            <div class="video">
-                <img src="/views/img/video.jpg" alt="">
-                <img src="/views/img/video.jpg" alt="">
-            </div>
-        </div>
-        <div class="section photoGalery">
-            <img src="/views/img/house.jpg" alt="">
-            <img src="/views/img/house.jpg" alt="">
-            <img src="/views/img/house.jpg" alt="">
-        </div>
-        <div class="section video">
-            <img src="/views/img/video.jpg" alt="">
-            <img src="/views/img/video.jpg" alt="">
-            <img src="/views/img/video.jpg" alt="">
-            <img src="/views/img/video.jpg" alt="">
-        </div>
+
+
+<!--        <div class="section photoGalery">-->
+<!--            <img src="/views/img/house.jpg" alt="">-->
+<!--            <img src="/views/img/house.jpg" alt="">-->
+<!--            <img src="/views/img/house.jpg" alt="">-->
+<!--        </div>-->
+<!--        <div class="section video">-->
+<!--            <img src="/views/img/video.jpg" alt="">-->
+<!--            <img src="/views/img/video.jpg" alt="">-->
+<!--            <img src="/views/img/video.jpg" alt="">-->
+<!--            <img src="/views/img/video.jpg" alt="">-->
+<!--        </div>-->
     </div>
 </main>
 
