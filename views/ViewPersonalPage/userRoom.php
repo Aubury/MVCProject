@@ -83,9 +83,9 @@
     </footer>
 <!--    <script src="/views/ViewPersonalPage/js/app.js"></script>-->
 <!--    <script src="/views/ViewPersonalPage/js/show_progect.js"></script>-->
-    <script src="/views/ViewPersonalPage/js/scriptComplaints.js"></script>
+    <script><?php include_once ROOT . "/views/ViewPersonalPage/js/scriptComplaints.js"?></script>
     <script><?php include_once ROOT . "/views/app/main.js"?></script>
-    <script src="/views/ViewPersonalPage/js/infoProject.js"></script>
+    <script><?php include_once ROOT . "/views/ViewPersonalPage/js/infoProject.js"?></script>
 
 
 </body>

@@ -1,6 +1,6 @@
 const obj = {
     form  : document.forms['logIn'],
-    users : document.querySelector('#users'),
+    users : document.querySelectorAll('.users'),
     map        : document.querySelector('.map'),
     address    : document.querySelector('.address'),
     phone      : document.querySelector('.phone'),
@@ -93,7 +93,7 @@ const getUsers = function getAmountUsers() {
             // 'Content-Type': 'application/x-www-form-urlencoded',
         }
     }).then( data => data.json())
-        .then( data => obj.users.innerHTML = data);
+        .then( data => {obj.users.forEach(el=> el.innerHTML = data)});
 }
 //----------------------------------------------------------------------------
 const splitStr = function StringToMass(str) {
