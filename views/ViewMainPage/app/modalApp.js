@@ -4,7 +4,7 @@ const obj = {
     map        : document.querySelector('.map'),
     address    : document.querySelector('.address'),
     phone      : document.querySelector('.phone'),
-    project   : document.querySelector('#projects')
+    project   : document.querySelector('#progects')
 
 };
 //-----------------------------------------------------------------------------------------------------------------
