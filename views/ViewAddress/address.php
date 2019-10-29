@@ -66,7 +66,9 @@
                     <div class="card-header"><h5>Адрес предприятия</h5></div>
                     <div class="card-body">
                         <form name="formAddress" action="#" method="POST">
-                            <textarea name="address" rows="3" style="width: 62vw;"></textarea>
+                           <p><textarea name="address" rows="3" style="width: 62vw;"></textarea>
+                               <span class="title none">Если надо поставить запятую между словами как разделительный знак, то пропишите - <span><code>&sbquo&#59;</code></span>,<br> если надо перенос строки - тогда поставьте просто запятую</span>
+                            </p>
                             <div class="row">
                               <div class="col-4 offset-8"><button class="btn btn-block btn-success" type="submit">Добавить / Редактировать</button></div>
                             </div>
@@ -83,7 +85,9 @@
                       <div class="card-header"><h5>Номера телефонов</h5></div>
                       <div class="card-body">
                           <form name="formTelephones" action="#" method="POST">
-                              <textarea name="telephones" rows="3" style="width: 62vw;"></textarea>
+                            <p><textarea name="telephones" rows="3" style="width: 62vw;"></textarea>
+                              <span class="title none">Если надо поставить запятую между словами как разделительный знак, то пропишите - <span><code>&sbquo&#59;</code></span>,<br> если надо перенос строки - тогда поставьте просто запятую</span>
+                              </p>
                               <div class="row">
                                 <div class="col-4 offset-8"><button class="btn btn-block btn-success" type="submit">Добавить / Редактировать</button></div>
                               </div>

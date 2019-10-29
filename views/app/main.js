@@ -2,7 +2,9 @@ const objMain = {
     logo : document.querySelector('.logo'),
     exit : document.querySelector('#exit'),
     nav  : document.querySelectorAll('li'),
-    form : document.forms[0]
+    form : document.forms,
+    arr  : []
+
 }
 //--------------------------------------------------------------------------------
 const displayNav = function displayNavigationBar(){
@@ -85,11 +87,11 @@ const  title = function TitleInput(ev){
 //--------------------------------------------------------------------------------------------------
 const lostFocus = function InputBlur() {
 
-    const form = objMain.form;
-          arr = form.elements;
-    for (let i = 0; i < arr.length; i++) {
-        if(arr[i].parentElement.lastElementChild != null && arr[i].parentElement.lastElementChild.classList.contains('title')){
-            arr[i].parentElement.lastElementChild.classList.add('none');
+    // const form = objMain.form;
+    //       arr = form.elements;
+    for (let i = 0; i < objMain.arr.length; i++) {
+        if(objMain.arr[i].parentElement.lastElementChild != null && objMain.arr[i].parentElement.lastElementChild.classList.contains('title')){
+            objMain.arr[i].parentElement.lastElementChild.classList.add('none');
         }
     }
 }
@@ -97,11 +99,17 @@ const lostFocus = function InputBlur() {
 //---------------------------------------------------------------------------------------------------
 const inpFocus = function addListenerInput(){
 
-    const form = objMain.form,
-          arr = form.elements;
-    for (let i = 0; i < arr.length; i++){
-        arr[i].addEventListener('focus', title);
-        arr[i].addEventListener('blur', lostFocus);
+    let form = objMain.form;
+
+    for (let i = 0; i < form.length; i++){
+        for (let j = 0; j < form[i].length; j++){
+           objMain.arr.push(form[i][j]);
+        }
+    }
+          // arr = form.elements;
+    for (let i = 0; i < objMain.arr.length; i++){
+        objMain.arr[i].addEventListener('focus', title);
+        objMain.arr[i].addEventListener('blur', lostFocus);
     }
 }
 
