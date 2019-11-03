@@ -1,0 +1,126 @@
+
+student@28-05 MINGW64 ~
+$ ls
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ Links/
+'Local Settings'@
+ Music/
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{6a2312cc-71ec-11e4-80c2-0026b94a1bc5}.TM.blf
+ NTUSER.DAT{6a2312cc-71ec-11e4-80c2-0026b94a1bc5}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{6a2312cc-71ec-11e4-80c2-0026b94a1bc5}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ ntuser.pol
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+ source/
+ Videos/
+'главное меню'@
+'Мои документы'@
+ Шаблоны@
+
+student@28-05 MINGW64 ~
+$ cd Documents/
+
+student@28-05 MINGW64 ~/Documents
+$ mkdir gimno
+
+student@28-05 MINGW64 ~/Documents
+$ cd gimno
+
+student@28-05 MINGW64 ~/Documents/gimno
+$ git init
+Initialized empty Git repository in C:/Users/student.ITSTEP1/Documents/gimno/.git/
+
+student@28-05 MINGW64 ~/Documents/gimno (master)
+$ git clone https://github.com/Aubury/MVCProject.git
+Cloning into 'MVCProject'...
+remote: Enumerating objects: 311, done.
+remote: Counting objects: 100% (311/311), done.
+remote: Compressing objects: 100% (195/195), done.
+remote: Total 1305 (delta 171), reused 216 (delta 104), pack-reused 994
+Receiving objects: 100% (1305/1305), 3.08 MiB | 817.00 KiB/s, done.
+Resolving deltas: 100% (797/797), done.
+
+student@28-05 MINGW64 ~/Documents/gimno (master)
+$ cd MVCProject/
+
+student@28-05 MINGW64 ~/Documents/gimno/MVCProject (master)
+$ git checkout -b alexsk8888gim
+Switched to a new branch 'alexsk8888gim'
+
+student@28-05 MINGW64 ~/Documents/gimno/MVCProject (alexsk8888gim)
+$ git status
+On branch alexsk8888gim
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+student@28-05 MINGW64 ~/Documents/gimno/MVCProject (alexsk8888gim)
+$ git add .
+
+student@28-05 MINGW64 ~/Documents/gimno/MVCProject (alexsk8888gim)
+$ git status
+On branch alexsk8888gim
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test.txt
+
+
+student@28-05 MINGW64 ~/Documents/gimno/MVCProject (alexsk8888gim)
+$ git commit -m 'add new txt file'
+[alexsk8888gim 1e23346] add new txt file
+ Committer: student <student@itstep1.dp.ua>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+
+student@28-05 MINGW64 ~/Documents/gimno/MVCProject (alexsk8888gim)
+$ git push https://github.com/Aubury/MVCProject.git alexsk8888gim
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+Username for 'https://github.com': alexsk8888
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 274 bytes | 274.00 KiB/s, done.
+Total 3 (delta 1), reused 1 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'alexsk8888gim' on GitHub by visiting:
+remote:      https://github.com/Aubury/MVCProject/pull/new/alexsk8888gim
+remote:
+To https://github.com/Aubury/MVCProject.git
+ * [new branch]      alexsk8888gim -> alexsk8888gim
+
+student@28-05 MINGW64 ~/Documents/gimno/MVCProject (alexsk8888gim)
+$ R
