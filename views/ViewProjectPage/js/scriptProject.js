@@ -3,7 +3,8 @@ let rex = {
     arrInp : document.forms['formProject'].querySelectorAll('.form-control'),
     table  : document.querySelector('.tableProjects'),
     arrIcons    : [],
-    massOriginal: []
+    massOriginal: [],
+    massCards: []
 };
 //---------------------------------------------------------------------------------------
 const massInp = function massInputsForm(){
@@ -74,21 +75,15 @@ rex.form.addEventListener('submit', function (ev) {
     inpArr.forEach((el) => { (el.inp.name === 'published')?
         fD.append([el.name],el.inp.checked.value): fD.append([el.name],el.inp.value);});
 
-
     fetch(url, {
         method: "POST",
         body: fD
     }).then(response=>  response.text())
         .then(text=>{rex.form.nextElementSibling.innerHTML = text;
-            // for(let i=0; i<rex.arrInp.length; i++){
-            //
-            //     rex.arrInp[i].value = '';
-            // }
-            // getProgects();
             setTimeout(()=>{
-                // rex.form.nextElementSibling.innerHTML = '';
+                getProgects();
                 window.location.reload();
-            }, 3000);
+            }, 500);
         });
 }
 );
@@ -101,11 +96,14 @@ const getProgects = function getMassProjects(){
             rex.massOriginal.push(arr[0]);
         });
 }
+//-------------------------------------------------------------------------------
+function sortArrPublish(arr) {
+    arr.sort((a, b) => a.published < b.published ? 1 : -1);
+}
 //------------------------------------------------------------------------------------------
 const projectCard = function createProjectCart(arr){
 
-
-
+    sortArrPublish(arr);
     let answ = '',
         infPublishNo = `<div class="alert alert-warning flex-grow-1" role="alert">
                          Не опубликовано!
@@ -115,8 +113,7 @@ const projectCard = function createProjectCart(arr){
                         </div>`;
     arr.forEach( el => {
         let publish = el.published;
-
-            answ += `
+        answ += `
                   <div class="card text-center border-warning">
                   ${(publish == '1') ? infPublishYes : infPublishNo}
                       <div class="card-header row justify-content-around">
@@ -134,17 +131,15 @@ const projectCard = function createProjectCart(arr){
                                
                                    <div class="col colHeight">
                                        <div class="mainImg"><img src="${el.photo_1}" alt=""></div>
-                                       <p class="card-text p-2 text-left">${el.text_2}</p>
+                                       <p class="card-text p-2 text-left">${el.text_1}</p>
                                    </div>
                            
                                    <div class="col wrapper colHeight ">
                                        <div class="col align-items-start">
                                          <h2 class="card-title">Проект \"${el.name}\"</h2>
-                                         <p class="card-text p-2 text-left">${el.text_1}</p>
+                                         <p class="card-text p-2 text-left">${el.text_2}</p>
                                        </div>
-                                 
-                                    
-                                      <div class="row">
+                                  <div class="row">
                                         <div class="sizeImg"><img class="padImg " src="${el.photo_2}" alt=""></div> 
                                         <div class="sizeImg"> <img class="padImg" src="${el.photo_3}" alt=""></div>
                                         <div class="sizeImg"><img class="padImg" src="${el.photo_4}" alt=""></div>
@@ -153,8 +148,7 @@ const projectCard = function createProjectCart(arr){
                                       
                                    </div>
                                </div>   
-                          
-                           <div class="row justify-content-around height"> 
+                            <div class="row justify-content-around height"> 
                             <p class="w-50 padImg">${el.video_1}</p>
                             <p class="w-50 padImg">${el.video_2}</p>
                            </div>
@@ -164,26 +158,29 @@ const projectCard = function createProjectCart(arr){
 
     rex.table.innerHTML = answ;
     rex.arrIcons.push(document.querySelectorAll(".icons"));
+    rex.massCards.push(rex.table.querySelectorAll('.card'));
     addListtener(rex.arrIcons[0]);
 }
 //--------------------------------------------------------------------------------------------------
 const getMassindex = function getMassIndexById(ev)
 {
-    const arr = rex.massOriginal[0];
+    const arr = rex.massOriginal[0],
+             item = ev.target.offsetParent;
     if(ev.target.hasAttribute('id')){
-
         arr.forEach( el =>{
             if(el.name === ev.target.id){
+                rex.massCards[0].forEach( e => {
+                    if(e != item){
+                        e.classList.add('none');
+                    }})
                fillInp(el);
             }
-
         });
     }
 }
 //---------------------------------------------------------------------------------------------------
 const addListtener = function addToArrListener(arr){
     for (let i = 0; i < arr.length; i++ ){
-
         arr[i].addEventListener('click', getMassindex);
     }
 }
@@ -192,7 +189,6 @@ const fillInp = function fillInputsForm(arr){
 
     const inpArr = massInp(),
          len = arr.length;
-
 
     for(let i = 0; i < inpArr.length; i++){
         for (key in arr) {

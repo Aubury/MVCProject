@@ -15,6 +15,9 @@ class Db
 
      try{
         $this->con = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password );
+        $this->con->query("SET NAMES 'utf8';");
+         $this->con->query("SET CHARACTER SET 'utf8';");
+         $this->con->query("SET SESSION collation_connection = 'utf8_general_ci';");
 //        // set the PDO error mode to exception
        $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
      }

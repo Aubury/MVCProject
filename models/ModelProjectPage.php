@@ -70,7 +70,7 @@ class ModelProjectPage
                 'video_1'  => $value['video_1'],
                 'video_2'  => $value['video_2'],
                 'text_1'   => $value['text_1'],
-                'text_2'   => $value['text_1']
+                'text_2'   => $value['text_2']
             ]);
         }
         foreach ($mass as $value){
@@ -89,7 +89,7 @@ class ModelProjectPage
                 'video_1'  => $this->getVideoInfo($value['video_1']),
                 'video_2'  => $this->getVideoInfo($value['video_2']),
                 'text_1'   => $value['text_1'],
-                'text_2'   => $value['text_1']
+                'text_2'   => $value['text_2']
             ]);
         }
         echo json_encode([$originalMass, $infMass]);
